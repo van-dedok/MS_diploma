@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: chapters/cover.aux
+A level-1 auxiliary file: chapters/contents.aux
+A level-1 auxiliary file: chapters/chap1.aux
+A level-1 auxiliary file: chapters/biblio.aux
+The style file: plain.bst
+Database file #1: main.bib.bib
+Warning--to sort, need author or key in Majorana_1937
+Warning--empty author in Majorana_1937
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            506 strings with 4161 characters,
+and the built_in function-call counts, 184 in all, are:
+= -- 16
+> -- 1
+< -- 0
++ -- 1
+- -- 0
+* -- 13
+:= -- 31
+add.period$ -- 2
+call.type$ -- 1
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 10
+empty$ -- 19
+format.name$ -- 0
+if$ -- 37
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 7
+num.names$ -- 0
+pop$ -- 4
+preamble$ -- 1
+purify$ -- 2
+quote$ -- 0
+skip$ -- 7
+stack$ -- 0
+substring$ -- 5
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 2
+while$ -- 0
+width$ -- 2
+write$ -- 10
+(There were 2 warnings)

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  23 APR 2019 14:17
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  24 APR 2019 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,17 +768,19 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+[1
+
+]
 \openout2 = `chapters/cover.aux'.
 
-(./chapters/cover.tex
+ (./chapters/cover.tex
 File: images/sklogo.eps Graphic file (type eps)
- <images/sklogo.eps> [1
-
+ <images/sklogo.eps> [2
 
 ]
 File: images/sklogo.eps Graphic file (type eps)
- <images/sklogo.eps> [2]
-(./chapters/abstract.tex) [3
+ <images/sklogo.eps> [3]
+(./chapters/abstract.tex) [4
 
 ] (./chapters/abstract_rus.tex
 Overfull \hbox (0.70314pt too wide) in paragraph at lines 1--2
@@ -809,9 +811,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--40
 
  []
 
-[3
+[4
 
-]) [4]
+]) [5]
 \openout2 = `chapters/contents.aux'.
 
  (./chapters/contents.tex (./main.toc
@@ -828,7 +830,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [5
+ [6
 
 
 
@@ -837,27 +839,27 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `main.lof'.
 
 
-[6
+[7
 
 ] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
-) [7
+) [8
 
 ]
 \openout2 = `chapters/chap1.aux'.
 
  (./chapters/chap1.tex
 Chapter 1.
-[8
+[9
 
 
 
-]) [9]
+]) [10]
 \openout2 = `chapters/biblio.aux'.
 
- (./chapters/biblio.tex (./main.bbl)) [10
+ (./chapters/biblio.tex (./main.bbl)) [11
 
 
 
@@ -867,10 +869,10 @@ Chapter 1.
 Here is how much of TeX's memory you used:
  13293 strings out of 493068
  294413 string characters out of 6137720
- 845890 words of memory out of 5000000
+ 845893 words of memory out of 5000000
  17047 multiletter control sequences out of 15000+600000
  8437 words of font info for 51 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  42i,7n,68p,10402b,239s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (11 pages).
+Output written on main.pdf (12 pages).

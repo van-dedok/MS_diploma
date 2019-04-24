@@ -1,7 +1,87 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{Majorana_1937}
-Teoria simmetrica dell’elettrone e del positrone.
-\newblock {\em Il Nuovo Cimento}, 1937.
+\sortlist[entry]{none/global/}
+  \entry{Oreg_2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=OY}{%
+         family={Oreg},
+         familyi={O\bibinitperiod},
+         given={Yuval},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Refael},
+         familyi={R\bibinitperiod},
+         given={Gil},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=vOF}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Oppen},
+         familyi={O\bibinitperiod},
+         given={Felix},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OYRGOFv1}
+    \strng{fullhash}{OYRGOFv1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{177002}
+    \field{title}{Helical Liquids and Majorana Bound States in Quantum Wires}
+    \field{volume}{105}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2010}
+  \endentry
 
-\end{thebibliography}
+  \entry{Lutchyn_2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LR}{%
+         family={Lutchyn},
+         familyi={L\bibinitperiod},
+         given={Roman},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Sau},
+         familyi={S\bibinitperiod},
+         given={Jay},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Sarma},
+         familyi={S\bibinitperiod},
+         given={Das},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRSJSD1}
+    \strng{fullhash}{LRSJSD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{077001}
+    \field{title}{Majorana Fermions and a Topological Phase Transition in
+  Semiconductor-Superconductor Heterostructures}
+    \field{volume}{105}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2010}
+  \endentry
+\endsortlist
+\endinput

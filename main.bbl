@@ -40,7 +40,7 @@
          giveni={F\bibinitperiod},
       }}%
     }
-    \strng{namehash}{OYRGOFv1}
+    \strng{namehash}{OY+1}
     \strng{fullhash}{OYRGOFv1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -72,7 +72,7 @@
          giveni={D\bibinitperiod},
       }}%
     }
-    \strng{namehash}{LRSJSD1}
+    \strng{namehash}{LR+1}
     \strng{fullhash}{LRSJSD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -82,6 +82,27 @@
     \field{volume}{105}
     \field{journaltitle}{Phys. Rev. Lett.}
     \field{year}{2010}
+  \endentry
+
+  \entry{quintized_conductance_Zhang}{article}{}
+    \true{moreauthor}
+    \name{author}{1}{}{%
+      {{hash=ZH}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZH+1}
+    \strng{fullhash}{ZH+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{74\bibrangedash 79}
+    \field{title}{Quantized Majorana Conductance}
+    \field{volume}{556}
+    \field{journaltitle}{Nature}
+    \field{year}{2018}
   \endentry
 \endsortlist
 \endinput

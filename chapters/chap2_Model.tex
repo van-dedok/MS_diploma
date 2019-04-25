@@ -4,6 +4,8 @@
 
 \chapter{The model}
 
+\section{Problem statement}
+
 The system being under consideration consists of two 1D s-type superconducting wires connected with a tunnel junction. There is a strong spin-orbit coupling assumed to be present and external magnetic field is applied in the direction perpendicular to the wire. The Hamiltonianm of the bulk of each wire, written in the Bogoliubov-de Gennes formalism, is similar to the ones presented in \cite{Oreg_2010} and \cite{Lutchyn_2010}:
 
 \begin{gather}
@@ -107,6 +109,20 @@ with
 \end{equation}
 and the $ L $ being the size of the junction. Note, that the parameters $ B $, $ u $, $ \Delta $ and $ m $ are taken to be unique within all the system.
  
-  This setting is close to the one of the models  considered by Oreg et al. in \cite{Oreg_2010} ("\textit{Spatially varying $ \mu $}" section). The difference is in a profile of $ \mu\br{y} $ -- Oreg et al.  introduced a step in effective chemical potential, while here this function possesses a well.  
+  This setting is close to the one of the models  considered by Oreg et al. in \cite{Oreg_2010} ("\textit{Spatially varying $ \mu $}" section). The difference is in the profile of $ \mu\br{y} $ -- Oreg et al.  introduced a step in effective chemical potential, while here this function possesses a well.  
   
-It can be argued, that superconducting correlations are not possible in thin wires due to the presence of fluctuations. However in real systems this difficulty can be avoided with the help of the proximity effect. The wire itself is assumed to be metallic or semiconductor, and being put close to a strong superconductor. Due to proximity effect it's possible to obtain a presence of order parameter inside initially nonsuperconducting wire.
+ In \cite{Oreg_2010} it's also discussed that the Majorana fermion appear at the inhomogeneity if the relation $ B-\sqrt{\mu^2+\Delta^2} $ is greater than zero at one side of the step in $ \mu\br{y} $ and lesser than zero at another side of it. As will be shown further, this is also relevant to the  system presented here. Note, that if $ B > \left|\Delta\right| $ this condition can always be satisfied by choosing appropriate $ \mu_L $ and $ \mu_R $. 
+  
+  
+It can be argued, that superconducting correlations are not possible in thin wires due to the presence of fluctuations. However in real systems this difficulty can be avoided with the help of the proximity effect. The wire itself is assumed to be metallic or semiconducting, and being put close to a strong superconductor. Due to proximity effect it's possible to obtain a presence of order parameter inside initially nonsuperconducting wire. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/like_real}
+	\caption{Possible experimental realization of the system. The red is a metallic or semiconducting wire, the yellow are the gates and the grey is a proximitized superconductor }
+	\label{fig:likereal}
+\end{figure}
+
+Taking into account the problem statement from this chapter, one can imagine the system to be like the one presented on figure \ref{fig:likereal} -- a wire put near the superconductor and equipped with a set of gates altering chemical potential. There were attempts \cite{quintized_conductance_Zhang} to create sample close to this and look for the signatires of the Majorana fermion there.
+
+\section{The spectrum of a bulk wire}

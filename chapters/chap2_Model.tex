@@ -47,11 +47,11 @@ The system being under consideration consists of two 1D s-type superconducting w
 	\Delta\tau_\phi
 \end{gather}
 
-Here $ \sigma_i $ and $ \tau_i $ are Pauli matrices in spin and particle-hole subspaces respectfully, $ \tau_\phi = \tau_x \cos\phi - \tau_y \sin\phi$, with $ \phi $ being a superconducting phase. $ \mu_0 $ is a chemical potential, $ B $ is an external magnetic field, $ \Delta $ is the module of superconducting order parameter and $ u $ is spin-orbit coupling constant with the dimension of velocity. The wire is being aligned along the y-axis, while the direction of the magnetic field coincides with x-axis. Note, that only one component of spin-orbit is nonzero due to 1D nature of the problem.
+Here $ \sigma_i $ and $ \tau_i $ are Pauli matrices in spin and particle-hole subspaces respectfully, $ \tau_\phi = \tau_x \cos\phi - \tau_y \sin\phi$, with $ \phi $ being a superconducting phase, $ \mu_0 $ is a chemical potential, $ B $ is an external magnetic field, $ \Delta $ is the absolute value of superconducting order parameter and $ u $ is spin-orbit coupling constant with the dimension of velocity. The wire is being aligned along the y-axis, while the direction of the magnetic field coincides with x-axis. Note, that only one component of spin-orbit is nonzero due to 1D nature of the problem.
 
 The tunnel junction is introduced  by applying an external electrical field. It's potential profile $U\br{y}  $ is presented at figure \ref{fig:chemandextpotentials}(a). Inside each wire the potential is assumed to be homogeneous, thought it's value can be different to the right and to the left of the junction. The junction itself is modeled by a sharp pike of the potential.
  
-To take this into account it's necessary to include an additional term $ U \br{y}\tau_z $ in (\ref{bulk_Hamiltonian}). However this term can be combined with the second term of  by (\ref{bulk_Hamiltonian}) by introducing an effective chemical potential $ \mu \br{y} = \mu_0 - U\br{y}  $ (see figure \ref{fig:chemandextpotentials}(b)). From now on all presence of  the external field will be hidden in $ \mu\br{y} $.
+To take this into account one should include an additional term $ U \br{y}\tau_z $ in (\ref{bulk_Hamiltonian}). However this term can be combined with the second term of  by (\ref{bulk_Hamiltonian}) by introducing an effective chemical potential $ \mu \br{y} = \mu_0 - U\br{y}  $ (see figure \ref{fig:chemandextpotentials}(b)). From now on all presence of  the external field will be hidden in $ \mu\br{y} $.
 
 The superconducting phase $ \phi $ in left and right wires, $ \phi_L $ and $ \phi_R $, can also be different. The phase inside the barrier is assumed to be a continuous monotonous function going from $ \phi_L $ to $ \phi_R $. The exact shape of that function is not important, as $ \mu\br{y} \gg \Delta$ inside the   
 barrier.
@@ -107,7 +107,7 @@ with
 		\phi_R, &~~~~ \frac{L}{2}< y 
 	\end{cases}
 \end{equation}
-and the $ L $ being the size of the junction. Note, that the parameters $ B $, $ u $, $ \Delta $ and $ m $ are taken to be unique within all the system.
+with $ L $ being the size of the junction. Note, that the parameters $ B $, $ u $, $ \Delta $ and $ m $ are taken to be constant within all the system.
  
   This setting is close to the one of the models  considered by Oreg et al. in \cite{Oreg_2010} ("\textit{Spatially varying $ \mu $}" section). The difference is in the profile of $ \mu\br{y} $ -- Oreg et al.  introduced a step in effective chemical potential, while here this function possesses a well.  
   
@@ -119,10 +119,53 @@ It can be argued, that superconducting correlations are not possible in thin wir
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/like_real}
-	\caption{Possible experimental realization of the system. The red is a metallic or semiconducting wire, the yellow are the gates and the grey is a proximitized superconductor }
+	\caption{Possible experimental realization of the system. The red is a metallic or semiconducting wire, the yellow are the gates and the gray is a proximitized superconductor }
 	\label{fig:likereal}
 \end{figure}
 
-Taking into account the problem statement from this chapter, one can imagine the system to be like the one presented on figure \ref{fig:likereal} -- a wire put near the superconductor and equipped with a set of gates altering chemical potential. There were attempts \cite{quintized_conductance_Zhang} to create sample close to this and look for the signatires of the Majorana fermion there.
+Taking into account the problem statement from this chapter, one can imagine the system to be like the one presented on figure \ref{fig:likereal} -- a wire put near the superconductor and equipped with a set of gates altering chemical potential. There were attempts \cite{quintized_conductance_Zhang} to create sample close to this and look for the signatures of the Majorana fermion there.
 
-\section{The spectrum of a bulk wire}
+\section{The dispersion of a homogeneous wire}
+
+Before discussing the properties of the junction it's necessary to consider a dispersion of a homogeneous wire modeled with the Hamiltonian (\ref{bulk_Hamiltonian}). Although this can be done exactly, it's instructive to obtain this dependence step by step, starting with a simpler model and adding new terms until the Hamiltonian (\ref{bulk_Hamiltonian}) is restored.
+
+The starting point is the Hamiltonian consisting only of kinetic energy and chemical potential terms: $ H =\frac{ p^2}{2m} - \mu$. It has simple parabolic dispersion presented at fig. \ref{fig:spectrum}(a). When the spin is introduced and spin-orbit coupling term $ up\sigma_z $ is added, the parabola splits in two (fig. \ref{fig:spectrum}(b)), each one corresponding to it's own z-protection of the spin. After introducing a magnetic field with $ B\sigma_x $ term, the gap at the intersection opens (fig. \ref{fig:spectrum}(c)). The next step is introducing the BdG formalism, by adding the multiplier $ \tau_z $ elsewhere except for magnetic field term:  $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	 $. This procedure doubles the spectra in a way that each eigenvector with energy $ E $ obtains a partner eigenvector with energy $ -E $, so additional two energy branches appear, being a mirror reflection of  initial dispersion. This is presented at fig. \ref{fig:spectrum}(d), with the dashed lines being a new BdG partners. The last step is adding the superconducting term $ \Delta\tau_\phi $, which opens the gap where the dashed and the solid lines are intersected (fig. \ref{fig:spectrum}(f)).
+
+As was mentioned before, the dispersion can be found explicitly. As was pointed in \cite{Oreg_2010}, it can be done by squiring the Hamiltonian (\ref{bulk_Hamiltonian}) twice and solving a resiting biquadratic equation. The result is:
+
+
+\begin{equation}
+E^2_{1,2}\br{p}
+=
+B^2
++
+\Delta^2
++
+\xi_p^2
++
+\br{up}^2
+\pm	
+2\sqrt{
+	B^2 \Delta^2
+	+
+	B^2\xi_p^2
+	+
+	\br{up}^2\xi_p^2
+}
+\end{equation}
+with $ \xi_p =\frac{p^2}{2m}-\mu$. This dependence, presented at fig. \ref{fig:spectrum}(f), has two positive and two negative branches, as any BdG dispersion with electron-hole symmetry does. It further discussion only positive branches are considered, if opposite is not mentioned.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/spectrum}
+	\caption{The dispersion of different Hamiltonians:
+		 a)  mere kinetic energy and chemical potential: $ H =\frac{ p^2}{2m} - \mu ~~~$
+		 b) spin-orbit coupling added: $ 	H = \frac{p^2}{2m}-\mu_0 + u p \sigma_z ~~~$
+		 c) magnetic field added: $ 	H = \frac{p^2}{2m} 	-\mu_0  +u p \sigma_z  + B\sigma_x ~~~~~$
+		 d) BdG formalism introduced: $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	~~~ $
+		 e) complete Hamiltonian of homogeneous wire: $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	+ \Delta\tau_\phi $.
+		 The parameters of the Hamiltonians for plotting are: $ B=0.2 $, $ \Delta=0.3 $, $ u=0.9 $, $ m = 1 $, $ \mu = 0.11 $ 
+ }
+	\label{fig:spectrum}
+\end{figure}
+
+

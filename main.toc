@@ -10,4 +10,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}The dispersion of a homogeneous wire}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Wavefunctions of a homogeneous wire}{8}
+\contentsline {section}{\numberline {2.3}Wavefunctions of a homogeneous wire}{9}

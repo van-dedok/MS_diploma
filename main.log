@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  10 MAY 2019 14:11
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  21 MAY 2019 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,27 +1135,25 @@ Chapter 2.
 ]
 File: images/chem_and_ext_potentials.png Graphic file (type QTm)
  <use  "images/chem_and_ext_potentials.png" > [6]
-File: images/like_real.png Graphic file (type QTm)
-
-<use  "images/like_real.png" > [7]
 File: images/spectrum.png Graphic file (type QTm)
- <use  "images/spectrum.png" >) [8] [9
+
+<use  "images/spectrum.png" > [7]) [8] [9
 
 
-]
-(./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
-(./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux))
+] (./main.aux (./chapters/cover.aux)
+(./chapters/contents.aux) (./chapters/chap1_Intro.aux)
+(./chapters/chap2_Model.aux))
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20246 strings out of 493068
- 420913 string characters out of 6137720
- 1164197 words of memory out of 5000000
- 23901 multiletter control sequences out of 15000+600000
+ 20247 strings out of 493068
+ 420924 string characters out of 6137720
+ 1168181 words of memory out of 5000000
+ 23903 multiletter control sequences out of 15000+600000
  8437 words of font info for 51 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 42i,14n,68p,10402b,4352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,14n,68p,10402b,4350s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (9 pages).

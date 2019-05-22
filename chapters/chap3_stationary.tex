@@ -88,7 +88,7 @@ Now the wavefunction can be constructed by putting (\ref{short_momentum_decaying
 	e^{2imus_z\varsigma_zx -\frac{\sqrt{\Delta^2-E^2}}{u}x}
 	\ket{s_z, \varsigma_z}
 \end{gather}
-where  $ \ket{s_z, \sigma_z} $ are eigenvectors of matrix $ \hat{s}_z \sigma_z $,  $ \gamma = -\frac{\pi}{2}+\arcsin\frac{E}{\Delta} $ and $ \phi_{1}=\phi_L$, $ \phi_{-1}=\phi_R $
+where  $ \ket{s_z, \sigma_z} $ are eigenvectors of matrix $ \hat{s}_z \sigma_z $,  $ \gamma = -\frac{\pi}{2}+\arcsin\frac{E}{\Delta} $ and $ \phi_{1}=\phi_L$, $ \phi_{-1}=-\phi_R $
 Thus the longwave part of eqigenstate can be written as:
 \begin{gather}
 \label{fast_mode_expansion}
@@ -143,9 +143,10 @@ C_{s_z,\varsigma_z}
 	e^{2imus_z\varsigma_zx -\frac{\sqrt{\Delta^2-E^2}}{u}x}
 	\ket{s_z, \varsigma_z}
 \end{gather}
-This equation can be  multiplied by $ \br{1+\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}^{-1} $, which up to a $ t^2 $ correction yields:
+This can be  multiplied by $ \br{1+\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}^{-1} $, which up to a $ t^2 $ correction yields:
 
 \begin{gather}
+\label{bc_projection}
 	\br{1-\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}
 	\Psi_{long,\varsigma_z}
 	=
@@ -159,3 +160,37 @@ This equation can be  multiplied by $ \br{1+\frac{2i\zeta t\hat{s}_z\sigma_z}{1+
 	e^{2imus_z\varsigma_zx -\frac{\sqrt{\Delta^2-E^2}}{u}x}
 	\ket{s_z, \varsigma_z}
 \end{gather}
+
+For each $ \varsigma_z $ the above equation can be interpreted as the requirement that the l.h.s. 4-vector (in LR- and eh-spaces) lies in the 2d linear space $ L_{2} $ spanned by the the two vectors in the sum in the r.h.s.. This can be reformulated as the requirement that the l.h.s. be orthogonal to the complementary 2d space $ \overline{L}_{2} $. There are two basic vectors $ \overline{\Psi}_{s_z\varsigma_{z}} $ ($ s_z=\pm1 $) spanning $ \overline{L}_{2} $ for each $ \varsigma_z $:
+\begin{gather}
+	\overline{\Psi}_{s_z\varsigma_{z}}
+	=
+	\begin{pmatrix}
+	1 \\
+	-e^{
+		i\br{
+			s_z\varsigma_z\gamma
+			+
+			\phi_{s_z}
+			}
+		}
+	\end{pmatrix}
+	\ket{s_z,\varsigma_z}
+\end{gather}
+Thus one needs to multiply (\ref{bc_projection}) by $ \br{\overline{\Psi}_{+\varsigma_{z}},\overline{\Psi}_{-\varsigma_{z}}} $ from the left and, after all evaluating the matrix produt, find the boundary condition on longwave modes in the form:
+\begin{gather}
+\label{bc_matrix}
+\begin{pmatrix}1 & -e^{-i\left(\sigma_{z}\gamma-\phi_L\right)} & A & -Ae^{-i\left(\sigma_{z}\gamma-\phi_L\right)}\\
+A^{*} & -A^{*}e^{i\left(\sigma_{z}\gamma+\phi_R\right)} & 1 & -e^{i\left(\sigma_{z}\gamma+\phi_R\right)}
+\end{pmatrix}\Psi_{long, \varsigma_{z}}=0
+\end{gather}
+here $ A=-\frac{2i\zeta t\sigma_z}{1+i\zeta\sigma_z} $ and the elements are ordered as $ \br{Le,Lh,Re,Rh} $.
+
+When studying wavefunctions in superconductors, it is more convenient to work with zero phase $ \phi $. This can be achieved by gauging the phase difference into the boundary condition. Indeed, suppose $ H_{\phi} $ describes a wire with phase $ \phi $. Then, $ H_{\phi}=U_{\phi}^{\dagger}H_{0}U_{\phi} $ with $ U_{\phi}=\mathrm{diag(1,e^{i\phi})_{eh}} $ and the wave functions are also related via unitary rotation $ \psi_{\phi}=U_{\phi}^{\dagger}\tilde{\psi} $. So the transform $ U^{\dagger}=\mathrm{diag}\br{1,e^{-i\phi_L},e^{-i\phi_L},1,e^{-i\phi_R }}_{Le,Lh,Re,Rh}$  will eliminate all the phases from the rires and put them into boundary condition. Substituting $ \Psi_{long,\varsigma_{z}}=U^{\dagger}\tilde{\Psi} $ into the (\ref{bc_matrix}) one arrives at an even simpler boundary condition on the zero-phase function $ \tilde{\Psi} $:
+\begin{gather}
+\label{bc_matrix_phases}
+\begin{pmatrix}1 & -e^{-i\sigma_{z}\gamma} & A & -Ae^{-i\left(\sigma_{z}\gamma+\varphi\right)}\\
+A^{*} & -A^{*}e^{i\left(\sigma_{z}\gamma+\varphi\right)} & 1 & -e^{i\sigma_{z}\gamma}
+\end{pmatrix}\Psi_{long, \varsigma_{z}}=0
+\end{gather}
+where $ \phi=\phi_R-\phi_L $. Note, that from here it's obvious, that in any physical quantity, calculated with this model, can depend only on phase difference $ \varphi $,  but not on the $ \phi_L $ or $ \phi_R $ separately.

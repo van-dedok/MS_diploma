@@ -10,6 +10,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}The dispersion of a homogeneous wire}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Stationary properties}{9}
+\contentsline {section}{\numberline {2.3}Hight and low modes}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Boundary conditions}{9}
+\contentsline {chapter}{\numberline {3}Stationary properties}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Boundary conditions}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}High momentum modes}{11}

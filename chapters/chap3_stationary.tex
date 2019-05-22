@@ -1,7 +1,7 @@
 \chapter{Stationary properties} 
 
 
-\section{Boundary conditions}
+\section{Boundary condition}
 
 To obtain the spectrum of the system it's necessary to find the boundary conditions. As the barrier chemical potential  is the biggest energy parameter of the problem, the wave-functions there are defined by the Hamiltonian:
 \begin{gather}
@@ -34,14 +34,14 @@ This condition is invariant under the combined action $ L\leftrightarrow R $, $ 
 \end{gather}
 This transformation is illustrated on the fig \ref{fig:bctransform}.
 
-The boundary condition (\ref{bc_transformed}) can be rewritten with introducing the spinor $ \Psi=\br{\psi_L, \psi_R}^T $ and Pauli matrices $ s_i $ in LR space:
+The boundary condition (\ref{bc_transformed}) can be rewritten with introducing the spinor $ \Psi=\br{\psi_L, \psi_R}^T $ and Pauli matrices $ \hat{s}_i $ in LR space:
 \begin{gather}
-	\br{1-ts_x}\Psi-\br{1+t s_x}b\pdy\Psi=0
+	\br{1-t\hat{s}_x}\Psi-\br{1+t s_x}b\pdy\Psi=0
 \end{gather}
-since for all $ t\ne 1 $ (recall, that $ t\ll1 $) the matrix is $ 1\pm ts_x $ in reversible. Multupliing the last equation by $ \br{1-ts_x}/\br{1+t^2} $ one obtain:
+since for all $ t\ne 1 $ (recall, that $ t\ll1 $) the matrix is $ 1\pm t\hat{s}_x $ in reversible. Multupliing the last equation by $ \br{1-t\hat{s}_x}/\br{1+t^2} $ one obtain:
 \begin{gather}
 \label{bc_LR_space}
-	\br{1-2\tilde{t}-\tilde{b}\pdy}\psi=0
+	\br{1-2\tilde{t}\hat{s}_z-\tilde{b}\pdy}\psi=0
 \end{gather}
 where $ \tilde{t}=\frac{t}{1+t^2} $, $ \tilde{b} = \frac{1-t^2}{1+t^2}b $. In the leading order on $ t $, which corresponds to the tunneling limit, $ \tilde{t}=t $, $ \tilde{b} = b $.
 \begin{figure}[H]
@@ -58,19 +58,19 @@ One can argue, that in tunneling limit the second and the third term in (\ref{bc
 As was pointed in section \ref{sec:high_and_low_modes}, there are two  shortwave and longwave wavefunctions inside the wire, and the first ones can be described with the Hamiltonian (\ref{short-long_hamiltonian}). However, if one is looking for the localized states, even the longwave modes should be taken decaying. To obtain this, one needs to add a restore superconducting term in (\ref{short-long_hamiltonian}), so the spectrum become gapped and the momenta can get an imaginary part. So, for shortwave modes one should consider a Hamiltonian:
 \begin{gather}
 \label{high_mods_hamiltonian}
-	H=\br{\frac{p^2}{2m}-ups_z\sigma_z}\tau_z+\Delta\tau_\phi
+	H=\br{\frac{p^2}{2m}-up\hat{s}_z\sigma_z}\tau_z+\Delta\tau_\phi
 \end{gather}
-here the multiplier $ s_z $ is added in the spin-orbit coupling term, as the direction of the left wire is inverted, so to write a correct Hamiltonian for LR space, one needs to change $ p $ to $ -p $ for the left wire --- which is exactly adding $ -s_z $ multiplier to each momentum.
+here the multiplier $ \hat{s}_z $ is added in the spin-orbit coupling term, as the direction of the left wire is inverted, so to write a correct Hamiltonian for LR space, one needs to change $ p $ to $ -p $ for the left wire --- which is exactly adding $ -s_z $ multiplier to each momentum.
 
-Denoting $ \eta = \frac{p^2}{2m}-ups_z\sigma_z $, one can rewrite (\ref{high_mods_hamiltonian}) as $ H=\eta\tau_z+\Delta\tau_\phi $. As $ s_z\sigma_z $ commutes with $ H $ one can treat it as a number, so the dispersion is $ E^2 =\eta^2+\Delta^2 $. Thus $ \eta=\pm i\sqrt{\Delta^2-E^2} $, as the case $ \abs{E}<\Delta $ is assumed. For shortwave one can write the equation:
+Denoting $ \eta = \frac{p^2}{2m}-up\hat{s}_z\sigma_z $, one can rewrite (\ref{high_mods_hamiltonian}) as $ H=\eta\tau_z+\Delta\tau_\phi $. As $ \hat{s}_z\sigma_z $ commutes with $ H $ one can treat it as a number, so the dispersion is $ E^2 =\eta^2+\Delta^2 $ (the number corresponding to eigenstate of $ \hat{s}_z $ will be denoted as $ s_z $ while the number, corresponding to the eigenstate of $ \sigma_z $ will be denoted as $ \varsigma_z $). Thus $ \eta=\pm i\sqrt{\Delta^2-E^2} $, as the case $ \abs{E}<\Delta $ is assumed. For momenta\textbf{} one can write the equation:
 \begin{gather}
-	p^2-2mu s_z \sigma_z p - 2m \eta =0
+	p^2-2mu s_z \varsigma_z p - 2m \eta =0
 \end{gather}
-which for shortwave momenta gives $ p_{short}\approx2 mu s_z \sigma_z + \frac{\eta}{u}s_z\sigma_z$. Choosing the sign of $ \eta $ in a way, that the wavefunction decays at $ x\to \infty $, one can obtain:
+which for shortwave momenta gives $ p_{short}\approx2 mu s_z \varsigma_z + \frac{\eta}{u}s_z\varsigma_z$. Choosing the sign of $ \eta $ in a way, that the wavefunction decays at $ x\to \infty $, one can obtain:
 \begin{gather}
 \label{short_momentum_decaying}
 	p_{short}\approx
-	2 mu s_z \sigma_z 
+	2 mu s_z \varsigma_z 
 	+
 	i\frac{\sqrt{\Delta^2-E^2}}{u}
 \end{gather}
@@ -78,31 +78,32 @@ which for shortwave momenta gives $ p_{short}\approx2 mu s_z \sigma_z + \frac{\e
 
 Now the wavefunction can be constructed by putting (\ref{short_momentum_decaying}) into the Schroedinger equation $ \br{\eta\tau_z +\Delta\tau_\phi}\Psi=E\Psi $. The solutions are:
 \begin{gather}
-	\Psi_{s_z,\sigma_z}\br{x}
+	\Psi_{s_z,\varsigma_z}\br{x}
 	=
 	\begin{pmatrix}
 	1
 	\\
-	e^{i\br{s_z\sigma_z\gamma+\phi_{s_z}}}
+	e^{i\br{s_z\varsigma_z\gamma+\phi_{s_z}}}
 	\end{pmatrix}_{eh}
-	e^{2imus_z\sigma_zx -\frac{\sqrt{\Delta^2-E^2}}{u}x}
-	\ket{s_z, \sigma_z}
+	e^{2imus_z\varsigma_zx -\frac{\sqrt{\Delta^2-E^2}}{u}x}
+	\ket{s_z, \varsigma_z}
 \end{gather}
-where $ s_z $ and $ \sigma_z $
- should be treated as numbers can be equal $ \pm1 $, $ \ket{s_z, \sigma_z} $ are eigenvectors of matrix $ s_z \sigma_z $ and $ \gamma = -\frac{\pi}{2}+\arcsin\frac{E}{\Delta} $.
+where  $ \ket{s_z, \sigma_z} $ are eigenvectors of matrix $ \hat{s}_z \sigma_z $,  $ \gamma = -\frac{\pi}{2}+\arcsin\frac{E}{\Delta} $ and $ \phi_{1}=\phi_L$, $ \phi_{-1}=\phi_R $
 Thus the longwave part of eqigenstate can be written as:
 \begin{gather}
+\label{fast_mode_expansion}
 	\Psi_{long}
 	=
 	\sum_{s_z=\pm 1}
-	\sum_{\sigma_z=\pm 1}
-	\Psi_{s_z,\sigma_z}\br{x}
+	\sum_{\varsigma_z=\pm 1}
+	C_{s_z,\varsigma_z}
+	\Psi_{s_z,\varsigma_z}\br{x}
 \end{gather}
  
   \if 0
 \begin{gather}
 \begin{pmatrix}
-i s_z \sigma_z\sqrt{\Delta^2-E^2}-E & \Delta e^{-i\phi_{L,R} s_z} \\
+i \hat_z \sigma_z\sqrt{\Delta^2-E^2}-E & \Delta e^{-i\phi_{L,R} s_z} \\
 \Delta e^{i\phi_{L,R} s_z} & -i s_z \sigma_z\sqrt{\Delta^2-E^2}-E
 \end{pmatrix}
 \Psi
@@ -110,4 +111,51 @@ i s_z \sigma_z\sqrt{\Delta^2-E^2}-E & \Delta e^{-i\phi_{L,R} s_z} \\
 E\Psi
 \end{gather}
 \fi
-and
+
+
+\section{Eliminating high modes from boundary condition}
+As the Majorana mode acts at low energies, it's expected to be predominantly longwave. This argument is in accord with \cite{Oreg_2010} and \cite{Lutchyn_2010}, where the majorana state was an eigenstate of a linearized Hamiltonian, which is relevant only for longwave physics. So, it's reasonable to eliminate the shortwave modes from the problem, reformulating the boundary condition (\ref{short-long_hamiltonian}).
+
+The wave function can be decomposed in shortwave and  longwave  parts: $ \Psi = \Psi_{short}+\Psi_{long} $. inserting it into the(\ref{short-long_hamiltonian}) and using the fact, that $ p_{long}\ll p_{short} \approx 2mu s_z \sigma_z $, one can obtain at the boundary:
+\begin{gather}
+	\br{1-2t\hat{s}_x}\Psi_{long}+\br{1-2t\hat{s}_x-2ibum\hat{s}_z \sigma_z}\Psi_{short}=0
+\end{gather}
+Multipluning by the $ \br{1-2t\hat{s}_x}^{-1} $ and eliminating $ {t^2} $ terms, obtain:
+\begin{gather}
+	\Psi_{long}
+	=
+	\br{-1+i\zeta\br{1+2t\hat{s}_x}s_z \sigma_z}\Psi_{short}
+\end{gather}
+with $ \zeta=2mul $.
+
+Now, using the expansion (\ref{fast_mode_expansion}) and renormalizing the coefficients: $ C_{s_z \varsigma_z}\to-\br{1-i\zeta s_z \varsigma_z}C_{s_z \varsigma_z} $ one can rewrite the boundary condition for $ \varsigma_z $ spin component of the wavefunction as:
+\begin{gather}
+\Psi_{long,\varsigma_z}
+=
+\br{1+\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}
+\sum_{s_z=\pm1}
+C_{s_z,\varsigma_z}
+		\begin{pmatrix}
+	1
+	\\
+	e^{i\br{s_z\varsigma_z\gamma+\phi_{s_z}}}
+	\end{pmatrix}_{eh}
+	e^{2imus_z\varsigma_zx -\frac{\sqrt{\Delta^2-E^2}}{u}x}
+	\ket{s_z, \varsigma_z}
+\end{gather}
+This equation can be  multiplied by $ \br{1+\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}^{-1} $, which up to a $ t^2 $ correction yields:
+
+\begin{gather}
+	\br{1-\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}
+	\Psi_{long,\varsigma_z}
+	=
+	\sum_{s_z=\pm1}
+	C_{s_z,\varsigma_z}
+			\begin{pmatrix}
+	1
+	\\
+	e^{i\br{s_z\varsigma_z\gamma+\phi_{s_z}}}
+	\end{pmatrix}_{eh}
+	e^{2imus_z\varsigma_zx -\frac{\sqrt{\Delta^2-E^2}}{u}x}
+	\ket{s_z, \varsigma_z}
+\end{gather}

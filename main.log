@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  22 MAY 2019 18:33
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  22 MAY 2019 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1150,23 +1150,30 @@ Chapter 3.
 
 ]
 File: images/bc_transform.png Graphic file (type QTm)
- <use  "images/bc_transform.png" > [11]) [12] [13
+ <use  "images/bc_transform.png" > [11] [12]
+Overfull \hbox (28.84993pt too wide) in paragraph at lines 131--132
+[]\TU/TimesNewRoman(0)/m/n/12 Now, using the expansion (3.10[]) and renormalizi
+ng the coefficients: $\OML/cmm/m/it/12 C[] \OMS/cmsy/m/n/12 ! ^^@ [] \OML/cmm/m
+/it/12 C[]$
+ []
+
+) [13] [14
 
 
-] (./main.aux
-(./chapters/cover.aux) (./chapters/contents.aux) (./chapters/chap1_Intro.aux)
-(./chapters/chap2_Model.aux) (./chapters/chap3_stationary.aux))
+] (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
+(./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux)
+(./chapters/chap3_stationary.aux))
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20290 strings out of 493068
- 421590 string characters out of 6137720
- 1170462 words of memory out of 5000000
- 23934 multiletter control sequences out of 15000+600000
+ 20291 strings out of 493068
+ 421611 string characters out of 6137720
+ 1170497 words of memory out of 5000000
+ 23935 multiletter control sequences out of 15000+600000
  8437 words of font info for 51 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  42i,16n,68p,10402b,4350s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (13 pages).
+Output written on main.pdf (14 pages).

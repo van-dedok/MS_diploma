@@ -7,7 +7,6 @@
 \section{Problem statement}
 
 The system under consideration consists of two 1D s-type superconducting wires connected with a tunnel junction. There is a strong spin-orbit coupling assumed to be present and external magnetic field is applied in the direction perpendicular to the wire. The Hamiltonianm of the bulk of each wire, written in the Bogoliubov-de Gennes formalism, is similar to the ones presented in \cite{Oreg_2010} and \cite{Lutchyn_2010}:
-
 \begin{gather}
 	\mathcal{H}
 	=
@@ -67,7 +66,6 @@ barrier.
 
 
 Finally, the BdG Hamiltonian for the model reads:
-
 \begin{equation}
 \label{full_hamiltonian}
 H
@@ -83,9 +81,7 @@ B\sigma_x
 +
 \Delta\tau_{\phi\br{y}}
 \end{equation}
-
 with
-
 \begin{equation}
 \label{full_hamiltonian_suppl}
 	\mu\br{y}
@@ -116,8 +112,7 @@ with $ L $ being the size of the junction. Note, that the parameters $ B $, $ u 
  In \cite{Oreg_2010} it's also discussed that the Majorana fermion appear at the inhomogeneity if the relation $ B-\sqrt{\mu^2+\Delta^2} $ is greater than zero at one side of the step in $ \mu\br{y} $ and lesser than zero at another side of it. As will be shown further, this is also relevant to the  system presented here. Note, that if $ B > \left|\Delta\right| $ this condition can always be satisfied by choosing appropriate $ \mu_L $ and $ \mu_R $. 
  
  The model, described by (\ref{full_hamiltonian}) and (\ref{full_hamiltonian_suppl}) possesses a big number of external parameters. Different areas in this parameter space require different approaches and sometimes lead to completely different physics. Here the certain experimentally reasonable constraints are assumed:
- 
- \begin{gather}
+  \begin{gather}
  \label{constraints}
  	\mu_L,\mu_R \ll B \sim \Delta \ll mu^2\ll \left|\mu_b\right|
  \end{gather} 
@@ -133,8 +128,6 @@ Before discussing the properties of the junction it's necessary to consider a di
 The starting point is the Hamiltonian consisting only of kinetic energy and chemical potential terms: $ H =\frac{ p^2}{2m} - \mu$. It has simple parabolic dispersion presented at fig. \ref{fig:spectrum}(a). When the spin is introduced and spin-orbit coupling term $ up\sigma_z $ is added, the parabola splits in two (fig. \ref{fig:spectrum}(b)), each one corresponding to it's own z-protection of the spin. After introducing a magnetic field with $ B\sigma_x $ term, the gap at the intersection opens (fig. \ref{fig:spectrum}(c)). The next step is introducing the BdG formalism, by adding the multiplier $ \tau_z $ elsewhere except for magnetic field term:  $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	 $. This procedure doubles the spectra in a way that each eigenvector with energy $ E $ obtains a partner eigenvector with energy $ -E $, so additional two energy branches appear, being a mirror reflection of  initial dispersion. This is presented at fig. \ref{fig:spectrum}(d), with the dashed lines being BdG partners. The last step is adding the superconducting term $ \Delta\tau_\phi $, which opens the gap where the dashed and the solid lines are intersected (fig. \ref{fig:spectrum}(f)).
 
 As was mentioned before, the dispersion can be found explicitly. As was pointed in \cite{Oreg_2010}, it can be done by squiring the Hamiltonian (\ref{bulk_Hamiltonian}) twice and solving a resulting biquadratic equation, leading to:
-
-
 \begin{equation}
 E^2_{1,2}\br{p}
 =
@@ -172,14 +165,13 @@ with $ \xi_p =\frac{p^2}{2m}-\mu$. This dependence, presented at fig. \ref{fig:s
 \end{figure}
 
 If the constrains (\ref{constraints}) are assumed, the lower branch of this spectra has three minima: one of them is at $ p=0 $ exactly, and two another are at $ p = \pm 2mu $ in the leading order. The last two are not very interesting -- the energy there is approximately equal to $ \Delta $, as it should be due to perturbative introduction of superconducting term. On the contrary, the minimum at $ p=0 $, which is given by\cite{Oreg_2010}:
-
 \begin{gather}
-	E_2\br{0}=\abs{g},~~~~g = B^2 -\sqrt{\Delta^2+\mu^2}
+	E_2\br{0}=\abs{g},~~~~g = B -\sqrt{\Delta^2+\mu^2}
 \end{gather}
-
 is the most important peculiarity of the spectrum. First, as $\mu\ll B \sim \Delta $, it's the true gap of the spectrum as $  \abs{B^2 -\sqrt{\Delta^2+\mu^2}} \approx  \abs{B-\Delta -\frac{\mu^2}{2\Delta}}\ll\Delta$. Second, the  sign of  $ g $ defines where the wire can or cannot host the Majorana state near some inhomogeneity. Here it's useful to introduce the terminology: if $ g>0 $ the wire is called "toplogical", otherwise it's called "trivial". In \cite{Oreg_2010} and \cite{Lutchyn_2010} it was derived, that the contact of trivial and topological wire hosts a Majorana state. It can also be shown (see section \textbf{ENTER SECTION}), that this state is present on the end of a topological wire and isn't there for a trivial one.
 
-
+Note, that when two wires are considered, there are two gaps, $ g_{L,R} = B-\sqrt{\Delta^2+\mu_{L,R}^2} $. When the magnetic field $ B $ is close to $ \Delta $, one can change the signs of $ g_{L,R} $ by changing $ \mu_{L,R} $ respectively. 
+\if 0
 \section{Wavefunctions of a homogeneous wire}
 
 Though the wavefunctions of (\ref{bulk_Hamiltonian}) can be found explicitly, their form is enough complicated to stall any further analysis. Here it's reasonable  to recall that due to constraints (\ref{constraints}) the spin-orbit energy $ mu^2 $ is the biggest energy parameter for homogeneous wire (the parameter $ \mu_b $ appears only when barrier is introduced). At first it seems that for the leading approximation it's enough to use the Hamiltonian: $ 	H
@@ -204,3 +196,4 @@ u p \sigma_z} \tau_z
 \end{gather}
 
 The zero in the l.h.s. is justified by the fact, that all the Majorana physics occur at the energies if the order of $ g $, so the term $ E\psi $ doesn't contribute to the leading order.
+\fi

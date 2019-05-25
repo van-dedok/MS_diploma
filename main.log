@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  22 MAY 2019 21:07
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  25 MAY 2019 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,7 +1139,12 @@ File: images/chem_and_ext_potentials.png Graphic file (type QTm)
  <use  "images/chem_and_ext_potentials.png" > [6]
 File: images/spectrum.png Graphic file (type QTm)
 
-<use  "images/spectrum.png" > [7] [8]) [9]
+<use  "images/spectrum.png" > [7]
+
+LaTeX Warning: Command \l invalid in math mode on input line 177.
+
+Missing character: There is no ł in font cmmi12!
+[8]) [9]
 \openout2 = `chapters/chap3_stationary.aux'.
 
  (./chapters/chap3_stationary.tex
@@ -1157,7 +1162,21 @@ ng the coefficients: $\OML/cmm/m/it/12 C[] \OMS/cmsy/m/n/12 ! ^^@ [] \OML/cmm/m
 /it/12 C[]$
  []
 
-[13]) [14] [15
+[13]
+Overfull \hbox (23.2177pt too wide) in paragraph at lines 248--250
+\TU/TimesNewRoman(0)/m/n/12 the leading order. Indeed, diagonalizing the upper 
+subblock of $\OML/cmm/m/it/12 H[]$\TU/TimesNewRoman(0)/m/n/12 , one finds, that
+ $\OML/cmm/m/it/12 E \OT1/cmr/m/n/12 = []$\TU/TimesNewRoman(0)/m/n/12 .
+ []
+
+[14]
+Overfull \hbox (5.2982pt too wide) in paragraph at lines 295--303
+[]\TU/TimesNewRoman(0)/m/n/12 However in the most part of this work the low ene
+rgy version $\OML/cmm/m/it/12  [] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 e[]$ 
+
+ []
+
+[15]) [16] [17
 
 
 ] (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
@@ -1168,12 +1187,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20294 strings out of 493068
- 421655 string characters out of 6137720
- 1170533 words of memory out of 5000000
- 23938 multiletter control sequences out of 15000+600000
+ 20295 strings out of 493068
+ 421679 string characters out of 6137720
+ 1170568 words of memory out of 5000000
+ 23939 multiletter control sequences out of 15000+600000
  8437 words of font info for 51 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  42i,16n,68p,10402b,4350s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (15 pages).
+Output written on main.pdf (17 pages).

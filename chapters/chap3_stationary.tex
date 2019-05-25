@@ -113,7 +113,7 @@ E\Psi
 \fi
 
 
-\section{Eliminating high modes from boundary condition}
+\section{Eliminating longwave modes from boundary condition}
 As the Majorana mode acts at low energies, it's expected to be predominantly longwave. This argument is in accord with \cite{Oreg_2010} and \cite{Lutchyn_2010}, where the majorana state was an eigenstate of a linearized Hamiltonian, which is relevant only for longwave physics. So, it's reasonable to eliminate the shortwave modes from the problem, reformulating the boundary condition (\ref{short-long_hamiltonian}).
 
 The wave function can be decomposed in shortwave and  longwave  parts: $ \Psi = \Psi_{short}+\Psi_{long} $. inserting it into the(\ref{short-long_hamiltonian}) and using the fact, that $ p_{long}\ll p_{short} \approx 2mu s_z \sigma_z $, one can obtain at the boundary:
@@ -191,6 +191,137 @@ When studying wavefunctions in superconductors, it is more convenient to work wi
 \label{bc_matrix_phases}
 \begin{pmatrix}1 & -e^{-i\sigma_{z}\gamma} & A & -Ae^{-i\left(\sigma_{z}\gamma+\varphi\right)}\\
 A^{*} & -A^{*}e^{i\left(\sigma_{z}\gamma+\varphi\right)} & 1 & -e^{i\sigma_{z}\gamma}
-\end{pmatrix}\Psi_{long, \varsigma_{z}}=0
+\end{pmatrix}
+\tilde{\Psi}_{long, \varsigma_{z}}=0
 \end{gather}
 where $ \phi=\phi_R-\phi_L $. Note, that from here it's obvious, that in any physical quantity, calculated with this model, can depend only on phase difference $ \varphi $,  but not on the $ \phi_L $ or $ \phi_R $ separately.
+
+\section{Low momenta and linearized Hamiltonian}
+
+To utilize boundary condition (\ref{bc_matrix}) or (\ref{bc_matrix_phases}), it's necessary to find low momenta wavefunctions in homogenious wire. For this purpose one can use s linearized version of the Hamiltonian (\ref{bulk_Hamiltonian}), like in \cite{Oreg_2010} and \cite{Lutchyn_2010}:
+\begin{gather}
+\label{linearized_hamiltonian}
+		H
+	=
+	-\mu \tau_z
+	+
+	u p \sigma_z \tau_z
+	+
+	B\sigma_x	
+	+
+	\Delta\tau_x
+\end{gather}
+here the zero phase $ \phi $ is assumed and $ \mu $ can be equal $ \mu_L $ or $ \mu_R $ depending on the wire considered. As was mentioned before, the nonzero phase can be restored by using $ U_\phi $ matrix. This hamiltonian is valid only for the right wire. To obtain the solution in the left wire one needs to reverse the sign of $ p $ in (\ref{bulk_Hamiltonian}). Instead of doing so, the unitary transform $ \psi_L=\sigma_x\psi_R $ can be utilized, as for (\ref{bulk_Hamiltonian}) $ H\br{-p}=\sigma_x H\br{p}\sigma_x $.
+
+Remembering, that $ \beta=B-\Delta\ll B, \Delta $, one can	treat this Hamiltonian penetratively, decomposing it as $ H=H_0+V_0$:
+\begin{gather}
+	H_0=
+	u p \sigma_z \tau_z
+	+
+	\Delta
+	\br{\sigma_x	
+	+
+	\tau_x}
+\\
+V=-\mu \tau_z+\beta\sigma_x
+\end{gather}
+
+As $ H_0 $ commutes with $ \sigma_x\tau_x $, it's convenient to rewrite it in the basis of common eigenstates of $ \sigma_x $ and $ \tau_x $. Denoting them as $ \ket{\sigma_x, \tau_x }$ and arranging the order as $  \br{\ket{+, + },\ket{-, - },\ket{+, - },\ket{-, + }} $ one can rewrite $ H_0+V $ as:
+\begin{gather}
+	H_0
+	=
+	\begin{pmatrix}
+	2\Delta & up & 0 & 0 \\
+	up & -2\Delta & 0 & 0\\
+	0 & 0 & 0 & up \\
+	0 & 0 & up & 0 
+	\end{pmatrix}
+	~~~~~~~~
+	V
+	=
+		\begin{pmatrix}
+	\beta & up & -\mu & 0 \\
+	up & -\beta & 0 & v-\mu\\
+	-\mu & 0 & \beta & up \\
+	0 & -\mu & up & -\beta 
+	\end{pmatrix}
+\end{gather}
+It's easy to see, subspace $ \mathrm{Span}\br{\ket{+, + },\ket{-, - }} $ require no perturbation to obtain the eigenstates in the leading order. Indeed, diagonalizing the upper subblock of $ H_0 $, one finds, that $ E=\sqrt{\br{2\Delta}^2+\br{up}^2} $. When the low energy states are the objects of interest ($ E\sim g_{L,R} $), one finds, that $ p =\pm\frac{i\Delta}{2u} $ in the leading order, and the corresponding eigenstates are $\ket{+, + }\pm i\ket{-, - } $. If
+
+The another two eigenstates are a little bit more complicated. Diaginalizing  the lower subblock of $ H_0 $, one immediately finds, that $ E=\pm up $. This corrseponds to the fact, that $ H_0 $ is the version of $ H $ with a closed gap $ g $  on lower branch (see fig. \ref{fig:spectrum},(e)), so in the zero order this states cannot form anything localized at all. To find them correctly, one needs to take into account the perturbation $ V $ and solve the secular equation using the following ansatz:
+\begin{gather}
+	\psi = r_1\ket{+, + }+r_2\ket{-, - }+q_{1}\ket{+, - }+q_{2}\ket{-, + }
+\end{gather}
+with $ r_i\ll q_j $ for all  pairs $ \br{i,j} $. In the leading order (remeber, that both $ E  $ and $ up $ are of the oreder of $ g_{L,R} $ now) this results to a couple of equations:
+\begin{gather}
+\begin{cases}
+	\br{-E+B-\Delta-\frac{\mu^2}{2\Delta}}q_1+up q_2=0
+	\\
+	u p q_1 + \br{-E-B+\Delta+\frac{\mu^2}{2\Delta}}q_2 =0
+\end{cases}
+\end{gather}
+recall, that at this precision $ g=B-\Delta-\frac{\mu^2}{2\Delta} $ and find $ E^2=g^2+u^2p^2 $.
+
+For this states the momenta are of the order of $ g/u $, so it's reasonably to name them longwave states. Than the states with momenta $ \pm\frac{i\Delta}{2u} $ will be called mediumwave states.
+Now it's time to present this wavefunctions in original BdG basis. The expressions here are relevant only for the right lead and for $ E>0 $. To find the wavefunctions in the left lead, the transform $ \psi_L=\sigma_x\psi_R $ can be used, while for finding the negative enrefu states one can utilize electron-hole transform: $ \psi_{E<0}= \tau_y\sigma_yK\psi_{E>0}$ with $ K $ being a complex conjugation operator.
+
+Medium wave states are (propagating version for $ E>2\Delta $ and decaying version for $ E<2\Delta $):
+\begin{gather}
+	\psi_{medium}=
+	\begin{pmatrix}
+	1
+	\\
+	\frac{E\mp\sqrt{E^2-4\Delta^2}}{2\Delta}
+	\\
+	\frac{E\mp\sqrt{E^2-4\Delta^2}}{2\Delta}
+	\\
+	1
+	\end{pmatrix}
+	e^\frac{\pm i x\sqrt{E^2-4\Delta^2}}{u}
+	~~~~~
+	\psi_{medium}=
+	\begin{pmatrix}
+	1
+	\\
+	\frac{E\pm i\sqrt{4\Delta^2-E^2}}{2\Delta}
+	\\
+	\frac{E\pm, i\sqrt{4\Delta^2-E^2}}{2\Delta}
+	\\
+	1
+	\end{pmatrix}
+	e^\frac{\pm  x\sqrt{4\Delta^2-E^2}}{u}
+\end{gather}
+
+However in the most part of this work the low energy version $\psi_{medium}=
+\br{
+1,
+\pm i,
+\pm i,
+1
+}^T
+e^{\pm\frac{\Delta x}{2u}}  $
+
+will be used.
+
+Longwavestates (for energies $ E\sim g_{L,R} $, for $ E>g $ and $ E<g $ respectfully):
+\begin{gather}
+		\psi_{long}
+=
+\begin{pmatrix}
+1\\
+\frac{E\mp \sqrt{E^2-g^2}}{g}\\
+-\frac{E\mp \sqrt{E^2-g^2}}{g}\\
+-1
+\end{pmatrix}
+e^{\pm\frac{ix\sqrt{E^2-g^2}}{u}}
+~~~~~~
+	\psi_{long}
+	=
+	\begin{pmatrix}
+	1\\
+	\frac{E\pm i\sqrt{g^2-E^2}}{g}\\
+	-\frac{E\pm i\sqrt{g^2-E^2}}{g}\\
+	-1
+	\end{pmatrix}
+	e^{\pm\frac{x\sqrt{g^2-E^2}}{u}}
+\end{gather}

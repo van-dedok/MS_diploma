@@ -18,4 +18,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}High momentum modes}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Eliminating high modes from boundary condition}{12}
+\contentsline {section}{\numberline {3.3}Eliminating longwave modes from boundary condition}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Low momenta and linearized Hamiltonian}{14}

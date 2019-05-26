@@ -7,6 +7,7 @@ A level-1 auxiliary file: chapters/contents.aux
 A level-1 auxiliary file: chapters/chap1_Intro.aux
 A level-1 auxiliary file: chapters/chap2_Model.aux
 A level-1 auxiliary file: chapters/chap3_stationary.aux
+A level-1 auxiliary file: chap3_ionization.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -48,45 +49,45 @@ Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for 
 while executing---line 2746 of file biblatex.bst
 Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
 while executing---line 2746 of file biblatex.bst
-You've used 3 entries,
+You've used 5 entries,
             6256 wiz_defined-function locations,
-            1193 strings with 8959 characters,
-and the built_in function-call counts, 11470 in all, are:
-= -- 754
-> -- 226
-< -- 35
-+ -- 345
-- -- 84
-* -- 730
-:= -- 1384
+            1210 strings with 9391 characters,
+and the built_in function-call counts, 21523 in all, are:
+= -- 1444
+> -- 392
+< -- 69
++ -- 590
+- -- 141
+* -- 1446
+:= -- 2417
 add.period$ -- 0
-call.type$ -- 3
-change.case$ -- 14
+call.type$ -- 5
+change.case$ -- 28
 chr.to.int$ -- 30
-cite$ -- 4
-duplicate$ -- 1322
-empty$ -- 1026
-format.name$ -- 133
-if$ -- 2280
+cite$ -- 8
+duplicate$ -- 2463
+empty$ -- 2006
+format.name$ -- 254
+if$ -- 4316
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 8
 missing$ -- 0
-newline$ -- 86
-num.names$ -- 76
-pop$ -- 748
+newline$ -- 144
+num.names$ -- 152
+pop$ -- 1436
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 54
 quote$ -- 0
-skip$ -- 340
+skip$ -- 619
 stack$ -- 0
-substring$ -- 1106
-swap$ -- 279
-text.length$ -- 54
+substring$ -- 2237
+swap$ -- 537
+text.length$ -- 93
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 90
+type$ -- 158
 warning$ -- 0
-while$ -- 203
+while$ -- 334
 width$ -- 0
-write$ -- 84
+write$ -- 140
 (There were 11 error messages)

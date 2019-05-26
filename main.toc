@@ -21,3 +21,25 @@
 \contentsline {section}{\numberline {3.3}Eliminating longwave modes from boundary condition}{12}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Low momenta and linearized Hamiltonian}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Subgap states}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Stationary supercurrent }{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.1}$ E $ \hspace {0pt} between $ \left |g_L\right | $ and $ g_R $}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{The case $ \left |g_L\right | > g_R $}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{The case $ \left |g_L\right | < g_R $}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.2}$ E $ \hspace {0pt} is greater than both $ \left |g_L\right | $ and $ g_R $}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Ionization}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Introducing the perturbation}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Tunnel Hamiltonian approach}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Multiphoton ionization}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{24}

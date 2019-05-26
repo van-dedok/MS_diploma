@@ -1,19 +1,120 @@
-\chapter{Figures}
+\chapter{Wavefunctions for the stationary contact}
+\label{app:wavefunctions_with_corrections}
 
-\vspace*{-3in}
+Here the eigenstates of the junction are presented in leading and subleading order of the tunneling constant $ t $. They are obtained with the methods from the chapter \ref{chap:stationary_properties} and written in the notation from the section \ref{sec:tunnel_hamiltonian}. Only low and medium momenta parts are presented here, as it's sufficient for the section \ref{sec:tunnel_hamiltonian}, which uses the formulas for from this appendix. The states are normalized as:
+\begin{gather}
+	\big\langle\gamma_{0}\big|\gamma_{0}\,\big>=1
+	~~~~
+	\big\langle\epsilon,R_{0}\,\big|\varepsilon,R_{0}\,\big>=N_{R}\left(\epsilon\right)\delta\left(\epsilon-\varepsilon\right)
+	~~~~
+	\big\langle\epsilon,L_{0}\,\big|\varepsilon,L_{0}\,\big>=N_{L}\left(\epsilon\right)\delta\left(\epsilon-\varepsilon\right)
+\end{gather}
+where
+\begin{gather}
+	N_{L}\left(\varepsilon\right)=\frac{4\pi u\sqrt{\varepsilon^{2}-g_{L}^{2}}\left(e^{2\ensuremath{\kappa_{L}\left(\varepsilon\right)}}+1\right)^{2}}{\varepsilon}
+	~~~~
+	N_{R}\left(\varepsilon\right)=\frac{4\pi u\sqrt{\varepsilon^{2}-g_{R}^{2}}\left(e^{2\eta_{R}\left(\varepsilon\right)}+1\right)^{2}}{\varepsilon}
+\end{gather}
+The diefinition of the $ \eta_{L,R} $, $ \eta_L $ and $ \kappa_R $ is given in the \ref{sec:stationary_supercurrent}. The indexes $ L,R $  near the spinors are relate to the wire, where this spinor is present.This reference can be used either in $ \abs{g_{L}}<g_{R} $ or in $ \abs{g_{L}}>g_{R} $ cases.
 
-\begin{figure}
-\vspace{2.4in}
-\caption{Armadillo slaying lawyer.}
-\label{arm:fig1}
-\end{figure}
-\clearpage
-\newpage
+The Majorana state is:
+\begin{gather}
+	\big<x\big|\gamma_{0}\,\big>=\frac{1}{2}\sqrt{\frac{g_{R}}{u}}\begin{pmatrix}-1\\
+	i\\
+	-i\\
+	1
+	\end{pmatrix}_{R}e^{-\frac{g_{R}x}{u}}
+	\\
+	\big<x\big|\gamma_{1}\,\big>=\frac{1}{2}\sqrt{\frac{g_{R}}{u}}\zeta t\left(e^{i\frac{\phi}{2}}+e^{-i\frac{\phi}{2}}\right)\left[\begin{pmatrix}-i\\
+	1\\
+	1\\
+	-i
+	\end{pmatrix}_{L}e^{-\frac{2\Delta x}{u}}-i\zeta\begin{pmatrix}-i\\
+	-1\\
+	1\\
+	i
+	\end{pmatrix}_{L}e^{-\frac{\left|g_{L}\right|x}{u}}\right]
+\end{gather}
 
-\begin{figure}
-\vspace{2.4in}
-\caption{Armadillo eradicating national debt.}
-\label{arm:fig2}
-\end{figure}
-\clearpage
-\newpage
+Continuous states from the right wire are:
+
+\begin{multline}
+	\big<x\big|E,\,R_{0}\big>=
+	\\
+	\left(-ie^{\eta_{R}\left(E\right)}-1\right)\begin{pmatrix}-1\\
+	-e^{\eta_{R}\left(E\right)}\\
+	e^{\eta_{R}\left(E\right)}\\
+	1
+	\end{pmatrix}_{R}e^{-\frac{ix\sqrt{E^{2}-g_{R}^{2}}}{u}}+\left(e^{\eta_{R}\left(E\right)}+i\right)\begin{pmatrix}-e^{\eta_{R}\left(E\right)}\\
+	-1\\
+	1\\
+	e^{\eta_{R}\left(E\right)}
+	\end{pmatrix}_{R}e^{\frac{ix\sqrt{E^{2}-g_{R}^{2}}}{u}}
+\end{multline}
+\begin{multline}
+	\big<x\big|E\,R_{1}\big>\Big|_{E<g_{L}}=
+	t\zeta\left(e^{2\eta_{R}\left(E\right)}-1\right)\left(e^{i\frac{\phi}{2}}+e^{-i\frac{\phi}{2}}\right)\times
+	\\
+	\times\left[\begin{pmatrix}-i\\
+	1\\
+	1\\
+	-i
+	\end{pmatrix}_{L}-e^{-\frac{2\Delta x}{u}}-\frac{2i\zeta}{\left(1+e^{-i\theta_{L}\left(E\right)}\right)}\begin{pmatrix}-ie^{-i\theta_{L}\left(E\right)}\\
+	-1\\
+	1\\
+	ie^{-i\theta_{L}\left(E\right)}
+	\end{pmatrix}_{L}e^{\frac{-x\sqrt{g_{L}^{2}-E^{2}}}{u}}\right]
+\end{multline}
+\begin{multline}
+	\big<x\big|E\,R_{1}\big>\Big|_{E>g_{L}}=
+	t\zeta\left(e^{2\eta_{R}\left(E\right)}-1\right)\left(e^{i\frac{\phi}{2}}+e^{-i\frac{\phi}{2}}\right)\times\\
+	\times
+	\left[\begin{pmatrix}-i\\
+	1\\
+	1\\
+	-i
+	\end{pmatrix}_{L}e^{-\frac{2\Delta x}{u}}-\frac{2i\zeta}{\left(1+ie^{-\kappa_{l}\left(E\right)}\right)}\begin{pmatrix}e^{-\kappa_{L}\left(E\right)}\\
+	-1\\
+	1\\
+	-e^{-\kappa_{L}\left(E\right)}
+	\end{pmatrix}_{L}e^{\frac{ix\sqrt{E^{2}-g_{L}^{2}}}{u}}\right]
+\end{multline}
+Continuous states from the left wire are:
+\begin{multline}
+	\big<x\big|\varepsilon,L_{0}\,\big>=\\\left(e^{\ensuremath{\kappa_{L}\left(\varepsilon\right)}}-i\right)\begin{pmatrix}1\\
+	-e^{\ensuremath{\kappa_{L}\left(\varepsilon\right)}}\\
+	e^{\ensuremath{\kappa_{L}\left(\varepsilon\right)}}\\
+	-1
+	\end{pmatrix}_{L}e^{+i\frac{\sqrt{\varepsilon^{2}-g_{L}^{2}}}{u}x}+\left(-1+ie^{\ensuremath{\kappa_{L}\left(\varepsilon\right)}}\right)\begin{pmatrix}e^{\ensuremath{\kappa_{L}\left(\varepsilon\right)}}\\
+	-1\\
+	1\\
+	-e^{\ensuremath{\kappa_{L}\left(\varepsilon\right)}}
+	\end{pmatrix}_{L}e^{-i\frac{\sqrt{\varepsilon^{2}-g_{L}^{2}}}{u}x}
+\end{multline}
+\begin{multline}
+	\big<x\big|\varepsilon,L_{1}\,\big>\Big|_{\varepsilon<g_{R}}=
+	\zeta t\left(e^{2\kappa_{L}\left(\varepsilon\right)}-1\right)\left(e^{i\frac{\phi}{2}}+e^{-i\frac{\phi}{2}}\right)
+	\times
+	\\
+	\times
+	\left[\frac{2i\zeta}{\left(-1+e^{i\theta_{R}\left(\varepsilon\right)}\right)}\begin{pmatrix}-1\\
+	ie^{i\theta_{R}\left(\varepsilon\right)}\\
+	-ie^{i\theta_{R}\left(\varepsilon\right)}\\
+	1
+	\end{pmatrix}_{R}e^{-x\frac{\sqrt{g_{r}^{2}-\varepsilon^{2}}}{u}}+\begin{pmatrix}1\\
+	-i\\
+	-i\\
+	1
+	\end{pmatrix}_{R}e^{-\frac{2\Delta x}{u}}\right]
+\end{multline}
+\begin{multline}
+	\big<x\big|\varepsilon,L_{1}\,\big>\Big|_{\varepsilon>g_{R}}=\zeta t\left(e^{2\kappa_{L}\left(\varepsilon\right)}-1\right)\left(e^{i\frac{\phi}{2}}+e^{-i\frac{\phi}{2}}\right)\times\\\times\left[\frac{2it\zeta}{\left(-1+ie^{-\eta_{R}\left(\varepsilon\right)}\right)}\begin{pmatrix}-1\\
+	-e^{-\eta_{R}\left(\varepsilon\right)}\\
+	e^{-\eta_{R}\left(\varepsilon\right)}\\
+	1
+	\end{pmatrix}_{R}e^{\frac{ix\sqrt{E^{2}-g_{R}^{2}}}{u}}+\begin{pmatrix}1\\
+	-i\\
+	-i\\
+	1
+	\end{pmatrix}_{R}e^{-\frac{2\Delta x}{u}}\right]
+\end{multline}

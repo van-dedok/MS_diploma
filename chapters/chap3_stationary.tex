@@ -1,5 +1,6 @@
 \chapter{Stationary properties} 
-
+\label{chap:stationary_properties}
+The stationary properties of the system are defined by it's spectrum. In this chapter the boundary condition is introduced, wavefunctions of the homogeneous wires are obtained, undergap states are investigated and  and the stationary supercurrent is estimated.
 
 \section{Boundary condition}
 
@@ -114,6 +115,7 @@ E\Psi
 
 
 \section{Eliminating longwave modes from boundary condition}
+\label{sec:elimintaing_longwave}
 As the Majorana mode acts at low energies, it's expected to be predominantly longwave. This argument is in accord with \cite{Oreg_2010} and \cite{Lutchyn_2010}, where the majorana state was an eigenstate of a linearized Hamiltonian, which is relevant only for longwave physics. So, it's reasonable to eliminate the shortwave modes from the problem, reformulating the boundary condition (\ref{short-long_hamiltonian}).
 
 The wave function can be decomposed in shortwave and  longwave  parts: $ \Psi = \Psi_{short}+\Psi_{long} $. inserting it into the(\ref{short-long_hamiltonian}) and using the fact, that $ p_{long}\ll p_{short} \approx 2mu s_z \sigma_z $, one can obtain at the boundary:
@@ -197,6 +199,7 @@ A^{*} & -A^{*}e^{i\left(\sigma_{z}\gamma+\varphi\right)} & 1 & -e^{i\sigma_{z}\g
 where $ \phi=\phi_R-\phi_L $. Note, that from here it's obvious, that in any physical quantity, calculated with this model, can depend only on phase difference $ \varphi $,  but not on the $ \phi_L $ or $ \phi_R $ separately.
 
 \section{Low momenta and linearized Hamiltonian}
+\label{sec:linearized_hamiltonian}
 
 To utilize boundary condition (\ref{bc_matrix}) or (\ref{bc_matrix_phases}), it's necessary to find low momenta wavefunctions in homogenious wire. For this purpose one can use s linearized version of the Hamiltonian (\ref{bulk_Hamiltonian}), like in \cite{Oreg_2010} and \cite{Lutchyn_2010}:
 \begin{gather}
@@ -267,7 +270,7 @@ Now it's time to present this wavefunctions in original BdG basis. The expressio
 
 Medium wave states are (propagating version for $ E>2\Delta $ and decaying version for $ E<2\Delta $):
 \begin{gather}
-	\psi_{medium}=
+	\psi^{out,~in}_{medium}=
 	\begin{pmatrix}
 	1
 	\\
@@ -279,7 +282,7 @@ Medium wave states are (propagating version for $ E>2\Delta $ and decaying versi
 	\end{pmatrix}
 	e^\frac{\pm i x\sqrt{E^2-4\Delta^2}}{u}
 	~~~~~
-	\psi_{medium}=
+	\psi^{grow,~dec}_{medium}=
 	\begin{pmatrix}
 	1
 	\\
@@ -303,9 +306,9 @@ e^{\pm\frac{\Delta x}{2u}}  $
 
 will be used.
 
-Longwavestates (for energies $ E\sim g_{L,R} $, for $ E>g $ and $ E<g $ respectfully):
+Longwave states (for energies $ E\sim g_{L,R} $, for $ E>g $ and $ E<g $ respectfully):
 \begin{gather}
-		\psi_{long}
+		\psi^{out,~in}_{long}
 =
 \begin{pmatrix}
 1\\
@@ -315,7 +318,7 @@ Longwavestates (for energies $ E\sim g_{L,R} $, for $ E>g $ and $ E<g $ respectf
 \end{pmatrix}
 e^{\pm\frac{ix\sqrt{E^2-g^2}}{u}}
 ~~~~~~
-	\psi_{long}
+	\psi^{grow,~dec}_{long}
 	=
 	\begin{pmatrix}
 	1\\
@@ -324,4 +327,132 @@ e^{\pm\frac{ix\sqrt{E^2-g^2}}{u}}
 	-1
 	\end{pmatrix}
 	e^{\pm\frac{x\sqrt{g^2-E^2}}{u}}
+\end{gather}
+\section{Subgap states}
+\label{sec:Subgap_states}
+\textbf{TO DO}
+\section{Stationary supercurrent }
+
+\label{sec:stationary_supercurrent}
+The stationary supercurrent for a Josephson contact is defined by \cite{Beenakker_three_universal}:
+
+\begin{multline}
+\label{beenakker_current}
+	I =
+	-
+	\frac{2e}{\hbar}
+	\sum_p
+	\tanh\br{\frac{\varepsilon_p}{2k_BT}}
+	\frac{d \varepsilon_p}{d\varphi}
+	-
+	\\
+	-
+	\frac{4e}{\hbar}
+k_BT
+	\int\limits_{cont.}d\varepsilon \log
+	\left[
+		2\cosh\br{\frac{\varepsilon}{2k_BT}}
+	\right]
+	\frac{d\rho}{d\varphi}
+	+
+	\frac{2e}{\hbar}
+	\frac{d}{d\varphi}
+	\int
+	d y
+		\frac{\abs{\Delta}^2}{\abs{ c}}
+\end{multline}
+Here $ \epsilon_p $ are the energies of the states localized near the barrier, $ \rho$ is the density of states and $ c\br{\textbf{r}} $ is the interacion constant of the BCS theory, $ \varphi $ is a phase difference, $ k_B $ is a Boltzmann's constant and $ T $ is the temperature.
+The first term comes from the discrete spectra and the sum is taken over all states in it, the second term is the current from continuous spectra and the third  term comes from inhomogeneity of the order parameter. As pointed in \cite{Beenakker_three_universal}, despite being generally nonzero, this last term doesn't contribute when step-model functions $ \Delta $ like in (\ref{full_hamiltonian_suppl})  are used.
+
+After ommiting the third term and taking the low temperature limit one rewrites (\ref{beenakker_current}) as:
+\begin{gather}
+\label{current_low_T}
+		I =
+		-
+	\frac{2e}{\hbar}
+	\sum_p
+	\frac{d \varepsilon_p}{d\varphi}
+	-
+	\frac{2e}{\hbar}
+	\int\limits_{cont.}\varepsilon d\varepsilon 
+	\frac{d\rho}{d\varphi}
+\end{gather}
+
+Here the only unknown quantity  is the density of states. As there is a derivative over $ \phi $ taken, one need to find the phase dependent part of $\rho  $ only. It can be done by using the relation between the density of states and the scattering matrix \cite{Akkermans_Avron_Shapiro_scattering_matrix}:
+\begin{gather}
+\label{smatrix_and_DOS}
+	\rho\br{\phi}=\frac{1}{2\pi i}\frac{\partial}{\partial \varepsilon}\log \det S +const.
+\end{gather}
+
+As was showed in the section \ref{sec:Subgap_states}, there are no undergap states in triv-top contact except Majorana state. But this state lays exactly on zero energy regardless of the phase difference, so the derivative in the first term of (\ref{current_low_T}) will be zero and no supercurrent from the Majorana state is present.
+
+The scattering matrix can be found with the help of boundary condition (\ref{bc_matrix_phases}) and the results of section (\ref{sec:linearized_hamiltonian}). It's dimension depends of the number of propagating modes at given energy. In this section only the triv.-top. contact will be considered, while the scattering matrices and DOS for other types of contacts will be given in the appendix.
+
+The process of building s-matrix is the following. Firstly, it's necessary to consider an energy and all the propagating  wavefunctions at this energy. Among them there are wave functions, localized near the barrier ($ \mathrm{Im}p>0 $), propagating towards the barrier ($  p<0 $), and propagating from the barrier ($ p<0 $). Let's denote these  three sets as $ X_{local} $, $ X_{in}  $ and $ X_{out} $. Each wavefunction $ \psi_i $ may contribute with it's own coefficient $ C_i $ --- denote the vectors of the coefficients  $ \vec{Y}_{local} $, $ \vec{Y}_{in}  $ and $ \vec{Y}_{out} $ . The s-matrix connects the coefficients from $ \vec{Y}_{in}  $ to $ \vec{Y}_{out} $ in a following wav:
+\begin{gather}
+	\vec{Y}_{out} = \hat{S}\vec{Y}_{in}
+\end{gather}
+to find a row of $ \hat{S} $, one should be taken equal to unity, than take  the functions from $ X_{local} $, $ X_{out} $ and one chosen function $ \Psi_{in,chosen} $ from $ X_{in} $ and make the linear combination of the form: $\Upsilon =\psi^{in}_{chosen} + c^{out}_1\Psi^{out}_1+c^{out}_2\Psi^{out}_2+...+c^{out}_1\Psi^{out}_1+c^{local}_2]Psi^{local}_2+... $. The one needs to act with the matrix $ \ref{bc_matrix_phases} $ on $ \Upsilon $ and obtain a set of equations for the coeffixints $ {c^{in}_i} $ and $ {c^{local}_i} $. This system should be solved,and the resulting coefficients ${c^{in}_i}  $ shold form a row in $ \hat{S} $, corresponding to $ \Psi_{in,chosen} $ . To construct the entire matrix $ \hat{S} $, one should repeat this procedure for every function $ \Psi_{in,chosen} $ in $ X_{in} $.
+
+The coefficients of $ \hat{S} $ generally depend on the normalization of the wavefunctions in $ X_{local} $, $ X_{in}  $ and $ X_{out} $. To make the formula (\ref{smatrix_and_DOS}) valid, one must take the functions from $ X_{local} $ normalized to unity and the functions from $ X_{in}  $, $ X_{out}$ normalized to a flux\cite{Akkermans_Avron_Shapiro_scattering_matrix}: $ \bra{\psi_{in,out}}v \ket{\psi_{in,out}} $ with $ v $ for our problem being $ v=u\sigma_z\tau_z $.
+
+Here some additional parameters will be used. When the given wavefunction is localized ($ e<g $), $ \theta $-parametrization is used:
+
+\begin{gather}
+\theta_{L,R}:~~~\sin \theta_{L,R} =\frac{E}{g_{L,R}},~~~\cos \theta_{L,R}>0
+\end{gather}
+this parametrization is useful for both trivial and topological wires. When the wavefunction propagates ($ E>g $), the $ \eta $- ot $ \kappa $-parametrization is used, depending on the sign of $ g $:
+\begin{gather}
+	\eta_R: ~~~\cosh\eta_R = \frac{E}{g_R},~~~\sinh \eta_R >0
+	~~~~~~~~
+	\kappa_L: ~~~ \cosh\kappa_L= \frac{E}{\abs{g_{L}}},~~~\sinh \kappa_L>0
+\end{gather}
+The way to memorize it is that the $ \eta $ is used for a topological wire, whether the $ \kappa $ is used for a trivial wire. All the parameters $ \theta_{L,R}  $,  $\kappa_L $ and $ \eta_R $ are always real and positive when used.
+
+As the dimension of  s-matrix depends on the number of propagating modes, and thus on the energy, it's necessary to investigate different energy ranges separately 
+\subsection{$ E $ \hspace{0pt} between $ \abs{g_L} $ and $ g_R $}
+	
+Recall, that the trivial wire is placed on the left of the barrier while the topological wire is on the right of it. There are two slightly distinct cases, which differ by relation between $ g_L $ and $ g_R $.
+\subsubsection{The case $ \abs{g_L} > g_R $}
+
+For $ g_R<E<\abs{g_L} $ there is only one state in $ X_{in} $, so the s-matrix has the dimension 1, so it's determinant coincides with it's only matrix element, which reads:
+\begin{gather}
+\hat{S}
+=
+\frac{e^{\eta _R}-i}{e^{\eta _R}+i}
++
+	\frac{2 t^2  \left(e^{-i \frac{\phi}{2} }+e^{i \frac{\phi}{2} }\right)^2 \left(-1+e^{i \theta _L}\right) \left(e^{2 \eta _R}-1\right)}{\left(1+e^{i \theta _L}\right) \left(e^{\eta _R}+i\right){}^2}
+	+
+	O\br{t^2}
+\end{gather}
+\subsubsection{The case $ \abs{g_L} < g_R $}
+When $ \abs{g_L}<E<g_R $ there is also only one state in $ X_{in} $ and the s-matrix is:
+\begin{gather}
+\hat{S}
+=
+	\frac{e^{\text{$\kappa $L}}-i}{e^{\text{$\kappa $L}}+i}
+	-
+	\frac{2 t^2 
+		\left(-1+e^{i \text{$\theta $R}}\right) \left(e^{2 \text{$\kappa $L}}-1\right)  \left(e^{-i \frac{\phi}{2} }+e^{i \frac{\phi}{2} }\right)^2
+	}{\left(1+e^{i \text{$\theta $R}}\right) \left(e^{\text{$\kappa $L}}+i\right)^2}
+	+O\left(t^2\right)
+\end{gather}
+
+\subsection{$ E $ \hspace{0pt} is greater than both $ \abs{g_L} $ and $ g_R $}
+
+Here there are two states in $ X_in $ -- one in the right wire and one in the left. Thus the s-matrix has the dimension equal to two and reads, up to a $ t^2 $ order:
+\begin{gather}
+\!\!\!\!\!\!\!\!
+\hat{S}
+=
+	\begin{pmatrix}
+	\frac{i+e^{\kappa _L}}{i-e^{\kappa _L}}
+	+
+	\frac{2 e^{-i \phi } \left(1+e^{i \phi }\right)^2 \left(-i+e^{\eta _R}\right) \left(-1+e^{2 \kappa _L}\right) t^2}{\left(i+e^{\eta _R}\right) \left(-i+e^{\kappa _L}\right){}^2}+ & 
+	\frac{2 i e^{-i \phi } \left(1+e^{i \phi }\right) \sqrt{\left(-1+e^{2 \eta _R}\right) \left(-1+e^{2 \kappa _L}\right)} t}{\left(i+e^{\eta _R}\right) \left(-i+e^{\kappa _L}\right)} \\
+	~
+	\\
+	\frac{2 \left(1+e^{i \phi }\right) \sqrt{\left(-1+e^{2 \eta _R}\right) \left(-1+e^{2 \kappa _L}\right)} t}{\left(i+e^{\eta _R}\right) \left(1+i e^{\kappa _L}\right)} & 
+	\frac{-i+e^{\eta _R}}{i+e^{\eta _R}}-\frac{2 e^{-i \phi } \left(1+e^{i \phi }\right)^2 \left(-1+e^{2 \eta _R}\right) \left(i+e^{\kappa _L}\right) t^2}{\left(i+e^{\eta _R}\right){}^2 \left(-i+e^{\kappa _L}\right)} \\
+	\end{pmatrix}
 \end{gather}

@@ -83,5 +83,64 @@
     \field{journaltitle}{Phys. Rev. Lett.}
     \field{year}{2010}
   \endentry
+
+  \entry{Beenakker_three_universal}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BC}{%
+         family={Beenakker},
+         familyi={B\bibinitperiod},
+         given={C.W.J.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BC1}
+    \strng{fullhash}{BC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{235\bibrangedash 253}
+    \field{title}{Three "universal" mesoscopic Josephson effects}
+    \field{volume}{109}
+    \field{journaltitle}{Transport Phenomena in Mesoscopic Systems}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Akkermans_Avron_Shapiro_scattering_matrix}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AE}{%
+         family={Akkermans},
+         familyi={A\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Auerbach},
+         familyi={A\bibinitperiod},
+         given={Assa},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AJE}{%
+         family={Avron},
+         familyi={A\bibinitperiod},
+         given={Joseph\bibnamedelima E.},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Shapiro},
+         familyi={S\bibinitperiod},
+         given={Boris},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AE+1}
+    \strng{fullhash}{AEAAAJESB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{76}
+    \field{title}{Relation between persistent currents and the scattering
+  matrix}
+    \field{volume}{66}
+    \field{journaltitle}{Physical Review Letters}
+    \field{year}{1991}
+  \endentry
 \endsortlist
 \endinput

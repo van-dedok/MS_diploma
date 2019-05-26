@@ -3,9 +3,12 @@
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\pdy}{\partial_y}
 \newcommand{\pd}[1]{\partial_{#1}}
+\newcommand{\brf}[1]{\left\{#1\right\}}
 
 \chapter{The model}
+\label{chap:model}
 
+The model being studied here mostly inspired by the works \cite{Oreg_2010} and \cite{Lutchyn_2010}. Here, however, some more complications are present to make the it better reflecting possible experimental situation and catch some higher energy effects that in \cite{Oreg_2010} and \cite{Lutchyn_2010}. 
 \section{Problem statement}
 
 The system under consideration consists of two 1D s-type superconducting wires connected with a tunnel junction. There is a strong spin-orbit coupling assumed to be present and external magnetic field is applied in the direction perpendicular to the wire. The Hamiltonianm of the bulk of each wire, written in the Bogoliubov-de Gennes formalism, is similar to the ones presented in \cite{Oreg_2010} and \cite{Lutchyn_2010}:
@@ -81,10 +84,10 @@ u p \sigma_z \tau_z
 +
 B\sigma_x	
 +
-\Delta\tau_{\phi\br{y}}
+\Delta\frac{y}{den}\tau_{\phi\br{y}}
 \end{equation}
 with
-\begin{equation}
+\begin{gather}
 \label{full_hamiltonian_suppl}
 	\mu\br{y}
 	=
@@ -94,25 +97,29 @@ with
 		\mu_R, ~~~~ \frac{L}{2}< y  
 	\end{cases}
 	~~~~~~~~
+	\Delta\br{y}
+	=
+	\begin{cases}
+		\Delta,&~~~  y>\frac{L}{2},~y<-\frac{L}{2}\\
+		0,
+		&~~ -\frac{L}{2} <y <\frac{L}{2}\\
+	\end{cases}
+		\\
 	\phi\br{y}
 	=
 	\begin{cases}
-		\phi_L,&~~~  -\frac{L}{2}<y\\
-		\phi_R
-		\frac{\frac{L}{2}+y}{L}
-		+
-		\phi_L
-		\frac{\frac{L}{2}-y}{L},
-		&~~ -\frac{L}{2} <y <\frac{L}{2}\\
-		\phi_R, &~~~~ \frac{L}{2}< y 
+	\phi_L,&~~~  -\frac{L}{2}<y\\
+	\phi_R, &~~~~ \frac{L}{2}< y 
 	\end{cases}
-\end{equation}
+\end{gather}
 with $ L $ being the size of the junction. Note, that the parameters $ B $, $ u $, $ \Delta $ and $ m $ are taken to be constant within all the system.
  
   This setup is close to the one of the models  considered by Oreg et al. in \cite{Oreg_2010} ("\textit{Spatially varying $ \mu $}" section). The difference is in the profile of $ \mu\br{y} $ -- in \cite{Oreg_2010}  there is a step in effective chemical potential, while here this function possesses a well.  
   
  In \cite{Oreg_2010} it's also discussed that the Majorana fermion appear at the inhomogeneity if the relation $ B-\sqrt{\mu^2+\Delta^2} $ is greater than zero at one side of the step in $ \mu\br{y} $ and lesser than zero at another side of it. As will be shown further, this is also relevant to the  system presented here. Note, that if $ B > \left|\Delta\right| $ this condition can always be satisfied by choosing appropriate $ \mu_L $ and $ \mu_R $. 
  
+ When the two wires of different sighn of $ g $ are assumed in this work, the trivial wire will always be on the left, while the topological wire will always be on the right.
+
  The model, described by (\ref{full_hamiltonian}) and (\ref{full_hamiltonian_suppl}) possesses a big number of external parameters. Different areas in this parameter space require different approaches and sometimes lead to completely different physics. Here the certain experimentally reasonable constraints are assumed:
   \begin{gather}
  \label{constraints}
@@ -160,8 +167,8 @@ with $ \xi_p =\frac{p^2}{2m}-\mu$. This dependence, presented at fig. \ref{fig:s
 		 b) spin-orbit coupling added: $ 	H = \frac{p^2}{2m}-\mu_0 + u p \sigma_z ~~~$
 		 c) magnetic field added: $ 	H = \frac{p^2}{2m} 	-\mu_0  +u p \sigma_z  + B\sigma_x ~~~~~$
 		 d) BdG formalism introduced: $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	~~~ $
-		 e) complete Hamiltonian of homogeneous wire: $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	+ \Delta\tau_\phi $.
-		 The parameters of the Hamiltonians for plotting are: $ B=0.2 $, $ \Delta=0.3 $, $ u=0.9 $, $ m = 1 $, $ \mu = 0.11 $ 
+		 e) The complete Hamiltonian of homogeneous wire: $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	+ \Delta\tau_\phi $.
+		 The parameters of the Hamiltonians for the plotting are: $ B=0.2 $, $ \Delta=0.3 $, $ u=0.9 $, $ m = 1 $, $ \mu = 0.11 $ 
  }
 	\label{fig:spectrum}
 \end{figure}

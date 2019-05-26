@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  26 MAY 2019 19:14
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  26 MAY 2019 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,7 +949,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
 (./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux)
 (./chapters/chap3_stationary.aux) (./chapters/chap4_ionization.aux)
-(./chapters/appb.aux))
+(./chapters/appb.aux) (./chapters/appc.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -968,7 +968,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 18.
 LaTeX Font Info:    Try loading font information for EU1+lmr on input line 18.
- (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmr.fd
 File: eu1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    ... okay on input line 18.
@@ -1194,24 +1195,33 @@ Appendix A.
 
 
 
-] [25]) [26] [27
+] [25]) [26]
+\openout2 = `chapters/appc.aux'.
+
+ (./chapters/appc.tex
+Appendix B.
+[27
 
 
-] (./main.aux (./chapters/cover.aux)
-(./chapters/contents.aux) (./chapters/chap1_Intro.aux)
-(./chapters/chap2_Model.aux) (./chapters/chap3_stationary.aux)
-(./chapters/chap4_ionization.aux) (./chapters/appb.aux))
+
+]) [28] [29
+
+
+] (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
+(./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux)
+(./chapters/chap3_stationary.aux) (./chapters/chap4_ionization.aux)
+(./chapters/appb.aux) (./chapters/appc.aux))
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20361 strings out of 493068
- 423197 string characters out of 6137720
- 1179536 words of memory out of 5000000
- 23984 multiletter control sequences out of 15000+600000
+ 20371 strings out of 493068
+ 423361 string characters out of 6137720
+ 1181828 words of memory out of 5000000
+ 23987 multiletter control sequences out of 15000+600000
  11721 words of font info for 70 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 42i,18n,68p,10402b,4348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,68p,10402b,4346s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (27 pages).
+Output written on main.pdf (29 pages).

@@ -1,0 +1,61 @@
+\chapter{Multiphoton ionization} 
+
+This appendix is focused on high-order perturbation theory, ionization rates in particular. 
+
+\section{Basics about Green's functions}
+
+The starting point is the general setup of a discrete bound state subject to a weak and slow perturbation $ V(t) $.The bound state energy is zero. The goal is to obtain the ionization rate. The time evolution of the wave function obeys the Schroedinger equation:
+\begin{gather}
+\label{shr_eq_general}
+	i\frac{\partial}{\partial t}\Psi=(H_{0}+V)\Psi
+\end{gather}
+
+In the absence of perturbations, the solution is $ \Psi(t)=\Psi_{0} $ (since $ E_{0}=0 $ it is literally time-independent). For further analysis it's convenient to consider the unperturbed retarded Green's function $ G^{R}(E) $ defined so that:
+\begin{gather}
+\label{green_function_def}
+	G^{R}(E)(E+i0-H_{0})=1
+\end{gather}
+If the bound state is normalized, $ \langle\gamma|\gamma\rangle= $1 and the continuous spectrum is normalized according to $ \langle E|E'\rangle=N(E)\delta(E-E') $ with some reasonably nice $ N(E $) then:
+\begin{gather}
+\mathbb{I}=|\gamma\rangle\langle\gamma|+\int\frac{|E\rangle\langle E|}{N(E)}dE
+\end{gather}
+Similarly, $ H_{0} $ and $ G^{R} $ in the energy representation:
+\begin{gather}
+	H_{0}=\int\frac{|E\rangle\langle E|}{N(E)}EdE
+	\qquad
+	G^{R}(\epsilon)=\frac{|\gamma\rangle\langle\gamma|}{\epsilon+i0}+\int\frac{|E\rangle\langle E|}{(\epsilon+i0-E)N(E)}dE
+\end{gather}
+Integrals over $ E $ include all states in the continuous spectrum. Where the latter is degenerate, a summation over the degenerate states must be carried out. From now on the "$ R $" index for retarded Green's function will be omitted.
+
+In time representation the Green's function obeys:
+\begin{gather}
+	\left(i\frac{\partial}{\partial t_{2}}-H_{0}\right)G(t_{2},t_{1})=\delta(t_{2}-t_{1})
+\end{gather}
+One can formally introduce the Green's function in energy representation with two arguments as a Fourier-transform of $ G(t_{2},t_{1}) $:
+\begin{gather}
+	G\br{E_2,E_1}
+	=
+	\iint
+	e^{iE_2t_2-iE_1t_1}
+	G(t_{2},t_{1})
+	dt_1
+	dt_2
+\end{gather}
+As $ H_0 $ is time independent, $ G\br{t_2,t_1}=G\br{t_2-t_1,0} $, so:
+\begin{gather}
+	G\br{E_2,E_1}=2\pi \delta\br{E_2-E_1} G\br{E_1}
+\end{gather}
+One can also find, that for any eigenstate $ \ket{E_0} $
+\begin{gather}
+	G\br{t}\ket{E_0}
+	=
+	-ie^{-iE_0t}\theta_H\br{t}\ket{E_0}
+\end{gather}
+With the help of Green's function the Schroedinger equation (\ref{shr_eq_general}) can be solved as:
+\begin{multline}
+\Psi(t)=\Psi_{0}+\int G_{0}(t-t')V(t')\Psi_{0}(t')dt'+
+\\
+\iint G_{0}(t-t')V(t')G_{0}(t'-t'')V(t'')\Psi_{0}(t'')dt'dt''+\dots
+\end{multline}
+where the $ \Psi_0 $ is unperturbed wavefunction.
+\section{Fermi Golden Rule (generalization)}

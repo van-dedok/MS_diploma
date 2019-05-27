@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  26 MAY 2019 20:23
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  27 MAY 2019 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1204,24 +1204,24 @@ Appendix B.
 
 
 
-]) [28] [29
+] [28] [29] [30]) [31] [32
 
 
-] (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
-(./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux)
-(./chapters/chap3_stationary.aux) (./chapters/chap4_ionization.aux)
-(./chapters/appb.aux) (./chapters/appc.aux))
+] (./main.aux (./chapters/cover.aux)
+(./chapters/contents.aux) (./chapters/chap1_Intro.aux)
+(./chapters/chap2_Model.aux) (./chapters/chap3_stationary.aux)
+(./chapters/chap4_ionization.aux) (./chapters/appb.aux) (./chapters/appc.aux))
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20371 strings out of 493068
- 423361 string characters out of 6137720
- 1181828 words of memory out of 5000000
- 23987 multiletter control sequences out of 15000+600000
+ 20374 strings out of 493068
+ 423443 string characters out of 6137720
+ 1181864 words of memory out of 5000000
+ 23990 multiletter control sequences out of 15000+600000
  11721 words of font info for 70 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  42i,18n,68p,10402b,4346s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (29 pages).
+Output written on main.pdf (32 pages).

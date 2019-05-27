@@ -53,9 +53,79 @@ One can also find, that for any eigenstate $ \ket{E_0} $
 \end{gather}
 With the help of Green's function the Schroedinger equation (\ref{shr_eq_general}) can be solved as:
 \begin{multline}
+\label{general_expression_for the_wavefunction}
 \Psi(t)=\Psi_{0}+\int G_{0}(t-t')V(t')\Psi_{0}(t')dt'+
 \\
 \iint G_{0}(t-t')V(t')G_{0}(t'-t'')V(t'')\Psi_{0}(t'')dt'dt''+\dots
 \end{multline}
-where the $ \Psi_0 $ is unperturbed wavefunction.
-\section{Fermi Golden Rule (generalization)}
+where the $ \Psi_0 $ is unperturbed wavefunction. This equation can be rewriteen  by the introducion 
+\section{Fermi Golden Rule (first order)}
+
+Consider first the lowest order to the Fermi Golden rule by only keeping the linear term in $ V $. Let the Fourier decomposition of $ V $ be:
+\begin{gather}
+	V(t)=\sum_n V_{n}e^{-i\omega_{n}t}
+\end{gather}
+(Hermiticity demands $ V(t)=V(t)^{*} $ so that $ V_{n}=V_{-n}^{*} $). Suppose there is an unperturbed continuous spectrum parameterized by $ E $, with $ \langle E|E'\rangle=f(E)\delta(E-E') $. The first step is to calculate $ \langle E|\Psi(t)\rangle $, i.e. the quantum amplitude of being in state $ |E\rangle $ at time $ t $. It is:
+\begin{multline}
+	\langle E|\Psi(t)\rangle=\langle E|\int G_{0}(t-t')V(t')\Psi_{0}(t')dt'\rangle=\int\langle E|G_{0}(t-t')V(t')|\Psi_{0}\rangle dt'=\\=\int\int\langle E|G_{0}(t-t')|E'\rangle\langle E'|V(t')|\Psi_{0}\rangle dt'\frac{dE'}{N(E)}
+	\\=\int e^{-i(t-t')E}\theta_{H}(t-t')\langle E|V(t')|\Psi_{0}\rangle dt'=\\=e^{-iEt}\sum_{n}\int e^{it'(E-\omega_{n})}\theta_{H}(t-t')\langle E|V_{n}|\Psi_{0}\rangle dt'
+\end{multline}
+
+Assuming that the perturbation was turned on at $ t'=0 $ the integral over $ t' $ is taken from $ t_{0} $ to $ t $ and gives:
+\begin{gather}
+	\langle E|\Psi(t)\rangle=e^{-iEt}\sum_{n}\langle E|V_{n}|\Psi_{0}\rangle\frac{e^{it(E-\omega)}-1}{i(E-\omega_{n})}
+\end{gather}
+
+Thus, the probability density of being in the state $ |E\rangle $ is (omit all frequencies except the resonant on should be ommited since the contributions from non-resonant frequencies can be neglected at long times):
+\begin{gather}
+	\rho(E)=|\langle E|V_{n}|\Psi_{0}\rangle|^{2}\frac{4\sin^{2}\frac{t(E-\omega_{n})}{2}}{(E-\omega_{n})^{2}}
+\end{gather}
+so that the probability of being in a state between $ E $ and $ E+\delta E $ is at large times:
+
+\begin{multline}
+	P(E+\delta E,E)=|\langle E|V_{n}|\Psi_{0}\rangle|^{2}\intop_{E}^{E+\delta E}\frac{dE}{N(E)}\frac{4\sin^{2}\frac{t(E-\omega_{n})}{2}}{(E-\omega_{n})^{2}}=\\=2t|\langle E|V_{n}|\Psi_{0}\rangle|^{2}\intop_{E}^{E+\delta E}\frac{d(tE/2)}{N(E)}\frac{4\sin^{2}\frac{t(E-\omega_{n})}{2}}{t^{2}(E-\omega_{n})^{2}}=\\=2t|\langle E|V_{n}|\Psi_{0}\rangle|^{2}\frac{\pi}{N(E)}\theta_{H}(\omega_{n}-E)\theta_{H}(E+\delta E-\omega_{n})
+\end{multline}
+In other words, the probability density at large t behaves exactly like the $ \delta $-function:
+\begin{gather}
+	\rho(E)=2\pi|\langle E|V_{n}|\Psi_{0}\rangle|^{2}\delta(E-\omega_{n})
+\end{gather} 
+which is the well-known Fermi Golden rule. (Note, that the probability is $ dP=\rho(E)dE/f(E) $ – do not forget the normalization). Thus, the ionization rate (i.e. $ P/t $) for a single photon is expressed as:
+\begin{gather}
+\label{golden_reul_first_order}
+	I=\frac{2\pi|\langle E|V_{n}|\Psi_{0}\rangle|^{2}}{f(E)}
+\end{gather}
+\section{Fermi Golden Rule (high order)}
+Tho treat the higher-order perturbation theory it's convenient to rewrite (\ref{general_expression_for the_wavefunction}) as:
+\begin{gather}
+	\Psi(t)=\Psi_{0}+\int\int G_{0}(t-t')W(t',t'')\Psi_{0}(t'')dt'dt''
+\end{gather}
+where W incorporates all powers of perturbation theory:
+\begin{gather}
+	W=V+VGV+VGVGV+\dots
+\end{gather}
+The perturbation $ V $ in energy space is:
+\begin{multline}
+	V(E',E)\equiv\int V(t',t)e^{it'E'-iEt}dt'dt=\int V(t)e^{i(E'-E)t}dt=\\=\sum_{n}V_{n}\int e^{i(E'-E-\omega_{n})t}dt=\sum_{n}V_{n}2\pi\delta(E'-E-\omega_{n})
+\end{multline}
+The second term of the perturbation theory $ W_{2}=VGV $ in energy representation reads:
+\begin{multline}
+	W_{2}(E_{2},E_{1})=\int V(E_{2},E)G(E,E')V(E',E_{1})\frac{dEdE'}{(2\pi)^{2}}=\\\sum_{nm}V_{n}2\pi\delta(E_{2}-E-\omega_{n})G^{R}(E)V_{m}2\pi\delta(E-E_{1}-\omega_{m})\frac{dE}{2\pi}=\\\sum_{nm}V_{n}G^{R}(E_{1}+\omega_{m})V_{m}2\pi\delta(E_{2}-E_{1}-\omega_{n}-\omega_{m})
+\end{multline} 
+Very similarly, the $ N $-th-order term is:
+\begin{gather}
+	W_{N}(E_{2},E_{1})=\sum_{n_{1},\dots,n_{N}}2\pi\delta\left(E_{2}-E_{1}-\sum_{i=1}^{N}\omega_{n_{i}}\right)V_{n_{N}}\prod_{j=1}^{N-1}G^{R}\left(E_{1}+\sum_{s=1}^{j}\omega_{n_{s}}\right)V_{n_{j}}
+\end{gather}
+
+The above expression sums over all processes involving N photons. Note how the Green's functions contains the cumulative energy of all photons absorbed by the time. The $ \delta $-function at the start of the expression indicates that the energy is changed by $ \sum\omega_{n_{i}} $. It makes more sense to sort processes within $ W $ not by photon count $ N $ but rather by the total energy gained, since the total ionization rate should be dominated by ionization to the lowest accessible continuum state. Defining this activation energy as $ \mathcal{E} $, write:
+\begin{gather}
+W_{\mathcal{E}}(E_{2},E_{1})=2\pi\delta(E_{2}-E_{1}-\mathcal{E})w_{\mathcal{E}}(E_{1})\\
+\label{ionization_key}
+w_{\mathcal{E}}(E)=\sum_{\{n_{i}\}:\mathcal{E}}V_{n_{N}}\prod_{j=1}^{N-1}G^{R}\left(E+\sum_{s=1}^{j}\omega_{n_{s}}\right)V_{n_{j}}
+\end{gather}
+The summation is over all sets of photons $ {n_{i}} $ that total an energy of $ \mathcal{E} $, i.e. such sets that $ \sum_{i}^{N}\omega_{n_{i}}=\mathcal{E} $. The photon number N itself depends on the particular photon set $ n_{i} $. The total composite perturbation $ W $ can be written as a sum of $ W_{\mathcal{E}} $ with different $ \mathcal{E} $. However, only one term is relevant --- the one with $ \mathcal{E}=\min{|g_{L}|,|g_{L}| }$. (If the elementary frequency quantum $ \omega $ is large enough, this is replaced by the lowest $ \mathcal{E} $ that surpasses the minimum gap). 
+
+Now  the Fermi Golden rule result (\ref{golden_reul_first_order}) can be rederived 	for $ W_{\mathcal{E}} $. It's easy ti see that $ W $ has the same energy structure as the single-photon perturbation $ V $. Both operators simply shift the energy. Thus, one may simply put $ W_{\mathcal{E}} $ into the Fermi Golden rule instead of $ V $ to get the full-theory results:
+\begin{gather}
+	I=\frac{2\pi|\langle\mathcal{E}|w_{\mathcal{E}}|\Psi_{0}\rangle|^{2}}{f(\mathcal{E})}
+\end{gather}
+Thus to find the ionization rate one should calculate $ w_{\mathcal{E}} $ from (\ref{ionization_key}).

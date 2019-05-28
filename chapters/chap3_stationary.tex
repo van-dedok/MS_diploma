@@ -33,7 +33,7 @@ This condition is invariant under the combined action $ L\leftrightarrow R $, $ 
 \psi_R - b\partial_y\psi_R=t(\psi_L + b\partial_y\psi_L)
 \end{cases}
 \end{gather}
-This transformation is illustrated on the fig \ref{fig:bctransform}.
+This transformation is illustrated on the fig \ref{fig:bctransform}. Note
 
 The boundary condition (\ref{bc_transformed}) can be rewritten with introducing the spinor $ \Psi=\br{\psi_L, \psi_R}^T $ and Pauli matrices $ \hat{s}_i $ in LR space:
 \begin{gather}
@@ -118,21 +118,21 @@ E\Psi
 \label{sec:elimintaing_longwave}
 As the Majorana mode acts at low energies, it's expected to be predominantly longwave. This argument is in accord with \cite{Oreg_2010} and \cite{Lutchyn_2010}, where the majorana state was an eigenstate of a linearized Hamiltonian, which is relevant only for longwave physics. So, it's reasonable to eliminate the shortwave modes from the problem, reformulating the boundary condition (\ref{short-long_hamiltonian}).
 
-The wave function can be decomposed in shortwave and  longwave  parts: $ \Psi = \Psi_{short}+\Psi_{long} $. inserting it into the(\ref{short-long_hamiltonian}) and using the fact, that $ p_{long}\ll p_{short} \approx 2mu s_z \sigma_z $, one can obtain at the boundary:
+The wave function can be decomposed in shortwave and  longwave  parts: $ \Psi = \Psi_{high}+\Psi_{low} $. inserting it into the(\ref{short-long_hamiltonian}) and using the fact, that $ p_{low}\ll p_{high} \approx 2mu s_z \sigma_z $, one can obtain at the boundary:
 \begin{gather}
-	\br{1-2t\hat{s}_x}\Psi_{long}+\br{1-2t\hat{s}_x-2ibum\hat{s}_z \sigma_z}\Psi_{short}=0
+	\br{1-2t\hat{s}_x}\Psi_{low}+\br{1-2t\hat{s}_x-2ibum\hat{s}_z \sigma_z}\Psi_{high}=0
 \end{gather}
 Multipluning by the $ \br{1-2t\hat{s}_x}^{-1} $ and eliminating $ {t^2} $ terms, obtain:
 \begin{gather}
-	\Psi_{long}
+	\Psi_{low}
 	=
-	\br{-1+i\zeta\br{1+2t\hat{s}_x}s_z \sigma_z}\Psi_{short}
+	\br{-1+i\zeta\br{1+2t\hat{s}_x}s_z \sigma_z}\Psi_{high}
 \end{gather}
-with $ \zeta=2mul $.
+with $ \zeta=2bum $.
 
 Now, using the expansion (\ref{fast_mode_expansion}) and renormalizing the coefficients: $ C_{s_z \varsigma_z}\to-\br{1-i\zeta s_z \varsigma_z}C_{s_z \varsigma_z} $ one can rewrite the boundary condition for $ \varsigma_z $ spin component of the wavefunction as:
 \begin{gather}
-\Psi_{long,\varsigma_z}
+\Psi_{low,\varsigma_z}
 =
 \br{1+\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}
 \sum_{s_z=\pm1}
@@ -150,7 +150,7 @@ This can be  multiplied by $ \br{1+\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \h
 \begin{gather}
 \label{bc_projection}
 	\br{1-\frac{2i\zeta t\hat{s}_z\sigma_z}{1+i\zeta \hat{s}_z\sigma_z}}
-	\Psi_{long,\varsigma_z}
+	\Psi_{low,\varsigma_z}
 	=
 	\sum_{s_z=\pm1}
 	C_{s_z,\varsigma_z}
@@ -182,26 +182,55 @@ For each $ \varsigma_z $ the above equation can be interpreted as the requiremen
 Thus one needs to multiply (\ref{bc_projection}) by $ \br{\overline{\Psi}_{+\varsigma_{z}},\overline{\Psi}_{-\varsigma_{z}}} $ from the left and, after all evaluating the matrix produt, find the boundary condition on longwave modes in the form:
 \begin{gather}
 \label{bc_matrix}
-\begin{pmatrix}1 & -e^{-i\left(\sigma_{z}\gamma-\phi_L\right)} & A & -Ae^{-i\left(\sigma_{z}\gamma-\phi_L\right)}\\
-A^{*} & -A^{*}e^{i\left(\sigma_{z}\gamma+\phi_R\right)} & 1 & -e^{i\left(\sigma_{z}\gamma+\phi_R\right)}
+\begin{pmatrix}1 & -e^{-i\left(\varsigma_{z}\gamma-\phi_L\right)} & A & -Ae^{-i\left(\varsigma_{z}\gamma-\phi_L\right)}\\
+A^{*} & -A^{*}e^{i\left(\varsigma_{z}\gamma+\phi_R\right)} & 1 & -e^{i\left(\varsigma_{z}\gamma+\phi_R\right)}
 \end{pmatrix}\Psi_{long, \varsigma_{z}}=0
 \end{gather}
-here $ A=-\frac{2i\zeta t\sigma_z}{1+i\zeta\sigma_z} $ and the elements are ordered as $ \br{Le,Lh,Re,Rh} $.
+here $ A=-\frac{2i\zeta t\varsigma_z}{1+i\zeta\varsigma_z} $ and the elements are ordered as $ \br{Le,Lh,Re,Rh} $.
 
-When studying wavefunctions in superconductors, it is more convenient to work with zero phase $ \phi $. This can be achieved by gauging the phase difference into the boundary condition. Indeed, suppose $ H_{\phi} $ describes a wire with phase $ \phi $. Then, $ H_{\phi}=U_{\phi}^{\dagger}H_{0}U_{\phi} $ with $ U_{\phi}=\mathrm{diag(1,e^{i\phi})_{eh}} $ and the wave functions are also related via unitary rotation $ \psi_{\phi}=U_{\phi}^{\dagger}\tilde{\psi} $. So the transform $ U^{\dagger}=\mathrm{diag}\br{1,e^{-i\phi_L},e^{-i\phi_L},1,e^{-i\phi_R }}_{Le,Lh,Re,Rh}$  will eliminate all the phases from the rires and put them into boundary condition. Substituting $ \Psi_{long,\varsigma_{z}}=U^{\dagger}\tilde{\Psi} $ into the (\ref{bc_matrix}) one arrives at an even simpler boundary condition on the zero-phase function $ \tilde{\Psi} $:
+When studying wavefunctions in superconductors, it is more convenient to work with zero phase $ \phi $. This can be achieved by gauging the phase difference into the boundary condition. Indeed, suppose $ H_{\phi} $ describes a wire with phase $ \phi $. Then, $ H_{\phi}=U_{\phi}^{\dagger}H_{0}U_{\phi} $ with $ U_{\phi}=\mathrm{diag(1,e^{i\phi})_{eh}} $ and the wave functions are also related via unitary rotation $ \psi_{\phi}=U_{\phi}^{\dagger}\tilde{\psi} $. So the transform $ U^{\dagger}=\mathrm{diag}\br{1,e^{-i\phi_L},1,e^{-i\phi_R }}_{Le,Lh,Re,Rh}$  will eliminate all the phases from the wires and put them into boundary condition. Substituting $ \Psi_{low,\varsigma_{z}}=U^{\dagger}\tilde{\Psi} $ into (\ref{bc_matrix}) one arrives at an even simpler boundary condition on the zero-phase function $ \tilde{\Psi} $:
 \begin{gather}
 \label{bc_matrix_phases}
-\begin{pmatrix}1 & -e^{-i\sigma_{z}\gamma} & A & -Ae^{-i\left(\sigma_{z}\gamma+\varphi\right)}\\
-A^{*} & -A^{*}e^{i\left(\sigma_{z}\gamma+\varphi\right)} & 1 & -e^{i\sigma_{z}\gamma}
+\begin{pmatrix}1 & -e^{-i\varsigma_{z}\gamma} & A & -Ae^{-i\left(\varsigma_{z}\gamma+\varphi\right)}\\
+A^{*} & -A^{*}e^{i\left(\varsigma_{z}\gamma+\varphi\right)} & 1 & -e^{i\varsigma_{z}\gamma}
 \end{pmatrix}
 \tilde{\Psi}_{long, \varsigma_{z}}=0
 \end{gather}
-where $ \phi=\phi_R-\phi_L $. Note, that from here it's obvious, that in any physical quantity, calculated with this model, can depend only on phase difference $ \varphi $,  but not on the $ \phi_L $ or $ \phi_R $ separately.
+where $ \varphi=\phi_R-\phi_L $. Note, that any physical quantity can depend only on phase difference $ \varphi $,  but not on $ \phi_L $ or $ \phi_R $ separately.
 
+It's also convenient to rewrite it in the form acting on the left and right wire wavefunctions: 
+
+\begin{gather}
+\label{bc_matrix_LR}
+M_L\tilde{\psi}_{low}^L
++
+M_R\tilde{\psi}_{low}^R
+=
+0
+\nonumber
+\\
+M_L
+=
+	\begin{pmatrix}
+	1 & -e^{-i\sigma_z\gamma}
+	\\
+	A^* & -A^* e^{i\br{\sigma_z\gamma+\varphi}}
+	\end{pmatrix}_{eh}
+	\qquad
+M_R
+=
+	\begin{pmatrix}
+	A & -A e^{i\br{\sigma_z\gamma+\varphi}}
+	\\
+1 & -e^{i\sigma_z\gamma}
+\end{pmatrix}_{eh}
+\qquad	
+\end{gather}
+This for is especially useful for finding subgap states localized near the barrier.
 \section{Low momenta and linearized Hamiltonian}
 \label{sec:linearized_hamiltonian}
 
-To utilize boundary condition (\ref{bc_matrix}) or (\ref{bc_matrix_phases}), it's necessary to find low momenta wavefunctions in homogenious wire. For this purpose one can use s linearized version of the Hamiltonian (\ref{bulk_Hamiltonian}), like in \cite{Oreg_2010} and \cite{Lutchyn_2010}:
+To utilize boundary condition (\ref{bc_matrix}) or (\ref{bc_matrix_phases}), it's necessary to find low momenta wavefunctions in homogenious wire (this functions constitute $ \psi_{low}$ in (\ref{bc_matrix}) and (\ref{bc_matrix_phases}). For this purpose one can use s linearized version of the Hamiltonian (\ref{bulk_Hamiltonian}), like in \cite{Oreg_2010} and \cite{Lutchyn_2010}:
 \begin{gather}
 \label{linearized_hamiltonian}
 		H
@@ -243,10 +272,10 @@ As $ H_0 $ commutes with $ \sigma_x\tau_x $, it's convenient to rewrite it in th
 	V
 	=
 		\begin{pmatrix}
-	\beta & up & -\mu & 0 \\
-	up & -\beta & 0 & v-\mu\\
-	-\mu & 0 & \beta & up \\
-	0 & -\mu & up & -\beta 
+	\beta & 0 & -\mu & 0 \\
+	0 & -\beta & 0 & -\mu\\
+	-\mu & 0 & \beta & 0 \\
+	0 & -\mu & 0 & -\beta 
 	\end{pmatrix}
 \end{gather}
 It's easy to see, subspace $ \mathrm{Span}\br{\ket{+, + },\ket{-, - }} $ require no perturbation to obtain the eigenstates in the leading order. Indeed, diagonalizing the upper subblock of $ H_0 $, one finds, that $ E=\sqrt{\br{2\Delta}^2+\br{up}^2} $. When the low energy states are the objects of interest ($ E\sim g_{L,R} $), one finds, that $ p =\pm\frac{i\Delta}{2u} $ in the leading order, and the corresponding eigenstates are $\ket{+, + }\pm i\ket{-, - } $. If
@@ -268,9 +297,11 @@ recall, that at this precision $ g=B-\Delta-\frac{\mu^2}{2\Delta} $ and find $ E
 For this states the momenta are of the order of $ g/u $, so it's reasonably to name them longwave states. Than the states with momenta $ \pm\frac{i\Delta}{2u} $ will be called mediumwave states.
 Now it's time to present this wavefunctions in original BdG basis. The expressions here are relevant only for the right lead and for $ E>0 $. To find the wavefunctions in the left lead, the transform $ \psi_L=\sigma_x\psi_R $ can be used, while for finding the negative enrefu states one can utilize electron-hole transform: $ \psi_{E<0}= \tau_y\sigma_yK\psi_{E>0}$ with $ K $ being a complex conjugation operator.
 
-Medium wave states are (propagating version for $ E>2\Delta $ and decaying version for $ E<2\Delta $):
+For $ E>2\Delta $ medium wave states are:
 \begin{gather}
-	\psi^{out,~in}_{medium}=
+	\psi^{out,~in}_{medium}
+	\bigg|_{E>2\Delta}
+	=
 	\begin{pmatrix}
 	1
 	\\
@@ -281,34 +312,30 @@ Medium wave states are (propagating version for $ E>2\Delta $ and decaying versi
 	1
 	\end{pmatrix}
 	e^\frac{\pm i x\sqrt{E^2-4\Delta^2}}{u}
-	~~~~~
-	\psi^{grow,~dec}_{medium}=
+	\end{gather}
+	
+	For $ E>2\Delta $ medium wave states are:
+	\begin{gather}
+	\label{medium_dec_wave_functions}
+	\psi^{grow,~dec}_{medium}
+	\bigg|_{E<2\Delta}
+	=
 	\begin{pmatrix}
 	1
 	\\
 	\frac{E\pm i\sqrt{4\Delta^2-E^2}}{2\Delta}
 	\\
-	\frac{E\pm, i\sqrt{4\Delta^2-E^2}}{2\Delta}
+	\frac{E\pm i\sqrt{4\Delta^2-E^2}}{2\Delta}
 	\\
 	1
 	\end{pmatrix}
 	e^\frac{\pm  x\sqrt{4\Delta^2-E^2}}{u}
 \end{gather}
 
-However in the most part of this work the low energy version $\psi_{medium}=
-\br{
-1,
-\pm i,
-\pm i,
-1
-}^T
-e^{\pm\frac{\Delta x}{2u}}  $
-
-will be used.
-
-Longwave states (for energies $ E\sim g_{L,R} $, for $ E>g $ and $ E<g $ respectfully):
+For $ E>\abs{g} $ longwave states are:
 \begin{gather}
 		\psi^{out,~in}_{long}
+		\bigg|_{E>g}
 =
 \begin{pmatrix}
 1\\
@@ -317,8 +344,12 @@ Longwave states (for energies $ E\sim g_{L,R} $, for $ E>g $ and $ E<g $ respect
 -1
 \end{pmatrix}
 e^{\pm\frac{ix\sqrt{E^2-g^2}}{u}}
-~~~~~~
+\end{gather}
+For $ E<\abs{g} $ longwave states are:
+\begin{gather}
+	\label{long_dec_wave_functions}
 	\psi^{grow,~dec}_{long}
+	\bigg|_{E<g}
 	=
 	\begin{pmatrix}
 	1\\
@@ -328,9 +359,138 @@ e^{\pm\frac{ix\sqrt{E^2-g^2}}{u}}
 	\end{pmatrix}
 	e^{\pm\frac{x\sqrt{g^2-E^2}}{u}}
 \end{gather}
+
 \section{Subgap states}
 \label{sec:Subgap_states}
-\textbf{TO DO}
+
+To find the bound states one needs to make two linear combinations (each for it's own wire) of decaying wave functions from (\ref{medium_dec_wave_functions}) and (\ref{long_dec_wave_functions}) at $ x=0 $ and put them into boundary condition (\ref{bc_matrix_LR}). For the right wire they can be taken directly from (\ref{medium_dec_wave_functions}) , (\ref{long_dec_wave_functions}), while for the left wire they should be multiplied by $ \sigma_x $ from the left (see the beginning of section \ref{sec:linearized_hamiltonian}).. These linear combinations can be written as:
+\begin{gather}
+	\tilde{\psi}_L
+	=
+	C_{medium}^L
+	\sigma_x \psi^{dec}_{medium}
+	+
+	C_{long}^L
+	\sigma_x \psi^{dec}_{L,long}
+\qquad
+	\tilde{\psi}_R
+	=
+	C_{medium}^R
+	\psi^{dec}_{medium}
+	+
+	C_{long}^R
+	\psi^{dec}_{R,long}
+\end{gather}
+where $ C_{medium}^L,C_{long}^L, C_{medium}^R,C_{long}^R $ are the undefined coefficients. Note, that the spinor $ \psi^{dec}_{medium} $ is the same for the left and for the right wires.
+
+ Putting these combinations into boundary condition \ref{bc_matrix_LR}, one can obtain four equations for these coefficients. If this system has a solution at energy $ E_0 $, than there is a bound state with this energy. The condition of solvability can be written as:
+\begin{gather}
+\label{subgap_determinant}
+	\det F = 0
+\end{gather}
+where matrix $ F $ is given by:
+\begin{gather}
+F
+=
+	\begin{pmatrix}
+	M_L \sigma_x \psi^{dec}_{medium},
+	&
+	M_L 
+	\sigma_x \psi^{dec}_{L,long},
+	&
+	M_R
+	\psi^{dec}_{medium},
+	&
+	M_R
+	\psi^{dec}_{R,long}
+	\end{pmatrix}
+\end{gather}
+As $ E\sim g_{L,R}\ll\Delta $, the mediumwave spinor can be taken in it's low-energy form: 
+In the most part of this work the low energy version: $\psi_{medium}^{dec}\approx
+\br{
+	1,
+	- i,
+	- i,
+	1
+}^T
+ $
+will be used.
+
+For dealing with $ \psi^{dec}_{long} $ it's convenient two introduce to quantities $ \chi_{L,R} $:
+\begin{gather}
+\cosh\chi_{L,R}
+=
+\frac{g_{L,R}}{\sqrt{g^2_{L,R}-E^2}}
+\qquad
+\sinh\chi_{L,R}
+=
+\frac{E}{\sqrt{g^2_{L,R}-E^2}}
+\end{gather}
+
+If $ g>0 $, the corresponding parameter $ \chi $ is real and the monotonously growing with $ E $. For $ g<0 $ the corresponding is complex, but can be parametrized as $ \chi=-\tilde{\chi}+i\pi $ with real and monotonous $\tilde{\chi}  $.
+
+With this parameters the spinors $ \psi_{L\br{R},long}^{dec} $ at $ x=0 $ can be written as:
+\begin{gather}
+\psi_{L\br{R},long}^{dec}
+=
+	\begin{pmatrix}
+	-\sinh \chi_{L\br{R}} -i
+	\\
+	-\cosh \chi_{L\br{R}}
+	\\
+	\cosh \chi_{L\br{R}}
+	\\
+	\sinh \chi_{L\br{R}} +i
+	\end{pmatrix}
+\end{gather}
+This parametrization completes the toolset used for studying the subgap states.
+
+\subsection{The case of zero tunneling}
+Consider first the the equation (\ref{subgap_determinant}) with $ t=0 $. This corresponds to absolutely unpenetrable barrier, orm which is same, to indepensent wires ended with a vacuum. The computation of the determinant in (\ref{subgap_determinant}) becomes a rather easy problem and results in:
+\begin{gather}
+\label{det_bound_States_zero_t}
+	\det F
+	\Big|_{t=0}
+	=
+	-16 \left(i \sinh \left(\chi _L\right)+\cosh \left(\chi _L\right)-1\right) \left(i \sinh \left(\chi _R\right)+\cosh \left(\chi _R\right)-1\right)
+\end{gather}
+
+If both $ g_L $, $ g_R $ are negative (triv-triv junction), this determinant cannot be equal to zero at all, as $ \cosh \chi_{L,R} $ are also negative and the real part in each braces always non zero.  If one of $ g_L $, $ g_R $ (triv-top junction), say $ g_R $ there is only one solution at $ E=0 $. If there both $ g_L $, $ g_R $(top-top junction) are positive, there are two solutions at $ E=0 $.
+
+This result proves, that the presence of Majorana mode in a isolated wire is defined only by the sign of $ g $ and justifies the notion of  topology in this system.
+
+\subsection{Small tunneling}
+To take into account the tunneling effect one may decompose $ \det F $ in $ t $. Note, that there is no first order in $ t $ due to the structure of boundary condition (\ref{bc_matrix_phases}). The decomposition can be written as:
+\begin{gather}
+\label{det_f_decomposition}
+	\det F
+	=
+	d_0
+	+
+	d_2t^2
+	+
+	\dots
+\end{gather}
+where $ d_0 $ is given by (\ref{det_bound_States_zero_t}). $ d_2 $ can be computed in a same way, but appears to be  a rather complex formula.  However, in tunneling limit the second correction in (\ref{det_f_decomposition}) should be much smaller than the first one, so the only values of $ E $ that should be considered are the ones with $ d_0 $ is close to zero.
+
+For triv-triv junction there are no such points, so in the tunneling limit there are no bound states for this case.
+
+For triv-top junction there is a solution for $ E=0 $, which corresponds to $ \chi_L=i \pi $, $ \chi_R=0 $. Computing $ d_2 $ for this parameters, one finds that it's exactly zero, so there is no correction to Majorana energy --- as at should be, as it's protected by a particle-hole symmetry.
+
+For top-top junction the situation is more interesting. In that case there are two solutions at $ E=0 $, which should split for nonzero $ t $. Calculating $  $ $ d_2 $ at $ E=0 $ and decomposing $ d_0 $ for small $ E $, one finds:
+\begin{gather}
+d_0=\frac{16E^2}{g_Rg_L}
+\qquad\qquad
+	d_2 = -\frac{256t^2\zeta^4}{\br{1+\zeta^2}^2}\cos^2\frac{\phi}{2}
+\end{gather}
+Using, that $ \zeta=2bum\ll1 $, one can find the energy levels:
+\begin{gather}
+	E_{1,2}
+	=
+	\pm
+	4t\zeta^2\sqrt{g_Rg_L}\cos\frac{\phi}{2}
+\end{gather}
+this answer is relevant only if these level are well below the gaps: $ t\zeta^2\sqrt{g_Rg_L}\ll\min\left[g_R,g_L\right] $.
 \section{Stationary supercurrent }
 
 \label{sec:stationary_supercurrent}
@@ -416,43 +576,11 @@ Recall, that the trivial wire is placed on the left of the barrier while the top
 \subsubsection{The case $ \abs{g_L} > g_R $}
 
 For $ g_R<E<\abs{g_L} $ there is only one state in $ X_{in} $, so the s-matrix has the dimension 1, so it's determinant coincides with it's only matrix element, which reads:
-\begin{gather}
-\hat{S}
-=
-\frac{e^{\eta _R}-i}{e^{\eta _R}+i}
-+
-	\frac{2 t^2  \left(e^{-i \frac{\phi}{2} }+e^{i \frac{\phi}{2} }\right)^2 \left(-1+e^{i \theta _L}\right) \left(e^{2 \eta _R}-1\right)}{\left(1+e^{i \theta _L}\right) \left(e^{\eta _R}+i\right){}^2}
-	+
-	O\br{t^2}
-\end{gather}
+
 \subsubsection{The case $ \abs{g_L} < g_R $}
 When $ \abs{g_L}<E<g_R $ there is also only one state in $ X_{in} $ and the s-matrix is:
-\begin{gather}
-\hat{S}
-=
-	\frac{e^{\text{$\kappa $L}}-i}{e^{\text{$\kappa $L}}+i}
-	-
-	\frac{2 t^2 
-		\left(-1+e^{i \text{$\theta $R}}\right) \left(e^{2 \text{$\kappa $L}}-1\right)  \left(e^{-i \frac{\phi}{2} }+e^{i \frac{\phi}{2} }\right)^2
-	}{\left(1+e^{i \text{$\theta $R}}\right) \left(e^{\text{$\kappa $L}}+i\right)^2}
-	+O\left(t^2\right)
-\end{gather}
+
 
 \subsection{$ E $ \hspace{0pt} is greater than both $ \abs{g_L} $ and $ g_R $}
 
 Here there are two states in $ X_in $ -- one in the right wire and one in the left. Thus the s-matrix has the dimension equal to two and reads, up to a $ t^2 $ order:
-\begin{gather}
-\!\!\!\!\!\!\!\!
-\hat{S}
-=
-	\begin{pmatrix}
-	\frac{i+e^{\kappa _L}}{i-e^{\kappa _L}}
-	+
-	\frac{2 e^{-i \phi } \left(1+e^{i \phi }\right)^2 \left(-i+e^{\eta _R}\right) \left(-1+e^{2 \kappa _L}\right) t^2}{\left(i+e^{\eta _R}\right) \left(-i+e^{\kappa _L}\right){}^2}+ & 
-	\frac{2 i e^{-i \phi } \left(1+e^{i \phi }\right) \sqrt{\left(-1+e^{2 \eta _R}\right) \left(-1+e^{2 \kappa _L}\right)} t}{\left(i+e^{\eta _R}\right) \left(-i+e^{\kappa _L}\right)} \\
-	~
-	\\
-	\frac{2 \left(1+e^{i \phi }\right) \sqrt{\left(-1+e^{2 \eta _R}\right) \left(-1+e^{2 \kappa _L}\right)} t}{\left(i+e^{\eta _R}\right) \left(1+i e^{\kappa _L}\right)} & 
-	\frac{-i+e^{\eta _R}}{i+e^{\eta _R}}-\frac{2 e^{-i \phi } \left(1+e^{i \phi }\right)^2 \left(-1+e^{2 \eta _R}\right) \left(i+e^{\kappa _L}\right) t^2}{\left(i+e^{\eta _R}\right){}^2 \left(-i+e^{\kappa _L}\right)} \\
-	\end{pmatrix}
-\end{gather}

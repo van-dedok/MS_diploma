@@ -20,15 +20,14 @@ The time dependence of phase difference is introduced as:
 \end{gather}
 where $ \varphi_0 $ is an initial time independent phase difference and $ \alpha $ is an amplitude of phase oscillations.
 
-As was shown in section \ref{sec:elimintaing_longwave}, there exists a gauge transform $ U_\phi $, which may redistribute the phase difference between the wires, so the phase in a given wire can take any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is a observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However when treating the time dependent $ \phi\br{t} $, where the oscillating phase is present. Moreover, the voltage frequency $ \omega $ is assumed to be much smaller than not obly the superconducting gap $ \Delta $, but the spectrum gaps in both wires: $ \omega\ll g_R, \abs{|g_L|} $
+As was shown in section \ref{sec:elimintaing_longwave}, there exists a gauge transform $ U_\phi $, which may redistribute the phase difference between the wires, so the phase in a given wire can take any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is a observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However when treating the time dependent $ \phi\br{t} $, where the oscillating phase is present. Moreover, the voltage frequency $ \omega $ is assumed to be much smaller than not obly the superconducting gap $ \Delta $, but the spectrum gaps in both wires: $ \omega\ll g_R, \abs{g_L} $
 
-\textbf{Pavel's talk about equally disturbed phase}
 
-The correct answer is that both left and right wires should get equal time-dependent phase with different signs: $ \phi_L=-\frac{\varphi_0}{2}-\frac{\alpha}{2}\cos \omega t $, $ \phi_R=\frac{\varphi_0}{2}+\frac{\alpha}{2}\cos \omega t $. Thus the superconducting terms in the wire Hamiltonians alter: $ \Delta_{\pm\frac{\varphi}{2}} \to\Delta_{\pm\frac{\varphi}{2}\pm \frac{\alpha}{2}\cos \omega t} $. Deocmposing them in small $ \alpha $ one can explicitly write the perturbation and try to compute the ionization rate. However this way appears to be quite difficult as the overlaps of all the states 
+The correct answer is that both left and right wires should get equal time-dependent phase with different signs: $ \phi_L=-\frac{\varphi_0}{2}-\frac{\alpha}{2}\cos \omega t $, $ \phi_R=\frac{\varphi_0}{2}+\frac{\alpha}{2}\cos \omega t $. Thus the superconducting terms in the wire Hamiltonians alter: $ \Delta_{\pm\frac{\varphi}{2}} \to\Delta_{\pm\frac{\varphi}{2}\pm \frac{\alpha}{2}\cos \omega t} $. Decomposing them in small $ \alpha $ one can explicitly write the perturbation and try to compute the ionization rate. However this way appears to be quite difficult as the overlaps of all the states 
 present in both wires and at first it seems that the Majorana states has to much ways to ionize. To avoid this difficulty, the tunnel Hamiltonian approach is used.
 \section{Tunnel Hamiltonian approach}
 \label{sec:tunnel_hamiltonian}
-The main idea of this method is to hide all the time dependence and the tunnel effect in one single operator. The local goal is to write the Hamiltonian as $ H=H_L+H_R+H_T $ , where $ H_{L,R} $ are the Hamiltonians of the left and right wire without any contact (corresponding to zero tunneling: $ t=0 $), and $H_T  $ is a tunnel Hamiltonain both containing the time dependence and mixing the wavefunctions from different wires. 
+The main idea of this method is to hide all the time dependence and the tunnel effect in one single operator. The local goal is to write the Hamiltonian as $ H=H_L+H_R+H_T $, where $ H_{L,R} $ are the Hamiltonians of the left and right wire without any contact (corresponding to zero tunneling: $ t=0 $), and $H_T  $ is a tunnel Hamiltonain both containing the time dependence and mixing the wavefunctions from different wires. 
 
 Here the following notation is used.The Hamiltonians $ H_L $, $ H_R $ and $ H_T $ are 8x8 matrices in combined Nambu-Gorkov and LR-space. In LR-space they have the following form:
 \begin{gather}
@@ -104,6 +103,7 @@ Now, multiplying the third equation by $ \big<\gamma_{0}\,\big| $ and $ \big<\ep
 \end{gather}
 The l.h.s. of both equations above can be found explicitly with the help of appendix \ref{app:wavefunctions_with_corrections}. The result yields:
 \begin{gather}
+\label{tunnel_matrix_elements_maj-cont}
 	\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
 	=
 	4\sqrt{ug_{R}}
@@ -111,6 +111,7 @@ The l.h.s. of both equations above can be found explicitly with the help of appe
 	\left(e^{i\frac{\phi}{2}}+e^{-i\frac{\phi}{2}}\right)
 	f\br{\frac{E}{\abs{g_L}}}
 	\\
+	\label{tunnel_matrix_elements_cont-cont}
 	\big<\epsilon,R_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
 	=
 	-16u\zeta^{2}t
@@ -121,3 +122,4 @@ The l.h.s. of both equations above can be found explicitly with the help of appe
 where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that, maybe it's possible to make this calculations in some more beautiful way.
 
 \section{Ionization rate}
+To obtain the ionization rate one should decompose the perturbation in Fourier series, as was done for (\ref{fourier_pertrubation}). From (\ref{})

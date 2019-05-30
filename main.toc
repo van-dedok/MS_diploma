@@ -44,14 +44,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Tunnel Hamiltonian approach}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Ionization rate}{25}
+\contentsline {section}{\numberline {4.3}Ionization rate for $ g_R\gg \left |g_L\right | $}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{26}
+\contentsline {subsection}{\numberline {4.3.1}Time dependence of perturbation}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Multiphoton ionization}{29}
+\contentsline {subsection}{\numberline {4.3.2}Factorizing $ w_\mathcal {E} $}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Basics about Green's functions}{29}
+\contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Fermi Golden Rule (first order)}{30}
+\contentsline {chapter}{\numberline {B}Multiphoton ionization}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Fermi Golden Rule (high order)}{32}
+\contentsline {section}{\numberline {B.1}Basics about Green's functions}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Fermi Golden Rule (first order)}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}Fermi Golden Rule (high order)}{34}

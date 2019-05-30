@@ -1,6 +1,6 @@
 \chapter{Ionization}
 
-In this chapter the model, previously presented is modified to allow the ionization precesses. The main goal here is to find the ionization rate when the typical size of the photon is much smaller, than the gap int the spectrum.
+In this chapter the model, previously presented is modified to allow the ionization precesses. The main goal here is to find the ionization rate of a Majorana state, when the typical size of the photon is much smaller, than the gap int the spectrum.  Only regime with $ \abs{g_L}\ll g_R $ is considered --- even though the ionization for this condition is factorized, it contains it's own nontrivial physics with a number of different subregimes.
 
 \section{Introducing the perturbation}
 
@@ -82,7 +82,8 @@ The correct way to write $ H_T $ is to make it restoring the corrections from ap
 	0 & \big|\varepsilon,R_{0}\,\big>\big<\varepsilon,R_{0}\,\big|
 	\end{pmatrix}_{LR}
 \end{multline}
-The corrections for the spinors should be calculated as
+with $ N_{L,R} $ from (\ref{N_L_N_R_definition}). 
+The corrections for the spinors should be calculated as:
 \begin{gather}
 	\Psi_{1}\left(E\right)=G_{0}\left(E\right)H_{T}\Psi_{0}\left(E\right)
 \end{gather}
@@ -119,7 +120,89 @@ The l.h.s. of both equations above can be found explicitly with the help of appe
 	f\br{\frac{E}{\abs{g_L}}}
 	f\br{\frac{\varepsilon}{g_R}}
 \end{gather}
-where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that, maybe it's possible to make this calculations in some more beautiful way.
+where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that, maybe it's possible to make this calculations in a more beautiful way.
 
-\section{Ionization rate}
-To obtain the ionization rate one should decompose the perturbation in Fourier series, as was done for (\ref{fourier_pertrubation}). From (\ref{})
+\section{Ionization rate for $ g_R\gg\abs{g_L} $}
+
+
+\subsection{Time dependence of perturbation}
+
+To obtain the ionization rate one should treat $ H_T $ as perturbation. For unperturbed system, described with $ H_0=H_R+H_L $ the electrons cannot get from wire to another, but $ H_T $ allows these processes, so the ionization can be described as a set of jumps from right to left wire (see fig. \ref{fig:tunneling})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{images/tunneling}
+	\caption{Ionization processes in terms of tunnel Hamiltonian}
+	\label{fig:tunneling}
+\end{figure}
+
+The ionization rate can be calculated with the help of  (\ref{ionization_key}). To use this formula, one should decompose the  perturbation in Fourier series, as was done for (\ref{fourier_pertrubation}). From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{t}}{2} $ with $ \varphi=\phi_{0}+\alpha\cos\omega t $. Using $ \alpha\ll1 $ we write:
+\begin{multline}
+	e^{i\varphi/2}+e^{-i\varphi/2}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha/2)^{n}}{2^{n}n!}(e^{in\omega t}+e^{-in\omega t})+c.c=\\=\sum_{n}\frac{\alpha{}^{n}}{2^{2n}n!}(e^{in\omega t}+e^{-in\omega t})2\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
+\end{multline}
+so that $ V_{n}=V_{0}A_{n} $ with $ A_{n}=\frac{\alpha^{n}}{2^{2n-1}n!}\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right) $.
+
+According to (\ref{tunnel_matrix_elements_maj-cont}) and (\ref{tunnel_matrix_elements_cont-cont}):
+\begin{gather}
+\label{tunnel_element_factorized}
+	\langle\gamma|V_{0}|E\rangle=4\sqrt{ug_{R}}\zeta^{2}tf\br{\frac{E}{\abs{g_L}}}
+\end{gather}
+
+Here the focus is on the case where the topological gap is much larger than the trivial one. In this case, the right continuum has high energies and does not participate in the ionization process. Indeed,
+\begin{gather}
+	VG_{\epsilon}V=\frac{V|\gamma\rangle\langle\gamma|V}{\epsilon}+\intop_{|E_{R}|>g_{R}}\frac{V|E_{R}\rangle\langle E_{R}|V}{\epsilon-E_{R}}\frac{dE_{R}}{N_{R}(E_{R})}
+\end{gather}
+When $ g_{R}\gg\epsilon\sim g_{L} $, the second term can be neglected. Then, the product $ \dots V_{n}GV_{n'}GV_{n''}\dots $ factorizes into individual number-factors of the form $ \langle\gamma|V_{n}GV_{m}|\gamma\rangle $.
+
+\subsection{Factorizing $ w_\mathcal{E} $}
+Each entry in the sum within $ w_{\mathcal{E}} $ is a product of operators of the type $ \dots VGVGV\dots. $ In the limit we are now interested in, in the right wire only the Majorana mode is relevant. This means that the whole thing decomposes into a product of $ J_{nm}\equiv\langle\gamma|V_{n}|G_{E}|V_{m}|\gamma\rangle $, and the ionozation rate is proportional to:
+
+\begin{gather}
+	\mathcal{I}\propto
+	\sum_N \sum_{\{n_i\}_M^N}\prod_{i=1}^{N}J_{n_in_{i+1}}
+\end{gather}
+Here the $ N $ has the meaning of total number of absorbed photons, $ M $ is the closet to $ \frac{\abs{g_L}}{\omega }$ integer, and the second sum is taken over all sets $ \{n_i\}_M^N $ such that there are $ N $ items in that set and $ \sum_i^N n_{i=1} = M$
+ The $ n $,$ m $-dependence factors out so that $ J_{nm}=A_{n}A_{m}^{*}J_{0} $ where:
+
+\begin{gather}
+	J_{0}(E)=\langle\gamma|V_{0}G(E)V_{0}|\gamma\rangle\equiv\intop_{cont.}\frac{|\langle\gamma|V_{0}|\epsilon\rangle|^{2}}{E-\epsilon}\frac{d\epsilon}{N_L(\epsilon)}
+\end{gather}
+
+However on each ionization step  the particle can move a state with energy $ E $ or $ -E $. Taking this into account, one	 gets:
+
+\begin{gather}
+	J_{0}(E)
+	=
+	2E\intop_{|g_{L}|}^{\infty}\frac{|\langle\gamma|V_{0}|\epsilon\rangle|^{2}}{E^{2}-\epsilon^{2}}\frac{d\epsilon}{f(\epsilon)}
+\end{gather}
+
+recalling (\ref{tunnel_element_factorized}), obtain:
+\begin{gather}
+		J_{0}(E)
+		=
+		ET\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
+\end{gather}
+where $ \lambda = \frac{E}{\abs{g_L}} $, $ T=\frac{g_R\br{\zeta^2t}^2}{\abs{g_L}} $.
+
+Thus, the elementary block in our product becomes:
+\begin{multline}
+	\frac{J_{nm}}{E+n\omega}
+	=
+	A_{n}A_{m}\frac{J_{0}}{E+n\omega}\simeq A_{n}A_{m}T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
+	=
+	\\
+	=\left(\frac{\alpha}{4}\right)^{n+m}B_{n}B_{m}^{*}T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
+\end{multline}
+
+where the parts that yield $ (\alpha/4)^{\mathcal{E}/\omega} $ for any trajectory and thus are factored out, as these parts do not affect summation and optimization. Thus one has $ B_{n}B_{m}T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}} $ to optimize.
+
+Now consider a slice of the ionization process, i.e. a part of the full ionization product, which runs from energy $ E $ to $ E+\Delta E $ where $ \Delta E=M\omega $ with a large M. One can assume that within that process, a large number 2N of photons is absorbed, but energy does not change significantly, $ \Delta E\ll E $, so that $ \lambda $ can be considered a constant within that process. Denoting:
+\begin{gather}
+	T_{\lambda}=-4T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
+\end{gather}
+
+Then, one finds, that the ionization rate is $ \mathcal{I}\propto\mathcal{J} $ where:
+\begin{gather}
+\mathcal{J}=\sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{J_{n_{i}m_{i}}}{E}=\left(\frac{\alpha}{4}\right)^{M}\sum_{\{n\}_{2N}^{M}}(-T_{\lambda})^{\frac{N}{2}}\prod_{i=1}^{N}\frac{\cos(\frac{\varphi_{0}}{2}+\frac{\pi n_{2i}}{2})}{n_{2i}!}
+\end{gather}
+So to obtain the ionization rate up to a prexponential constant, one should compute $ \mathcal{J} $.

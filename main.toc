@@ -50,6 +50,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.2}Factorizing $ w_\mathcal {E} $}{26}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Using multinomial formula}{27}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{28}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {B}Multiphoton ionization}{31}

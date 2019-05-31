@@ -36,6 +36,8 @@ Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a c
 while executing---line 2630 of file biblatex.bst
 Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2630 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2630 of file biblatex.bst
 Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2634 of file biblatex.bst
 Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
@@ -48,6 +50,12 @@ Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a c
 while executing---line 2648 of file biblatex.bst
 Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2654 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2654 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2658 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2658 of file biblatex.bst
 Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2658 of file biblatex.bst
 Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
@@ -67,45 +75,59 @@ Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a c
 while executing---line 2746 of file biblatex.bst
 Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-You've used 18 entries,
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2746 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2746 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2746 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2746 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2746 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2746 of file biblatex.bst
+Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppen" has a comma at the end for entry quintum_computation_Romito
+while executing---line 2746 of file biblatex.bst
+You've used 29 entries,
             6256 wiz_defined-function locations,
-            1294 strings with 11726 characters,
-and the built_in function-call counts, 82447 in all, are:
-= -- 5438
-> -- 1567
-< -- 310
-+ -- 1960
-- -- 568
-* -- 5823
-:= -- 8420
+            1357 strings with 14057 characters,
+and the built_in function-call counts, 178915 in all, are:
+= -- 13366
+> -- 2736
+< -- 490
++ -- 4835
+- -- 1041
+* -- 13273
+:= -- 19914
 add.period$ -- 0
-call.type$ -- 18
-change.case$ -- 117
+call.type$ -- 29
+change.case$ -- 194
 chr.to.int$ -- 30
-cite$ -- 34
-duplicate$ -- 9091
-empty$ -- 8011
-format.name$ -- 1034
-if$ -- 16938
+cite$ -- 56
+duplicate$ -- 19191
+empty$ -- 16570
+format.name$ -- 2039
+if$ -- 35709
 int.to.chr$ -- 0
-int.to.str$ -- 34
+int.to.str$ -- 56
 missing$ -- 0
-newline$ -- 473
-num.names$ -- 646
-pop$ -- 5872
+newline$ -- 970
+num.names$ -- 1064
+pop$ -- 10078
 preamble$ -- 1
-purify$ -- 217
+purify$ -- 420
 quote$ -- 0
-skip$ -- 2501
+skip$ -- 4166
 stack$ -- 0
-substring$ -- 8811
-swap$ -- 2079
-text.length$ -- 361
+substring$ -- 23904
+swap$ -- 3868
+text.length$ -- 598
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 600
+type$ -- 974
 warning$ -- 0
-while$ -- 1036
+while$ -- 2400
 width$ -- 0
-write$ -- 456
-(There were 19 error messages)
+write$ -- 942
+(There were 30 error messages)

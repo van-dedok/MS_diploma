@@ -356,6 +356,513 @@
     \field{year}{2008}
   \endentry
 
+  \entry{review_majorana_Aguado}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AR}{%
+         family={Aguado},
+         familyi={A\bibinitperiod},
+         given={Ramón},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AR1}
+    \strng{fullhash}{AR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Majorana quasiparticles in condensed matter}
+    \field{volume}{40}
+    \field{journaltitle}{La Rivista del Nuovo Cimento}
+    \field{year}{2018}
+  \endentry
+
+  \entry{review_majorana_Beenakker}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BCWJ}{%
+         family={Beenakker},
+         familyi={B\bibinitperiod},
+         given={C.\bibnamedelima W.\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim
+  J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BCWJ1}
+    \strng{fullhash}{BCWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Search for Majorana fermions in superconductors}
+    \field{volume}{4}
+    \field{journaltitle}{Annu. Rev. Con. Mat. Phys.}
+    \field{year}{2013}
+  \endentry
+
+  \entry{review_majorana_Oppen}{book}{}
+    \name{author}{3}{}{%
+      {{hash=vOF}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Oppen},
+         familyi={O\bibinitperiod},
+         given={Felix},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=PY}{%
+         family={Peng},
+         familyi={P\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=PF}{%
+         family={Pientka},
+         familyi={P\bibinitperiod},
+         given={Falko},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OFv+1}
+    \strng{fullhash}{OFvPYPF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Topological superconducting phases in one dimension}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Dirak_BdG_Chamon}{article}{}
+    \name{author}{5}{}{%
+      {{hash=CC}{%
+         family={Chamon},
+         familyi={C\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=JR}{%
+         family={Jackiw},
+         familyi={J\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NY}{%
+         family={Nishida},
+         familyi={N\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=PSY}{%
+         family={Pi},
+         familyi={P\bibinitperiod},
+         given={S.-Y.},
+         giveni={S\bibinitperiod-Y\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Santos},
+         familyi={S\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CC+1}
+    \strng{fullhash}{CCJRNYPSYSL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{224515}
+    \field{title}{Quantizing Majorana fermions in a superconductor}
+    \field{volume}{81}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Dirak_BdG_Elliott}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ESR}{%
+         family={Elliott},
+         familyi={E\bibinitperiod},
+         given={Steven\bibnamedelima R.},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Franz},
+         familyi={F\bibinitperiod},
+         given={Marcel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ESRFM1}
+    \strng{fullhash}{ESRFM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Colloquium: Majorana fermions in nuclear, particle, and
+  solid-state physics}
+    \field{volume}{87}
+    \field{journaltitle}{Rev. Mod. Phys.}
+    \field{year}{2015}
+  \endentry
+
+  \entry{quintum_computation_Alicea}{article}{}
+    \name{author}{5}{}{%
+      {{hash=AJ}{%
+         family={Alicea},
+         familyi={A\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=OY}{%
+         family={Oreg},
+         familyi={O\bibinitperiod},
+         given={Yuval},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Refael},
+         familyi={R\bibinitperiod},
+         given={Gil},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=vOF}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Oppen},
+         familyi={O\bibinitperiod},
+         given={Felix},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=FMPA}{%
+         family={Fisher},
+         familyi={F\bibinitperiod},
+         given={Matthew P.\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AJ+1}
+    \strng{fullhash}{AJOYRGOFvFMPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Non-Abelian statistics and topological quantum information
+  processing in 1D wire networks}
+    \field{volume}{7}
+    \field{journaltitle}{Nature Physics}
+    \field{year}{2011}
+  \endentry
+
+  \entry{quintum_computation_Nayak}{article}{}
+    \name{author}{4}{}{%
+      {{hash=NC}{%
+         family={Nayak},
+         familyi={N\bibinitperiod},
+         given={Chetan},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SSH}{%
+         family={Simona},
+         familyi={S\bibinitperiod},
+         given={Steven\bibnamedelima H.},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=ASMF}{%
+         family={Ady\bibnamedelima Stern},
+         familyi={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={Michael\bibnamedelima Freedman},
+         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=SSD}{%
+         family={Sarma},
+         familyi={S\bibinitperiod},
+         given={Sankar\bibnamedelima Das},
+         giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NC+1}
+    \strng{fullhash}{NCSSHASMFSSD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Non-Abelian anyons and topological quantum computation}
+    \field{volume}{80}
+    \field{journaltitle}{Rev. Mod. Phys.}
+    \field{year}{2008}
+  \endentry
+
+  \entry{quintum_computation_Romito}{article}{}
+    \name{author}{4}{}{%
+      {{hash=RA}{%
+         family={Romito},
+         familyi={R\bibinitperiod},
+         given={Alessandro},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AJ}{%
+         family={Alicea},
+         familyi={A\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Refael},
+         familyi={R\bibinitperiod},
+         given={Gil},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=vOF}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Oppen},
+         familyi={O\bibinitperiod},
+         given={Felix},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RA+1}
+    \strng{fullhash}{RAAJRGOFv1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Manipulating Majorana fermions using supercurrents}
+    \field{volume}{85}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{2012}
+  \endentry
+
+  \entry{majorana_experiment_Kouwenhoven}{article}{}
+    \name{author}{6}{}{%
+      {{hash=MV}{%
+         family={Mourik},
+         familyi={M\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=ZK}{%
+         family={Zuo1},
+         familyi={Z\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=FSM}{%
+         family={Frolov},
+         familyi={F\bibinitperiod},
+         given={S.\bibnamedelima M.},
+         giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=PSR}{%
+         family={Plissard},
+         familyi={P\bibinitperiod},
+         given={S.\bibnamedelima R.},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=BEPAM}{%
+         family={Bakkers},
+         familyi={B\bibinitperiod},
+         given={E.\bibnamedelima P. A.\bibnamedelima M.},
+         giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod
+  A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=KLP}{%
+         family={Kouwenhoven},
+         familyi={K\bibinitperiod},
+         given={L.\bibnamedelima P.},
+         giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MV+1}
+    \strng{fullhash}{MVZKFSMPSRBEPAMKLP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Signatures of Majorana Fermions in Hybrid
+  Superconductor-Semiconductor Nanowire Devices}
+    \field{volume}{336}
+    \field{journaltitle}{Science}
+    \field{year}{2012}
+  \endentry
+
+  \entry{majorana_experiment_Vaitiekėnas}{article}{}
+    \name{author}{4}{}{%
+      {{hash=VS}{%
+         family={Vaitiekėnas},
+         familyi={V\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=DMT}{%
+         family={Deng},
+         familyi={D\bibinitperiod},
+         given={M.-T.},
+         giveni={M\bibinitperiod-T\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Krogstrup},
+         familyi={K\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MCM}{%
+         family={Marcus},
+         familyi={M\bibinitperiod},
+         given={C.\bibnamedelima M.},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VS+1}
+    \strng{fullhash}{VSDMTKPMCM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Flux-induced Majorana modes in full-shell nanowires}
+    \field{journaltitle}{arXiv:1809.05513}
+    \field{year}{2018}
+  \endentry
+
+  \entry{majorana_experiment_Zhang}{article}{}
+    \name{author}{22}{}{%
+      {{hash=ZH}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LCX}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Chun-Xiao},
+         giveni={C\bibinitperiod-X\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gazibegovic},
+         familyi={G\bibinitperiod},
+         given={Sasa},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Di},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LJA}{%
+         family={Logan},
+         familyi={L\bibinitperiod},
+         given={John\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=WG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Guanzhong},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=vLN}{%
+         prefix={van},
+         prefixi={v\bibinitperiod},
+         family={Loo},
+         familyi={L\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=BJDS}{%
+         family={Bommer},
+         familyi={B\bibinitperiod},
+         given={Jouri D.\bibnamedelima S.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+      }}%
+      {{hash=dMMWA}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Moor},
+         familyi={M\bibinitperiod},
+         given={Michiel W.\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Car},
+         familyi={C\bibinitperiod},
+         given={Diana},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=hVRLMO}{%
+         prefix={het},
+         prefixi={h\bibinitperiod},
+         family={Veld},
+         familyi={V\bibinitperiod},
+         given={Roy L. M.\bibnamedelima Op},
+         giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod
+  M\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=vVPJ}{%
+         prefix={van},
+         prefixi={v\bibinitperiod},
+         family={Veldhoven},
+         familyi={V\bibinitperiod},
+         given={Petrus\bibnamedelima J.},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Koelling},
+         familyi={K\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VMA}{%
+         family={Verheijen},
+         familyi={V\bibinitperiod},
+         given={Marcel\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pendharkar},
+         familyi={P\bibinitperiod},
+         given={Mihir},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PDJ}{%
+         family={Pennachio},
+         familyi={P\bibinitperiod},
+         given={Daniel\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Shojaei},
+         familyi={S\bibinitperiod},
+         given={Borzoyeh},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LJS}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Joon\bibnamedelima Sue},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=PCJ}{%
+         family={Palmstrøm},
+         familyi={P\bibinitperiod},
+         given={Chris\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BEPAM}{%
+         family={Bakkers},
+         familyi={B\bibinitperiod},
+         given={Erik P. A.\bibnamedelima M.},
+         giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod
+  A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=SSD}{%
+         family={Sarma},
+         familyi={S\bibinitperiod},
+         given={S.\bibnamedelima Das},
+         giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=KLP}{%
+         family={Kouwenhoven},
+         familyi={K\bibinitperiod},
+         given={Leo\bibnamedelima P.},
+         giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZH+1}
+  \strng{fullhash}{ZHLCXGSXDLJAWGLNvBJDSMMWAdCDVRLMOhVPJvKSVMAPMPDJSBLJSPCJBEPAMSSDKLP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Quantized Majorana conductance}
+    \field{volume}{556}
+    \field{journaltitle}{Nature}
+    \field{year}{2018}
+  \endentry
+
   \entry{Oreg_2010}{article}{}
     \name{author}{3}{}{%
       {{hash=OY}{%

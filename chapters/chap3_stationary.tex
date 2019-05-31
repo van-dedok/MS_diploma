@@ -447,6 +447,7 @@ With this parameters the spinors $ \psi_{L\br{R},long}^{dec} $ at $ x=0 $ can be
 This parametrization completes the toolset used for studying the subgap states.
 
 \subsection{The case of zero tunneling}
+\label{subsect:zero_tunnel}
 Consider first the the equation (\ref{subgap_determinant}) with $ t=0 $. This corresponds to absolutely unpenetrable barrier, orm which is same, to indepensent wires ended with a vacuum. The computation of the determinant in (\ref{subgap_determinant}) becomes a rather easy problem and results in:
 \begin{gather}
 \label{det_bound_States_zero_t}
@@ -542,7 +543,7 @@ After ommiting the third term and taking the low temperature limit one rewrites 
 Here the only unknown quantity  is the density of states. As there is a derivative over $ \phi $ taken, one need to find the phase dependent part of $\rho  $ only. It can be done by using the relation between the density of states and the scattering matrix \cite{Akkermans_Avron_Shapiro_scattering_matrix}:
 \begin{gather}
 \label{smatrix_and_DOS}
-	\rho\br{\phi}=\frac{1}{2\pi i}\frac{\partial}{\partial \varepsilon}\log \det S +const.
+	\rho\br{\phi}=\frac{1}{2\pi i}\frac{\partial}{\partial \varepsilon}\log \det \hat{S} +const.
 \end{gather}
 
 As was showed in the section \ref{sec:Subgap_states}, there are no undergap states in triv-top contact except Majorana state. But this state lays exactly on zero energy regardless of the phase difference, so the derivative in the first term of (\ref{current_low_T}) will be zero and no supercurrent from the Majorana state is present.
@@ -570,18 +571,162 @@ this parametrization is useful for both trivial and topological wires. When the 
 \end{gather}
 The way to memorize it is that the $ \eta $ is used for a topological wire, whether the $ \kappa $ is used for a trivial wire. All the parameters $ \theta_{L,R}  $,  $\kappa_L $ and $ \eta_R $ are always real and positive when used.
 
-As the dimension of  s-matrix depends on the number of propagating modes, and thus on the energy, it's necessary to investigate different energy ranges separately 
+As the dimension of  s-matrix depends on the number of propagating modes, and thus on the energy, it's necessary to investigate different energy ranges separately.
+
+For $ E\ll\Delta $  one may use low energy limit of functions $ \psi_{medium}^{dec} $: $ \psi_{medium}^{dec}\approx\br{1,-i,-i,1}^Te^{-{\frac{2\Delta x}{u}} }$ and also set $ \gamma=-\frac{\pi}{2}\arcsin\frac{E}{\Delta} \approx -\frac{\pi}{2}$. When $ E\sim\Delta $ one has to use $ \gamma $ as it is, and high energy of $ \psi_{low}^{dec} $: $  \psi_{low}^{dec}\approx\br{1,0,0,1}e^{-\frac{Ex}{u}}$.
+
 \subsection{$ E $ \hspace{0pt} between $ \abs{g_L} $ and $ g_R $}
-	
-Recall, that the trivial wire is placed on the left of the barrier while the topological wire is on the right of it. There are two slightly distinct cases, which differ by relation between $ g_L $ and $ g_R $.
+
+Also recall, that the trivial wire is placed on the left of the barrier while the topological wire is on the right of it. There are two slightly distinct cases, which differ by relation between $ g_L $ and $ g_R $. 
 \subsubsection{The case $ \abs{g_L} > g_R $}
 
 For $ g_R<E<\abs{g_L} $ there is only one state in $ X_{in} $, so the s-matrix has the dimension 1, so it's determinant coincides with it's only matrix element, which reads:
+\begin{gather}
+	\det \hat{S}
+	=
+	-\frac{e^{\eta _R}+i}{1+i e^{\eta _R}}-\frac{2 i \zeta ^4 t^2 e^{-i \varphi } \left(1+e^{i \varphi }\right)^2 \left(-1+e^{i \theta _L}\right) \left(e^{2 \eta _R}-1\right)}{\left(\zeta ^2+1\right)^2 \left(1+e^{i \theta _L}\right) \left(e^{\eta _R}-i\right){}^2}+O\left(t^3\right)
+\end{gather}
 
+Using the (\ref{current_low_T}) (\ref{smatrix_and_DOS}), one finds, that:
+\begin{gather}
+\label{curr_e_between_g_r>g_l}
+	I=\frac{2e}{\hbar}\frac{4t^2\zeta^4\sin\varphi}{\pi}\br{
+		\sqrt{g_L^2-g_R^2}
+		-
+		\int_{g_R}^{\abs{g_L}}	dE\frac{\sqrt{E^2-g_R^2}}{ \sqrt{1-\frac{E^2}{g_L^2}}+1}}
+\end{gather}
 \subsubsection{The case $ \abs{g_L} < g_R $}
 When $ \abs{g_L}<E<g_R $ there is also only one state in $ X_{in} $ and the s-matrix is:
+\begin{gather}
+\det\hat{S}
+=
+	\frac{e^{\kappa _L}-i}{-1+i e^{\kappa _L}}-\frac{2 i \zeta ^4 t^2 e^{-i \varphi } \left(1+e^{i \varphi }\right)^2 \left(e^{2 \kappa _L}-1\right) \left(1+e^{i \theta _R}\right)}{\left(\zeta ^2+1\right)^2 \left(e^{\kappa _L}+i\right){}^2 \left(-1+e^{i \theta _R}\right)}+O\left(t^3\right)
+\end{gather}
+Again with the help of (\ref{current_low_T}) (\ref{smatrix_and_DOS}), one finds, that:
+\begin{gather}
+\label{curr_e_between_g_r<g_l}
+I=\frac{2e}{\hbar}\frac{4t^2\zeta^4\sin\varphi}{\pi}\br{
+	\sqrt{g_R^2-g_L^2}
+	-
+	g_R
+	\int_{\abs{g_L}}^{g_R}
+	\frac{dE}{E^2}
+	\sqrt{E^2-g_L^2} \left(\sqrt{1-\frac{E^2}{g_R^2}}+1\right)
+}
+\end{gather}
 
+\subsection{$ E $ \hspace{0pt} is greater than both $ \abs{g_L} $ and $ g_R $ and much smaller than $ \Delta $}
 
-\subsection{$ E $ \hspace{0pt} is greater than both $ \abs{g_L} $ and $ g_R $}
+Here there are two states in $ X_{in} $ -- one in the right wire and one in the left, so the s-matrix has the dimension equal to two. Arranging it's elements in the following order:
+\begin{gather}
+\label{s_matrix_2D}
+	\hat{S}
+	=
+	\begin{pmatrix}
+	r_{LL} & t_{LR} \\ 
+	t_{RL} & r_{RR}
+	\end{pmatrix}
+\end{gather}
+one gets:
 
-Here there are two states in $ X_in $ -- one in the right wire and one in the left. Thus the s-matrix has the dimension equal to two and reads, up to a $ t^2 $ order:
+\begin{gather}
+	r_{LL}
+	=
+	\frac{e^{\kappa _L}-i}{-1+i e^{\kappa _L}}+\frac{2 \zeta ^4 t^2 e^{-i \varphi } \left(1+e^{i \varphi }\right)^2 \left(e^{2 \kappa _L}-1\right) \left(e^{\eta _R}+i\right)}{\left(\zeta ^2+1\right)^2 \left(e^{\kappa _L}+i\right){}^2 \left(-1-i e^{\eta _R}\right)}+O\left(t^3\right)
+	\\
+	r_{RR}
+	=
+	-\frac{e^{\eta _R}+i}{1+i e^{\eta _R}}
+	+
+	\frac{2 \zeta ^4 t^2 e^{-i \varphi } \left(1+e^{i \varphi }\right)^2 \left(e^{\kappa _L}-i\right) \left(e^{2 \eta _R}-1\right)}{\left(\zeta ^2+1\right)^2 \left(-1+i e^{\kappa _L}\right) \left(e^{\eta _R}-i\right){}^2}+O\left(t^3\right)
+	\\
+	t_{LR}=
+	\frac{2 \zeta ^2 t e^{-i \varphi } \left(1+e^{i \varphi }\right) \sqrt{\left(e^{2 \kappa _L}-1\right) \left(e^{2 \eta _R}-1\right)}}{\left(\zeta ^2+1\right) \left(e^{\kappa _L}+i\right) \left(e^{\eta _R}-i\right)}+O\left(t^3\right)
+	\\
+	t_{RL}
+	=
+	-\frac{2 t \zeta ^2 \left(1+e^{i \varphi }\right) \sqrt{\left(e^{2 \kappa _L}-1\right) \left(e^{2 \eta _R}-1\right)}}{\left(\zeta ^2+1\right) \left(e^{\kappa _L}+i\right) \left(e^{\eta _R}-i\right)}+O\left(t^3\right)
+\end{gather}
+The computation of supercurrent is again made with the (\ref{current_low_T}) (\ref{smatrix_and_DOS}). Introducing $  $: 
+\begin{gather}
+	g_{max}
+	=
+	\begin{cases}
+	g_R, ~~g_R>\abs{g_L}
+	\\
+	g_L, ~~\abs{g_L}>g_R
+	\end{cases}
+	\qquad
+		g_{min}
+	=
+	\begin{cases}
+	g_R, ~~g_R<\abs{g_L}
+	\\
+	g_L, ~~\abs{g_L}<g_R
+	\end{cases}
+	\qquad
+	s_g
+	=
+	\begin{cases}
+	1,~~g_R>\abs{g_L}
+	\\
+	-1,~~g_R<\abs{g_L}
+	\end{cases}
+\end{gather}
+one finds:
+\begin{multline}
+\label{curr_e>g_max}
+I\sim
+	\frac{2e}{\hbar}\frac{4t^2\zeta^4\sin\varphi}{\pi}\times
+	\\
+	\times
+	\br{
+	s_g\sqrt{g_{max}^2-g_{min}^2}
+-
+g_{max}g_{min}
+\int_{g_{max}}^{\Delta}
+\frac{dE}{E^2}
+\br{
+	\frac{\sqrt{E^2-g_{max}^2}}{g_{max}}
+	+
+	\frac{\sqrt{E^2-g_{min}^2}}{g_{min}}
+}
+	}
+\end{multline}
+it's importan to note, that this computation is irrelevant for $ E\sim\Delta $, so $ \Delta $ here acts like hight energy cutoff. 
+
+\subsection{$ E $ is near and below $ \Delta $}
+
+To maker the estimate for the supercurrent at enregies $ E\lesssim \Delta$ high eneregy versions of $ \psi_{low} $ can be used, so the system forgets about $ g_L $ and $ g_R $ and becomes effectively symmetric. Taking the notation from (\ref{s_matrix_2D}), find:
+\begin{multline}
+	r_{LL}=r_{RR}
+	=
+	e^{i \gamma }+
+	\\
+	+
+	\zeta ^2 t^2 e^{-i \varphi } \left(\frac{\left(-1+e^{2 i \gamma }\right)^2 \left(1+e^{i \varphi }\right)^2}{e^{i \theta }-e^{i \gamma }}+2 e^{i \gamma } \left(e^{2 i (\gamma +\varphi )}+e^{2 i \gamma }-2 e^{i \varphi }\right)\right)
+	+O\br{t^3}
+	\end{multline}
+\begin{gather}
+	t_{RL}=-t_{RL}
+	=
+	i \zeta  t\left(1+e^{2 i \gamma }\right)  \left(-1+e^{i \varphi }\right)
+	+
+	O\br{t^3}
+\end{gather}
+Using (\ref{current_low_T}) (\ref{smatrix_and_DOS}), one may find
+(\ref{current_low_T}) (\ref{smatrix_and_DOS})
+\begin{gather}
+\label{curr_E_delta}
+I
+\sim
+	\frac{e}{\hbar}
+	\zeta ^2 t^2\Delta
+\end{gather}
+
+\subsection{Analysing the results}
+From (\ref{curr_e_between_g_r<g_l}) and (\ref{curr_e_between_g_r>g_l}) one may see, that the current coming from the states between $ g_L $ and $ g_R $ has a multiplier of the order $ g_{L,R} $. The current from the states above $ g_{max} $, but close to it, can be estimated with (\ref{curr_e>g_max}). It has the multiplier $ g_{min}\log\frac{\Delta}{g_{max}} $. The current states near $ \Delta $ according to (\ref{curr_E_delta}) is proportional to $ \Delta $. Thus one may deduce that the current from the low energy states is negligible compared with the current from the states near $ \Delta. $ 
+
+This is similar to the result of short Josephson junction with some bound state below the gap. It can be shown, that in that case the current from the subgap state will be proportional to the same quantity as (\ref{curr_E_delta}).
+	
+

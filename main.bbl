@@ -17,6 +17,345 @@
 \endgroup
 
 \sortlist[entry]{none/global/}
+  \entry{Majorana_1937}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ME}{%
+         family={Majorana},
+         familyi={M\bibinitperiod},
+         given={Ettore},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ME1}
+    \strng{fullhash}{ME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Teoria simmetrica {dell’elettrone} e del positrone}
+    \field{journaltitle}{Il Nuovo Cimento}
+    \field{year}{1937}
+  \endentry
+
+  \entry{particle_majorana_Avignone}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FTAaSRE}{%
+         family={Frank T. Avignone\bibnamedelima and},
+         familyi={F\bibinitperiod\bibinitdelim T\bibinitperiod
+  A\bibinitperiod\bibinitdelim a\bibinitperiod},
+         given={Steven R.\bibnamedelima Elliott},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+      {{hash=EJ}{%
+         family={Engel},
+         familyi={E\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FTAaSREEJ1}
+    \strng{fullhash}{FTAaSREEJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Double beta decay, Majorana neutrinos, and neutrino mass}
+    \field{volume}{80}
+    \field{journaltitle}{Rev. Mod. Phys.}
+  \endentry
+
+  \entry{particle_majorana_Giuliani}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GA}{%
+         family={Giuliani},
+         familyi={G\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Poves},
+         familyi={P\bibinitperiod},
+         given={Alfredo},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GAPA1}
+    \strng{fullhash}{GAPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Neutrinoless Double-Beta Decay}
+    \field{volume}{2012}
+    \field{journaltitle}{Advances in High Energy Physics}
+  \endentry
+
+  \entry{particle_majorana_Marcocci}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DS}{%
+         family={Dell’Oro},
+         familyi={D\bibinitperiod},
+         given={Stefano},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Marcocci},
+         familyi={M\bibinitperiod},
+         given={Simone},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Viel},
+         familyi={V\bibinitperiod},
+         given={Matteo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VF}{%
+         family={Vissani},
+         familyi={V\bibinitperiod},
+         given={Francesco},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DS+1}
+    \strng{fullhash}{DSMSVMVF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2162659}
+    \field{title}{Neutrinoless Double Beta Decay: 2015 Review}
+    \field{volume}{27}
+    \field{journaltitle}{Advances in High Energy Physics}
+    \field{year}{2016}
+  \endentry
+
+  \entry{majorana_condmat_Rossi}{article}{}
+    \name{author}{2}{}{%
+      {{hash=R}{%
+         family={R.Jackiw},
+         familyi={R\bibinitperiod},
+      }}%
+      {{hash=P}{%
+         family={P.Rossi},
+         familyi={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RP1}
+    \strng{fullhash}{RP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Zero modes of the vortex-fermion system}
+    \field{volume}{190}
+    \field{journaltitle}{Nuclear Physics B}
+    \field{year}{1981}
+  \endentry
+
+  \entry{majorana_condmat_Kitaev}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KAY}{%
+         family={Kitaev},
+         familyi={K\bibinitperiod},
+         given={A\bibnamedelima Yu},
+         giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KAY1}
+    \strng{fullhash}{KAY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Unpaired Majorana fermions in quantum wires}
+    \field{volume}{44}
+    \field{journaltitle}{Uspekhi Fizicheskikh Nauk}
+    \field{year}{2001}
+  \endentry
+
+  \entry{majorana_condmat_Kopnin}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KNB}{%
+         family={Kopnin},
+         familyi={K\bibinitperiod},
+         given={N.\bibnamedelima B.},
+         giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=SMM}{%
+         family={Salomaa},
+         familyi={S\bibinitperiod},
+         given={M.\bibnamedelima M.},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KNBSMM1}
+    \strng{fullhash}{KNBSMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Mutual friction in superfluid {$ \mathcal{He}^3 $}: Effects
+  of bound states in the vortex core}
+    \field{volume}{44}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{1991}
+  \endentry
+
+  \entry{majorana_condmat_Motrunich}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MO}{%
+         family={Motrunich},
+         familyi={M\bibinitperiod},
+         given={Olexei},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=DK}{%
+         family={Damle},
+         familyi={D\bibinitperiod},
+         given={Kedar},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HDA}{%
+         family={Huse},
+         familyi={H\bibinitperiod},
+         given={David\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MO+1}
+    \strng{fullhash}{MODKHDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{224204}
+    \field{title}{Griffiths effects and quantum critical points in dirty
+  superconductors without spin-rotation invariance: One-dimensional examples}
+    \field{volume}{63}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{2001}
+  \endentry
+
+  \entry{majorana_condmat_Nayak}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SSD}{%
+         family={Sarma},
+         familyi={S\bibinitperiod},
+         given={Sankar\bibnamedelima Das},
+         giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=NC}{%
+         family={Nayak},
+         familyi={N\bibinitperiod},
+         given={Chetan},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TS}{%
+         family={Tewari},
+         familyi={T\bibinitperiod},
+         given={Sumanta},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SSD+1}
+    \strng{fullhash}{SSDNCTS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{220502}
+    \field{title}{Proposal to stabilize and detect {half-quantum} vortices in
+  strontium ruthenate thin films: {Non-Abelian} braiding statistics of vortices
+  in a {$ p_x+ip_y $ }superconductor}
+    \field{volume}{73}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{2006}
+  \endentry
+
+  \entry{majorana_condmat_Read_Green}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RN}{%
+         family={Read},
+         familyi={R\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=GD}{%
+         family={Green},
+         familyi={G\bibinitperiod},
+         given={Dmitry},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RNGD1}
+    \strng{fullhash}{RNGD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{10267}
+    \field{title}{Paired states of fermions in two dimensions with breaking of
+  parity and time-reversal symmetries and the fractional quantum Hall effect}
+    \field{volume}{61}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{2000}
+  \endentry
+
+  \entry{majorana_condmat_Senthil}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ST}{%
+         family={Senthil},
+         familyi={S\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=FMPA}{%
+         family={Fisher},
+         familyi={F\bibinitperiod},
+         given={Matthew P.\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STFMPA1}
+    \strng{fullhash}{STFMPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9690}
+    \field{title}{Quasiparticle localization in superconductors with spin-orbit
+  scattering}
+    \field{volume}{61}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{2000}
+  \endentry
+
+  \entry{majorana_condmat_Volovik}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VG}{%
+         family={Volovik},
+         familyi={V\bibinitperiod},
+         given={G.E.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VG1}
+    \strng{fullhash}{VG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Fermion zero modes on vortices in chiral superconductors}
+    \field{volume}{70}
+    \field{journaltitle}{Pisma Zh.Eksp.Teor.Fiz.}
+    \field{year}{1999}
+  \endentry
+
+  \entry{majorana_condmat_Fu_Kane}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FL}{%
+         family={Fu},
+         familyi={F\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KCL}{%
+         family={Kane},
+         familyi={K\bibinitperiod},
+         given={C.\bibnamedelima L.},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FLKCL1}
+    \strng{fullhash}{FLKCL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Superconducting Proximity Effect and Majorana Fermions at the
+  Surface of a Topological Insulator}
+    \field{volume}{100}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2008}
+  \endentry
+
   \entry{Oreg_2010}{article}{}
     \name{author}{3}{}{%
       {{hash=OY}{%

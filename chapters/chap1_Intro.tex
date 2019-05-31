@@ -9,95 +9,13 @@
 
 The system, considered in this work, is a pair of 1D superconductors connected with a Josephson junction. For all the discussion presented it's crucial for one of superconductors to be topological. 
 
-Topological superconductivity is relatively fresh topic in physics. On the one hand it's being connected to particle physics through the notion of Majorana fermion -- the particle coinciding with it's own antiparticle. It can be looked for not only in Standart models' context, but also as a state in solids. Despite the difference between theses entities, there is a clear analogy between majoranas in condensed matter and majoranas in particle physics.
+Topological superconductivity is relatively fresh topic in physics. On the one hand it's being connected to particle physics through the notion of Majorana fermion -- the particle coinciding with it's own antiparticle\cite{Majorana_1937}. It can be looked for not only in Standart models' context\cite{particle_majorana_Avignone}\cite{particle_majorana_Giuliani}\cite{particle_majorana_Marcocci}, but also as a state in solids\cite{majorana_condmat_Rossi}\cite{majorana_condmat_Kitaev}\cite{majorana_condmat_Kopnin}\cite{majorana_condmat_Motrunich}\cite{majorana_condmat_Nayak}\cite{majorana_condmat_Read_Green}\cite{majorana_condmat_Senthil}\cite{majorana_condmat_Volovik}\cite{majorana_condmat_Fu_Kane}. Despite the difference between these entities, there is a clear analogy between majoranas in condensed matter and majoranas in particle physics.
 
- On the other hand topological superconductivity is of interest to quantum computation community as a platform to build fault tolerant quantum memory. Although significant difficulties has appeared on this way, the intention to realize this program is still strong and gives the motivation to build a superconducting samples, which demonstrates signatures of nontrivial topology.
+ On the other hand topological superconductivity is of interest to quantum computation community as a platform to build fault tolerant quantum memory. Although significant difficulties has appeared on this way, the intention to realize this program is still strong and gives the motivation to build a superconducting samples, which demonstrates signatures of nontrivial topology and presence of Majorana fermions.
 
-The brief discussion of topological superconductivity as well as it's connection to majornas in particle physics and quantum computation is presented in the introduction. The subsequent character presents the model for Jospehson junction of two 1D supeconductors  and and the investigation of it's properties -- spectrum, supercurrent and ionization rate. The discussion of a potential use of this results can be found in the	completive character The most important technical details can be found in supplementary.
+The proposition of using superconducting wires as a carriers of Majorana fermions came from a seminal work of Kitaev \cite{majorana_condmat_Kitaev}. The key ingredient of this system was a p-wave superconductivity assumed to be present in a wire. There was showed, that under certain conditions the Majroana state ca be present at the end of the wire. After some time another propositions\cite{Oreg_2010}\cite{Lutchyn_2010} appeared, based on seminconductor-superconductor heterostructures with s-wave superconductivity, external magnetic field and spin-orbit coupling. It was showed, that the sign of quantity $ g=B=\sqrt{B^2+\mu^2} $, where $ B $ is a magnetic field, $ \Delta $ is the absolute value of superconducting order parameter and $ \mu $ is a chemical potential can be used as a topological index, and a Majorana state will appear where $ \mathrm{sgn}~g $ is changing.
 
-The review, presented here, only scartches the surface of rich topic of topological superconductivity. More complete discsssion can be found in the notes of (LINKS-LINKS)
+The model, considered is this work is close to the ones used in \cite{Oreg_2010}\cite{Lutchyn_2010}. It consists of two superconducting wires connected with a tunnel junction. However instead of domain wall of $ \mathrm{sgn}~g $, a tunnel barrier between areas with $ g>0 $ and $ g<0 $ is introduced. This model formulated in detail in chapter \ref{chap:model}. The spectrum of this model and stationary supercurrent are studied in chapter \ref{chap:stationary} and the ionization under small external oscillating voltage is considered in chapter \ref{chap:ionization}. Chapter \textbf{LINk to discssion chapter}  stands for the discussion of obtained results and their possible experimental realization and use, while chapter \textbf{LINk to conclusion chapter} concludes the study.
 
 
-\iffalse
-\section{Majorana fermions -- from particles to superconductors}
 
-Topological superconductor is often defined as a
-superconductor, which can host states with special symmetry -- Majorana fermions -- localized near the defects. Although this definition is not totally clear and doesn't reflects the connection to topology as concept of math, it's being very practical when the concrete system is considered. Here the notion of Majorana fermion is given and it's emergence from particle physics is described.
-
-A particle with spin $ \frac{1}{2} $ can be represented with 4 components spinor $ \Psi $ and obeys a Dirac equation:
-\begin{equation}
-	\left(
-		i\gamma^\mu\partial_\mu - m 
-	\right)
-	\Psi
-	=
-	0
-\end{equation}
-Here $ \gamma^\mu $ are 4x4 matrices which form a Clifford algebra $ \left\{\gamma^\mu,\gamma^\nu \right\} = 2\eta_{\mu\nu} $.
-in terms of real spinors $ \Psi $. To do so, he proposed an alternative representation of $ \gamma^\mu $. While originally the representation:
-\begin{equation}
-\label{dirac_repr_1}
-	\gamma^\mu
-	=
-	\left(
-		\beta, \beta \pmb{\alpha}
-	\right)
-\end{equation}
-with:
-
-\begin{equation}
-\label{dirac_repr_2}
-	\alpha_i 
-	=
-	\begin{pmatrix}
-	 0 & \sigma_i \\
-	 \sigma_i & 0
-	\end{pmatrix}
-	~~~~~~~~~~~~~
-	\beta 
-	=
-	\begin{pmatrix}
-	\mathbb{I} & 0 \\
-	0      &  -\mathbb{I}
-	\end{pmatrix}
-\end{equation}
-and $ \sigma_i $ being Pauli matrices was used, Majorana proposed another set of $ \gamma^\mu_M $, namely:
-\begin{equation}
-\label{Majorana_repr_1}
-	\gamma^0_M
-	=
-	i
-	\begin{pmatrix}
-	0 & -\sigma_1 \\
-	\sigma_1 & 0
-	\end{pmatrix}
-	~~~
-	\gamma^1_M
-	=
-	i
-	\begin{pmatrix}
-	0 & ~~\mathbb{I} \\
-	\mathbb{I} & 0
-	\end{pmatrix}
-	~~~
-	\gamma^2_M
-	=
-	i
-	\begin{pmatrix}
-	\mathbb{I} & 0 \\
-	0          & -\mathbb{I}
-	\end{pmatrix}
-	~~~
-	\gamma^2_M
-	=
-	i
-	\begin{pmatrix}
-	0 & \sigma_2 \\
-	-\sigma_2 & 0
-	\end{pmatrix}	
-\end{equation}
-both Dirac (\ref{dirac_repr_1}), (\ref{dirac_repr_2}) and Majorana (\ref{Majorana_repr_1}) form a Clifford algebra $ \left\{\gamma^\mu,\gamma^\nu \right\} = 2\eta_{\mu\nu} $ where $ \eta_{\mu\nu} $
- is Minkovwsky tensor, so each of them can be used as proper equation describing a particle with a spin equal to $ \frac{1}{2} $.
- 
- If 
- \fi

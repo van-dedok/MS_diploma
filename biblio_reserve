@@ -1,8 +1,8 @@
 @article{Majorana_1937,
-	author = {Ettore Majorana},
-	year = {1937},
-	title = {Teoria simmetrica {dell’elettrone} e del positrone},
-	journal = {Il Nuovo Cimento}
+author = {Ettore Majorana},
+year = {1937},
+title = {Teoria simmetrica {dell’elettrone} e del positrone},
+journal = {Il Nuovo Cimento}
 }
 @article{Lutchyn_2010,
 	author = {Roman Lutchyn and Jay Sau and Das Sarma
@@ -66,8 +66,8 @@
 	number={}
 }
 @article{particle_majorana_Marcocci,
-	title = {Neutrinoless Double Beta Decay: 2015 Review},
-	author = {Stefano Dell’Oro and Simone Marcocci and Matteo Viel and Francesco Vissani},
+	author = {Neutrinoless Double Beta Decay: 2015 Review},
+	title = {Stefano Dell’Oro and Simone Marcocci and Matteo Viel and and Francesco Vissani1},
 	year = {2016},
 	journal = {Advances in High Energy Physics},
 	number = {2162659},
@@ -76,11 +76,11 @@
 
 @article{majorana_condmat_Kopnin,
 	author = {N. B. Kopnin and M. M. Salomaa},
-	title = {Mutual friction in superfluid {$ \mathcal{He}^3 $}: Effects of bound states in the vortex core},
-year = {1991},
-journal = {Phys. Rev. B},
-volume = {44},
-number={}
+	title = {Mutual friction in superfluid {}$ \mathcal{He}^3 $}: Effects of bound states in the vortex core},
+	year = {1991},
+	journal = {Phys. Rev. B},
+	volume = {44},
+	number={}
 }
 
 @article{majorana_condmat_Volovik,
@@ -144,15 +144,7 @@ number={}
 	volume = {44},
 	number={}
 }
-@article{majorana_condmat_Fu_Kane,
-	author = {Liang Fu and C. L. Kane},
-	title = {Superconducting Proximity Effect and Majorana Fermions at the Surface of a Topological Insulator},
-	year = {2008},
-	journal = {Phys. Rev. Lett.},
-	volume = {100},
-	number={}
-}
-@article{,
+@article{
 	author = {},
 	title = {},
 	year = {},

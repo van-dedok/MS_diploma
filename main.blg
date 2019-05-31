@@ -7,7 +7,9 @@ A level-1 auxiliary file: chapters/contents.aux
 A level-1 auxiliary file: chapters/chap1_Intro.aux
 A level-1 auxiliary file: chapters/chap2_Model.aux
 A level-1 auxiliary file: chapters/chap3_stationary.aux
-A level-1 auxiliary file: chap3_ionization.aux
+A level-1 auxiliary file: chapters/chap4_ionization.aux
+A level-1 auxiliary file: chapters/appb.aux
+A level-1 auxiliary file: chapters/appc.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -26,68 +28,84 @@ Database file #1: main-blx.bib
 Database file #2: biblio.bib
 Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2630 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2630 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2630 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2630 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2634 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2640 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2644 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2644 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
+while executing---line 2648 of file biblatex.bst
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2654 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2658 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2658 of file biblatex.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-Name 2 in "Roman Lutchyn and Jay Sau, and Das Sarma" has a comma at the end for entry Lutchyn_2010
+Name 1 in "Frank T. Avignone and, Steven R. Elliott, and Jonathan Engel" has a comma at the end for entry particle_majorana_Avignone
 while executing---line 2746 of file biblatex.bst
-You've used 5 entries,
+You've used 18 entries,
             6256 wiz_defined-function locations,
-            1210 strings with 9391 characters,
-and the built_in function-call counts, 21523 in all, are:
-= -- 1444
-> -- 392
-< -- 69
-+ -- 590
-- -- 141
-* -- 1446
-:= -- 2417
+            1294 strings with 11726 characters,
+and the built_in function-call counts, 82447 in all, are:
+= -- 5438
+> -- 1567
+< -- 310
++ -- 1960
+- -- 568
+* -- 5823
+:= -- 8420
 add.period$ -- 0
-call.type$ -- 5
-change.case$ -- 28
+call.type$ -- 18
+change.case$ -- 117
 chr.to.int$ -- 30
-cite$ -- 8
-duplicate$ -- 2463
-empty$ -- 2006
-format.name$ -- 254
-if$ -- 4316
+cite$ -- 34
+duplicate$ -- 9091
+empty$ -- 8011
+format.name$ -- 1034
+if$ -- 16938
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 34
 missing$ -- 0
-newline$ -- 144
-num.names$ -- 152
-pop$ -- 1436
+newline$ -- 473
+num.names$ -- 646
+pop$ -- 5872
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 217
 quote$ -- 0
-skip$ -- 619
+skip$ -- 2501
 stack$ -- 0
-substring$ -- 2237
-swap$ -- 537
-text.length$ -- 93
+substring$ -- 8811
+swap$ -- 2079
+text.length$ -- 361
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 158
+type$ -- 600
 warning$ -- 0
-while$ -- 334
+while$ -- 1036
 width$ -- 0
-write$ -- 140
-(There were 11 error messages)
+write$ -- 456
+(There were 19 error messages)

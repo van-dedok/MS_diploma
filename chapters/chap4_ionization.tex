@@ -25,11 +25,11 @@ As was shown in section \ref{sec:elimintaing_longwave}, there exists a gauge tra
 
 
 The correct answer is that both left and right wires should get equal time-dependent phase with different signs: $ \phi_L=-\frac{\varphi_0}{2}-\frac{\alpha}{2}\cos \omega t $, $ \phi_R=\frac{\varphi_0}{2}+\frac{\alpha}{2}\cos \omega t $. Thus the superconducting terms in the wire Hamiltonians alter: $ \Delta_{\pm\frac{\varphi}{2}} \to\Delta_{\pm\frac{\varphi}{2}\pm \frac{\alpha}{2}\cos \omega t} $. Decomposing them in small $ \alpha $ one can explicitly write the perturbation and try to compute the ionization rate. However this way appears to be quite difficult as the overlaps of all the states 
-present in both wires and at first it seems that the Majorana states has to much ways to ionize. To avoid this difficulty, the tunnel Hamiltonian approach is used.
+present in both wires and at first it seems that the Majorana states has too much ways to ionize. To avoid this difficulty, the tunnel Hamiltonian approach is used.
+
 \section{Tunnel Hamiltonian approach}
 \label{sec:tunnel_hamiltonian}
 The main idea of this method is to hide all the time dependence and the tunnel effect in one single operator. The local goal is to write the Hamiltonian as $ H=H_L+H_R+H_T $, where $ H_{L,R} $ are the Hamiltonians of the left and right wire without any contact (corresponding to zero tunneling: $ t=0 $), and $H_T  $ is a tunnel Hamiltonian both containing the time dependence and mixing the wavefunctions from different wires. 
-
 Here the following notation is used.The Hamiltonians $ H_L $, $ H_R $ and $ H_T $ are 8x8 matrices in combined Nambu-Gorkov and LR-space. In LR-space they have the following form:
 \begin{gather}
 	H_L
@@ -49,12 +49,13 @@ Here the following notation is used.The Hamiltonians $ H_L $, $ H_R $ and $ H_T 
 	H_T
 =
 \begin{pmatrix}
-0 & h_T^\dagger \\
-h_T & 0
+0 & h_T \\
+h_T^\dagger & 0
 \end{pmatrix}_{LR}	
 \end{gather}
- The spinors with four components are corresponding to the unperturbed wavefunctions and are denoted as $ \big|\gamma_{0}\,\big> $,  for the Majorana state and $ \big|\varepsilon,L_{0}\,\big> $, $ \big|\varepsilon,R_{0}\,\big> $ for the contentious spectra in the left and in the right wires respectfully, and the corrections are denoted as $ \big|\gamma_{1}\,\big> $, $ \big|\varepsilon,L_{1}\,\big> $, $ \big|\varepsilon,R_{1}\,\big> $. These wavefunctions can be found in the appendix \ref{app:wavefunctions_with_corrections}.  In the the combined space of dimension 8 this spinors are:
+The Hamiltonians $ h_L $ and $ h_R $ eventually coinside with (\ref{bulk_Hamiltonian}) with zero boundary condition on one side. The Hamiltonian $ h_T $ in unknown -- the goal is to make it in a way the wavefunctions obtained from the model of chapter \ref{chap:model}. This wavefunctions and their tunneling first corrections are listed in the appendix \ref{app:wavefunctions_with_corrections}.
 
+ The spinors with four components are corresponding to the unperturbed wavefunctions and are denoted as $ \big|\gamma_{0}\,\big> $,  for the Majorana state and $ \big|\varepsilon,L_{0}\,\big> $, $ \big|\varepsilon,R_{0}\,\big> $ for the contentious spectra in the left and in the right wires respectfully, and the corrections are denoted as $ \big|\gamma_{1}\,\big> $, $ \big|\varepsilon,L_{1}\,\big> $, $ \big|\varepsilon,R_{1}\,\big> $. These wavefunctions can be found in the appendix \ref{app:wavefunctions_with_corrections}.  This 8D spinors are:
 \begin{gather}
 	\Psi_{\gamma}=\begin{pmatrix}0\\
 	\big|\gamma_{0}\,\big>
@@ -71,8 +72,7 @@ h_T & 0
 	\end{pmatrix}_{LR}+...
 \end{gather}
 
-
-The correct way to write $ H_T $ is to make it restoring the corrections from appendix \ref{app:wavefunctions_with_corrections}. To do so, one may write the unperturbed Green function of the system as:
+To restore the wavefunctions from the appendix \ref{app:wavefunctions_with_corrections} one should write the unperturbed Green function of the system as:
 
 \begin{multline}
 	G_{0}\left(E\right)=\frac{1}{E+i0}\begin{pmatrix}0 & 0\\
@@ -103,7 +103,7 @@ Now, multiplying the third equation by $ \big<\gamma_{0}\,\big| $ and $ \big<\ep
 \begin{gather}
 	\big<\gamma_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E+i0}\,\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>\\\big<\epsilon,R_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E-\epsilon+i0}\big<\epsilon,R_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
 \end{gather}
-The l.h.s. of both equations above can be found explicitly with the help of appendix \ref{app:wavefunctions_with_corrections}. The result yields:
+The l.h.s. of both equations above can be found explicitly with the help of appendix \ref{app:wavefunctions_with_corrections}.  The result yields:
 \begin{gather}
 \label{tunnel_matrix_elements_maj-cont}
 	\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
@@ -128,7 +128,7 @@ where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. The fact, that all energy dep
 
 \subsection{Time dependence of perturbation}
 
-To obtain the ionization rate one should treat $ H_T $ as perturbation. For unperturbed system, described with $ H_0=H_R+H_L $ the electrons cannot get from wire to another, but $ H_T $ allows these processes, so the ionization can be described as a set of jumps from right to left wire (see fig. \ref{fig:tunneling})
+To obtain the ionization rate one should treat $ H_T $ as perturbation. For unperturbed system, described with $ H_0=H_R+H_L $ the electrons cannot get from wire to another, but $ H_T $ allows these processes, so the ionization can be described as a set of jumps from right to left wire (see fig. \ref{fig:tunneling}).
 
 \begin{figure}[H]
 	\centering
@@ -137,9 +137,9 @@ To obtain the ionization rate one should treat $ H_T $ as perturbation. For unpe
 	\label{fig:tunneling}
 \end{figure}
 
-The ionization rate can be calculated with the help of  (\ref{ionization_key}). To use this formula, one should decompose the  perturbation in Fourier series, as was done for (\ref{fourier_pertrubation}). From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{t}}{2} $ with $ \varphi=\phi_{0}+\alpha\cos\omega t $. Using $ \alpha\ll1 $ we write:
+The ionization rate can be calculated with the help of  (\ref{ionization_key}). To use this formula, one should decompose the  perturbation in Fourier series, as was done for (\ref{fourier_pertrubation}). From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{t}}{2} $ with $ \varphi=\phi_{0}+\alpha\cos\omega t $. Using $ \alpha\ll1 $, one may write:
 \begin{multline}
-	e^{i\varphi/2}+e^{-i\varphi/2}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha/2)^{n}}{2^{n}n!}(e^{in\omega t}+e^{-in\omega t})+c.c=\\=\sum_{n}\frac{\alpha{}^{n}}{2^{2n}n!}(e^{in\omega t}+e^{-in\omega t})2\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
+	e^{i\varphi/2}+e^{-i\varphi/2}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha/2)^{n}}{2^{n}n!}(e^{in\omega t}+e^{-in\omega t})+c.c=\\=\sum_{n}\frac{\alpha{}^{n}}{2^{2n-1}n!}(e^{in\omega t}+e^{-in\omega t})\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
 \end{multline}
 so that $ V_{n}=V_{0}A_{n} $ with $ A_{n}=\frac{\alpha^{n}}{2^{2n-1}n!}\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right) $.
 
@@ -151,7 +151,9 @@ According to (\ref{tunnel_matrix_elements_maj-cont}) and (\ref{tunnel_matrix_ele
 
 Here the focus is on the case where the topological gap is much larger than the trivial one. In this case, the right continuum has high energies and does not participate in the ionization process. Indeed,
 \begin{gather}
-	VG_{\epsilon}V=\frac{V|\gamma\rangle\langle\gamma|V}{\epsilon}+\intop_{|E_{R}|>g_{R}}\frac{V|E_{R}\rangle\langle E_{R}|V}{\epsilon-E_{R}}\frac{dE_{R}}{N_{R}(E_{R})}
+	V G_{\epsilon} V
+	=
+	\frac{V|\gamma\rangle\langle\gamma|V}{\epsilon}+\intop_{|E_{R}|>g_{R}}\frac{V|E_{R}\rangle\langle E_{R}|V}{\epsilon-E_{R}}\frac{dE_{R}}{N_{R}(E_{R})}
 \end{gather}
 When $ g_{R}\gg\epsilon\sim g_{L} $, the second term can be neglected. Then, the product $ \dots V_{n}GV_{n'}GV_{n''}\dots $ factorizes into individual number-factors of the form $ \langle\gamma|V_{n}GV_{m}|\gamma\rangle $.
 
@@ -221,22 +223,34 @@ The first step to deal with (\ref{ionization_super_formula}) is to rewrite the p
 	\begin{pmatrix}
 	n
 	\\
-	k_1,k2,\dots,k_n
+	k_1,k_2,\dots,k_n
 	\end{pmatrix}
 	\prod_i
 	f_i^{(k_i)}
 \end{gather}
-For the cosing product it can be applied in a following way:
+For the cosine product it can be applied in a following way:
 \begin{gather}
 	\sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{\cos(\chi+\frac{\pi n_{i}}{2})}{n_{i}!}=\sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{D_{\chi}^{n_{i}}}{n_{i}!}\cos\chi=\frac{1}{M!}D_{\chi}^{M}\cos^{N}\chi
 \end{gather}
-Then some algebra should be used:
+where $ \chi=\frac{\varphi_0 }{2}$. Then some algebra should be used:
 \begin{multline}
 \label{after_multinomial}
-	\frac{1}{M!}D_{\chi}^{M}\cos^{N}\chi=\frac{1}{M!2^{N}}D_{\chi}^{M}\sum_{k=0}^{N}C_{k}^{N}e^{i\chi(N-2k)}=\\=\frac{1}{M!2^{N}}\sum_{k=0}^{N}C_{k}^{N}(i(N-2k))^{M}e^{i\chi(N-2k)}=\frac{e^{i\chi N+iM\pi/2}}{M!2^{N}}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}
+	\frac{1}{M!}D_{\chi}^{M}\cos^{N}\chi=
+	\frac{1}{2^{N}M!}D_{\chi}^{M}\sum_{k=0}^{N}C_{k}^{N}e^{i\chi(N-2k)}
+	=
+	\frac{e^{i\chi N+iM\pi/2}}{2^{N}M!}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}
 \end{multline}
 Now, in the sum, the ratio of consecutive summands is $ \frac{a_{k+1}}{a_{k}}=\frac{C_{k+1}^{N}}{C_{k}^{N}}\left(\frac{N-2k-2}{N-2k}\right)^{M} $. For $ k<N/2 $ both factors here are decreasing, so the largest ratio is $ \frac{a_{1}}{a_{0}}=N(\frac{N-2}{N})^{M}\simeq Ne^{-2M/N} $. The most important terms in this sum define in wich regime the system is and what the ionization rate would be. 
 
+The expression (\ref{ionization_super_formula}) can be rewritten with the help of the Poisson summation formula:
+
+\begin{gather}
+	\mathcal{J}
+	=
+	\br{\frac{\alpha}{4}}^M
+	\sum_N
+	\mathcal{J}_{N}	
+\end{gather}
 One can anticipate that the typical (i.e. most important) value of $ N $ is given by $ N_{*}=\frac{2M}{n_{*}} $ with $ n_{*}=\log\frac{1}{T_{\lambda}} $. It can be shown from considering the action $ s=\log\frac{1}{T_\lambda}-\frac{2}{2M} $ which appears in this sum. Taking $ N=N_{*} $ one can rewrite the condition $ \abs{\frac{a_{1}}{a_{0}}}\ll1 $ as $ \frac{2M}{n_{*}}\ll e^{n_{*}} $. This condition separates two regimes of the system --- pure Andreev regime, when only the first and the last terms in the sum are relevant, and the Andreev+Normal regime, when other terms should be taken into account.
 
 \subsection{Pure Andreev regime}

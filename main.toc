@@ -18,7 +18,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}High momentum modes}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Eliminating longwave modes from boundary condition}{14}
+\contentsline {section}{\numberline {3.3}Eliminating long-wave modes from boundary condition}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Low momenta and linearized Hamiltonian}{16}
 \defcounter {refsection}{0}\relax 
@@ -40,7 +40,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.6.3}$ E $ is near and below $ \Delta $}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Analysing the results}{25}
+\contentsline {subsection}{\numberline {3.6.4}Analyzing the results}{25}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Ionization}{26}
 \defcounter {refsection}{0}\relax 

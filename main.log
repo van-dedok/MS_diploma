@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  4 JUN 2019 12:59
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  5 JUN 2019 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,15 +1141,15 @@ Chapter 2.
 
 ]
 File: images/chem_and_ext_potentials.png Graphic file (type QTm)
- <use  "images/chem_and_ext_potentials.png" > [8]
+ <use  "images/chem_and_ext_potentials.png" > [8] [9]
 File: images/spectrum.png Graphic file (type QTm)
 
-<use  "images/spectrum.png" > [9]
+<use  "images/spectrum.png" > [10]
 
-LaTeX Warning: Command \l invalid in math mode on input line 183.
+LaTeX Warning: Command \l invalid in math mode on input line 185.
 
 Missing character: There is no ł in font cmmi12!
-[10]) [11]
+) [11]
 \openout2 = `chapters/chap3_stationary.aux'.
 
  (./chapters/chap3_stationary.tex
@@ -1161,21 +1161,14 @@ Chapter 3.
 ]
 File: images/bc_transform.png Graphic file (type QTm)
  <use  "images/bc_transform.png" > [13] [14]
-Overfull \hbox (28.84993pt too wide) in paragraph at lines 134--135
+Overfull \hbox (28.84993pt too wide) in paragraph at lines 135--136
 []\TU/TimesNewRoman(0)/m/n/12 Now, using the expansion (3.10[]) and renormalizi
 ng the coefficients: $\OML/cmm/m/it/12 C[] \OMS/cmsy/m/n/12 ! ^^@ [] \OML/cmm/m
 /it/12 C[]$
  []
 
-[15] [16]
-Overfull \hbox (23.2177pt too wide) in paragraph at lines 281--283
-\TU/TimesNewRoman(0)/m/n/12 the leading order. Indeed, diagonalizing the upper 
-subblock of $\OML/cmm/m/it/12 H[]$\TU/TimesNewRoman(0)/m/n/12 , one finds, that
- $\OML/cmm/m/it/12 E \OT1/cmr/m/n/12 = []$\TU/TimesNewRoman(0)/m/n/12 .
- []
-
-[17] [18] [19] [20] [21]
-Overfull \hbox (25.18828pt too wide) in paragraph at lines 576--577
+[15] [16] [17] [18] [19] [20] [21]
+Overfull \hbox (25.18828pt too wide) in paragraph at lines 578--579
 []\TU/TimesNewRoman(0)/m/n/12 For $\OML/cmm/m/it/12 E \OMS/cmsy/m/n/12 ^^\ \OT1
 /cmr/m/n/12 ^^A$ \TU/TimesNewRoman(0)/m/n/12 one may use low energy limit of fu
 nctions $\OML/cmm/m/it/12  []$\TU/TimesNewRoman(0)/m/n/12 : $\OML/cmm/m/it/12  
@@ -1187,6 +1180,10 @@ nctions $\OML/cmm/m/it/12  []$\TU/TimesNewRoman(0)/m/n/12 : $\OML/cmm/m/it/12
 
  (./chapters/chap4_ionization.tex
 Chapter 4.
+
+LaTeX Warning: Reference `sec:elimintaing_longwave' on page 26 undefined on inp
+ut line 24.
+
 [26
 
 
@@ -1267,15 +1264,18 @@ iral superconductors”, Pisma Zh.Eksp.Teor.Fiz.
 (./chapters/chap3_stationary.aux) (./chapters/chap4_ionization.aux)
 (./chapters/chap_discussion.aux) (./chapters/chap_conclusion.aux)
 (./chapters/appb.aux) (./chapters/appc.aux))
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20470 strings out of 493068
- 426893 string characters out of 6137720
- 871830 words of memory out of 5000000
- 24072 multiletter control sequences out of 15000+600000
+ 20472 strings out of 493068
+ 426932 string characters out of 6137720
+ 871818 words of memory out of 5000000
+ 24074 multiletter control sequences out of 15000+600000
  12614 words of font info for 72 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  44i,18n,68p,10402b,4352s stack positions out of 5000i,500n,10000p,200000b,80000s

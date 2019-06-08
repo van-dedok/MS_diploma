@@ -10,15 +10,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}The dispersion of a homogeneous wire}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}High and low modes}{11}
+\contentsline {section}{\numberline {2.3}Short-wave and long-wave wavefunctions}{11}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Stationary properties}{12}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Boundary condition}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}High momentum modes}{13}
+\contentsline {section}{\numberline {3.2}Short-wave wavefunctions}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Eliminating long-wave modes from boundary condition}{14}
+\contentsline {section}{\numberline {3.3}Eliminating short-wave wavefunctions from boundary condition}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Low momenta and linearized Hamiltonian}{16}
 \defcounter {refsection}{0}\relax 
@@ -26,60 +26,60 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.1}The case of zero tunneling}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Small tunneling}{20}
+\contentsline {subsection}{\numberline {3.5.2}Weak tunneling}{20}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.6}Stationary supercurrent }{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}$ E $ \hspace {0pt} between $ \left |g_L\right | $ and $ g_R $}{23}
+\contentsline {subsection}{\numberline {3.6.1} Supercurrent for $ E $ \hspace {0pt} between $ \left |g_L\right | $ and $ g_R $}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{The case $ \left |g_L\right | > g_R $}{23}
+\contentsline {subsubsection}{The case $ \left |g_L\right | > g_R $}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{The case $ \left |g_L\right | < g_R $}{23}
+\contentsline {subsubsection}{The case $ \left |g_L\right | < g_R $}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}$ E $ \hspace {0pt} is greater than both $ \left |g_L\right | $ and $ g_R $ and much smaller than $ \Delta $}{23}
+\contentsline {subsection}{\numberline {3.6.2}Supercurrent for $ \left |g_L\right |, g_R<E\ll \Delta $ }{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}$ E $ is near and below $ \Delta $}{24}
+\contentsline {subsection}{\numberline {3.6.3}Supercurrent for $\left |g_L\right |, g_R\ll E \lesssim \Delta $}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Analyzing the results}{25}
+\contentsline {subsection}{\numberline {3.6.4}Analyzing the results}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Ionization}{26}
+\contentsline {chapter}{\numberline {4}Ionization}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introducing the perturbation}{26}
+\contentsline {section}{\numberline {4.1}Introducing the perturbation}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Tunnel Hamiltonian approach}{27}
+\contentsline {section}{\numberline {4.2}Tunnel Hamiltonian approach}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Ionization rate for $ g_R\gg \left |g_L\right | $}{29}
+\contentsline {section}{\numberline {4.3}Ionization rate for $ g_R\gg \left |g_L\right | $}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Time dependence of perturbation}{29}
+\contentsline {subsection}{\numberline {4.3.1}Time dependence of perturbation}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Factorizing $ w_\mathcal {E} $}{30}
+\contentsline {subsection}{\numberline {4.3.2}Factorizing $ w_\mathcal {E} $}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Using multinomial formula}{32}
+\contentsline {subsection}{\numberline {4.3.3}Using multinomial formula}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Pure Andreev regime}{32}
+\contentsline {subsection}{\numberline {4.3.4}Pure Andreev regime}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Pure Andreev regime regime: intermediate case: fixed photon number}{36}
+\contentsline {subsubsection}{Pure Andreev regime regime: intermediate case: fixed photon number}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Andreev+Normal regime}{36}
+\contentsline {subsection}{\numberline {4.3.5}Andreev+Normal regime}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Results}{40}
+\contentsline {section}{\numberline {4.4}Results}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ionization rate}{40}
+\contentsline {subsubsection}{Ionization rate}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{42}
+\contentsline {chapter}{\numberline {5}Discussion}{41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.0.1}Results summary}{42}
+\contentsline {subsection}{\numberline {5.0.1}Results summary}{41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.0.2}Possible experimental realization}{42}
+\contentsline {subsection}{\numberline {5.0.2}Possible experimental realization}{41}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{44}
+\contentsline {chapter}{\numberline {6}Conclusion}{43}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{45}
+\contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Multiphoton ionization}{48}
+\contentsline {chapter}{\numberline {B}Multiphoton ionization}{47}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Basics about Green's functions}{48}
+\contentsline {section}{\numberline {B.1}Basics about Green's functions}{47}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Fermi Golden Rule (first order)}{49}
+\contentsline {section}{\numberline {B.2}Fermi Golden Rule (first order)}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Fermi Golden Rule (high order)}{51}
+\contentsline {section}{\numberline {B.3}Fermi Golden Rule (high order)}{50}

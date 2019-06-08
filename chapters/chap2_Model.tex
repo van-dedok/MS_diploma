@@ -8,7 +8,7 @@
 \chapter{The model}
 \label{chap:model}
 
-The model studied here is mostly inspired by the works \cite{Oreg_2010} and \cite{Lutchyn_2010} with the main difference being the presence of a tunnel contact between the wires. As will be shown in subsequent chapters, the barrier doesn't affect the appearance of Majorana state, but has important consequences for other other properties of the system. In this chapter the model itself is presented.
+The model studied here is mostly inspired by the works \cite{Oreg_2010} and \cite{Lutchyn_2010} with the main difference being the presence of a tunnel contact between the wires. As will be shown in subsequent chapters, the barrier doesn't affect the appearance of Majorana state, but has important consequences for other properties of the system. In this chapter the model itself is presented.
 
 \section{Problem statement}
 
@@ -52,7 +52,7 @@ The system under consideration consists of two 1D s-wave superconducting wires c
 	\Delta\tau_\phi
 \end{gather}
 
-Here $ \sigma_i $ and $ \tau_i $ are Pauli matrices in spin and particle-hole subspaces respectively, $ \tau_\phi = \tau_x \cos\phi - \tau_y \sin\phi$, with $ \phi $ being a superconducting phase, $ \mu_0 $ is a chemical potential, $ B $ is an external magnetic field, $ \Delta $ is the absolute value of superconducting order parameter and $ u $ is spin-orbit coupling constant with the dimension of velocity. The wire is being aligned along the y-axis, while the direction of the magnetic field coincides with x-axis. Note, that only one component of spin-orbit is nonzero due to 1D nature of the problem.
+Here $ \sigma_i $ and $ \tau_i $ are Pauli matrices in spin and particle-hole subspaces respectively, $ \tau_\phi = \tau_x \cos\phi - \tau_y \sin\phi$, with $ \phi $ being the superconducting phase, $ \mu_0 $ is a chemical potential, $ B $ is an external magnetic field, $ \Delta $ is the absolute value of superconducting order parameter and $ u $ is spin-orbit coupling constant with the dimension of velocity. The wire is aligned along the y-axis, while the direction of the magnetic field coincides with x-axis. Note, that only one component of spin-orbit is nonzero due to 1D nature of the problem.
 
 The tunnel junction is introduced  by applying an external electrical field. Its potential profile $U\br{y}  $ is presented on figure \ref{fig:chemandextpotentials}(a). Inside each wire the potential is assumed to be homogeneous, though its value can be different to the right and to the left of the junction. The junction itself is modeled by a sharp peak of the potential.
  
@@ -109,7 +109,6 @@ with
 	=
 	\begin{cases}
 	\phi_L,&~~~  -\frac{L}{2}<y\\
-	undefined,~~ -\frac{L}{2} <y <\frac{L}{2}\\
 	\phi_R, &~~~~ \frac{L}{2}< y 
 	\end{cases}
 \end{gather}
@@ -117,27 +116,27 @@ with $ L $ being the size of the junction. Note, that the parameters $ B $, $ u 
  
   This setup is close to one of the models  considered by Oreg et al. in \cite{Oreg_2010} ("\textit{Spatially varying $ \mu $}" section). The difference is in the profile of $ \mu\br{y} $ -- in \cite{Oreg_2010}  there is a step in effective chemical potential, while here this function has a well.  
   
- In \cite{Oreg_2010} it's also discussed that the Majorana fermion appears at the inhomogeneity if the difference $ B-\sqrt{\mu^2+\Delta^2} $ is greater than zero on one side of the step in $ \mu\br{y} $ and lesser than zero on another side of it. As will be shown further, this is also relevant to the  system presented here. Note, that if $ B > \left|\Delta\right| $ this condition can always be satisfied by choosing appropriate $ \mu_L $ and $ \mu_R $. 
+ In \cite{Oreg_2010} it's also shown that the Majorana fermion appears at the interface between areas with different signs of the difference $ B-\sqrt{\mu^2+\Delta^2} $.  As will be shown further, this is also relevant to the  system presented here. Note, that if $ B > \left|\Delta\right| $ this condition can always be satisfied by choosing appropriate $ \mu_L $ and $ \mu_R $. 
  
- When the two wires of different sign of $ g $ are assumed in this work, the trivial wire will always be on the left, while the topological wire will always be on the right.
+ When two wires of different sign of $ g $ are assumed in this work, the trivial wire will always be on the left, while the topological wire will always be on the right.
 
  The model, described by (\ref{full_hamiltonian}) and (\ref{full_hamiltonian_suppl}) possesses a big number of external parameters. Different areas in this parameter space require different approaches and sometimes lead to completely different physics. Here the certain experimentally reasonable constraints are assumed:
   \begin{gather}
  \label{constraints}
- 	\mu_L,\mu_R \ll B \sim \Delta \ll mu^2\ll \left|\mu_b\right|
+ 	\mu_L,\mu_R \ll B \approx \Delta \ll mu^2\ll \left|\mu_b\right|
  \end{gather} 
 
-  The experimental justification of this choice is given in the chapter \ref{chap:discssion}. From the theoretical point of view the benefit of constraints $ \mu_L,\mu_R \ll B \sim \Delta \ll mu^2 $ is that they make possible to write the approximate wavefunctions in the wires explicitly. The constraint $ \mu_L,\mu_R, B, \Delta, mu^2\ll \abs{\mu_b}$ has another meaning --- it set's the system in the tunneling regime.
+  The experimental justification of this choice is given in chapter \ref{chap:discssion}. From the theoretical point of view the benefit of constraints $ \mu_L,\mu_R \ll B \approx \Delta \ll mu^2 $ is that they make it possible to use  approximate wavefunctions in the wires. The inequality $ mu^2\ll \abs{\mu_b}$ sets the system in the tunneling regime.
   
 
 
 \section{The dispersion of a homogeneous wire}
 
-Before discussing the properties of the junction it's necessary to consider a dispersion of a homogeneous wire modeled with the Hamiltonian (\ref{bulk_Hamiltonian}). Although this can be done exactly, it's instructive to obtain this dependence step by step, starting with a simpler model and adding new terms until the Hamiltonian (\ref{bulk_Hamiltonian}) is restored.
+Before discussing the properties of the junction it's necessary to consider a dispersion of a homogeneous wire modeled with the Hamiltonian (\ref{bulk_Hamiltonian}). Although this can be done exactly, it's instructive to obtain this dependence step by step, starting with a simpler model and adding terms until the Hamiltonian (\ref{bulk_Hamiltonian}) is restored.
 
 The starting point is the Hamiltonian consisting only of kinetic energy and chemical potential terms: $ H =\frac{ p^2}{2m} - \mu$. It has simple parabolic dispersion presented on fig. \ref{fig:spectrum}(a). When the spin is introduced and spin-orbit coupling term $ up\sigma_z $ is added, the parabola splits in two (fig. \ref{fig:spectrum}(b)), each one corresponding to its own $ z $-projection of the spin. After introducing a magnetic field with $ B\sigma_x $ term, the gap at the intersection opens (fig. \ref{fig:spectrum}(c)). The next step is introducing the BdG formalism, by adding the multiplier $ \tau_z $ everywhere except for magnetic field term:  $ 	H = \br{\frac{p^2}{2m} 	-\mu_0 }\tau_z +u p \sigma_z \tau_z + B\sigma_x	 $. This procedure doubles the spectra in a way that each eigenvector with energy $ E $ obtains a partner eigenvector with energy $ -E $, so two additional  energy branches appear, being a mirror reflection of  initial dispersion. This is presented on fig. \ref{fig:spectrum}(d), with the dashed lines being BdG partners. The last step is adding the superconducting term $ \Delta\tau_\phi $, which opens the gap where dashed and	 solid lines intersect (fig. \ref{fig:spectrum}(e)).
 
-As was mentioned before, the dispersion can be found explicitly. As was pointed out in \cite{Oreg_2010}, it can be done by squiring the Hamiltonian (\ref{bulk_Hamiltonian}) twice and solving a resulting biquadratic equation, leading to:
+As was mentioned before, the dispersion can be found explicitly. As was pointed out in \cite{Oreg_2010}, it can be done by squaring the Hamiltonian (\ref{bulk_Hamiltonian}) twice and solving a resulting biquadratic equation, leading to:
 \begin{equation}
 E^2_{1,2}\br{p}
 =
@@ -174,23 +173,35 @@ with $ \xi_p =\frac{p^2}{2m}-\mu$. This dependence, presented on fig. \ref{fig:s
 	\label{fig:spectrum}
 \end{figure}
 
-If the constrains (\ref{constraints}) are assumed, the lower branch of this spectra has three minima: one of them is at $ p=0 $ exactly, and two another are at $ p = \pm 2mu $ in the leading order. The last two are not very interesting -- the energy gap  there is approximately equal to $ \Delta $, as it should be due to perturbative introduction of superconducting term. On the contrary, the minimum at $ p=0 $, which is given by\cite{Oreg_2010}:
+If the constrains (\ref{constraints}) are assumed, the lower branch of this spectra has three minima: one of them is at $ p=0 $ exactly, and two others are at $ p = \pm 2mu $ in the leading order. The last two are not very interesting -- the energy gap  there is approximately equal to $ \Delta $, as it should be due to perturbative introduction of superconducting term. On the contrary, the minimum at $ p=0 $, which is given by\cite{Oreg_2010}:
 \begin{gather}
 	E_2\br{0}=\abs{g},~~~~g = B -\sqrt{\Delta^2+\mu^2}
 \end{gather}
-is the most important peculiarity of the spectrum. First, as $\mu\ll B \sim \Delta $, it's the true gap of the spectrum as $  \abs{B^2 -\sqrt{\Delta^2+\mu^2}} \approx  \abs{B-\Delta -\frac{\mu^2}{2\Delta}}\ll\Delta$. Second, the  sign of  $ g $ defines whether the wire can or cannot host a Majorana state. Here it's useful to introduce the terminology: if $ g>0 $ the wire is called topological", otherwise it's called "trivial". In \cite{Oreg_2010} and \cite{Lutchyn_2010} it was derived, that the contact of trivial and topological wire hosts a Majorana state. It can also be shown (see section \ref{subsect:zero_tunnel}), that this state is present on the end of a topological wire and isn't there for a trivial one.
+is the most important peculiarity of the spectrum. First, as $\mu\ll B \approx \Delta $, it's the true gap of the spectrum as $  \abs{B^2 -\sqrt{\Delta^2+\mu^2}} \approx  \abs{B-\Delta -\frac{\mu^2}{2\Delta}}\ll\Delta$. Second, the  sign of  $ g $ defines whether the wire host a Majorana state. Here it's useful to introduce the terminology: if $ g>0 $ the wire is called topological", otherwise it's called "trivial". In \cite{Oreg_2010} and \cite{Lutchyn_2010} it was derived, that the contact of trivial and topological wire hosts a Majorana state. It can also be shown (see section \ref{subsect:zero_tunnel}), that this state is present at the end of a topological wire and isn't there for a trivial one.
+
+\if 0
+As the presence of Majrana state is defined by the sign of $ g_{L,R} $,  the eigenstates of the system which can demonstrate any topological physics are should wave the energies of the order of $ g_{L,R} $. In this work we will reach the energies $ E\sim	\Delta \gg g_{L,R} $ only once -- in subsection \ref{subsec:supercurrent_sim_Delta}, where the stationary supercurrent from the states near $ \Delta $ is estimated. Within all discussion we assume, that the energies of relevant states 
+\fi
 
 Note, that when two wires are considered, there are two gaps, $ g_{L,R} = B-\sqrt{\Delta^2+\mu_{L,R}^2} $. When the magnetic field $ B $ is close to $ \Delta $, one can change the signs of $ g_{L,R} $ by changing $ \mu_{L,R} $ respectively. 
 
-It's instructive to clarify the place of $ g_{L,R} $ in the parameter hierarchy of the problem. As $\mu_L \sim \mu_R \ll B\sim \Delta $  and $ g_L=B-\sqrt{\Delta^2+\mu_L^2}<0 $, one can figure out that $\mu_R\sim \mu_L \gtrsim \br{B-\Delta}\br{B+\Delta} $.  Taking that into account and noticing that $ g_{L,R} \approx B-\Delta -\frac{\mu^2}{2\Delta^2}$ and introducing $ \beta=B-\Delta $ one finds $ g_{L,R}\l\lesssim \frac{\beta^2}{\Delta} $, while $ \mu_{L,R} \gtrsim\sqrt{ \beta \Delta} $, so $ g_{L,R}\ll \mu_{L}, \mu_R $.
+For further discussion it's necessary to clarify the place of $ g_{L,R} $ in the parameter hierarchy of the problem. To do so, we introduce $ \beta=B-\Delta $. As $ B \approx \Delta $, we find that $ \beta\ll B,\Delta $. Recalling $ \mu_{L,R}\ll B, \Delta $, one immediately finds that $ g_{L,R}=B-\sqrt{\Delta^2+\mu_{L,R}^2}\approx\beta -\frac{\mu_{L,R}^2}{2\Delta	} \ll B,\Delta$.
 
-\section{High and low modes}
+
+\section{Short-wave and long-wave wavefunctions}
 \label{sec:high_and_low_modes}
 
-Though the wavefunctions of (\ref{bulk_Hamiltonian}) can be found explicitly, their form is  complicated enough to stall any further analysis. However, as the spin-orbit energy is assumed to be the largest energy scale for a homogeneous wire, one can simplify the Hamiltonian (\ref{bulk_Hamiltonian}) to:
+Though the wavefunctions of (\ref{bulk_Hamiltonian}) can be found explicitly, their form is  complicated enough to stall any further analysis. However, with the parameter hierarchy introduced in the previous section the Hamiltonian (\ref{bulk_Hamiltonian}) can be treated perturbatively with the following strategy.
+
+At first step only kinetic and spin-orbit terms are left in the Hamiltonian (\ref{bulk_Hamiltonian}), so 
 \begin{gather}
 \label{short-long_hamiltonian}
-	H=\br{\frac{p^2}{2m}+up\sigma_z}\tau_z
+H\approx\br{\frac{p^2}{2m}+up\sigma_z}\tau_z
 \end{gather}
 
-in this problem it's reasonable to assume that the energies, at which the wavefunctions are looked for, are of the order of $ g $, as all the Majorana physics should live there. Thus the energy term can be omitted in Schroedinger equation, which leads to two types of momenta: $ p_{short} \approx \pm 2mu$ and $ p_{long}\approx 0$ and, respectively two types of wavefunctions: short-wave and long-wave ones. The fact that $ p_{long} $ is equal to zero means, that the approximation $(\ref{short-long_hamiltonian})$ is insufficient to describe them. However, to deal with long-wave wavefunctions one can omit the quadratic term in (\ref{bulk_Hamiltonian}) and work with linearized Hamiltonian, similar to the ones used in \cite{Oreg_2010} and \cite{Lutchyn_2010}.
+  As the presence of the Majorana state depends on sign of $ g_{L,R} $, all the topological physics appears at the energies $ E\sim g \ll mu^2$, so  the energy term can also  be omitted in Schroedinger equation . This leads to a couple of solutions for the momenta: $ p_{\mathrm{short}}\approx\pm2mu $ and $ p_{\mathrm{long}}\approx0 $ with a corresponding wavefunctions --- short-wave and long-wave ones.
+  
+  Despite the fact that all the omitted terms in (\ref{short-long_hamiltonian}) are indeed smaller than the left ones, it's can't be taken as zero order Hamiltonian --- it's spectrum is ungapped, so all the solutions of Schroedinger equation are running waves and can't form a localized state. To introduce the gap one needs to add a superconductung term to (\ref{short-long_hamiltonian}). For short-wave ($ p\approx2mu $) wavefunctions it's enough and is treated in section \ref{sec:elimintaing_long-wave}.
+  
+  For long-wave wavefunctions we can't add the superconducting term without adding a magnetic term, as they both significantly alter the momenta, and, consequentially, the wavefunctions. However, for this case the kinetic term, proportional to $ p^2 $, is much smaller than the spin-orbit term  and thus can be omitted. The resulting Hamiltonian is similar to the ones used in \cite{Oreg_2010,Lutchyn_2010} and treated in section \ref{sec:linearized_hamiltonian}. 
+  

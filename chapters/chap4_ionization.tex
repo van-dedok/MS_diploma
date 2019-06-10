@@ -1,11 +1,11 @@
 \chapter{Ionization}
 \label{chap:ionization}
 
-In this chapter the model, previously presented is modified to allow the ionization precesses. The main goal here is to find the ionization rate of a Majorana state, when the typical size of the photon is much smaller, than the gap int the spectrum.  Only regime with $ \abs{g_L}\ll g_R $ is considered --- even though the ionization for this condition is factorized, it contains it's own nontrivial physics with a number of different subregimes.
+In this chapter the model presented in chapter \ref{chap:model} is modified by introducing a small oscillating  external voltage to allow the ionization precesses. The main goal here is to find the ionization rate of a Majorana state, when the typical size of the photon is much smaller, than the gap int the spectrum.  Only regime with $ \abs{g_L}\ll g_R $ is considered --- even though the ionization for this condition is factorized, it contains it's own nontrivial physics with a number of different subregimes.
 
 \section{Introducing the perturbation}
 
-To study the ionization behavior of the system, it's necessary must modify the model considered in chapter \ref{chap:model}. It's reasonable to assume, that this perturbation will be present as an alternating voltage applied to the junction. This may alter the Hamiltonian (\ref{full_hamiltonian}) in two ways --- by the modification of the chemical potentials $ \mu_L, \mu_R $ and by making the superconducting phase difference $ \varphi=\phi_R-\phi_L $ time dependent. The second effect can be described by a Josephson relation:
+To study the behavior of the system, it's necessary modify the model considered in chapter \ref{chap:model}. It's reasonable to assume, that this perturbation will be present as an alternating voltage applied to the junction. This may alter the Hamiltonian (\ref{full_hamiltonian}) in two ways --- by the modification of the chemical potentials $ \mu_L, \mu_R $ and by making the superconducting phase difference $ \varphi=\phi_R-\phi_L $ time dependent. The second effect can be described by a Josephson relation:
 \begin{gather}
 	U\br{t}
 	=
@@ -13,16 +13,18 @@ To study the ionization behavior of the system, it's necessary must modify the m
 	\frac{\partial\varphi\br{t}}{\partial t}
 \end{gather}
 
-The ionization voltage is assumed to be small compared to other energy parameters of the system, but this smallness is present in both effects. However, is the frequency $ \omega $ of the voltage is also small, the perturbation induced by the second effect will have additional big multiplier $ \frac{\Delta}{\omega} $ and will be much more important than the. In this chapter only this regime is taken under consideration.
+The ionization voltage is assumed to be small compared to other energy parameters of the system, but this smallness is present in both effects. However, if the frequency $ \omega $ of voltage is also small, the perturbation induced by the second effect will have additional big multiplier $ \frac{\Delta}{\omega} $ and will be much more important than the. In this chapter only this regime is taken under consideration.
 
-The time dependence of phase difference is introduced as:
+Time dependence of phase difference is introduced as:
 \begin{gather}
 	\varphi\br{t}=\varphi_0+\alpha\cos\omega t
 \end{gather}
 where $ \varphi_0 $ is an initial time independent phase difference and $ \alpha $ is an amplitude of phase oscillations.
 
-As was shown in section \ref{sec:elimintaing_longwave}, there exists a gauge transform $ U_\phi $, which may redistribute the phase difference between the wires, so the phase in a given wire can take any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is a observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However when treating the time dependent $ \phi\br{t} $, where the oscillating phase is present. Moreover, the voltage frequency $ \omega $ is assumed to be much smaller than not obly the superconducting gap $ \Delta $, but the spectrum gaps in both wires: $ \omega\ll g_R, \abs{g_L} $
+As was shown in section  \ref{sec:elimintaing_long-wave}, there is a gauge transform $ U_\phi $, which may redistribute the phase difference between the wires, so the phase in a given wire can have any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is an observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However, when treating the time dependent  phase difference this gauge transform also become time dependent. After its application the additional term $ \dot{U}_{\phi\br{t}}U_{\phi\br{t}}^\dagger $ will appear. We avoid this difficulty by setting the voltage frequency $ \omega $  much smaller than not only the superconducting gap $ \Delta $, but the spectrum gaps in both wires: $ \omega\ll g_R, \abs{g_L} $, so the term $ \dot{U}_{\phi\br{t}}U_{\phi\br{t}}^\dagger $ can be neglected.
 
+
+\textbf{add something}
 
 The correct answer is that both left and right wires should get equal time-dependent phase with different signs: $ \phi_L=-\frac{\varphi_0}{2}-\frac{\alpha}{2}\cos \omega t $, $ \phi_R=\frac{\varphi_0}{2}+\frac{\alpha}{2}\cos \omega t $. Thus the superconducting terms in the wire Hamiltonians alter: $ \Delta_{\pm\frac{\varphi}{2}} \to\Delta_{\pm\frac{\varphi}{2}\pm \frac{\alpha}{2}\cos \omega t} $. Decomposing them in small $ \alpha $ one can explicitly write the perturbation and try to compute the ionization rate. However this way appears to be quite difficult as the overlaps of all the states 
 present in both wires and at first it seems that the Majorana states has too much ways to ionize. To avoid this difficulty, the tunnel Hamiltonian approach is used.
@@ -55,7 +57,7 @@ h_T^\dagger & 0
 \end{gather}
 The Hamiltonians $ h_L $ and $ h_R $ eventually coinside with (\ref{bulk_Hamiltonian}) with zero boundary condition on one side. The Hamiltonian $ h_T $ in unknown -- the goal is to make it in a way the wavefunctions obtained from the model of chapter \ref{chap:model}. This wavefunctions and their tunneling first corrections are listed in the appendix \ref{app:wavefunctions_with_corrections}.
 
- The spinors with four components are corresponding to the unperturbed wavefunctions and are denoted as $ \big|\gamma_{0}\,\big> $,  for the Majorana state and $ \big|\varepsilon,L_{0}\,\big> $, $ \big|\varepsilon,R_{0}\,\big> $ for the contentious spectra in the left and in the right wires respectfully, and the corrections are denoted as $ \big|\gamma_{1}\,\big> $, $ \big|\varepsilon,L_{1}\,\big> $, $ \big|\varepsilon,R_{1}\,\big> $. These wavefunctions can be found in the appendix \ref{app:wavefunctions_with_corrections}.  This 8D spinors are:
+ The spinors with four components are corresponding to the unperturbed wavefunctions and are denoted as $ \big|\gamma_{0}\,\big> $,  for the Majorana state and $ \big|\varepsilon,L_{0}\,\big> $, $ \big|\varepsilon,R_{0}\,\big> $ for the contentious spectra in the left and in the right wires respectfully, and the corrections are denoted as $ \big|\gamma_{1}\,\big> $, $ \big|\varepsilon,L_{1}\,\big> $, $ \big|\varepsilon,R_{1}\,\big> $. These wavefunctions can be found in the appendix \ref{app:wavefunctions_with_corrections}.  These 8D spinors are:
 \begin{gather}
 	\Psi_{\gamma}=\begin{pmatrix}0\\
 	\big|\gamma_{0}\,\big>

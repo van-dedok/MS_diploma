@@ -7,23 +7,23 @@ In this chapter the model presented before is modified by introducing a small os
 
  The perturbation is introduced as an oscillating	 voltage applied to the junction. This alters the Hamiltonian (\ref{full_hamiltonian}) in two ways --- by the modification of the chemical potentials $ \mu_L, \mu_R $ and by making the superconducting phase difference $ \varphi=\phi_R-\phi_L $ time dependent. The second effect is governed by the Josephson relation:
 \begin{gather}
-	U\br{t}
+	U\br{\tau}
 	=
 	\frac{\hbar}{2e}
-	\frac{\partial\varphi\br{t}}{\partial t}
+	\frac{\partial\varphi\br{\tau}}{\partial \tau}
 \end{gather}
 
 The ionization voltage is assumed to be small compared to other energy parameters, and this smallness is present in both effects. However, if the frequency $ \omega $ of voltage is also small, the perturbation in $ \Delta $ induced by the second effect will have additional big multiplier $ \frac{\Delta}{\omega} $ and will dominate the perturbation in $ \mu $. In this chapter only this regime is considered.
 
 Time dependence of phase difference is introduced as:
 \begin{gather}
-	\varphi\br{t}=\varphi_0+\alpha\cos\omega t
+	\varphi\br{\tau}=\varphi_0+\alpha\cos\omega \tau
 \end{gather}
 where $ \varphi_0 $ is an initial time independent phase difference and $ \alpha\ll1 $ is the amplitude of phase oscillations.
 
-As was shown in section  \ref{sec:elimintaing_long-wave}, there is a gauge transform $ U_\phi $, which  redistributes the phase difference between the wires, so the phase in a given wire can have any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is an observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However, when treating the time dependent  phase difference this gauge transform also becomes time-dependent. After its application the additional term $ \dot{U}_{\phi\br{t}}U_{\phi\br{t}}^\dagger \propto \dot{\phi}\br{t}$ will appear, but, as $ \omega $ is small, it can be neglected. The corresponding condition on $ \omega $ will be established in section \textbf{ENTER SECTION}  
+As was shown in section  \ref{sec:elimintaing_long-wave}, there is a gauge transform $ U_\phi $, which  redistributes the phase difference between the wires, so the phase in a given wire can have any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is an observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However, when treating the time dependent  phase difference this gauge transform also becomes time-dependent. After its application the additional term $ \dot{U}_{\phi\br{\tau}}U_{\phi\br{\tau}}^\dagger \propto \dot{\phi}\br{\tau}$ will appear, but, as $ \omega $ is small, it can be neglected. The corresponding condition on $ \omega $ will be established in section \textbf{ENTER SECTION}  
 
-As the term $ \dot{U}_{\phi\br{t}}U_{\phi\br{t}}^\dagger \propto \dot{\phi}\br{t}$ is negligible, we again can gauge all the phase difference into the boundary condition. Now the boundary condition is time-dependent. It's not very convenient, and to avoid dealing with it we reformulate the problem in terms  of tunnel Hamiltonian, which allow us to treat both tunneling and time dependence simultaneously via perturbation theory.
+As the term $ \dot{U}_{\phi\br{\tau}}U_{\phi\br{\tau}}^\dagger \propto \dot{\phi}\br{\tau}$ is negligible, we again can gauge all the phase difference into the boundary condition. Now the boundary condition is time-dependent. It's not very convenient, and to avoid dealing with it we reformulate the problem in terms  of tunnel Hamiltonian, which allow us to treat both tunneling and time dependence simultaneously via perturbation theory.
 
 
 \if 0
@@ -64,23 +64,33 @@ The Hamiltonians $ h_L $ and $ h_R $ eventually coinside with (\ref{bulk_Hamilto
 
 The derivation of tunnel Hamiltonian matrix elements is presented in appendix \ref{app:tunnel}. Using the notation  $ \big|\gamma_{0}\,\big> $ for Majorana state and $ \big|\varepsilon,L_{0}\,\big> $, $ \big|\varepsilon,R_{0}\,\big> $ for continuous spectra, we have the following:
 \begin{gather}
+H_T=
+\left(e^{i\frac{\varphi}{2}}+e^{-i\frac{\varphi}{2}}\right)
+H_{T,0}
+=
+\left(e^{i\frac{\varphi}{2}}+e^{-i\frac{\varphi}{2}}\right)
+\begin{pmatrix}
+0 & h_{T,0} \\
+h_{T,0}^\dagger & 0
+\end{pmatrix}
+\\
 \label{tunnel_matrix_elements_maj-cont}
-	\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
+	\big<\gamma_{0}\,\big|h_{T,0}^{\dagger}\big|E,L_{0}\,\big>
 	=
 	4\sqrt{ug_{R}}
-	\zeta^{2}t
-	\left(e^{i\frac{\varphi}{2}}+e^{-i\frac{\varphi}{2}}\right)
+	t\zeta^{2}
 	f\br{\frac{E}{\abs{g_L}}}
 	\\
 	\label{tunnel_matrix_elements_cont-cont}
-	\big<\epsilon,R_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
+	\big<\epsilon,R_{0}\,\big|h_{T,0}^{\dagger}\big|E,L_{0}\,\big>
 	=
 	-16u\zeta^{2}t
-	\left(e^{i\frac{\varphi}{2}}+e^{-i\frac{\varphi}{2}}\right)
 	f\br{\frac{E}{\abs{g_L}}}
 	f\br{\frac{\varepsilon}{g_R}}
 \end{gather}
-where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that, maybe it's possible to make this calculations in a more beautiful way.
+where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. Note, that $ h_{T,0} =h_{T,0}^\dagger $.
+
+ The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that, maybe it's possible to make this calculations in a more beautiful way.
 
 \section{Ionization rate for $ g_R\gg\abs{g_L} $}
 
@@ -96,25 +106,30 @@ To obtain the ionization rate one should treat $ H_T $ as perturbation. For unpe
 	\label{fig:tunneling}
 \end{figure}
 
-The ionization rate can be calculated with the help of  (\ref{ionization_key}). To use this formula, one should decompose the  perturbation in Fourier series, as was done for (\ref{fourier_pertrubation}). From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{t}}{2} $ with $ \varphi=\phi_{0}+\alpha\cos\omega t $. Using $ \alpha\ll1 $, one may write:
+The ionization rate can be calculated with the help of appendix \ref{app:multiphoton ionization}. Ionization rate is given by the formula   (\ref{ionization_key}). To use this formula, we decompose the  perturbation in Fourier series. From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{\tau}}{2} $ with $ \varphi\br{\tau}=\phi_{0}+\alpha\cos\omega \tau $. Using $ \alpha\ll1 $, we write:
 \begin{multline}
-	e^{i\varphi/2}+e^{-i\varphi/2}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha/2)^{n}}{2^{n}n!}(e^{in\omega t}+e^{-in\omega t})+c.c=\\=\sum_{n}\frac{\alpha{}^{n}}{2^{2n-1}n!}(e^{in\omega t}+e^{-in\omega t})\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
+	e^{\frac{i\varphi\br{\tau}}{2}}+e^{-\frac{i\varphi\br{\tau}}{2}}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha/2)^{n}}{2^{n}n!}(e^{in\omega \tau}+e^{-in\omega \tau})+c.c=
+	\\
+	=\sum_{n}\frac{\alpha{}^{n}}{2^{2n-1}n!}(e^{in\omega \tau}+e^{-in\omega \tau})\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
 \end{multline}
-so that $ V_{n}=V_{0}A_{n} $ with $ A_{n}=\frac{\alpha^{n}}{2^{2n-1}n!}\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right) $.
-
-According to (\ref{tunnel_matrix_elements_maj-cont}) and (\ref{tunnel_matrix_elements_cont-cont}):
+so 
 \begin{gather}
-\label{tunnel_element_factorized}
-	\langle\gamma|V_{0}|E\rangle=4\sqrt{ug_{R}}\zeta^{2}tf\br{\frac{E}{\abs{g_L}}}
+	H_T
+	\approx
+	\sum_{n}
+	\frac{\alpha^{n}}{2^{2n-1}n!}\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)H_{T,0}
 \end{gather}
 
-Here the focus is on the case where the topological gap is much larger than the trivial one. In this case, the right continuum has high energies and does not participate in the ionization process. Indeed,
+Here the focus is on the case where the topological gap is much larger than the trivial one: $ \abs{g_L}\ll g_R $. In this case, the right continuum has high energies and does not participate in the ionization process. Indeed,
 \begin{gather}
-	V G_{\epsilon} V
+	h_T G_{\epsilon} h_T
 	=
-	\frac{V|\gamma\rangle\langle\gamma|V}{\epsilon}+\intop_{|E_{R}|>g_{R}}\frac{V|E_{R}\rangle\langle E_{R}|V}{\epsilon-E_{R}}\frac{dE_{R}}{N_{R}(E_{R})}
+	\frac{h_T|\gamma\rangle\langle\gamma|h_T}{\epsilon}
+	+
+	\intop_{|E|>g_{R}}
+	\frac{h_T|E,R_0\rangle\langle E,R_0|h_T}{\epsilon-E}\frac{dE}{N_{R}(E)}
 \end{gather}
-When $ g_{R}\gg\epsilon\sim g_{L} $, the second term can be neglected. Then, the product $ \dots V_{n}GV_{n'}GV_{n''}\dots $ factorizes into individual number-factors of the form $ \langle\gamma|V_{n}GV_{m}|\gamma\rangle $.
+So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term can be neglected. Then, the product $ \dots V_{n}GV_{n'}GV_{n''}\dots $ factorizes into individual number-factors of the form $ \langle\gamma|V_{n}GV_{m}|\gamma\rangle $.
 
 \subsection{Factorizing $ w_\mathcal{E} $}
 Each entry in the sum within $ w_{\mathcal{E}} $ is a product of operators of the type $ \dots VGVGV\dots. $ In the limit we are now interested in, in the right wire only the Majorana mode is relevant. This means that the whole thing decomposes into a product of $ J_{nm}\equiv\langle\gamma|V_{n}|G_{E}|V_{m}|\gamma\rangle $, and the ionization rate is proportional to:

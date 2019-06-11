@@ -141,7 +141,7 @@ Here the focus is on the case where the topological gap is much larger than the 
 	\intop_{|E|>g_{R}}
 	\frac{h_T|E,R_0\rangle\langle E,R_0|h_T}{\epsilon-E}\frac{dE}{N_{R}(E)}
 \end{gather}
-So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term is small and can be neglected. Then, the product $ \dots h_TG\br{E}h_TG\br{E}h_T\dots $ factorizes into individual factors of the form $ J_{nm}\equiv\langle\gamma|h_TG\br{E}h_T|\gamma\rangle $.
+So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term is small and can be neglected. Then, the product $ \dots h_TG\br{E}h_TG\br{E}h_T\dots $ factorizes into individual factors of the form $ J_{nm}\equiv\langle\gamma|h_{T,n}G\br{E}h_{T,m}|\gamma\rangle $.
 
 \subsection{Factorizing $ w_\mathcal{E} $}
 As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_TG\br{E}h_TG\br{E}h_T\dots. $  for ionization rate we have:
@@ -164,16 +164,16 @@ J_{nm}
 \begin{gather}
 	J_{0}(E)
 	=
-	\langle\gamma|h_{T,0}G(E)h_{T,0}|\gamma\rangle
+	\langle\gamma|\tilde{h}_{T}G(E)\tilde{h}_{T}|\gamma\rangle
 	\equiv
-	\intop_{cont.}\frac{|\langle\gamma|h_{T,0}|\epsilon\rangle|^{2}}{E-\epsilon}\frac{d\epsilon}{N_L(\epsilon)}
+	\intop_{cont.}\frac{|\langle\gamma|\tilde{h}_{T}|\epsilon\rangle|^{2}}{E-\epsilon}\frac{d\epsilon}{N_L(\epsilon)}
 \end{gather}
 
 On each ionization step  the particle can move to the state with energy $ E $ or $ -E $, so:
 \begin{gather}
 	J_{0}(E)
-	\approx
-	2E\intop_{|g_{L}|}^{\infty}\frac{|\langle\gamma|h_{T,0}|\epsilon\rangle|^{2}}{E^{2}-\epsilon^{2}}\frac{d\epsilon}{N_L(\epsilon)}
+	=
+	2E\intop_{|g_{L}|}^{\infty}\frac{|\langle\gamma|\tilde{h}_{T}|\epsilon\rangle|^{2}}{E^{2}-\epsilon^{2}}\frac{d\epsilon}{N_L(\epsilon)}
 \end{gather}
 recalling (\ref{tunnel_matrix_elements_maj-cont}), we obtain:
 \begin{gather}

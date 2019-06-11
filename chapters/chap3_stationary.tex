@@ -118,7 +118,7 @@ E\Psi
 
 \section{Eliminating short-wave wavefunctions from boundary condition}
 \label{sec:elimintaing_long-wave}
-\textbf{I don't understand ,how to find short-wave part when long-wave part is known. I have a reverse operator We found, that the resulting short-wave part would be small. Were we wrong?}
+
 
 	As the Majorana state lives at low energies, it's expected to be predominantly long-wave. This argument is in accord with \cite{Oreg_2010} and \cite{Lutchyn_2010}, where the Majorana state was an eigenstate of a linearized Hamiltonian, which is relevant only for long-wave physics. So, it's reasonable to eliminate the short-wave components from the problem, reformulating the boundary condition (\ref{short-long_hamiltonian}).
 
@@ -193,7 +193,7 @@ A^{*} & -A^{*}e^{i\left(\varsigma_{z}\gamma+\phi_R\right)} & 1 & -e^{i\left(\var
 \end{gather}
 here $ A=-\frac{2i\zeta t\varsigma_z}{1+i\zeta\varsigma_z} $ and the elements are ordered as $ \br{Le,Lh,Re,Rh} $.
 
-When studying wavefunctions in superconductors, it is more convenient to work with zero phase $ \phi $. This can be achieved by gauging the phase difference into the boundary condition. Indeed, suppose $ H_{\phi} $ describes a wire with phase $ \phi $. Then, $ H_{\phi}=U_{\phi}^{\dagger}H_{0}U_{\phi} $ with $ U_{\phi}=\mathrm{diag(1,e^{i\phi})_{eh}} $ and the wave functions are also related via unitary rotation $ \psi_{\phi}=U_{\phi}^{\dagger}\tilde{\psi} $. So the transform $ U^{\dagger}=\mathrm{diag}\br{1,e^{-i\phi_L},1,e^{-i\phi_R }}_{Le,Lh,Re,Rh}$  will eliminate all the phases from the wires and put them into the boundary condition. Substituting $ \Psi_{\mathrm{long},\varsigma_{z}}=U^{\dagger}\tilde{\Psi} $ into (\ref{bc_matrix}) one arrives at an even simpler boundary condition on the zero-phase function $ \tilde{\Psi} $:
+When studying wavefunctions in superconductors, it is more convenient to work with zero phase $ \phi $. This can be achieved by gauging the phase difference into the boundary condition. Indeed, suppose $ H_{\phi} $ describes a wire with phase $ \phi $. Then, $ H_{\phi}=U_{\phi}^{\dagger}H_{0}U_{\phi} $ with $ U_{\phi}=e^{-\frac{i\tau_z \phi}{2}}$ and the wave functions are also related via unitary rotation $ \psi_{\phi}=U_{\phi}^{\dagger}\tilde{\psi} $. So the transform $ \hat{U}=\mathrm{diag}\br{U_{\phi_{L}},U_{\phi_{R}}}_{L,R}$  will eliminate all the phases from the wires and put them into the boundary condition. Substituting $ \Psi_{\mathrm{long},\varsigma_{z}}=U^{\dagger}\tilde{\Psi} $ into (\ref{bc_matrix}) one arrives at an even simpler boundary condition on the zero-phase function $ \tilde{\Psi} $:
 \begin{gather}
 \label{bc_matrix_phases}
 \begin{pmatrix}1 & -e^{-i\varsigma_{z}\gamma} & A & -Ae^{-i\left(\varsigma_{z}\gamma+\varphi\right)}\\
@@ -407,7 +407,7 @@ F
 	,
 	&
 	M_L 
-	\sigma_x \psi^{\mathrm{dec}}_{\mathrm{L},\mathrm{long,2}},
+	\sigma_x
 	\wf{dec}{\verylong}
 	&
 	M_R
@@ -439,7 +439,7 @@ For dealing with $ \wf{dec}{\verylong} $ it's convenient to introduce two quanti
 \frac{E}{\sqrt{g^2_{L,R}-E^2}}
 \end{gather}
 
-If $ g>0 $, the corresponding parameter $ \chi $ is real and monotonously growing with $ E $. For $ g<0 $ the parameter $ \chi $ is complex, but can be parametrized as $ \chi=-\tilde{\chi}+i\pi $ with real and monotonous $\tilde{\chi}  $.
+If $ g>0 $, the corresponding parameter $ \chi $ is real and monotonously growing with $ E $. For $ g<0 $ the parameter $ \chi $ is complex, but can be written as $ \chi=-\tilde{\chi}+i\pi $ with real and monotonous $\tilde{\chi}  $.
 
 With these parameters the spinors $ \wf{dec}{L\br{R},\verylong} $ at $ x=0 $ can be written as:
 \begin{gather}
@@ -488,7 +488,7 @@ where $ d_0 $ is given by (\ref{det_bound_States_zero_t}). $ d_2 $ can be comput
 
 For triv-triv junction there are no such points, so in the tunneling limit there are no bound states for this case.
 
-For triv-top junction there is a solution for $ E=0 $, which corresponds to $ \chi_L=i \pi $, $ \chi_R=0 $. Computing $ d_2 $ for this parameters, one finds that it's exactly zero, so there is no correction to Majorana energy --- as at should be, as it's protected by a particle-hole symmetry.
+For triv-top junction there is a solution for $ E=0 $, which corresponds to $ \chi_L=i \pi $, $ \chi_R=0 $. Computing $ d_2 $ for this parameters, one finds that it's exactly zero, so there is no correction to Majorana energy --- as at should be, as it's protected by a particle-hole symmetry. This solution with the first correction in $ t $ is presented in appendix \ref{app:wavefunctions_with_corrections}.
 
 For top-top junction the situation is more interesting. In that case there are two solutions at $ E=0 $, which should split for nonzero $ t $. Calculating $  $ $ d_2 $ at $ E=0 $ and expanding $ d_0 $ for small $ E $, one finds:
 \begin{gather}
@@ -590,6 +590,8 @@ As the dimension of  $ s $-matrix depends on the number of propagating modes, an
 
 For $ E\ll\Delta $  one may use low energy limit of functions $ \wf{dec}{\medium} $: $ \wf{dec}{\medium} \approx\br{1,-i,-i,1}^Te^{-{\frac{2\Delta x}{u}} }$ and also set $ \gamma=-\frac{\pi}{2}\arcsin\frac{E}{\Delta} \approx -\frac{\pi}{2}$. When $ E\sim\Delta $ one has to use $ \gamma $ as it is, and high energy of $ \wf{dec}{\verylong} $: $  \wf{dec}{\verylong}\approx\br{1,0,0,1}e^{-\frac{Ex}{u}}$.
 
+The eigenstates for the system  at energies near $ g $ are presented in appendix \ref{app:wavefunctions_with_corrections}, in leading and subleading order on $ t $. Here we focus on the result for the supercurrent in different cases.
+
 \subsection{ Supercurrent for $ E $ \hspace{0pt} between $ \abs{g_L} $ and $ g_R $}
 
 Recall, that the trivial wire is placed on the left  while the topological wire is on the right. There are two slightly distinct cases, which differ by relation between $ g_L $ and $ g_R $. 
@@ -667,7 +669,7 @@ we find:
 	=
 	-\frac{2 t \zeta ^2 \left(1+e^{i \varphi }\right) \sqrt{\left(e^{2 \kappa _L}-1\right) \left(e^{2 \eta _R}-1\right)}}{\left(\zeta ^2+1\right) \left(e^{\kappa _L}+i\right) \left(e^{\eta _R}-i\right)}+O\left(t^3\right)
 \end{gather}
-The computation of supercurrent is again made with (\ref{current_low_T}) (\ref{smatrix_and_DOS}). Introducing $g_{\mathring{max}}=\max\left[g_R,\abs{g_L}\right]  $ , $g_{\mathring{min}}=\min\left[g_R,\abs{g_L}\right]  $  and 
+The computation of supercurrent is again made with (\ref{current_low_T}) (\ref{smatrix_and_DOS}). Introducing $g_{\mathrm{max}}=\max\left[g_R,\abs{g_L}\right]  $,  $g_{\mathrm{min}}=\min\left[g_R,\abs{g_L}\right]  $  and 
 \begin{gather}
 	s_g
 	=
@@ -711,7 +713,7 @@ It's important to note, that this computation is irrelevant for $ E\sim\Delta $,
 
 \label{subsec:supercurrent_sim_Delta}
 
-To make the estimate for the supercurrent at energies $ E\lesssim \Delta$ high energy versions of $ \wf{}{\verylong} $ can be used, so the system "forgets" about $ g_L $ and $ g_R $ and becomes effectively symmetric. Taking the notation from (\ref{s_matrix_2D}), we find:
+To make the estimate for the supercurrent at energies $ E\lesssim \Delta$ high energy limits of $ \wf{}{\verylong} $ can be used, so the system "forgets" about $ g_L $ and $ g_R $ and becomes effectively symmetric. Taking the notation from (\ref{s_matrix_2D}), we find:
 \begin{multline}
 	r_{LL}=r_{RR}
 	=
@@ -740,9 +742,9 @@ I
 \end{gather}
 
 \subsection{Analyzing the results}
-From the estimates below 	(\ref{curr_e_between_g_r<g_l}) and (\ref{curr_e_between_g_r>g_l}) one may see, that the current coming from the states between $ g_L $ and $ g_R $ has a multiplier of the order $ g_{R} $ or $ \abs{g_L} $. The current from the states above $ g_{max} $ and near it can be estimated with (\ref{curr_e>g_max}). It has the multiplier $ g_{\mathrm{max}}\log\frac{\Delta}{g_{\mathrm{max}}} $. Finally, according to (\ref{curr_E_delta}), the current from the states near $ \Delta $ is proportional to $ \Delta $. Thus we deduce that the current from the low energy states is negligible compared with the current from the states near $ \Delta. $ 
+From the estimates below 	(\ref{curr_e_between_g_r<g_l}) and (\ref{curr_e_between_g_r>g_l}) one may see, that the current coming from the states between $ g_L $ and $ g_R $ has a multiplier of the order $ g_{R} $ or $ \abs{g_L} $. The current from the states above $ g_{\max} $ and near it can be estimated with (\ref{curr_e>g_max}). It has the multiplier $ g_{\mathrm{max}}\log\frac{\Delta}{g_{\mathrm{max}}} $. Finally, according to (\ref{curr_E_delta}), the current from the states near $ \Delta $ is proportional to $ \Delta $. Thus we deduce that the current from the low energy states is negligible compared with the current from the states near $ \Delta. $ 
 
 
-This shows us that the low energy states ($ E\ll\Delta $) contribute to stationary supercurrent by a very small quantity. The proportionality to $ \Delta $ in (\ref{curr_E_delta}) is similar to  a short Josephson case with a subgap state near $ \Delta $. We conclude, that for this system it's unlikely to reveal any topological physics by measuring stationary supercurrent.
-	
+This shows us that the low energy states ($ E\ll\Delta $) contribute to stationary supercurrent by a very small quantity. The proportionality to $ \Delta $ in (\ref{curr_E_delta}) is similar to  a conventional Josephson tunnel junction. We conclude, that measuring stationary supercurrent is unlikely to reveal any topological physics in this system.
+
 

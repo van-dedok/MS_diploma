@@ -1,7 +1,30 @@
 \chapter{Wavefunctions for the stationary contact}
 \label{app:wavefunctions_with_corrections}
 
-Here the eigenstates of the junction are presented in leading and subleading order of the tunneling constant $ t $. They are obtained with the methods from the chapter \ref{chap:stationary_properties} and written in the notation from the section \ref{sec:tunnel_hamiltonian}. Only low and medium momenta parts are presented here, as it's sufficient for the section \ref{sec:tunnel_hamiltonian}, which uses the formulas for from this appendix. The states are normalized as:
+	Here the eigenstates of the junction are presented in leading and subleading order on the tunneling constant $ t $. Only long-wave ($ \wf{}{\medium} $ and $ \wf{}{\verylong} $) part is presented here, as it's sufficient for chapter \ref{chap:ionization}.	
+	
+	 The states in Nambu-Gorkov space are written in bra-ket notation. For zero tunneling they are:
+  $ \big|\gamma_{0}\,\big> $--- the Majorana state and $ \big|\varepsilon,L_{0}\,\big> $, $ \big|\varepsilon,R_{0}\,\big> $ --- continuous spectra in the left and in the right wire respectfully.  The corrections are denoted as $ \big|\gamma_{1}\,\big> $, $ \big|\varepsilon,L_{1}\,\big> $, $ \big|\varepsilon,R_{1}\,\big> $. 
+  
+  It's important to note, that the first order correction for any state is located in the wire opposite to the one hosting the leading order. This can be reflected  with spinors in $ LR $-space as:  
+\begin{gather}
+\Psi_{\gamma}=\begin{pmatrix}0\\
+\big|\gamma_{0}\,\big>
+\end{pmatrix}_{LR}+\begin{pmatrix}\big|\gamma_{1}\,\big>\\
+0
+\end{pmatrix}_{LR}+...\\\Psi_{R}=\begin{pmatrix}0\\
+\big|\varepsilon,R_{0}\,\big>
+\end{pmatrix}_{LR}+\begin{pmatrix}\big|\varepsilon,R_{1}\,\big>\\
+0
+\end{pmatrix}_{LR}+...\\\Psi_{L}=\begin{pmatrix}\big|\varepsilon,L_{0}\,\big>\\
+0
+\end{pmatrix}_{LR}+\begin{pmatrix}0\\
+\big|\varepsilon,L_{1}\,\big>
+\end{pmatrix}_{LR}+...
+\end{gather}
+
+
+  The states are normalized as:
 \begin{gather}
 	\big\langle\gamma_{0}\big|\gamma_{0}\,\big>=1
 	~~~~
@@ -16,7 +39,10 @@ where
 	~~~~
 	N_{R}\left(\varepsilon\right)=\frac{4\pi u\sqrt{\varepsilon^{2}-g_{R}^{2}}\left(e^{2\eta_{R}\left(\varepsilon\right)}+1\right)^{2}}{\varepsilon}
 \end{gather}
-The diefinition of the $ \eta_{L,R} $, $ \eta_L $ and $ \kappa_R $ is given in the \ref{sec:stationary_supercurrent}. The indexes $ L,R $  near the spinors are relate to the wire, where this spinor is present.This reference can be used either in $ \abs{g_{L}}<g_{R} $ or in $ \abs{g_{L}}>g_{R} $ cases.
+
+Note, that for calculating $ s $-matrix another normalization, providing $ \bra{\epsilon} v \ket{\varepsilon} = \delta\br{\epsilon-\epsilon} $ should be used, with $ v=u\sigma_z\tau_z $ for long-wave states. The normalization used here serves for computing tunnel Hamiltonian matrix elements.
+
+The definition of the $ \eta_{L,R} $, $ \eta_L $ and $ \kappa_R $ is given in the \ref{sec:stationary_supercurrent}. The indexes $ L,R $  near the spinors are relate to the wire, where this spinor is present. All the wavefucntions listed here  are relevant for both $ \abs{g_{L}}<g_{R} $ and $ \abs{g_{L}}>g_{R} $ cases.
 
 The Majorana state is:
 \begin{gather}

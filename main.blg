@@ -8,6 +8,8 @@ A level-1 auxiliary file: chapters/chap1_Intro.aux
 A level-1 auxiliary file: chapters/chap2_Model.aux
 A level-1 auxiliary file: chapters/chap3_stationary.aux
 A level-1 auxiliary file: chapters/chap4_ionization.aux
+A level-1 auxiliary file: chapters/chap_discussion.aux
+A level-1 auxiliary file: chapters/chap_conclusion.aux
 A level-1 auxiliary file: chapters/appb.aux
 A level-1 auxiliary file: chapters/appc.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -91,7 +93,7 @@ Name 2 in "Alessandro Romito and Jason Alicea, and Gil Refael and Felix von Oppe
 while executing---line 2746 of file biblatex.bst
 You've used 29 entries,
             6256 wiz_defined-function locations,
-            1357 strings with 14057 characters,
+            1359 strings with 14113 characters,
 and the built_in function-call counts, 178915 in all, are:
 = -- 13366
 > -- 2736

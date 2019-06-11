@@ -1,0 +1,35 @@
+\chapter{Tunnel Hamiltonian derivation} 
+\label{app:tunnel}
+The goal in derivation tunnel Hamiltonian is to make it restoring the corrections of the wavefuncitons from appendix \ref{app:wavefunctions_with_corrections}.
+Recalling, that in $ LR $-space the Hamiltonian has the form (\ref{tunnel_Hamiltonian_formalizm}), we write the unperturbed Green function as:
+\begin{multline}
+G_{0}\left(E\right)=\frac{1}{E+i0}\begin{pmatrix}0 & 0\\
+0 & \big|\gamma_{0}\,\big>\big<\gamma_{0}\,\big|
+\end{pmatrix}_{LR}+\int_{g_{L}}^{\infty}\frac{d\varepsilon}{N_{L}\left(\varepsilon\right)}\frac{1}{E+i0-\varepsilon}\begin{pmatrix}\big|\varepsilon,L_{0}\,\big>\big<\varepsilon,L_{0}\,\big| & 0\\
+0 & 0
+\end{pmatrix}_{LR}+\\+\int_{g_{l}}^{\infty}\frac{d\varepsilon}{N_{R}\left(\varepsilon\right)}\frac{1}{E+i0-\varepsilon}\begin{pmatrix}0 & 0\\
+0 & \big|\varepsilon,R_{0}\,\big>\big<\varepsilon,R_{0}\,\big|
+\end{pmatrix}_{LR}
+\end{multline}
+with $ N_{L,R} $ from (\ref{N_L_N_R_definition}). 
+The corrections for the spinors should be calculated as:
+\begin{gather}
+\Psi_{1}\left(E\right)=G_{0}\left(E\right)H_{T}\Psi_{0}\left(E\right)
+\end{gather}
+So, for different states:
+\begin{align}
+\big|\gamma_{1}\,\big>&=\int_{g_{L}}^{\infty}\frac{d\varepsilon}{N_{L}\left(\varepsilon\right)}\,\frac{1}{-\varepsilon+i0}\big|\varepsilon,L_{0}\,\big>\,\big<\varepsilon,L_{0}\,\big|h_{t}\big|\gamma_{0}\,\big>\\\big|E+i0,R_{1}\,\big>&=\int_{g_{L}}^{\infty}\frac{d\varepsilon}{N_{L}\left(\varepsilon\right)}\,\frac{1}{E-\varepsilon+i0}\big|\varepsilon,L_{0}\,\big>\,\big<\varepsilon,L_{0}\,\big|h_{t}\big|E\,R_{0}\big>
+\\
+\nonumber
+\big|E+i0,L_{1}\,\big>&=\frac{1}{E+i0}\big|\gamma_{0}\,\big>\,\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>+
+\\	
+&\qquad\qquad\qquad\qquad
++\int_{g_{l}}^{\infty}\frac{d\varepsilon}{N_{R}\left(\varepsilon\right)}\,\frac{1}{E-\varepsilon+i0}\big|\varepsilon\,R_{0}\big>\,\big<\varepsilon,R_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
+\end{align}
+
+Now, multiplying the third equation by $ \big<\gamma_{0}\,\big| $ and $ \big<\epsilon,R_{0}\,\big |$, find:
+\begin{gather}
+\big<\gamma_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E+i0}\,\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>\\\big<\epsilon,R_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E-\epsilon+i0}\big<\epsilon,R_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
+\end{gather}
+
+The l.h.s. of this equation can be calculated with the help of appendix \ref{app:wavefunctions_with_corrections}. After doing so, we arrive to the result (\ref{tunnel_matrix_elements_maj-cont}).

@@ -66,29 +66,29 @@ The derivation of tunnel Hamiltonian matrix elements is presented in appendix \r
 \begin{gather}
 H_T=
 \left(e^{i\frac{\varphi}{2}}+e^{-i\frac{\varphi}{2}}\right)
-H_{T,0}
+\tilde{H}_{T}
 =
 \left(e^{i\frac{\varphi}{2}}+e^{-i\frac{\varphi}{2}}\right)
 \begin{pmatrix}
-0 & h_{T,0} \\
-h_{T,0}^\dagger & 0
+0 & \tilde{h}_{T} \\
+\tilde{h}_T^\dagger & 0
 \end{pmatrix}
 \\
 \label{tunnel_matrix_elements_maj-cont}
-	\big<\gamma_{0}\,\big|h_{T,0}^{\dagger}\big|E,L_{0}\,\big>
+	\big<\gamma_{0}\,\big|\tilde{h}_{T}^{\dagger}\big|E,L_{0}\,\big>
 	=
 	4\sqrt{ug_{R}}
 	t\zeta^{2}
 	f\br{\frac{E}{\abs{g_L}}}
 	\\
 	\label{tunnel_matrix_elements_cont-cont}
-	\big<\epsilon,R_{0}\,\big|h_{T,0}^{\dagger}\big|E,L_{0}\,\big>
+	\big<\epsilon,R_{0}\,\big|\tilde{h}_{T}^{\dagger}\big|E,L_{0}\,\big>
 	=
 	-16u\zeta^{2}t
 	f\br{\frac{E}{\abs{g_L}}}
 	f\br{\frac{\varepsilon}{g_R}}
 \end{gather}
-where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. Note, that $ h_{T,0} =h_{T,0}^\dagger $.
+where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. Note, that $ \tilde{h}_{T} =\tilde{h}_{T}^\dagger $.
 
  The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that, maybe it's possible to make this calculations in a more beautiful way.
 
@@ -130,7 +130,7 @@ so:
 	{\alpha^{n}}
 	{2^{2n-1}n!}
 	\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
-	h_{T,0}
+	\tilde{h}_{T}
 \end{gather}
 Here the focus is on the case where the topological gap is much larger than the trivial one: $ \abs{g_L}\ll g_R $. In this case, the right continuum has high energies and does not participate in the ionization process. Indeed,
 \begin{gather}
@@ -149,9 +149,9 @@ As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_TG\br
 	\sqrt{\mathcal{I}}\propto
 	\sum_N \sum_{\{n_i\}_M^N}\prod_{i=1}^{N}J_{n_in_{i+1}}
 \end{gather}
-Here $ N $ has the meaning of total number of absorbed photons, $ M $ is the closet to $ \frac{\abs{g_L}}{\omega }$ integer, and the second sum is taken over all sets $ \{n_i\}_M^N $ of $ N $ items and $ \sum_i^N n_{i=1} = M$.
+Here $ N $ has the meaning of total number of absorbed photons, $ M $ is the closest to $ \frac{\abs{g_L}}{\omega }$ integer, and the second sum is taken over all sets $ \{n_i\}_M^N $ of $ N $ items and $ \sum_i^N n_{i=1} = M$.
 
- The $ n $,$ m $-dependence factors out so that:
+ The $ n $,$ m $-dependence factors out:
 \begin{gather}
 J_{nm}
 =

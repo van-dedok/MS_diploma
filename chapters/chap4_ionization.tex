@@ -101,7 +101,7 @@ To obtain the ionization rate one should treat $ H_T $ as perturbation. For unpe
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{images/tunneling}
+	\includegraphics[width=0.65\linewidth]{images/tunneling}
 	\caption{Ionization processes in terms of tunnel Hamiltonian}
 	\label{fig:tunneling}
 \end{figure}
@@ -112,14 +112,26 @@ The ionization rate can be calculated with the help of appendix \ref{app:multiph
 	\\
 	=\sum_{n}\frac{\alpha{}^{n}}{2^{2n-1}n!}(e^{in\omega \tau}+e^{-in\omega \tau})\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
 \end{multline}
-so 
+so:
 \begin{gather}
-	H_T
+	h_{T}=
+	\sum_n
+	h_{T,n}
+	\br{
+	e^{in\omega }
+	+
+	e^{-in\omega }
+	}
+	\qquad
+	h_{T,n}
 	\approx
-	\sum_{n}
-	\frac{\alpha^{n}}{2^{2n-1}n!}\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)H_{T,0}
+	\sum_{n}	
+	\frac
+	{\alpha^{n}}
+	{2^{2n-1}n!}
+	\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
+	h_{T,0}
 \end{gather}
-
 Here the focus is on the case where the topological gap is much larger than the trivial one: $ \abs{g_L}\ll g_R $. In this case, the right continuum has high energies and does not participate in the ionization process. Indeed,
 \begin{gather}
 	h_T G_{\epsilon} h_T
@@ -129,31 +141,41 @@ Here the focus is on the case where the topological gap is much larger than the 
 	\intop_{|E|>g_{R}}
 	\frac{h_T|E,R_0\rangle\langle E,R_0|h_T}{\epsilon-E}\frac{dE}{N_{R}(E)}
 \end{gather}
-So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term can be neglected. Then, the product $ \dots V_{n}GV_{n'}GV_{n''}\dots $ factorizes into individual number-factors of the form $ \langle\gamma|V_{n}GV_{m}|\gamma\rangle $.
+So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term is small and can be neglected. Then, the product $ \dots h_TG\br{E}h_TG\br{E}h_T\dots $ factorizes into individual factors of the form $ J_{nm}\equiv\langle\gamma|h_TG\br{E}h_T|\gamma\rangle $.
 
 \subsection{Factorizing $ w_\mathcal{E} $}
-Each entry in the sum within $ w_{\mathcal{E}} $ is a product of operators of the type $ \dots VGVGV\dots. $ In the limit we are now interested in, in the right wire only the Majorana mode is relevant. This means that the whole thing decomposes into a product of $ J_{nm}\equiv\langle\gamma|V_{n}|G_{E}|V_{m}|\gamma\rangle $, and the ionization rate is proportional to:
-
+As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_TG\br{E}h_TG\br{E}h_T\dots. $  for ionization rate we have:
 \begin{gather}
 	\sqrt{\mathcal{I}}\propto
 	\sum_N \sum_{\{n_i\}_M^N}\prod_{i=1}^{N}J_{n_in_{i+1}}
 \end{gather}
-Here the $ N $ has the meaning of total number of absorbed photons, $ M $ is the closet to $ \frac{\abs{g_L}}{\omega }$ integer, and the second sum is taken over all sets $ \{n_i\}_M^N $ such that there are $ N $ items in that set and $ \sum_i^N n_{i=1} = M$
- The $ n $,$ m $-dependence factors out so that $ J_{nm}=A_{n}A_{m}^{*}J_{0} $ where:
+Here $ N $ has the meaning of total number of absorbed photons, $ M $ is the closet to $ \frac{\abs{g_L}}{\omega }$ integer, and the second sum is taken over all sets $ \{n_i\}_M^N $ of $ N $ items and $ \sum_i^N n_{i=1} = M$.
 
+ The $ n $,$ m $-dependence factors out so that:
 \begin{gather}
-	J_{0}(E)=\langle\gamma|V_{0}G(E)V_{0}|\gamma\rangle\equiv\intop_{cont.}\frac{|\langle\gamma|V_{0}|\epsilon\rangle|^{2}}{E-\epsilon}\frac{d\epsilon}{N_L(\epsilon)}
+J_{nm}
+=
+	\frac{\alpha^{n+m}}
+	{2^{2\br{n+m}-2}n!m!}
+	\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
+	\cos\left(\frac{\varphi_{0}}{2}+m\frac{\pi}{2}\right)
+	J_0\br{E}
 \end{gather}
-
-However on each ionization step  the particle can move a state with energy $ E $ or $ -E $. Taking this into account, one	 gets:
-
 \begin{gather}
 	J_{0}(E)
 	=
-	2E\intop_{|g_{L}|}^{\infty}\frac{|\langle\gamma|V_{0}|\epsilon\rangle|^{2}}{E^{2}-\epsilon^{2}}\frac{d\epsilon}{f(\epsilon)}
+	\langle\gamma|h_{T,0}G(E)h_{T,0}|\gamma\rangle
+	\equiv
+	\intop_{cont.}\frac{|\langle\gamma|h_{T,0}|\epsilon\rangle|^{2}}{E-\epsilon}\frac{d\epsilon}{N_L(\epsilon)}
 \end{gather}
 
-recalling (\ref{tunnel_element_factorized}), obtain:
+On each ionization step  the particle can move to the state with energy $ E $ or $ -E $, so:
+\begin{gather}
+	J_{0}(E)
+	\approx
+	2E\intop_{|g_{L}|}^{\infty}\frac{|\langle\gamma|h_{T,0}|\epsilon\rangle|^{2}}{E^{2}-\epsilon^{2}}\frac{d\epsilon}{N_L(\epsilon)}
+\end{gather}
+recalling (\ref{tunnel_matrix_elements_maj-cont}), we obtain:
 \begin{gather}
 		J_{0}(E)
 		=
@@ -161,29 +183,39 @@ recalling (\ref{tunnel_element_factorized}), obtain:
 \end{gather}
 where $ \lambda = \frac{E}{\abs{g_L}} $, $ T=\frac{g_R\br{\zeta^2t}^2}{\abs{g_L}} $.
 
-Thus, the elementary block in our product becomes:
-\begin{multline}
+Thus, the elementary block  in our product for small enough $ n $ becomes:
+\begin{gather}
 	\frac{J_{nm}}{E+n\omega}
+	\approx
+	\frac{J_{nm}}{E}
 	=
-	A_{n}A_{m}\frac{J_{0}}{E+n\omega}\simeq A_{n}A_{m}T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
-	=
-	\\
-	=\left(\frac{\alpha}{4}\right)^{n+m}B_{n}B_{m}^{*}T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
-\end{multline}
+	\br{\frac{\alpha}{4}}^{n+m}
+	B_n B_m^* T
+	\frac{-1+\sqrt{1-\lambda^2}}{\lambda^2}
+\end{gather}
+where
+\begin{gather}
+	B_n=
+	\frac{2}{n!}\cos\br{\frac{\phi_0}{2}+\frac{\pi n}{2}}
+\end{gather}
 
-where the parts that yield $ (\alpha/4)^{\mathcal{E}/\omega} $ for any trajectory and thus are factored out, as these parts do not affect summation and optimization. Thus one has $ B_{n}B_{m}T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}} $ to optimize.
+The prefactor $  \br{\alpha/4}^{n+m} $ yields $ (\alpha/4)^{\mathcal{E}/\omega} $ for any trajectory  do not affect summation and optimization. Thus one has $ B_{n}B_{m}T\frac{-1+\sqrt{1-\lambda^{2}}}{\lambda^{2}} $ to optimize.
 
 Now consider a slice of the ionization process, i.e. a part of the full ionization product, which runs from energy $ E $ to $ E+\Delta E $ where $ \Delta E=M\omega $ with a large M. One can assume that within that process, a large number 2N of photons is absorbed, but energy does not change significantly, $ \Delta E\ll E $, so that $ \lambda $ can be considered a constant within that process. Denoting:
 \begin{gather}
 	T_{\lambda}=-4T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
 \end{gather}
-
 Then, one finds, that the ionization rate is $ \mathcal{I}\propto\mathcal{J}^2 $ where:
 \begin{gather}
 \label{ionization_super_formula}
 \mathcal{J}
 \equiv
-\sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{J_{n_{i}m_{i}}}{E}=\left(\frac{\alpha}{4}\right)^{M}\sum_{\{n\}_{2N}^{M}}(-T_{\lambda})^{\frac{N}{2}}\prod_{i=1}^{N}\frac{\cos(\frac{\varphi_{0}}{2}+\frac{\pi n_{2i}}{2})}{n_{i}!}
+\sum_N
+\sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{J_{n_{i}n_{i+1}}}{E}
+=
+\left(\frac{\alpha}{4}\right)^{M}
+\sum_N
+\sum_{\{n\}_{2N}^{M}}(-T_{\lambda})^{\frac{N}{2}}\prod_{i=1}^{N}\frac{\cos(\frac{\varphi_{0}}{2}+\frac{\pi n_{2i}}{2})}{n_{i}!}
 \end{gather}
 So to obtain the ionization rate up to a prexponential constant, one should compute $ \mathcal{J} $.
 

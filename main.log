@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  11 JUN 2019 19:00
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  12 JUN 2019 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,12 +1189,16 @@ Chapter 4.
 ] [26]
 File: images/tunneling.png Graphic file (type QTm)
  <use  "images/tunneling.png" > [27]
-
-LaTeX Warning: Reference `tunnel_element_factorized' on page 28 undefined on in
-put line 156.
+Overfull \hbox (5.26373pt too wide) in paragraph at lines 143--145
+[] \OML/cmm/m/it/12 h[]G [] h[]G [] h[] [] $ \TU/TimesNewRoman(0)/m/n/12 factor
+izes into individual factors of the form $\OML/cmm/m/it/12 J[] \OMS/cmsy/m/n/12
+ ^^Q h\OML/cmm/m/it/12 ^^M\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 h[]G [] h[]\OMS/cm
+sy/m/n/12 j\OML/cmm/m/it/12 ^^M\OMS/cmsy/m/n/12 i$\TU/TimesNewRoman(0)/m/n/12 .
+ 
+ []
 
 [28] [29] [30] [31] [32]
-Overfull \hbox (10.91136pt too wide) in paragraph at lines 378--388
+Overfull \hbox (10.91136pt too wide) in paragraph at lines 410--420
 \TU/TimesNewRoman(0)/m/n/12 Above we considered $\OML/cmm/m/it/12 M \OMS/cmsy/m
 /n/12 ^^] \OML/cmm/m/it/12 n[]$ \TU/TimesNewRoman(0)/m/n/12 which lead to a sim
 ple asymptotic of the function $[] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]\OT1/
@@ -1202,7 +1206,7 @@ cmr/m/n/12 )$\TU/TimesNewRoman(0)/m/n/12 .
  []
 
 [33] [34] [35]
-Overfull \hbox (1.77039pt too wide) in paragraph at lines 504--507
+Overfull \hbox (1.77039pt too wide) in paragraph at lines 536--539
 \TU/TimesNewRoman(0)/m/n/12 The next step is to sum this over $\OML/cmm/m/it/12
  N$\TU/TimesNewRoman(0)/m/n/12 . Remember that $\OML/cmm/m/it/12 k[] \OT1/cmr/m
 /n/12 = \OML/cmm/m/it/12 Ne[]$ \TU/TimesNewRoman(0)/m/n/12 and $\OML/cmm/m/it/1
@@ -1212,26 +1216,26 @@ man(0)/m/n/12 .
  []
 
 [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 604--614
+Underfull \hbox (badness 10000) in paragraph at lines 636--646
 
  []
 
-) [38]
+[38]) [39]
 \openout2 = `chapters/chap_discussion.aux'.
 
  (./chapters/chap_discussion.tex
 Chapter 5.
 File: images/real_model_3.png Graphic file (type QTm)
-<use  "images/real_model_3.png" > [39
+<use  "images/real_model_3.png" > [40
 
 
 
-]) [40]
+]) [41]
 \openout2 = `chapters/chap_conclusion.aux'.
 
  (./chapters/chap_conclusion.tex
 Chapter 6.
-) [41
+) [42
 
 
 
@@ -1240,16 +1244,16 @@ Chapter 6.
 
  (./chapters/appb.tex
 Appendix A.
-[42
+[43
 
 
 
-] [43]) [44]
+] [44]) [45]
 \openout2 = `chapters/app_tunnel.aux'.
 
  (./chapters/app_tunnel.tex
 Appendix B.
-) [45
+) [46
 
 
 
@@ -1258,38 +1262,35 @@ Appendix B.
 
  (./chapters/appc.tex
 Appendix C.
-[46
+[47
 
 
 
-] [47] [48] [49]) [50]
+] [48] [49] [50]) [51]
 Overfull \hbox (0.22112pt too wide) in paragraph at lines 40--40
 []\TU/TimesNewRoman(0)/m/n/12 G. Volovik, “Fermion zero modes on vortices in ch
 iral superconductors”, Pisma Zh.Eksp.Teor.Fiz.
  []
 
-[51
+[52
 
 
-] [52] (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
+] [53] (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
 (./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux)
 (./chapters/chap3_stationary.aux) (./chapters/chap4_ionization.aux)
 (./chapters/chap_discussion.aux) (./chapters/chap_conclusion.aux)
 (./chapters/appb.aux) (./chapters/app_tunnel.aux) (./chapters/appc.aux))
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20488 strings out of 493068
- 427255 string characters out of 6137720
+ 20487 strings out of 493068
+ 427228 string characters out of 6137720
  871137 words of memory out of 5000000
- 24083 multiletter control sequences out of 15000+600000
+ 24082 multiletter control sequences out of 15000+600000
  12614 words of font info for 72 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  44i,18n,68p,10402b,4352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (52 pages).
+Output written on main.pdf (53 pages).

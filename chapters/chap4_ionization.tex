@@ -181,7 +181,7 @@ recalling (\ref{tunnel_matrix_elements_maj-cont}), we obtain:
 		=
 		ET\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
 \end{gather}
-where $ \lambda = \frac{E}{\abs{g_L}} $, $ T=\frac{g_R\br{\zeta^2t}^2}{\abs{g_L}} $.
+where $ \lambda = \frac{E}{\abs{g_L}} $, $ T=\frac{g_R\br{\zeta^2t}^2}{\abs{g_L}} $. We consider $ T\ll 1$, so the systems remains in a strong tunneling limit.
 
 Thus, the elementary block  in our product for small enough $ n $ becomes:
 \begin{gather}
@@ -207,18 +207,120 @@ Now consider a slice of the ionization process, i.e. a part of the full ionizati
 \end{gather}
 Then, one finds, that the ionization rate is $ \mathcal{I}\propto\mathcal{J}^2 $ where:
 \begin{gather}
-\label{ionization_super_formula}
-\mathcal{J}
+\label{ionization_super_formula_sum}
+\mathcal{J}\br{\lambda}
 \equiv
 \sum_N
 \sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{J_{n_{i}n_{i+1}}}{E}
 =
 \left(\frac{\alpha}{4}\right)^{M}
 \sum_N
-\sum_{\{n\}_{2N}^{M}}(-T_{\lambda})^{\frac{N}{2}}\prod_{i=1}^{N}\frac{\cos(\frac{\varphi_{0}}{2}+\frac{\pi n_{2i}}{2})}{n_{i}!}
+\br{-T_{\lambda}}^{\frac{N}{2}}
+\mathcal{J}_N\br{\lambda}
+\\
+\label{ionization_super_formula}
+\mathcal{J}_N\br{\lambda}
+=
+\sum_{\{n\}_{2N}^{M}}\prod_{i=1}^{N}\frac{\cos(\frac{\varphi_{0}}{2}+\frac{\pi n_{2i}}{2})}{n_{i}!}
 \end{gather}
-So to obtain the ionization rate up to a prexponential constant, one should compute $ \mathcal{J} $.
 
+So to obtain the ionization rate up to a prexponential constant, one should compute $ \mathcal{J}\br{\lambda} $ and take the product 
+$ \underset{\lambda_k}{\prod} \mathcal{J}\br{\lambda_k}$ where $ \lambda_k $ corresponds for the $ k $-th slice of the ionization process. 
+\subsection{Optimal photon number}
+We begin dealing with (\ref{ionization_super_formula_sum}) by finding the optimal photon number $ N_* $. This number corresponds to the largest term in the sum (\ref{ionization_super_formula_sum}).
+
+The first step is to use Poisson summation formula:
+\begin{gather}
+	\sum_{n=-\infty}^\infty
+	\delta\br{x - n}
+	=
+	\sum_{k=-\infty}^\infty
+	e^{2i\pi x}
+\end{gather} 
+so:
+\begin{multline}
+	\mathcal{J}_N\br{\lambda}
+	=
+	\\
+	=
+	\br{
+	\sum_{k_1=-\infty}^\infty
+	\cdots
+	\sum_{k_{2N-1}=-\infty}^\infty
+	}
+	\prod_{i=1}^{2N-1}
+	\br{
+	\int d x_i
+	e^{2i \pi k_i x_i}
+	\frac
+		{	
+			\cos
+			\br{
+				\frac{\varphi_0}{2}
+				+
+			\frac{\pi x_i}{2}
+			}
+		}
+		{\Gamma\br{x_i+1}}
+	}
+	\frac
+{
+	\cos
+	\br{
+		\frac{\varphi_0}{2}
+		+
+		\frac{\pi x_{2N}}{2}
+	}
+}
+{\Gamma\br{x_{2N}+1}}
+\end{multline}
+where $ x_{2N} \equiv M - \sum_{i=1}^{2N-1} x_i$. This can be rewritten as:
+\begin{gather}
+		\mathcal{J}_N\br{\lambda}
+		=
+		\sum_{\mathbf{k}}
+		\br{
+			\sum_{s_1=\pm 1}
+			\cdots
+			\sum_{s_{2N-1}=\pm1}
+		}
+	\br{
+		\prod_{i=1}^{2N-1}
+		\int
+		d x_i
+	}
+	e^{S[\mathbf{x}]}
+\end{gather}
+with 
+\begin{gather}
+\label{ionization_saddle_action}
+	S[\mathbf{x}]
+	=
+	-
+	\sum_{i=1}^{2N}
+	\log \Gamma\br{x_i+1}
+	+
+	2i\pi\sum_{i=1}^{2N-1}
+	k_i x_i
+	+
+	\sum_{i=1}^{2N}
+	s_i
+	\br{\frac{\varphi_0}{2}
+	+
+	\frac{\pi x_i}{2}	
+	}
+\end{gather}
+As $ N $ and $ M $ are large, we assume that $ x_i $ at saddle points are also large, so the Stirling approximation is relevant: $\log \Gamma\br{x} \approx x\log x - x $. This allows us to neglect all the terms in (\ref{ionization_saddle_action}) except for the first one and get (recall, that $ x_{2N}
+= M-\sum_{i=1}^{2N-1}x_i $):
+\begin{gather}
+	\frac{\partial}{\partial x_i}
+	S[\mathbf{x}]
+	\approx
+	\log{x_{2N}}-\log{x_i}
+\end{gather}
+So, at the saddle point all $ x_i $ are equal to $ \frac{M}{2N} $. 
+
+Each $ x_i $ corresponds to  it's own $ n_i $. When saddle
 \subsection{Using multinomial formula}
 The first step to deal with (\ref{ionization_super_formula}) is to rewrite the product of cosines using multinomial formula:
 \begin{gather}
@@ -232,7 +334,8 @@ The first step to deal with (\ref{ionization_super_formula}) is to rewrite the p
 	k_1,k_2,\dots,k_n
 	\end{pmatrix}
 	\prod_i
-	f_i^{(k_i)}
+	\frac{d^{k_i}}{dx^{k_i}}
+	f_i
 \end{gather}
 For the cosine product it can be applied in a following way:
 \begin{gather}
@@ -246,6 +349,12 @@ where $ \chi=\frac{\varphi_0 }{2}$. Then some algebra should be used:
 	=
 	\frac{e^{i\chi N+iM\pi/2}}{2^{N}M!}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}
 \end{multline}
+So:
+\begin{gather}
+	\mathcal{J}_N\br{\lambda}
+	=
+		\frac{e^{i\frac{\phi_0}{2} N+iM\pi/2}}{2^{N}M!}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}
+\end{gather}
 Now, in the sum, the ratio of consecutive summands is $ \frac{a_{k+1}}{a_{k}}=\frac{C_{k+1}^{N}}{C_{k}^{N}}\left(\frac{N-2k-2}{N-2k}\right)^{M} $. For $ k<N/2 $ both factors here are decreasing, so the largest ratio is $ \frac{a_{1}}{a_{0}}=N(\frac{N-2}{N})^{M}\simeq Ne^{-2M/N} $. The most important terms in this sum define in wich regime the system is and what the ionization rate would be. 
 
 The expression (\ref{ionization_super_formula}) can be rewritten with the help of the Poisson summation formula:

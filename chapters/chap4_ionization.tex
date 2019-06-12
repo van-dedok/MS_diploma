@@ -90,14 +90,14 @@ H_T=
 \end{gather}
 where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. Note, that $ \tilde{h}_{T} =\tilde{h}_{T}^\dagger $.
 
- The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that, maybe it's possible to make this calculations in a more beautiful way.
+ The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that maybe it's possible to make this calculations in a more beautiful way.
 
 \section{Ionization rate for $ g_R\gg\abs{g_L} $}
 
 
 \subsection{Time dependence of perturbation}
 
-To obtain the ionization rate one should treat $ H_T $ as perturbation. For unperturbed system, described with $ H_0=H_R+H_L $ the electrons cannot get from wire to another, but $ H_T $ allows these processes, so the ionization can be described as a set of jumps from right to left wire (see fig. \ref{fig:tunneling}).
+To obtain the ionization rate one should treat $ H_T $ as perturbation. For unperturbed system, described with $ H_0=H_R+H_L $, the electrons cannot get from wire to another, but $ H_T $ allows these processes, so the ionization can be described as a set of jumps from right to left wire (see fig. \ref{fig:tunneling}).
 
 \begin{figure}[H]
 	\centering
@@ -106,9 +106,9 @@ To obtain the ionization rate one should treat $ H_T $ as perturbation. For unpe
 	\label{fig:tunneling}
 \end{figure}
 
-The ionization rate can be calculated with the help of appendix \ref{app:multiphoton ionization}. Ionization rate is given by the formula   (\ref{ionization_key}). To use this formula, we decompose the  perturbation in Fourier series. From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{\tau}}{2} $ with $ \varphi\br{\tau}=\phi_{0}+\alpha\cos\omega \tau $. Using $ \alpha\ll1 $, we write:
+The approach to multiphoton ionization is described in appendix \ref{app:multiphoton ionization}. The rate is given by the formula   (\ref{ionization_key}). To use this formula, we decompose the  perturbation in Fourier series. From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{\tau}}{2} $ with $ \varphi\br{\tau}=\varphi_{0}+\alpha\cos\omega \tau $. Using $ \alpha\ll1 $, we write:
 \begin{multline}
-	e^{\frac{i\varphi\br{\tau}}{2}}+e^{-\frac{i\varphi\br{\tau}}{2}}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha/2)^{n}}{2^{n}n!}(e^{in\omega \tau}+e^{-in\omega \tau})+c.c=
+	e^{\frac{i\varphi\br{\tau}}{2}}+e^{-\frac{i\varphi\br{\tau}}{2}}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha)^{n}}{2^{n}n!}(e^{in\omega \tau}+e^{-in\omega \tau})+c.c=
 	\\
 	=\sum_{n}\frac{\alpha{}^{n}}{2^{2n-1}n!}(e^{in\omega \tau}+e^{-in\omega \tau})\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
 \end{multline}
@@ -144,7 +144,7 @@ Here the focus is on the case where the topological gap is much larger than the 
 So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term is small and can be neglected. Then, the product $ \dots h_TG\br{E}h_TG\br{E}h_T\dots $ factorizes into individual factors of the form $ J_{nm}\equiv\langle\gamma|h_{T,n}G\br{E}h_{T,m}|\gamma\rangle $.
 
 \subsection{Factorizing $ w_\mathcal{E} $}
-As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_TG\br{E}h_TG\br{E}h_T\dots. $  for ionization rate we have:
+As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_TG\br{E}h_TG\br{E}h_T\dots $.  For ionization rate we have:
 \begin{gather}
 	\sqrt{\mathcal{I}}\propto
 	\sum_N \sum_{\{n_i\}_M^N}\prod_{i=1}^{N}J_{n_in_{i+1}}

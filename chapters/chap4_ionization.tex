@@ -320,7 +320,17 @@ As $ N $ and $ M $ are large, we assume that $ x_i $ at saddle points are also l
 \end{gather}
 So, at the saddle point all $ x_i $ are equal to $ \frac{M}{2N} $. 
 
-Each $ x_i $ corresponds to  it's own $ n_i $. When saddle
+Each $ x_i $ corresponds to  it's own $ n_i $. In saddle point approximation we can take only terms with $ n_i = x_i^{\mathrm{saddle}} $ in sum (\ref{ionization_super_formula}). Than the sum (\ref{ionization_super_formula_sum}) 
+\begin{gather}
+	\mathcal{L}\br{\lambda}
+	\approx
+	\sum
+	\br{-T_\lambda}^\frac{N}{2}
+	e^{
+		\frac{M}{2N}
+		\log\frac{M}{2N}
+	}
+\end{gather}
 \subsection{Using multinomial formula}
 The first step to deal with (\ref{ionization_super_formula}) is to rewrite the product of cosines using multinomial formula:
 \begin{gather}

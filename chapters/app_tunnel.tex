@@ -18,18 +18,22 @@ The corrections for the spinors should be calculated as:
 \end{gather}
 So, for different states:
 \begin{align}
-\big|\gamma_{1}\,\big>&=\int_{g_{L}}^{\infty}\frac{d\varepsilon}{N_{L}\left(\varepsilon\right)}\,\frac{1}{-\varepsilon+i0}\big|\varepsilon,L_{0}\,\big>\,\big<\varepsilon,L_{0}\,\big|h_{t}\big|\gamma_{0}\,\big>\\\big|E+i0,R_{1}\,\big>&=\int_{g_{L}}^{\infty}\frac{d\varepsilon}{N_{L}\left(\varepsilon\right)}\,\frac{1}{E-\varepsilon+i0}\big|\varepsilon,L_{0}\,\big>\,\big<\varepsilon,L_{0}\,\big|h_{t}\big|E\,R_{0}\big>
+\big|\gamma_{1}\,\big>&=\int_{g_{L}}^{\infty}\frac{d\varepsilon}{N_{L}\left(\varepsilon\right)}\,\frac{1}{-\varepsilon+i0}\big|\varepsilon,L_{0}\,\big>\,\big<\varepsilon,L_{0}\,\big|h_{LR}\big|\gamma_{0}\,\big>
+\\
+\big|E+i0,R_{1}\,\big>&=\int_{g_{L}}^{\infty}\frac{d\varepsilon}{N_{L}\left(\varepsilon\right)}\,\frac{1}{E-\varepsilon+i0}\big|\varepsilon,L_{0}\,\big>\,\big<\varepsilon,L_{0}\,\big|h_{LR}\big|E\,R_{0}\big>
 \\
 \nonumber
-\big|E+i0,L_{1}\,\big>&=\frac{1}{E+i0}\big|\gamma_{0}\,\big>\,\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>+
+\big|E+i0,L_{1}\,\big>&=\frac{1}{E+i0}\big|\gamma_{0}\,\big>\,\big<\gamma_{0}\,\big|h_{LR}^{\dagger}\big|E,L_{0}\,\big>+
 \\	
 &\qquad\qquad\qquad\qquad
-+\int_{g_{l}}^{\infty}\frac{d\varepsilon}{N_{R}\left(\varepsilon\right)}\,\frac{1}{E-\varepsilon+i0}\big|\varepsilon\,R_{0}\big>\,\big<\varepsilon,R_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
++\int_{g_{l}}^{\infty}\frac{d\varepsilon}{N_{R}\left(\varepsilon\right)}\,\frac{1}{E-\varepsilon+i0}\big|\varepsilon\,R_{0}\big>\,\big<\varepsilon,R_{0}\,\big|h_{LR}^{\dagger}\big|E,L_{0}\,\big>
 \end{align}
 
 Now, multiplying the third equation by $ \big<\gamma_{0}\,\big| $ and $ \big<\epsilon,R_{0}\,\big |$, find:
 \begin{gather}
-\big<\gamma_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E+i0}\,\big<\gamma_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>\\\big<\epsilon,R_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E-\epsilon+i0}\big<\epsilon,R_{0}\,\big|h_{t}^{\dagger}\big|E,L_{0}\,\big>
+\big<\gamma_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E+i0}\,\big<\gamma_{0}\,\big|h_{LR}^{\dagger}\big|E,L_{0}\,\big>
+\\
+\big<\epsilon,R_{0}\,\big|E+i0,L_{1}\,\big>=\frac{1}{E-\epsilon+i0}\big<\epsilon,R_{0}\,\big|h_{LR}^{\dagger}\big|E,L_{0}\,\big>
 \end{gather}
 
 The l.h.s. of this equation can be calculated with the help of appendix \ref{app:wavefunctions_with_corrections}. After doing so, we arrive to the result (\ref{tunnel_matrix_elements_maj-cont}).

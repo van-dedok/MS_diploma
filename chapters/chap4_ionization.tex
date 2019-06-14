@@ -56,11 +56,11 @@ Here the following notation is used: the Hamiltonians $ H_L $, $ H_R $ and $ H_T
 	H_T
 =
 \begin{pmatrix}
-0 & h_T \\
-h_T^\dagger & 0
+0 & h_{LR} \\
+h_{RL} & 0
 \end{pmatrix}_{LR}	
 \end{gather}
-The Hamiltonians $ h_L $ and $ h_R $ eventually coinside with (\ref{bulk_Hamiltonian}) with zero boundary condition. The Hamiltonian $ h_T $ in unknown -- the goal is to make it in a way the corrections for the wavefunctions are restored . This wavefunctions and their  first tunneling corrections are listed in  appendix \ref{app:wavefunctions_with_corrections}.
+The Hamiltonians $ h_L $ and $ h_R $ eventually coinside with (\ref{bulk_Hamiltonian}) with zero boundary condition. The Hamiltonian $ h_{LR}=h_{Rl}^\dagger $ in unknown --- the goal is to make it in a way the corrections for the wavefunctions are restored . This wavefunctions and their  first tunneling corrections are listed in  appendix \ref{app:wavefunctions_with_corrections}.
 
 The derivation of tunnel Hamiltonian matrix elements is presented in appendix \ref{app:tunnel}. Using the notation  $ \big|\gamma_{0}\,\big> $ for Majorana state and $ \big|\varepsilon,L_{0}\,\big> $, $ \big|\varepsilon,R_{0}\,\big> $ for continuous spectra, we have the following:
 \begin{gather}
@@ -70,25 +70,25 @@ H_T=
 =
 \left(e^{i\frac{\varphi}{2}}+e^{-i\frac{\varphi}{2}}\right)
 \begin{pmatrix}
-0 & \tilde{h}_{T} \\
-\tilde{h}_T^\dagger & 0
+0 & \tilde{h}_{LR} \\
+\tilde{h}_{RL} & 0
 \end{pmatrix}
 \\
 \label{tunnel_matrix_elements_maj-cont}
-	\big<\gamma_{0}\,\big|\tilde{h}_{T}^{\dagger}\big|E,L_{0}\,\big>
+	\big<\gamma_{0}\,\big|\tilde{h}_{RL}\big|E,L_{0}\,\big>
 	=
 	4\sqrt{ug_{R}}
 	t\zeta^{2}
 	f\br{\frac{E}{\abs{g_L}}}
 	\\
 	\label{tunnel_matrix_elements_cont-cont}
-	\big<\epsilon,R_{0}\,\big|\tilde{h}_{T}^{\dagger}\big|E,L_{0}\,\big>
+	\big<\epsilon,R_{0}\,\big|\tilde{h}_{RL}\big|E,L_{0}\,\big>
 	=
 	-16u\zeta^{2}t
 	f\br{\frac{E}{\abs{g_L}}}
 	f\br{\frac{\varepsilon}{g_R}}
 \end{gather}
-where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. Note, that $ \tilde{h}_{T} =\tilde{h}_{T}^\dagger $.
+where $ f\br{x}=\sqrt{x^2-1}\br{x+\sqrt{x^2-1}} $. 
 
  The fact, that all energy dependences here are described by a single function $ f\br{x} $ insinuates that maybe it's possible to make this calculations in a more beautiful way.
 
@@ -106,7 +106,7 @@ To obtain the ionization rate one should treat $ H_T $ as perturbation. For unpe
 	\label{fig:tunneling}
 \end{figure}
 
-The approach to multiphoton ionization is described in appendix \ref{app:multiphoton ionization}. The rate is given by the formula   (\ref{ionization_key}). To use this formula, we decompose the  perturbation in Fourier series. From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ V=H_T\propto\cos\frac{\varphi\br{\tau}}{2} $ with $ \varphi\br{\tau}=\varphi_{0}+\alpha\cos\omega \tau $. Using $ \alpha\ll1 $, we write:
+The approach to multiphoton ionization is described in Appendix \ref{app:multiphoton ionization}.  The first step is to decompose the  perturbation in Fourier series in frequencies. From  (\ref{tunnel_matrix_elements_maj-cont}) one finds, that $ H_T\propto\cos\frac{\varphi\br{\tau}}{2} $ with $ \varphi\br{\tau}=\varphi_{0}+\alpha\cos\omega \tau $. Using $ \alpha\ll1 $, we write:
 \begin{multline}
 	e^{\frac{i\varphi\br{\tau}}{2}}+e^{-\frac{i\varphi\br{\tau}}{2}}\simeq e^{i\frac{\varphi_{0}}{2}}\sum_{n}\frac{(i\alpha)^{n}}{2^{n}n!}(e^{in\omega \tau}+e^{-in\omega \tau})+c.c=
 	\\
@@ -114,70 +114,117 @@ The approach to multiphoton ionization is described in appendix \ref{app:multiph
 \end{multline}
 so:
 \begin{gather}
-	h_{T}=
+	H_{T}=
 	\sum_n
-	h_{T,n}
+	H_{T,n}
 	\br{
-	e^{in\omega }
+	e^{in\omega\tau }
 	+
-	e^{-in\omega }
-	}
+	e^{-in\omega\tau }
+	},
 	\qquad
-	h_{T,n}
+	H_{T,n}
 	\approx
 	\sum_{n}	
 	\frac
 	{\alpha^{n}}
 	{2^{2n-1}n!}
 	\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
-	\tilde{h}_{T}
+	\tilde{H}_{T}
 \end{gather}
-Here the focus is on the case where the topological gap is much larger than the trivial one: $ \abs{g_L}\ll g_R $. In this case, the right continuum has high energies and does not participate in the ionization process. Indeed,
+The same decomposition is valid for $ LR $ matrix elements of $ H_T $:
 \begin{gather}
-	h_T G_{\epsilon} h_T
+h_{LR}=
+\sum_n
+h_{LR,n}
+\br{
+	e^{in\omega\tau }
+	+
+	e^{-in\omega\tau }
+},
+\qquad
+h_{LR,n}
+\approx
+\sum_{n}	
+\frac
+{\alpha^{n}}
+{2^{2n-1}n!}
+\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
+\tilde{h}_{LR}
+\end{gather}
+Then the rate is given by (see Appendix \ref{app:multiphoton ionization}):
+\begin{gather}
+\label{ionization_key}
+\mathcal{I}
+\sim
+\frac{|\langle\mathcal{E}|w_{\mathcal{E}}|\gamma\rangle|^{2}}{N(\mathcal{E})},
+\qquad
+w_{\mathcal{E}}(E)
+=
+\sum_{\{n_{i}\}:\mathcal{E}}H_{T,n_{N}}\prod_{j=1}^{N-1}G_{0}\left(E+\sum_{s=1}^{j}\omega_{n_{s}}\right)H_{T,n_{j}}
+\end{gather}
+here sum is taken over all sets $ \{n_i\}:\mathcal{E} $ so that $ \sum_{i} \omega_{n_i}=\mathcal{E}=\min[g_R, \abs{g_L}]$. Each term in sum (\ref{ionization_key}) corresponds to some way (i.e. trajectory) to absorb photons with energies $ \omega_{n_i} $, such that the total absorbed energy is equal to spectrum gap.
+
+For unperturbed Green function we take a notaion:
+\begin{gather}
+	G_0\br{E}
 	=
-	\frac{h_T|\gamma\rangle\langle\gamma|h_T}{\epsilon}
+	\begin{pmatrix}
+	G_L\br{E} & 0 \\
+	0 & G_R\br{E}
+	\end{pmatrix}_{LR}.
+\end{gather}
+
+In this section the focus is on the case where the topological gap is much larger than the trivial one: $ \abs{g_L}\ll g_R $. Then the right continuum has high energies and does not participate in the ionization process. Indeed,
+\begin{gather}
+	h_{LR} G_R\br{\epsilon} h_{RL}
+	=
+	\frac{h_{LR}|\gamma\rangle\langle\gamma|h_{RL}}{\epsilon}
 	+
 	\intop_{|E|>g_{R}}
-	\frac{h_T|E,R_0\rangle\langle E,R_0|h_T}{\epsilon-E}\frac{dE}{N_{R}(E)}
+	\frac{h_{LR}|E,R_0\rangle\langle E,R_0|h_{RL}}{\epsilon-E}\frac{dE}{N_{R}(E)}
 \end{gather}
-So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term is small and can be neglected. Then, the product $ \dots h_TG\br{E}h_TG\br{E}h_T\dots $ factorizes into individual factors of the form $ J_{nm}\equiv\langle\gamma|h_{T,n}G\br{E}h_{T,m}|\gamma\rangle $.
+So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term is small and can be neglected. Then, the product $ \dots h_{RL}G_L\br{E}h_{LR}G_R\br{E}h_{RL}\dots $ factorizes into individual factors, which we denote as $ J_{nm}\br{E}\equiv\langle\gamma|h_{RL,n}G_L\br{E}h_{LR,m}|\gamma\rangle $.
 
 \subsection{Factorizing $ w_\mathcal{E} $}
-As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_TG\br{E}h_TG\br{E}h_T\dots $.  For ionization rate we have:
+As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_{lR}G_R\br{E}h_{RL}G_L\br{E}h_{LR}\dots $, we have:
 \begin{gather}
 	\sqrt{\mathcal{I}}\propto
-	\sum_N \sum_{\{n_i\}_M^N}\prod_{i=1}^{N}J_{n_in_{i+1}}
+	\sum_N \sum_{\{n_i\}_M^N}
+	J_{n_1 n_{2}}
+	J_{n_3 n_{4}}
+	\cdots
+	J_{n_{N-1}n_{N}}
 \end{gather}
-Here $ N $ has the meaning of total number of absorbed photons, $ M $ is the closest to $ \frac{\abs{g_L}}{\omega }$ integer, and the second sum is taken over all sets $ \{n_i\}_M^N $ of $ N $ items and $ \sum_i^N n_{i=1} = M$.
+Here $ N $ has the meaning of total number of absorbed photons, $ M $ is the integer closest to $ \frac{\abs{g_L}}{\omega }$ , and the second sum is taken over all sets $ \{n_i\}_M^N $ of $ N $ items such that $ \sum_{i=1}^N n_{i} = M$. We set, the number $ N $ to be even, hiding the last photon into unimportant prefactor.
 
  The $ n $,$ m $-dependence factors out:
 \begin{gather}
-J_{nm}
+J_{nm}\br{E}
 =
 	\frac{\alpha^{n+m}}
 	{2^{2\br{n+m}-2}n!m!}
 	\cos\left(\frac{\varphi_{0}}{2}+n\frac{\pi}{2}\right)
 	\cos\left(\frac{\varphi_{0}}{2}+m\frac{\pi}{2}\right)
-	J_0\br{E}
+	Q_0\br{E}
 \end{gather}
 \begin{gather}
-	J_{0}(E)
+	Q_{0}(E)
 	=
-	\langle\gamma|\tilde{h}_{T}G(E)\tilde{h}_{T}|\gamma\rangle
+	\langle\gamma|\tilde{h}_{RL}G_L(E)\tilde{h}_{LR}|\gamma\rangle
 	\equiv
-	\intop_{cont.}\frac{|\langle\gamma|\tilde{h}_{T}|\epsilon\rangle|^{2}}{E-\epsilon}\frac{d\epsilon}{N_L(\epsilon)}
+	\intop_{cont.}\frac{|\langle\gamma|\tilde{h}_{LR}|\epsilon\rangle|^{2}}{E-\epsilon}\frac{d\epsilon}{N_L(\epsilon)}
 \end{gather}
 
 On each ionization step  the particle can move to the state with energy $ E $ or $ -E $, so:
 \begin{gather}
-	J_{0}(E)
+	Q_{0}(E)
 	=
-	2E\intop_{|g_{L}|}^{\infty}\frac{|\langle\gamma|\tilde{h}_{T}|\epsilon\rangle|^{2}}{E^{2}-\epsilon^{2}}\frac{d\epsilon}{N_L(\epsilon)}
+	2E\intop_{|g_{L}|}^{\infty}\frac{|\langle\gamma|\tilde{h}_{RL}|\epsilon\rangle|^{2}}{E^{2}-\epsilon^{2}}\frac{d\epsilon}{N_L(\epsilon)}
 \end{gather}
 recalling (\ref{tunnel_matrix_elements_maj-cont}), we obtain:
 \begin{gather}
-		J_{0}(E)
+		Q_{0}(E)
 		=
 		ET\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
 \end{gather}
@@ -190,7 +237,7 @@ Thus, the elementary block  in our product for small enough $ n $ becomes:
 	\frac{J_{nm}}{E}
 	=
 	\br{\frac{\alpha}{4}}^{n+m}
-	B_n B_m^* T
+	B_n B_m T
 	\frac{-1+\sqrt{1-\lambda^2}}{\lambda^2}
 \end{gather}
 where
@@ -201,31 +248,39 @@ where
 
 The prefactor $  \br{\alpha/4}^{n+m} $ yields $ (\alpha/4)^{\mathcal{E}/\omega} $ for any trajectory and therefore do not affect summation and optimization. Thus one has $ B_{n}B_{m}T\frac{-1+\sqrt{1-\lambda^{2}}}{\lambda^{2}} $ to optimize.
 
-Now consider a slice of the ionization process, i.e. a part of the full ionization product, which runs from energy $ E $ to $ E+\Delta E $ where $ \Delta E=M\omega $ with a large M. One can assume that within that process, a large number 2N of photons is absorbed, but energy does not change significantly, $ \Delta E\ll E $, so that $ \lambda $ can be considered a constant within that process. Denoting:
+Now consider a slice of the ionization process, i.e. a part of the full ionization product, which runs from energy $ E $ to $ E+\Delta E $ where $ \Delta E=M\omega $ with a large M. One can assume that within that process, a large number N of photons is absorbed, but energy does not change significantly, $ \Delta E\ll E $, so that $ \lambda $ can be considered a constant within that process. 
+
+This approach is invalid, if the optimal photon energy is larger  than the slice size. If this happens, one needs to enlarge the slice until it reaches the energy of optimal photon. It cannot be done, when the optimal photon energy is equal or larger than spectrum gap. This case will be treated separately in section (\textbf{ENTER SECTION}).
+
+For now, denoting
 \begin{gather}
+\label{T_lambda_def}
 	T_{\lambda}=-4T\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
 \end{gather}
-Then, one finds, that the ionization rate is $ \mathcal{I}\propto\mathcal{J}^2 $ where:
+we rewrite:
 \begin{gather}
 \label{ionization_super_formula_sum}
 \mathcal{J}\br{\lambda}
 \equiv
 \sum_N
-\sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{J_{n_{i}n_{i+1}}}{E}
+\sum_{\{n\}_{N}^{M}}\frac{	J_{n_1 n_{2}}
+	J_{n_3 n_{4}}
+	\cdots
+	J_{n_{N-1}n_{N}}}{E^{\frac{N}{2}}}
 =
 \left(\frac{\alpha}{4}\right)^{M}
 \sum_N
 \br{-T_{\lambda}}^{\frac{N}{2}}
-\mathcal{J}_N\br{\lambda}
+\mathcal{J}_N
 \\
 \label{ionization_super_formula}
-\mathcal{J}_N\br{\lambda}
+\mathcal{J}_N
 =
-\sum_{\{n\}_{2N}^{M}}\prod_{i=1}^{N}\frac{\cos(\frac{\varphi_{0}}{2}+\frac{\pi n_{2i}}{2})}{n_{i}!}
+\sum_{\{n\}_{N}^{M}}\prod_{i=1}^{N}\frac{\cos(\frac{\varphi_{0}}{2}+\frac{\pi n_{2i}}{2})}{n_{i}!}
 \end{gather}
 
 So to obtain the ionization rate up to a prexponential constant, one should compute $ \mathcal{J}\br{\lambda} $ and take the product 
-$ \underset{\lambda_k}{\prod} \mathcal{J}\br{\lambda_k}$ where $ \lambda_k $ corresponds for the $ k $-th slice of the ionization process. 
+$ \underset{\lambda_k}{\prod} \mathcal{J}\br{\lambda_k}$ where $ \lambda_k $ corresponds for the $ k $-th slice of the ionization process.  
 \subsection{Estimation for optimal photon number}
 We begin dealing with (\ref{ionization_super_formula_sum}) by finding the optimal photon number $ N_* $. This number corresponds to the largest term in the sum (\ref{ionization_super_formula_sum}).
 
@@ -239,16 +294,16 @@ The first step is to use Poisson summation formula:
 \end{gather} 
 so:
 \begin{multline}
-	\mathcal{J}_N\br{\lambda}
+	\mathcal{J}_N
 	=
 	\\
 	=
 	\br{
 	\sum_{k_1=-\infty}^\infty
 	\cdots
-	\sum_{k_{2N-1}=-\infty}^\infty
+	\sum_{k_{N-1}=-\infty}^\infty
 	}
-	\prod_{i=1}^{2N-1}
+	\prod_{i=1}^{N-1}
 	\br{
 	\int d x_i
 	e^{2i \pi k_i x_i}
@@ -269,24 +324,24 @@ so:
 	\br{
 		\frac{\varphi_0}{2}
 		+
-		\frac{\pi x_{2N}}{2}
+		\frac{\pi x_{N}}{2}
 	}
 }
-{\Gamma\br{x_{2N}+1}}
+{\Gamma\br{x_{N}+1}}
 \end{multline}
-where $ x_{2N} \equiv M - \sum_{i=1}^{2N-1} x_i$. This can be rewritten as:
+where $ x_{N} \equiv M - \sum_{i=1}^{N-1} x_i$. This can be rewritten as:
 \begin{gather}
-		\mathcal{J}_N\br{\lambda}
+		\mathcal{J}_N
 		=
-		\frac{1}{2^{2N}}
+		\frac{1}{2^{N}}
 		\sum_{\mathbf{k}}
 		\br{
 			\sum_{s_1=\pm 1}
 			\cdots
-			\sum_{s_{2N}=\pm1}
+			\sum_{s_{N}=\pm1}
 		}
 	\br{
-		\prod_{i=1}^{2N-1}
+		\prod_{i=1}^{N-1}
 		\int
 		d x_i
 	}
@@ -298,29 +353,29 @@ with
 	S[\mathbf{x}]
 	=
 	-
-	\sum_{i=1}^{2N}
+	\sum_{i=1}^{N}
 	\log \Gamma\br{x_i+1}
 	+
-	2i\pi\sum_{i=1}^{2N-1}
+	2i\pi\sum_{i=1}^{N-1}
 	k_i x_i
 	+
 	i
-	\sum_{i=1}^{2N}
+	\sum_{i=1}^{N}
 	s_i
 	\br{\frac{\varphi_0}{2}
 	+
 	\frac{\pi x_i}{2}	
 	}
 \end{gather}
-As $ N $ and $ M $ are large, we assume that $ x_i $ at saddle points are also large, so the Stirling approximation is relevant: $\log \Gamma\br{x} \approx x\log x - x $. This allows us to neglect all the terms in (\ref{ionization_saddle_action}) except for the first one and get (recall, that $ x_{2N}
-= M-\sum_{i=1}^{2N-1}x_i $):
+As $ N $ and $ M $ are large, we assume that $ x_i $ at saddle points are also large, so the Stirling approximation is relevant: $\log \Gamma\br{x} \approx x\log x - x $. As we just make the estimation for saddle point position, we can neglect all the terms in (\ref{ionization_saddle_action}) except for the first one and get (recall, that $ x_{N}
+= M-\sum_{i=1}^{N-1}x_i $):
 \begin{gather}
 	\frac{\partial}{\partial x_i}
 	S[\mathbf{x}]
 	\approx
-	\log{x_{2N}}-\log{x_i}
+	\log{x_{N}}-\log{x_i}
 \end{gather}
-So, at the saddle point all $ x_i $ are equal to $ \frac{M}{2N} $. 
+So, at the saddle point all $ x_i $ are equal to $ \frac{M}{N} $. 
 
 Each $ x_i $ corresponds to  it's own $ n_i $. In saddle point approximation we can take only terms with $ n_i = x_i^{\mathrm{saddle}} $ in sum (\ref{ionization_super_formula}). Than the sum (\ref{ionization_super_formula_sum})  becomes:
 \begin{gather}
@@ -332,7 +387,7 @@ Each $ x_i $ corresponds to  it's own $ n_i $. In saddle point approximation we 
 	\br{-T_\lambda}^\frac{N}{2}
 	e^{-
 		M
-		\log\frac{M}{2N}
+		\log\frac{M}{N}
 	}
 =
 \sum_N
@@ -341,28 +396,27 @@ A_N
 e^{\frac{N}{2}
 \log T_\lambda
 -
-M\log\frac{M}{2N}
+M\log\frac{M}{N}
  }
 \end{gather}
-where everything not important for the estimation is put in the multipliers $ A_N $. 
+with relatively slow function $ A_N $. 
 
-It's easy to see, that the biggest term in (\ref{ionization_saddle_action}) corresponds to the $ N_*=2M\log\frac{1}{T_\lambda} $. This is the optimal photon number  for the slice for energy range from $ E $ to $ E+\Delta E $ with $ E=\abs{g_L}\lambda  $ and $ \Delta E = \omega M $. Consequentially the optimal photon size is given by $ n_*=\frac{M}{2N_*}=\log\frac{1}{T_\lambda} $.
+It's easy to see, that the biggest term in (\ref{ionization_saddle_action}) corresponds to the $ N_*=2M/\log\frac{1}{T_\lambda} $. This is the optimal photon number  for the slice  from $ E $ to $ E+\Delta E $ of energy range with $ E=\abs{g_L}\lambda  $ and $ \Delta E = \omega M $. Consequentially the optimal photon size is given by $ n_*=\frac{M}{N_*}=\frac{1}{2}\log\frac{1}{T_\lambda} $. From (\ref{T_lambda_def}) we see, that $ T_\lambda $ differs from $ T $ by a smooth depending on $ \lambda $ prefactor phonot. We introdice a global optimal photon size $ n_T\equiv\log\frac{1}{T} \gg1$ and find, that $ n_* \sim n_T $. It's important to note, that $ n_* $ doesn't depend on the energy slice size $ M $, being an intensive parameter of the process.
 
-
-\subsection{Using multinomial formula}
+\subsection{Two regimes of factorized ionization}
 To treat (\ref{ionization_super_formula}) more accurately it's convenient to use the multinomial formula:
 \begin{gather}
-	\frac{d^n}{dx^n}
-	\prod_i f_i\br{x}
+	\frac{d^M}{dx^M}
+	\prod_{i=1}^N f_i\br{x}
 	=
-	\sum_{\sum_i k_i=n}
+	\sum_{\{n_i\}_{N}^{M}}
 	\begin{pmatrix}
-	n
+	M
 	\\
-	k_1,k_2,\dots,k_n
+	n_1,n_2,\dots,n_N
 	\end{pmatrix}
-	\prod_i
-	\frac{d^{k_i}}{dx^{k_i}}
+	\prod_{i=1}^N
+	\frac{d^{n_i}}{dx^{n_i}}
 	f_i
 \end{gather}
 For the cosine product it can be applied in a following way:
@@ -379,34 +433,40 @@ where $ \chi=\frac{\varphi_0 }{2}$. Then some algebra should be used:
 \end{multline}
 So:
 \begin{gather}
-	\mathcal{J}_N\br{\lambda}
+\label{sum_after_multinomial}
+	\mathcal{J}_N
 	=
-		\frac{e^{i\frac{\phi_0}{2} N+iM\pi/2}}{2^{N}M!}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}
+		\frac{e^{i\frac{\varphi_0}{2} N+iM\pi/2}}{2^{N}M!}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-ik\varphi_0}
 \end{gather}
-Now, in the sum, the ratio of consecutive summands is $ \frac{a_{k+1}}{a_{k}}=\frac{C_{k+1}^{N}}{C_{k}^{N}}\left(\frac{N-2k-2}{N-2k}\right)^{M} $. For $ k<N/2 $ both factors here are decreasing, so the largest ratio is $ \frac{a_{1}}{a_{0}}=N(\frac{N-2}{N})^{M}\simeq Ne^{-2M/N} $. The most important terms in this sum define in wich regime the system is and what the ionization rate would be. 
 
-The expression (\ref{ionization_super_formula}) can be rewritten with the help of the Poisson summation formula:
+Now, in the sum, the ratio of consecutive summands is $ \frac{a_{k+1}}{a_{k}}=\frac{C_{k+1}^{N}}{C_{k}^{N}}\left(\frac{N-2k-2}{N-2k}\right)^{M} $. This ratio can be larger or less than unity.
+When $ \frac{a_{k+1}}{a_{k}} <1 $ for any $ k<\frac{N}{2} $, the largest ratio is  $ \frac{a_{1}}{a_{0}}=N(\frac{N-2}{N})^{M}\simeq Ne^{-2M/N} $, so only $ a_0 $ and $ a_N $ should be taken into account. 
+The summand $ a_0  \propto e^{\frac{iN\varphi_0}{2}}$ corresponds to tunneling $ N/2 $ electrons to the left and  $ N/2 $ holes to the right, while the $ a_N\propto e^{\frac{-iN\varphi_0}{2}} $ corresponds to tunneling $ N/2 $ electrons to the right and  $ N/2 $ holes to the left. So, the regime with only these two terms being present is a pure Andreev reflection regime. Taking $ N=N_* $, we rewrite the condition $ \abs{\frac{a1}{a_0}}\ll 1 $ as $ M\ll n_* e^{2n_*} \sim T \log\frac{1}{T} $. 
 
+When this condition is broken, the largest terms in (\ref{sum_after_multinomial}) are not $ a_0 $ and $ a_N $. This corresponds two some mixture of Andreev and normal reflections and should be treated separately.
+
+
+\subsection{Pure Andreev reflection regime}
+
+In pure Andreev the sum (\ref{sum_after_multinomial}) can be rewritten as:
 \begin{gather}
-	\mathcal{J}
+\label{pure_MAR_sum}
+	\mathcal{J}\br{\lambda}
+	\approx
+	\left(\frac{\alpha}{4}\right)^{M}\sum_{N}(-T_{\lambda})^{N/2}\frac{N^{M}}{2^{N-1}M!}\cos\left(\frac{N\varphi_0}{2}+\frac{M\pi}{2}\right)
+\end{gather}
+The preexponent is not the object of interest, while the fixed parity of $ N $ should be taken into account. Here we set $ N=2K $. With the help of polylogarithmic function
+\begin{gather}
+	\li_s\br{z}
 	=
-	\br{\frac{\alpha}{4}}^M
-	\sum_N
-	\mathcal{J}_{N}	
+	\sum\frac{z^k}{k^s}
 \end{gather}
-One can anticipate that the typical (i.e. most important) value of $ N $ is given by $ N_{*}=\frac{2M}{n_{*}} $ with $ n_{*}=\log\frac{1}{T_{\lambda}} $. It can be shown from considering the action $ s=\log\frac{1}{T_\lambda}-\frac{2}{2M} $ which appears in this sum. Taking $ N=N_{*} $ one can rewrite the condition $ \abs{\frac{a_{1}}{a_{0}}}\ll1 $ as $ \frac{2M}{n_{*}}\ll e^{n_{*}} $. This condition separates two regimes of the system --- pure Andreev regime, when only the first and the last terms in the sum are relevant, and the Andreev+Normal regime, when other terms should be taken into account.
-
-\subsection{Pure Andreev regime}
-
-When $ \frac{2M}{n_{*}}\ll e^{n_{*}} $ the sum (\ref{after_multinomial}) can be rewritten as:
-\begin{gather}
-	\mathcal{J}\approx\left(\frac{\alpha}{4}\right)^{M}\sum_{N}(-T_{\lambda})^{N/2}\frac{N^{M}}{M!2^{N}}\times2\cos\left(\chi N+\frac{M\pi}{2}\right)
-\end{gather}
-The preexponent is not the object of interest, while the fixed parity of N should be taken into account (it is fixed since the continuum state is available only on the left side of the junction). Replace $ N=2K $ and obtain:
+we rewrite (\ref{pure_MAR_sum}) as:
 \begin{multline}
-	I_{M}=\left(\frac{\alpha}{4}\right)^{M}\sum_{K=1}^{\infty}(-T_{\lambda})^{K}\frac{(2K)^{M}}{M!2^{2K}}\times2\cos\left(\phi_{0}K+\frac{M\pi}{2}\right)=
+	\mathcal{J}\br{\lambda}=
+	\left(\frac{\alpha}{4}\right)^{M}\sum_{K=1}^{\infty}(-T_{\lambda})^{K}\frac{(2K)^{M}}{2^{2K-1}M!}\cos\left(\varphi_{0}K+\frac{M\pi}{2}\right)=
 	\\
-	=\frac{2}{M!}\left(\frac{\alpha}{4}\right)^{M}\Re\left[i^{M}\sum_{K}(-T_{\lambda})^{K}\frac{(2K)^{M}}{2^{2K}}e^{i\phi_{0}K}\right]=\\=\frac{2^{M+1}}{M!}\left(\frac{\alpha}{4}\right)^{M}\Re\left[i^{M}\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\phi_{0}+\pi)}\right)\right]
+	=\frac{2}{M!}\left(\frac{\alpha}{4}\right)^{M}\Re\left[i^{M}\sum_{K}(-T_{\lambda})^{K}\frac{(2K)^{M}}{2^{2K}}e^{i\varphi_{0}K}\right]=\\=\frac{2^{M+1}}{M!}\left(\frac{\alpha}{4}\right)^{M}\Re\left[i^{M}\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\varphi_{0}+\pi)}\right)\right]
 \end{multline}
 %****************************************************************************
 The polylogarithmic function can be rewritten in the following useful way
@@ -416,23 +476,25 @@ The polylogarithmic function can be rewritten in the following useful way
 
 Substituting, we get
 \[
-\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\phi_{0}+\pi)}\right)=\Gamma(1+M)\sum_{r\in\mathbb{Z}}\left(i[2r\pi-\pi-\phi_{0}]+\ln\frac{4}{T_{\lambda}}\right)^{-M-1}
+\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\phi_{0}+\pi)}\right)=\Gamma(1+M)\sum_{r\in\mathbb{Z}}\left(i[2r\pi-\pi-\varphi_{0}]+\log\frac{4}{T_{\lambda}}\right)^{-M-1}
 \]
 
-Denoting $\ln\frac{4}{T_{\lambda}}=n_{\lambda}$ we have the ratio
+Denoting $\log\frac{4}{T_{\lambda}}=n_{\lambda}$ we have the ratio
 of consecutive terms in the sum (assuming they are not too far from
 the largest term):
 \[
 \left|\frac{a_{r+1}}{a_{r}}\right|\sim\left(\frac{n_{\lambda}^{2}+(\gamma_{r}+2\pi)^{2}}{n_{\lambda}^{2}+\gamma_{r}^{2}}\right)^{-1-M}\sim\left(1+\frac{2\pi(2\pi+2\gamma_{r})}{n_{\lambda}^{2}+\gamma_{r}^{2}}\right)^{-M}\sim\exp\left[\frac{4\pi M(\pi+\gamma_{r})}{n_{\lambda}^{2}}\right]
 \]
 
-where $\gamma_{r}=i(2r\pi-\pi-\phi_{0})$. There are two values of
+where $\gamma_{r}=i(2r\pi-\pi-\varphi_{0})$. There are two values of
 $r$ for which $|\pi+\gamma_{r}|$ is smallest, for the rest it is
 not smaller than $2\pi$ so that the rest of the terms are smaller
 by at least 
 \[
 \exp\left[-\frac{8\pi^{2}M}{n_{\lambda}^{2}}\right]
 \]
+
+This leads us to two additional subcases. When $ M \gg n_\lambda\sim n_T$, the sum over $ r $ is dominated by the two largest terms: $ r=0,1 $ for $ -\pi<\varphi_0<\pi $.
 
 \textbf{Subcase}
 \[

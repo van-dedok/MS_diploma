@@ -123,12 +123,12 @@ Very similarly, the $ N $-th-order term is:
 The above expression sums over all processes involving N photons. Note how the Green's functions contains the cumulative energy of all photons absorbed by the time. The $ \delta $-function at the start of the expression indicates that the energy is changed by $ \sum\omega_{n_{i}} $. It makes more sense to sort processes within $ W $ not by photon count $ N $ but rather by the total energy gained, since the total ionization rate should be dominated by ionization to the lowest accessible continuum state. Defining this activation energy as $ \mathcal{E} $, write:
 \begin{gather}
 W_{\mathcal{E}}(E_{2},E_{1})=2\pi\delta(E_{2}-E_{1}-\mathcal{E})w_{\mathcal{E}}(E_{1})\\
-\label{ionization_key}
+\label{ionization_key_app}
 w_{\mathcal{E}}(E)
 =
 \sum_{\{n_{i}\}:\mathcal{E}}V_{n_{N}}\prod_{j=1}^{N-1}G_{0}\left(E+\sum_{s=1}^{j}\omega_{n_{s}}\right)V_{n_{j}}
 \end{gather}
-The summation is over all sets of photons $ {n_{i}} $ that total an energy of $ \mathcal{E} $, i.e. such sets that $ \sum_{i}^{N}\omega_{n_{i}}=\mathcal{E} $. The photon number N itself depends on the particular photon set $ n_{i} $. The total composite perturbation $ W $ can be written as a sum of $ W_{\mathcal{E}} $ with different $ \mathcal{E} $. However, only one term is relevant --- the one with $ \mathcal{E}=\min{|g_{L}|,|g_{L}| }$. (If the elementary frequency quantum $ \omega $ is large enough, this is replaced by the lowest $ \mathcal{E} $ that surpasses the minimum gap). 
+The summation is over all sets of photons $ {n_{i}} $ that total an energy of $ \mathcal{E} $, i.e. such sets that $ \sum_{i}^{N}\omega_{n_{i}}=\mathcal{E} $. The photon number N itself depends on the particular photon set $ n_{i} $. The total composite perturbation $ W $ can be written as a sum of $ W_{\mathcal{E}} $ with different $ \mathcal{E} $. However, only one term is relevant --- the one with $ \mathcal{E}=\min{|g_{R}|,|g_{L}| }$. (If the elementary frequency quantum $ \omega $ is large enough, this is replaced by the lowest $ \mathcal{E} $ that surpasses the minimum gap). 
 
 Now  the Fermi Golden rule result (\ref{golden_reul_first_order}) can be rederived 	for $ W_{\mathcal{E}} $. It's easy ti see that $ W $ has the same energy structure as the single-photon perturbation $ V $. Both operators simply shift the energy. Thus, one may simply put $ W_{\mathcal{E}} $ into the Fermi Golden rule instead of $ V $ to get the full-theory results:
 \begin{gather}

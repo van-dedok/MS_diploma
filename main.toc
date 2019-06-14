@@ -54,36 +54,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.2}Factorizing $ w_\mathcal {E} $}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Estimation for optimal photon number}{29}
+\contentsline {subsection}{\numberline {4.3.3}Estimation for optimal photon number}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Using multinomial formula}{30}
+\contentsline {subsection}{\numberline {4.3.4}Two regimes of factorized ionization}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Pure Andreev regime}{31}
+\contentsline {subsection}{\numberline {4.3.5}Pure Andreev reflection regime}{32}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Pure Andreev regime regime: intermediate case: fixed photon number}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.6}Andreev+Normal regime}{35}
+\contentsline {subsection}{\numberline {4.3.6}Andreev+Normal regime}{36}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Results}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ionization rate}{39}
+\contentsline {subsubsection}{Ionization rate}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{41}
+\contentsline {chapter}{\numberline {5}Discussion}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.0.1}Results summary}{41}
+\contentsline {subsection}{\numberline {5.0.1}Results summary}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.0.2}Possible experimental realization}{41}
+\contentsline {subsection}{\numberline {5.0.2}Possible experimental realization}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{43}
+\contentsline {chapter}{\numberline {6}Conclusion}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{44}
+\contentsline {chapter}{\numberline {A}Wavefunctions for the stationary contact}{45}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Tunnel Hamiltonian derivation}{47}
+\contentsline {chapter}{\numberline {B}Tunnel Hamiltonian derivation}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Multiphoton ionization}{48}
+\contentsline {chapter}{\numberline {C}Multiphoton ionization}{49}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.1}Basics about Green's functions}{48}
+\contentsline {section}{\numberline {C.1}Basics about Green's functions}{49}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.2}Fermi Golden Rule (first order)}{49}
+\contentsline {section}{\numberline {C.2}Fermi Golden Rule (first order)}{50}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.3}Fermi Golden Rule (high order)}{51}
+\contentsline {section}{\numberline {C.3}Fermi Golden Rule (high order)}{52}

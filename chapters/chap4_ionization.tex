@@ -226,7 +226,7 @@ Then, one finds, that the ionization rate is $ \mathcal{I}\propto\mathcal{J}^2 $
 
 So to obtain the ionization rate up to a prexponential constant, one should compute $ \mathcal{J}\br{\lambda} $ and take the product 
 $ \underset{\lambda_k}{\prod} \mathcal{J}\br{\lambda_k}$ where $ \lambda_k $ corresponds for the $ k $-th slice of the ionization process. 
-\subsection{Optimal photon number}
+\subsection{Estimation for optimal photon number}
 We begin dealing with (\ref{ionization_super_formula_sum}) by finding the optimal photon number $ N_* $. This number corresponds to the largest term in the sum (\ref{ionization_super_formula_sum}).
 
 The first step is to use Poisson summation formula:
@@ -322,19 +322,35 @@ As $ N $ and $ M $ are large, we assume that $ x_i $ at saddle points are also l
 \end{gather}
 So, at the saddle point all $ x_i $ are equal to $ \frac{M}{2N} $. 
 
-Each $ x_i $ corresponds to  it's own $ n_i $. In saddle point approximation we can take only terms with $ n_i = x_i^{\mathrm{saddle}} $ in sum (\ref{ionization_super_formula}). Than the sum (\ref{ionization_super_formula_sum}) 
+Each $ x_i $ corresponds to  it's own $ n_i $. In saddle point approximation we can take only terms with $ n_i = x_i^{\mathrm{saddle}} $ in sum (\ref{ionization_super_formula}). Than the sum (\ref{ionization_super_formula_sum})  becomes:
 \begin{gather}
-	\mathcal{L}\br{\lambda}
+\label{ionization_sum_saddle}
+	\mathcal{J}\br{\lambda}
 	\approx
-	\sum
+	\sum_N
+	A_N
 	\br{-T_\lambda}^\frac{N}{2}
-	e^{
-		\frac{M}{2N}
+	e^{-
+		M
 		\log\frac{M}{2N}
 	}
+=
+\sum_N
+A_N
+\br{-1}^\frac{N}{2}
+e^{\frac{N}{2}
+\log T_\lambda
+-
+M\log\frac{M}{2N}
+ }
 \end{gather}
+where everything not important for the estimation is put in the multipliers $ A_N $. 
+
+It's easy to see, that the biggest term in (\ref{ionization_saddle_action}) corresponds to the $ N_*=2M\log\frac{1}{T_\lambda} $. This is the optimal photon number  for the slice for energy range from $ E $ to $ E+\Delta E $ with $ E=\abs{g_L}\lambda  $ and $ \Delta E = \omega M $. Consequentially the optimal photon size is given by $ n_*=\frac{M}{2N_*}=\log\frac{1}{T_\lambda} $.
+
+
 \subsection{Using multinomial formula}
-The first step to deal with (\ref{ionization_super_formula}) is to rewrite the product of cosines using multinomial formula:
+To treat (\ref{ionization_super_formula}) more accurately it's convenient to use the multinomial formula:
 \begin{gather}
 	\frac{d^n}{dx^n}
 	\prod_i f_i\br{x}

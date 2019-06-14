@@ -54,7 +54,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.2}Factorizing $ w_\mathcal {E} $}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Optimal photon number}{29}
+\contentsline {subsection}{\numberline {4.3.3}Estimation for optimal photon number}{29}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.4}Using multinomial formula}{30}
 \defcounter {refsection}{0}\relax 

@@ -187,6 +187,8 @@ In this section the focus is on the case where the topological gap is much large
 So, when $ g_{R}\gg\epsilon\sim \abs{g_L} $, the second term is small and can be neglected. Then, the product $ \dots h_{RL}G_L\br{E}h_{LR}G_R\br{E}h_{RL}\dots $ factorizes into individual factors, which we denote as $ J_{nm}\br{E}\equiv\langle\gamma|h_{RL,n}G_L\br{E}h_{LR,m}|\gamma\rangle $.
 
 \subsection{Factorizing $ w_\mathcal{E} $}
+\label{sect:factorizeing_w}
+
 As each entry in the sum within $ w_{\mathcal{E}} $ has the form $ \dots h_{lR}G_R\br{E}h_{RL}G_L\br{E}h_{LR}\dots $, we have:
 \begin{gather}
 	\sqrt{\mathcal{I}}\propto
@@ -447,6 +449,7 @@ When this condition is broken, the largest terms in (\ref{sum_after_multinomial}
 
 
 \subsection{Pure Andreev reflection regime}
+\label{sect:pure_MAR}
 
 In pure Andreev the sum (\ref{sum_after_multinomial}) can be rewritten as:
 \begin{gather}
@@ -552,7 +555,7 @@ s_{\lambda}
  =
 M\log\frac{\alpha}{2}
 -
-M
+\frac{M}{2}
 \intop_{0}^{1}\log(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})d\lambda
 \end{gather}
 Calculation of the $\lambda$-integral:
@@ -562,12 +565,50 @@ Calculation of the $\lambda$-integral:
 	\intop_{0}^{1}\left(2\log n_{\lambda}+\frac{(\pi-|\varphi_{0}|)^{2}}{n_{\lambda}^{2}}\right)d\lambda
 \end{gather}
 
-Separately we find:
+Separately we find (recall, that $ n_T=\log\frac{1}{T} $):
+\begin{multline}
+	\intop_{0}^{1}\log n_{\lambda}d\lambda
+	\approx
+	\log n_T
+	+
+	\frac{1}{n_T}
+	\intop_{0}^{1}\log\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}d\lambda
+	=
+	\\
+	=
+	\log n_T
+	+
+	\frac{\pi-2}{2n_T}
+	-
+	\frac{C_2}{n_T^2}
+	+
+	O
+	\br{\frac{1}{n_T^3}}
+	.
+\end{multline}
+where
 \begin{gather}
-	\intop_{0}^{1}\log n_{\lambda}d\lambda=\ln\frac{1}{T}+\intop_{0}^{1}\log\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}d\lambda=\log\frac{1}{T}+\frac{\pi}{2}-1.	
+	C_2
+	=
+	2\int\limits^1_0
+	d\lambda
+	\br{
+	\log
+		\frac{\lambda^2}{1-\sqrt{1-\lambda^2}}}
+\approx
+0.689
 \end{gather}
+The last integral here is:
 \begin{gather}
-\intop_{0}^{1}\frac{1}{n_{\lambda}^{2}}d\lambda=\intop_{0}^{1}\frac{1}{\left[\log\frac{1}{T}+\log\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}\right]^{2}}d\lambda=\frac{1}{(\log\frac{1}{T})^{2}}+O\left(\frac{1}{(\log\frac{1}{T})^{3}}\right)	
+\intop_{0}^{1}\frac{1}{n_{\lambda}^{2}}d\lambda
+=
+\int_0^1 d\lambda
+\frac{1}
+{\br{n_T+\log\frac{\lambda^2}{1-\sqrt{1-\lambda^2}}}^2}
+=
+\frac{1}{n_T^2}
++
+O\br{\frac{1}{n_T^3}}
 \end{gather}
 
 
@@ -575,26 +616,42 @@ Thus, we get
 \begin{gather}
 s_{\lambda}
 =
-M\br{\log\frac{\alpha}{2}
+\frac{2\abs{g_L}}{\omega}
+\br{\log\frac{\alpha}{2}
 -
-2\log n_T
--\br{\pi-2}
+\log n_T
 -
-\frac{(\pi-|\varphi_{0}|)^{2}}{n_T^{2}}+O\left(\frac{1}{n_T^{3}}\right)}
+\frac{\pi-2}{2n_T}
++
+\frac{C_2}{n_T^2}
+-
+\frac{(\pi-|\varphi_{0}|)^{2}}
+{2n_T^{2}}
++
+O\left(\frac{1}{n_T^{3}}\right)}
 \end{gather}
 
 and the final result in this limit:
 \begin{gather}
+\label{final_ion_pure_mar_1}
 	\mathcal{I}
 	\sim
 	\exp
 	\left[
-	\frac{2\abs{g_L}}{\omega}\br{\log\frac{\alpha}{2}
-		-
-		2\log n_T
-		-\br{\pi-2}
-		-
-		\frac{(\pi-|\varphi_{0}|)^{2}}{n_T^{2}}+O\left(\frac{1}{n_T^{3}}\right)}	
+	-
+\frac{2\abs{g_L}}{\omega}\br{
+	\log\frac{2}{\alpha}
+	+
+	\log n_T
+	+
+	\frac{\pi-2}{2n_T}
+	-
+	\frac{C_2}{n_T^2}
+	+
+	\frac{(\pi-|\varphi_{0}|)^{2}}
+	{2n_T^{2}}
+	+
+	O\left(\frac{1}{n_T^{3}}\right)}	
 \right]
 \end{gather}
 
@@ -609,38 +666,70 @@ full series is dominated by a single term. This is in full agreement
 with the fact that the form (\ref{polylog_useful_formula}) of polylogarithm  converges
 over a large number of $r$-terms. The optimal
 term has the integer index $K_{0}$ closest to the real saddle-point
-$K_{*}=M/n_{*}$. We write $
-K_{*}=K_{0}+\xi,$ with $\xi \in \br{-\frac{1}{2}, \frac{1}{2}}$, so:
-\begin{multline*}
-\li_{-M}(e^{-n_{*}+i(\phi_{0}+\pi)})
-\propto e^{-n_{*}(K_{*}-\xi)+M\ln(K_{0}-\xi)}=\\
-=e^{-M+n_{*}\xi+M\ln\frac{M}{n_{*}}+M\ln(1-\frac{\xi n_{*}}{M})}=e^{-M+M\ln\frac{M}{n_{*}}-\frac{\xi^{2}n_{*}^{2}}{2M}+O\left(\frac{n_{*}^{3}}{M^{2}}\right)}
-\end{multline*}
+$K_{\lambda}=M/ n_\lambda$. We write $
+K_{\lambda}=K_{0}+\xi_\lambda,$ with $\xi_\lambda \in \br{-\frac{1}{2}, \frac{1}{2}}$, so:
+\begin{gather}
+\label{pure_mar_slice_shit}
+\frac{1}{M!}
+	\li_M
+	\br{
+	e^{-n_\lambda+i\br{\varphi_0+\pi}}}
+	\propto
+	\frac{1}{M!}
+	e^{-n_\lambda
+		\br{K_\lambda-\xi_\lambda}
+	+
+	M
+	\log  \br{K_\lambda-\xi_\lambda}
+	}
+	=
+	e^{- M\log{n_\lambda}
+		-
+		\frac{\xi_\lambda^2 n_\lambda^2}{2M}
+		+
+		O\br{\frac{n_\lambda^3}{M^2}}
+	}
+\end{gather}
+Here we have a nonlinear in $ M $ term. It means, that the answer for the ionization rate depends on how we split the process into energy slices. So, we must take only one slice --- the whole gap. As we take only one slice, $ n_\lambda $ changes significantly inside it. Therefore the optimal photon number is not given by $ \frac{M}{n_\lambda} $ anymore. Consequently $\xi_\lambda $ becomes ill-defined. 
 
-Substituting this result for the $\li$ function we obtain in this
-regime (to exponential accuracy)
-\[
-I\sim\frac{1}{M!}(\frac{\alpha}{2})^{M}e^{-M+M\ln\frac{M}{n_{*}}-\frac{\xi^{2}n_{*}^{2}}{2M}+O\left(\frac{n_{*}^{3}}{M^{2}}\right)}=e^{-M\ln\frac{2}{\alpha}-M\ln n_{*}-\frac{\xi^{2}n_{*}^{2}}{2M}++O\left(\frac{\xi^{3}n_{*}^{3}}{M^{2}}\right)}
-\]
+However,we can use the term $ \frac{\xi_\lambda^2 n_\lambda}{2M} $ as an estimate for integer effects. The answer for ionization rate is:
+\begin{gather}
+	\mathcal{I}
+	\sim
+	\exp
+	\left[
+		-\frac{2\abs{g_L}}{\omega}
+		\br{
+			\log\frac{2}{\alpha}
+			-
+				\log n_T
+			-
+			\frac{\pi-2}{2n_T}
+		}
+	+
+		O\br{	
+			\frac{\omega n_T^2}{2\abs{g_L}}}
+	\right]
+\end{gather}
+The linear term $ \frac{\abs{g_L}}{\omega} $ is obtained by averaging the action over $ \lambda $ as before. It isn't relate to integer effects and thus this procedure is legitimate.
+\subsection{Single photon case}
+\label{subsect:single_photon}
 
-and for the probability we write:
-\[
-P_{2}=\exp\left[-M\left(2\ln\frac{2}{\alpha}+2\ln n_{*}\right)-\left\{ \frac{M}{n_{*}}\right\} ^{2}\frac{n_{*}^{2}}{M}+O\left(\frac{n_{*}^{3}}{M^{2}}\right)\right],\qquad n_{*}\ll M\ll n_{*}^{2}
-\]
 
-\subsection{Andreev+Normal regime}
+When the optimal photon size is larger than the slice size ($ n_T>M $), one again cannot use the procedure described in section \ref{sect:factorizeing_w} and divide the ionization process into pieces. This situation corresponds to the case, when only
+\subsection{Andreev+Normal reflection regime}
 
 For completenness, let us also consider the case $M/N\ll\log N$.
-In this case the sum over $k$ is not defined by the two edge terms.
+In this case the sum (\ref{sum_after_multinomial}) is not defined by the two edge terms.
 We write:
-\[
+\begin{gather}
 \sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}=\sum_{k=0}^{N}e^{-S_{0}(k)-2ki\chi}
-\]
+\end{gather}
 
 where the action $S_{0}$ is 
 \begin{multline*}
-S_{0}=-\ln C_{k}^{N}-M\ln(N-2k)=-N\ln N+k\ln k+(N-k)\ln(N-k)-\\
--M\ln(N-2k)-\frac{1}{2}\ln\frac{N}{2\pi(N-k)k}+\dots
+S_{0}=-\log C_{k}^{N}-M\log(N-2k)=-N\log N+k\log k+(N-k)\log(N-k)-\\
+-M\log(N-2k)-\frac{1}{2}\log\frac{N}{2\pi(N-k)k}+\dots
 \end{multline*}
 
 The stationary point of that action obeys $\partial S_{0}/\partial k=0$:
@@ -670,24 +759,20 @@ $M/N\ll\frac{1}{2}\ln N$. At this saddle point, $k=k_{0}$, we have
 \frac{\partial^{2}S_{0}}{\partial k^{2}}\approx\frac{1}{k}+\frac{1}{N-k}+\frac{4M}{(N-2k)^{2}}\approx\frac{1}{k_{0}}+\frac{4M}{N^{2}}=\frac{1}{N}\left(e^{2M/N}+\frac{4M}{N}\right)\approx\frac{1}{k_{0}}
 \]
 
-where we made use of $M/N\gg1$. The action itself if 
+where we made use of $M/N\gg1$. The action itself is:
 \begin{multline*}
 S_{0}=-N\ln N+k_{0}\ln k_{0}+(N-k_{0})\ln(N-k_{0})-M\ln(N-2k_{0})-\frac{1}{2}\ln\frac{N}{2\pi(N-k_{0})k_{0}}\\
 \approx-N\ln N+k_{0}\ln k_{0}+(N-k_{0})\left[\ln N+\ln(1-\frac{k_{0}}{N})\right]-\\
 -M\left[\ln N+\ln(1-\frac{2k_{0}}{N})\right]-\frac{1}{2}\ln\frac{1}{2\pi k_{0}}+\frac{1}{2}\ln(1-\frac{k_{0}}{N})
 \end{multline*}
 
-If we are interested in the exponent and preexponent, we can only
-omit terms of the order $o(1)$ in $S_{0}$, for example the very
-last term in the above. We get
-\[
-S_{0}\approx-(M+k_{0})\ln N+(k_{0}+\frac{1}{2})\ln k_{0}+(N-k_{0})\ln(1-\frac{k_{0}}{N})-M\ln(1-\frac{2k_{0}}{N})-\frac{1}{2}\ln\frac{1}{2\pi}
-\]
+
 
 However, since our solution for $k_{0}$ is itself approximate, we
 should restrict ourselves to exponential accuracy here and keep only
 major terms, linear in $M$
 \begin{align*}
+\label{mixed_refl_action}
 S_{0} & =-M\ln N+O(k_{0}\frac{M}{N},k_{0}\ln N,k_{0},k_{0}\ln k_{0})\\
 & =-M\ln N+O(k_{0}\ln N)
 \end{align*}
@@ -701,76 +786,84 @@ We now integrate using the Poisson formula:
 Assuming $\phi_{0}$ is not close to $\pm\pi$ the above is dominated
 by the term with $p=0$ because $k_{0}\gg1$. If we are close to $\pi$
 phase difference, there are two main terms, but, to an exponential
-accuracy the answer is still the same (the only problem that could
-possibly arise is alternating-sign sums that might appear later when
-summing over $N$ and give incorrect results due to the approximation
-we do now. Maybe this can be mended easily by restoring these terms
-via replicating the result via $\phi_{0}\rightarrow\phi_{0}+2\pi p$).
+accuracy the answer is still the same 
 In the above, we only integrated near the saddle-point with $k_{0}<N/2$,
 there remains the symmetric saddle at $N-k_{0}$. This adds the complex
 conjugate to the result (but first we must restore some prefactors):
-\begin{multline*}
-\frac{i^{M}e^{i\chi N}}{M!2^{N}}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}=\\
-\sqrt{2\pi k_{0}}\frac{e^{i\chi N+iM\pi/2}}{M!2^{N}}\sum_{p\in\mathbb{Z}}e^{-S_{0}(k_{0})-2k_{0}i(\chi-\pi p)-2(\chi-\pi p)^{2}k_{0}}+c.c.=\\
-=2\frac{\sqrt{2\pi k_{0}}}{M!2^{N}}e^{-S_{0}}\sum_{p\in\mathbb{Z}}\exp\left[-2(\chi-\pi p)^{2}k_{0}\right]\cos\left[-2k_{0}(\chi-\pi p)+\chi N+\frac{M\pi}{2}\right]
-\end{multline*}
+\begin{gather}
+\frac{i^{M}e^{i\chi N}}{M!2^{N}}\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}
+=
+2\frac{\sqrt{2\pi k_{0}}}{M!2^{N}}
+e^{-S_{0}-2\chi^{2}k_{0}}
+\cos\left[-2k_{0}\chi+\chi N+\frac{M\pi}{2}\right]
+\end{gather}
 
-The sum can be written in terms of the elliptic theta-function. But
-thus is not particularly helpful. Instead, we risk omitting all terms
-except the $p=0$ -terms. This preserves exponential accuracy, but
-risks errors in further summation over $N$, since that summation
-may be an alternating sign sum susceptible to minor corrections to
-the terms. We get
-\[
-2\frac{\sqrt{2\pi k_{0}}}{M!2^{N}}e^{-S_{0}}\sum_{p\in\mathbb{Z}}\exp\left[-\chi^{2}k_{0}\right]\cos\left[\chi(N-2k_{0})+\frac{M\pi}{2}\right]
-\]
 The next step is to sum this over $N$. Remember that $k_{0}=Ne^{-2M/N}$
-and $S_{0}=S_{0}(M,N,k_{0}(M,N))$. We now have
+and $S_{0}=S_{0}(M,N,k_{0}(M,N))$. 
+
+Up to the preexponent we have:
 \[
+\mathcal{I}
+\sim
 \Re\frac{i^{M}}{M!}\left(\frac{\alpha}{4}\right)^{M}\sum_{N}\left(-\frac{T_{\lambda}}{4}\right)^{N/2}\sqrt{k_{0}}e^{-S_{0}-\chi^{2}k_{0}+i\chi(N-2k_{0})}
 \]
+We drop the terms proportional to $ k_0 $ from the action as they are beyond our accuracy. Recalling, that $ N=2K $, we write:
+\begin{gather}
+	\mathcal{I}
+	\sim
+	\frac{1}{M!}
+	\left(\frac{\alpha}{4}\right)^{M}\Re
+	\left[ i^{M}
+	\sum_{N}
+	\left(-\frac{T_{\lambda}}{4}\right)^{K}
+	e^{-S_{0}+i\varphi_{0}K}
+	\right]
+\end{gather}
+This contains the same polylogaritm as in (\ref{pure_MAR_to_polylog}). As $ M<n_Te^n_T $, we should treat it exactly as in the first subcase of the section \ref{sect:pure_MAR}. Thus we can just take the answer (\ref{final_ion_pure_mar_1}), but add an additional correction:
+\begin{multline}
+		\mathcal{I}
+	\sim
+	\exp
+	\bigg[
+		-
+		\frac
+		{2\abs{g_L}}
+		{\omega}
+		\br{
+			\log
+			\frac{2}{\alpha}
+			+
+			\log n_T
+			+
+			\frac{\pi-2}{2n_T}
+			-
+			\frac{C_2}{n_T^2}
+			+
+			\frac{(\pi-|\varphi_{0}|)^{2}}{2n_T^{2}}
+			+
+			O\br{\frac{1}{n_T^3}}
+		}
+	+
+	\\
+	+
+	O
+	\br{ 		\frac{\abs{g_L}}{\omega n_T}
+			e^{-n_T}
+			\log\frac{\abs{g_L}}{\omega}
+	}		
+	\bigg]
+\end{multline}
+This correction comes from (\ref{mixed_refl_action}). At large enough $ \frac{\abs{g_L}}{\omega} $ it can become the greatest term in the exponent. This means, that in this case the approximation taken in (\ref{mixed_refl_action}) is insufficient.  
 
-where we omitted a few pre-exponential factors. We now replace $N=2K$
-and rewrite:
+\subsection{The adiabaticity condition}
+In section (\ref{sec:stationary_supercurrent}) we gauged the time-dependent phase difference into $ H_T $. This transformation generated the terms $ \dot{U}U^\dagger=\dot{\varphi}\tau_z $ in the wires, and these terms were neglected.This approach in valid, when the ionization from the terms $  \dot{\varphi}\tau_z $ is weaker than than the ionization from $ H_T$.
 
-\[
-\frac{1}{M!}\left(\frac{\alpha}{4}\right)^{M}\Re i^{M}\sum_{N}\left(-\frac{T_{\lambda}}{4}\right)^{K}\sqrt{k_{0}}e^{-S_{0}-\frac{\phi_{0}^{2}k_{0}}{4}+i\phi_{0}(K-k_{0})},\qquad k_{0}=\frac{K}{2}e^{-M/K}
-\]
+To estimate the ionization caused by $ \dot{\varphi}\tau_z $ we turn off the tunneling  and look at the transitions in left and right wire separately.
 
-We now again have to use the saddle appoximation when summing over
-$K$. The total action, as a function of $K$ is
-\[
-S(K)=S_{0}+\frac{\phi_{0}^{2}k_{0}}{4}-i\phi_{0}(K-k_{0})-K\left(\frac{i\pi}{2}+\ln\frac{T_{\lambda}}{4}\right).
-\]
+In the left wire the transitions are possible only between the states of continuous spectrum. As $ \dot{\varphi}\tau_z. $ is homogeneous, the jumps are possible only between the states with equal momenta. From each state $ \ket{E,L_0} $ with $ E\sim\abs{g_L} $ the transitions are possible only to the state $ \ket{-E,L_0} $ and into two another states with energies of the order of $ \Delta $.
 
-We are again looking for the stationary point. At this point we calculate
-$\partial S/\partial K$ to the main order. In particular, since we
-expect $M\gg K$ we may neglect the $k_{0}$-terms that are seen explicitly:
-we have
-\begin{align*}
-\frac{\partial S}{\partial K} & \simeq\frac{\partial S_{0}}{\partial K}+i\left(\phi_{0}+\frac{\pi}{2}+\ln\frac{T_{\lambda}}{4}\right)\\
-& \simeq-\frac{M}{K}-\left(i\phi_{0}+i\frac{\pi}{2}+\ln\frac{T_{\lambda}}{4}\right)
-\end{align*}
-
-which immediately gives $K=M/n_{\lambda}$ where $n_{\lambda}=\ln(4/T_{\lambda})$.
-This is the same size as before, which is a good sign! Thus, we mainly
-have to calculate
-
-The projected answer is:
-\begin{align*}
-I & =e^{-Ms}\\
-s & =\ln\frac{2}{\alpha}+\intop_{0}^{1}\ln n_{\lambda}d\lambda+o(1)
-\end{align*}
-
-\textbf{Single-photon case.} Here we simply have one photon with $N=M$
-which produces the $(\alpha/4)^{M}/M!$ factor and therefore, to exponential
-accuracy we get
-
-\[
-P\sim T\exp\left[-M\left(2\ln\frac{4}{\alpha}-\ln M+1\right)\right]
-\]
-
-
+  The matrix element $ \bra{E,L_0}\tau_z\ket{-E', L_0} \sim\frac{E}{\Delta}
+  N_L\br{E}\delta\br{E-E'}$. The smallness $ \frac{E}{\Delta} $ occurs, as low energy states in leading order are eigenstates  of the same eigenvalue of $ \sigma_x\tau_x $, which anticommutes with $ \tau_z $. The matrix element $ \bra{E,L_0}\tau_z\ket{E_2, L_0}$ (with $ E_2\sim \Delta $) is not small
 \section{Results}
 
 Here we collect results for the ionization rate (i.e. probability
@@ -819,7 +912,7 @@ amount is $N_{*}=2M/n_{*}$. The results are as follows:
 	become important. Or, in other words, their phase space becomes large
 	-- there are many such ``trajectories''). This case is very technically
 	involved{]}. So, if only MAR (multiple Andreev reflection) happens,
-	then we can furhter refine the expression for the ionization rate
+	then we can further refine the expression for the ionization rate
 	and get
 	\begin{equation}
 	P_{N_{*}+\delta N}^{(MAR)}\sim\exp\left[-M\left(2\ln\frac{2}{\alpha}+2\ln n_{*}+\pi-2+\frac{(\pi-|\varphi_{0}|)^{2}}{n_{*}^{2}}+O\left(\frac{1}{n_{*}^{3}}\right)\right)\right]

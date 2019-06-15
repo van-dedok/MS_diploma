@@ -64,9 +64,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Subcase $ n_T\ll M \ll n_T^2 $}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.6}Andreev+Normal regime}{35}
+\contentsline {subsection}{\numberline {4.3.6}Single photon case}{36}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Results}{39}
+\contentsline {subsection}{\numberline {4.3.7}Andreev+Normal reflection regime}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.8}The adiabaticity condition}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Results}{38}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Ionization rate}{39}
 \defcounter {refsection}{0}\relax 

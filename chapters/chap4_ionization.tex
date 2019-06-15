@@ -226,6 +226,7 @@ On each ionization step  the particle can move to the state with energy $ E $ or
 \end{gather}
 recalling (\ref{tunnel_matrix_elements_maj-cont}), we obtain:
 \begin{gather}
+\label{ionization_brick}
 		Q_{0}(E)
 		=
 		ET\frac{\left[-1+\sqrt{1-\lambda^{2}}\right]}{\lambda^{2}}
@@ -863,7 +864,16 @@ To estimate the ionization caused by $ \dot{\varphi}\tau_z $ we turn off the tun
 In the left wire the transitions are possible only between the states of continuous spectrum. As $ \dot{\varphi}\tau_z. $ is homogeneous, the jumps are possible only between the states with equal momenta. From each state $ \ket{E,L_0} $ with $ E\sim\abs{g_L} $ the transitions are possible only to the state $ \ket{-E,L_0} $ and into two another states with energies of the order of $ \Delta $.
 
   The matrix element $ \bra{E,L_0}\tau_z\ket{-E', L_0} \sim\frac{E}{\Delta}
-  N_L\br{E}\delta\br{E-E'}$. The smallness $ \frac{E}{\Delta} $ occurs, as low energy states in leading order are eigenstates  of the same eigenvalue of $ \sigma_x\tau_x $, which anticommutes with $ \tau_z $. The matrix element $ \bra{E,L_0}\tau_z\ket{E_2, L_0}$ (with $ E_2\sim \Delta $) is not small
+  N_L\br{E}\delta\br{E-E'}$. The smallness $ \frac{E}{\Delta} $ occurs, as low energy states in leading order are eigenstates  of the same eigenvalue of $ \sigma_x\tau_x $, which anticommutes with $ \tau_z $. The matrix element $ \bra{E,L_0}\tau_z\ket{E_2, L_0}$ (with $ E_2\sim \Delta $) is proportional to $ N_L \delta\br{E-E_2} $. Therefore the basic block $ \bra{E_0}\dot{\varphi}\tau_zG\dot{\varphi\tau_z\ket{E_0}}$ of the ionization process is proportional to $ \frac{\omega^2\abs{g_L}}{\Delta^2} $. This should be compared with $ \bra{\gamma}H_T G H_T \ket{\gamma}$, which is given by the formula (\ref{ionization_brick}) and has the order $ \abs{g_L}T $. So, if $ \omega\ll\Delta\sqrt{T} $, the adiabaticity holds.
+  
+  Actually, the adiabaticity condition is even weaker, as $ \dot{\varphi} $ has only the first harmonic in $ \omega $  and therefore less efficient than $ H_T $, which allows to optimize the photon size. The ionization with $ \dot{\varphi}\tau_z $ always uses photons of the size $ \omega $ and it scales as $ e^{-M\br{\log\frac{1}{\alpha}+\log\frac{\Delta}{\omega}}} $. So, $ H_T $ prevails when the condition
+  \begin{gather}
+  \omega
+  	\ll \frac{\Delta}{\log\frac{1}{T}}
+  \end{gather}
+  holds.
+  
+  The fact, that in adiabaticity condition  $\omega  $ is compared with $ \Delta $, not with $ \abs{g_L} $, means, that even the single photon limit \textbf{ENTER SECTion} is achievable. 
 \section{Results}
 
 Here we collect results for the ionization rate (i.e. probability

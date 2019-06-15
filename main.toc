@@ -70,7 +70,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.8}The adiabaticity condition}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Results}{38}
+\contentsline {section}{\numberline {4.4}Results}{39}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Ionization rate}{39}
 \defcounter {refsection}{0}\relax 

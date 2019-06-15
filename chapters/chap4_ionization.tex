@@ -441,9 +441,9 @@ So:
 
 Now, in the sum, the ratio of consecutive summands is $ \frac{a_{k+1}}{a_{k}}=\frac{C_{k+1}^{N}}{C_{k}^{N}}\left(\frac{N-2k-2}{N-2k}\right)^{M} $. This ratio can be larger or less than unity.
 When $ \frac{a_{k+1}}{a_{k}} <1 $ for any $ k<\frac{N}{2} $, the largest ratio is  $ \frac{a_{1}}{a_{0}}=N(\frac{N-2}{N})^{M}\simeq Ne^{-2M/N} $, so only $ a_0 $ and $ a_N $ should be taken into account. 
-The summand $ a_0  \propto e^{\frac{iN\varphi_0}{2}}$ corresponds to tunneling $ N/2 $ electrons to the left and  $ N/2 $ holes to the right, while the $ a_N\propto e^{\frac{-iN\varphi_0}{2}} $ corresponds to tunneling $ N/2 $ electrons to the right and  $ N/2 $ holes to the left. So, the regime with only these two terms being present is a pure Andreev reflection regime. Taking $ N=N_* $, we rewrite the condition $ \abs{\frac{a1}{a_0}}\ll 1 $ as $ M\ll n_* e^{2n_*} \sim T \log\frac{1}{T} $. 
+The summand $ a_0  \propto e^{\frac{iN\varphi_0}{2}}$ corresponds to tunneling $ N/2 $ electrons to the left and  $ N/2 $ holes to the right, while the $ a_N\propto e^{\frac{-iN\varphi_0}{2}} $ corresponds to tunneling $ N/2 $ electrons to the right and  $ N/2 $ holes to the left. So, the regime with only these two terms being present is a pure Andreev reflection regime. Taking $ N=N_* $, we rewrite the condition $ \abs{\frac{a1}{a_0}}\ll 1 $ as $ M\ll n_T e^{n_T} \sim T \log\frac{1}{T} $. 
 
-When this condition is broken, the largest terms in (\ref{sum_after_multinomial}) are not $ a_0 $ and $ a_N $. This corresponds two some mixture of Andreev and normal reflections and should be treated separately.
+When this condition is broken, the largest terms in (\ref{sum_after_multinomial}) are not $ a_0 $ and $ a_N $. This corresponds to some mixture of Andreev and normal reflections and should be treated separately.
 
 
 \subsection{Pure Andreev reflection regime}
@@ -463,16 +463,18 @@ The preexponent is not the object of interest, while the fixed parity of $ N $ s
 \end{gather}
 we rewrite (\ref{pure_MAR_sum}) as:
 \begin{multline}
+\label{pure_MAR_to_polylog}
 	\mathcal{J}\br{\lambda}=
 	\left(\frac{\alpha}{4}\right)^{M}\sum_{K=1}^{\infty}(-T_{\lambda})^{K}\frac{(2K)^{M}}{2^{2K-1}M!}\cos\left(\varphi_{0}K+\frac{M\pi}{2}\right)=
 	\\
 	=\frac{2}{M!}\left(\frac{\alpha}{4}\right)^{M}\Re\left[i^{M}\sum_{K}(-T_{\lambda})^{K}\frac{(2K)^{M}}{2^{2K}}e^{i\varphi_{0}K}\right]=\\=\frac{2^{M+1}}{M!}\left(\frac{\alpha}{4}\right)^{M}\Re\left[i^{M}\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\varphi_{0}+\pi)}\right)\right]
 \end{multline}
-%****************************************************************************
+
 The polylogarithmic function can be rewritten in the following useful way
-\[
-\li_{s}(e^{\mu})=\Gamma(1-s)\sum_{r\in\mathbb{Z}}(2r\pi i-\mu)^{s-1}
-\]
+\begin{gather}
+\label{polylog_useful_formula}
+	\li_{s}(e^{\mu})=\Gamma(1-s)\sum_{r\in\mathbb{Z}}(2r\pi i-\mu)^{s-1}
+\end{gather}
 
 Substituting, we get
 \[
@@ -494,136 +496,125 @@ by at least
 \exp\left[-\frac{8\pi^{2}M}{n_{\lambda}^{2}}\right]
 \]
 
-This leads us to two additional subcases. When $ M \gg n_\lambda\sim n_T$, the sum over $ r $ is dominated by the two largest terms: $ r=0,1 $ for $ -\pi<\varphi_0<\pi $.
+This leads us to three additional subcases. When $ M \gg n_\lambda^2\sim n_T$, the sum over $ r $ is dominated by the  largest terms: they correspond to $ r=0,1 $ for $ -\pi<\varphi_0<\pi $. The small number of terms in (\ref{polylog_useful_formula}) corresponds to the large number of terms in (\ref{pure_MAR_to_polylog}), so in this case not only the trajectories with $ N_* $ contributes to ionization, but also the large number of neighboring ones.
 
-\textbf{Subcase}
-\[
-\exp\left[\frac{8\pi^{2}M}{n_{\lambda}^{2}}\right]\gg1
-\]
-in which case the sum over $r$ is dominated by the two largest terms
-(typically by just one term except for the case when $\phi_{0}$ is
-close to zero). We dictate $-\pi<\phi_{0}<\pi$ so that the two dominating
-terms correspond to $r=0,1$. We have in that limit
+When $ M\ll n_\lambda^2 $, the formula (\ref{polylog_useful_formula}) isn't useful. Instead we look directly at (\ref{pure_MAR_to_polylog}) and find, that if $ M<n_T $ only first term is relevant --- which is one photon case, treated in section \textbf{ENTER SECTION}. When $ n_T\ll M\ll n_T^2 $, the maximum term in (\ref{pure_MAR_to_polylog}) is at $ N_*\sim\frac{M}{n_T} $.
 
-\[
-\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\phi_{0}+\pi)}\right)\simeq M!\left(\frac{1}{(n_{\lambda}+i(\pi-\phi_{0}))^{M+1}}+\frac{1}{(n_{\lambda}+i(-\pi-\phi_{0}))^{M+1}}\right)
-\]
+The subcases $ n_T \ll M\ll n_T^2 $ and $ n_T^2 \ll M\ll n_T e^{n_T} $ are presented below.
 
-and thus 
-\[
-I_{M}=2\left(\frac{\alpha}{2}\right)^{M}\Re\left[i^{M}\left(\frac{1}{(n_{\lambda}+i(\pi-\phi_{0}))^{M+1}}+\frac{1}{(n_{\lambda}+i(-\pi-\phi_{0}))^{M+1}}\right)\right]
-\]
+\subsubsection{ Subcase $ n_T^2 \ll M\ll n_T e^{2n_T} $}
 
-We have 
-\[
-[n_{\lambda}+i(\pi-\phi_{0})]^{M+1}=\left[n_{\lambda}^{2}+(\pi-\phi_{0})^{2}\right]^{\frac{M+1}{2}}e^{i(M+1)\arctan\frac{\pi-\phi_{0}}{n_{\lambda}}}
-\]
-and 
-\begin{align*}
-I_{M} & =2\left(\frac{\alpha}{2}\right)^{M}\Re\left[\frac{e^{\frac{iM\pi}{2}-i(M+1)\arctan\frac{\pi-\varphi_{0}}{n_{\lambda}}}}{\left[n_{\lambda}^{2}+(\pi-\phi_{0})^{2}\right]^{\frac{M+1}{2}}}+\frac{e^{\frac{iM\pi}{2}+i(M+1)\arctan\frac{\pi+\varphi_{0}}{n_{\lambda}}}}{\left[n_{\lambda}^{2}+(\pi+\phi_{0})^{2}\right]^{\frac{M+1}{2}}}\right]=\\
-& =2\left(\frac{\alpha}{2}\right)^{M}\left[\frac{\cos\left(\frac{M\pi}{2}-(M+1)\arctan\frac{\pi-\varphi_{0}}{n_{\lambda}}\right)}{\left[n_{\lambda}^{2}+(\pi-\phi_{0})^{2}\right]^{\frac{M+1}{2}}}+\frac{\cos\left(\frac{M\pi}{2}+(M+1)\arctan\frac{\pi+\varphi_{0}}{n_{\lambda}}\right)}{\left[n_{\lambda}^{2}+(\pi+\phi_{0})^{2}\right]^{\frac{M+1}{2}}}\right]
-\end{align*}
+In this case  we have
+
+\begin{gather}
+	\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\varphi_{0}+\pi)}\right)\simeq M!\left(\frac{1}{(n_{\lambda}+i(\pi-\varphi_{0}))^{M+1}}+\frac{1}{(n_{\lambda}+i(-\pi-\varphi_{0}))^{M+1}}\right)
+\end{gather}
+
+For $ \varphi_0<0 $ only the first term should be left, while for the $ \varphi_0>0 $ only the the second one. Thus the answer, obviously, depends on $ \varphi_0 $ and can be obtained only for the case, say $ \varphi_0>0 $.
+
+So we set:
+
+\begin{gather}
+\li_{-M}\left(\frac{T_{\lambda}}{4}e^{i(\varphi_{0}+\pi)}\right)
+\simeq \frac{M!}{(n_{\lambda}+i(\pi-\varphi_{0}))^{M+1}}
+\end{gather}
+and:
+\begin{gather}
+	\mathcal{J}\br{\lambda}
+	=
+	2\left(\frac{\alpha}{2}\right)^{M}
+	\Re
+	\left[\frac{i^{M}}{(n_{\lambda}+i(\pi-\phi_{0}))^{M+1}}\right]
+\end{gather}
+
+Applying some algebra:
+\begin{gather}
+	[n_{\lambda}+i(\pi-\phi_{0})]^{M+1}=\left[n_{\lambda}^{2}+(\pi-\phi_{0})^{2}\right]^{\frac{M+1}{2}}e^{i(M+1)\arctan\frac{\pi-\phi_{0}}{n_{\lambda}}}
+\end{gather}
+ we find:
+\begin{gather}
+	\mathcal{J}\br{\lambda}
+	=
+	2\left(\frac{\alpha}{2}\right)^{M}\frac{\cos\left(\frac{M\pi}{2}-(M+1)\arctan\frac{\pi-\varphi_{0}}{n_{\lambda}}\right)}{\left[n_{\lambda}^{2}+(\pi-\phi_{0})^{2}\right]^{\frac{M+1}{2}}}
+\end{gather}
 
 This contains some complicated oscillations but within exponential
 accuracy we may write
-\[
-I_{M}\sim\exp M\left[\ln\frac{\alpha}{2}-\frac{1}{2}\ln(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})\right]
-\]
-
-This is almost the final formula for the ionization amplitude. To
-finalize it, we have to replace the action at fixed $n_{\lambda}$
-by an integration over $\lambda$ to account for the slowly changing
-energy of the quasiparticle. However,it is unclear, what is required
-of $M,n_{*}$ to allow such a procedure. The procedure assumes that
-we can roughly write $I_{M}=\prod_{j}I_{M_{j}}(\lambda_{j})$ where
-the full process is split into layers counted by $j$ where within
-each layer energy if roughly the same and $\sum M_{j}=M$, but $M_{j}$
-is relatively large (so that $N_{j}$ remains large). Hypothetically,
-if our principal conditions are met (the ones that limit the sum to
-highest harmonics and allow the use of asymptotics for $\li$) then
-we can split $M$ into layers which individually obey the same limits.
-Therefore, in the mathematical limit the procedure seems correct,
-but it is hard to tell, what accuracy it has. We have
-\begin{align*}
-s_{\lambda} & =\intop_{0}^{1}\ln(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})d\lambda=\intop_{0}^{1}\ln(\ln(\frac{4}{T_{\lambda}})^{2}+(\pi-|\varphi_{0}|)^{2})d\lambda\\
-& =\intop_{0}^{1}\ln\left(\left[\ln\frac{\lambda^{2}}{T_{0}(1-\sqrt{1-\lambda^{2}})}\right]^{2}+(\pi-|\varphi_{0}|)^{2}\right)d\lambda
-\end{align*}
-
-Calculation of the $\lambda$-integral:
-
-\[
-\intop_{0}^{1}\ln(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})d\lambda=\intop_{0}^{1}\left(2\ln n_{\lambda}+\frac{(\pi-|\varphi_{0}|)^{2}}{n_{\lambda}^{2}}\right)d\lambda
-\]
-
-Separately we find:
-\[
-\intop_{0}^{1}\ln n_{\lambda}d\lambda=\ln\frac{1}{T}+\intop_{0}^{1}\ln\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}d\lambda=\ln\frac{1}{T}+\frac{\pi}{2}-1.
-\]
-
-For the second integral we have
-\[
-\intop_{0}^{1}\frac{1}{n_{\lambda}^{2}}d\lambda=\intop_{0}^{1}\frac{1}{\left[\ln\frac{1}{T}+\ln\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}\right]^{2}}d\lambda=\frac{1}{(\ln\frac{1}{T})^{2}}+O\left(\frac{1}{(\ln\frac{1}{T})^{3}}\right)
-\]
-
-Thus, we get 
-\[
-s_{\lambda}=2\ln\frac{1}{T}+\pi-2+\frac{(\pi-|\varphi_{0}|)^{2}}{(\ln\frac{1}{T})^{2}}+O\left(\frac{1}{(\ln\frac{1}{T})^{3}}\right)
-\]
-
-and the final result in this limit (only pure MAR (multiple Andreev
-reflections)) is:
-\[
-P=\exp\left[-\frac{g_{L}}{\omega}\left(2\ln\frac{2}{\alpha}+2\ln\ln\frac{1}{T}+\pi-2+\frac{(\pi-|\varphi_{0}|)^{2}}{(\ln\frac{1}{T})^{2}}+O\left(\frac{1}{(\ln\frac{1}{T})^{3}}\right)\right)\right]
-\]
-
-\[
-(\ln\frac{1}{T})^{2}\ll\frac{g_{L}}{\omega}\ll(\ln\frac{1}{T})^{2}e^{1/T}
-\]
-
-and in the second regime,
-
-\[
-P=\exp\left[-\frac{g_{L}}{\omega}\left(2\ln\frac{2}{\alpha}+2\ln\ln\frac{1}{T}+\pi-2+o(1)\right)\right]
-\]
-
-\[
-(\ln\frac{1}{T})^{2}\ll\frac{g_{L}}{\omega}
-\]
-This includes the previous answer. The $o(1)$ is to be determined.
-
-Finally, in the case where $n_{*}\ll M\ll n_{*}^{2}$ I do Poisson
-to calculate $\li$ and find that it behaves strangely: I get $e^{-M\ln n_{\lambda}-\frac{1}{2}{\frac{M}{n_{\lambda}}}^{2}n_{\lambda}^{2}/M+corr.}$
-where ${M/n_{\lambda}}$ denotes the fractional part of the number
-(from $-1/2$ to $1/2$). The number within changes quickly with $\lambda$
-and therefore $^{2}\rightarrow\langle{}^{2}\rangle=1/12$. Then, we
-get
-\begin{align}
-P & =\exp\left[-\frac{g_{L}}{\omega}\left(2\ln\frac{2}{\alpha}+2\ln\ln\frac{1}{T}+\pi-2\right)+\frac{1}{12}\frac{(\ln\frac{1}{T})^{2}}{g_{L}/\omega}+o\left(\frac{(\ln\frac{1}{T})^{2}}{g_{L}/\omega}\right)\right]
-\end{align}
 \begin{gather}
-	\qquad(\ln\frac{1}{T})\ll\frac{g_{L}}{\omega}<(\ln\frac{1}{T})^{2}\
+	\mathcal{J}\br{\lambda}
+	\sim
+	\exp M\left[\log\frac{\alpha}{2}-\frac{1}{2}\log(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})\right]
 \end{gather}
 
-\subsubsection{Pure Andreev regime regime: intermediate case: fixed photon number}
+The last thing to do is to take a product $  \underset{\lambda_k}{\prod} \mathcal{J}\br{\lambda_k} $. It results to the integration of the quantity in the exponent over $ \lambda $ (the limits are 0 and 1 as $ \lambda = \frac{E}{\abs{g_L}}$):
+\begin{gather}
+s_{\lambda} 
+ =
+M\log\frac{\alpha}{2}
+-
+M
+\intop_{0}^{1}\log(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})d\lambda
+\end{gather}
+Calculation of the $\lambda$-integral:
+\begin{gather}
+\intop_{0}^{1}\log(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})d\lambda
+	\approx
+	\intop_{0}^{1}\left(2\log n_{\lambda}+\frac{(\pi-|\varphi_{0}|)^{2}}{n_{\lambda}^{2}}\right)d\lambda
+\end{gather}
 
-Above we considered $M\gg n_{*}$ which lead to a simple asymptotic
-of the function $\li_{-M}(e^{-n_{*}+i(\phi_{0}+\pi)})$. There is
-also the intermediate case where $n_{*}\ll M\ll n_{*}^{2}$. In this
-case the dominating term(s) have large index $K$, but the gaussian
-envelope is very narrow, with a width $\ll1$ which means that the
-full series is dominated by a single term (this is in full agreement
-with the fact that the second form of $\li$ is now wide, i.e. converges
-over a large number of $r$-terms). It is easy to show that the optimal
+Separately we find:
+\begin{gather}
+	\intop_{0}^{1}\log n_{\lambda}d\lambda=\ln\frac{1}{T}+\intop_{0}^{1}\log\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}d\lambda=\log\frac{1}{T}+\frac{\pi}{2}-1.	
+\end{gather}
+\begin{gather}
+\intop_{0}^{1}\frac{1}{n_{\lambda}^{2}}d\lambda=\intop_{0}^{1}\frac{1}{\left[\log\frac{1}{T}+\log\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}\right]^{2}}d\lambda=\frac{1}{(\log\frac{1}{T})^{2}}+O\left(\frac{1}{(\log\frac{1}{T})^{3}}\right)	
+\end{gather}
+
+
+Thus, we get 
+\begin{gather}
+s_{\lambda}
+=
+M\br{\log\frac{\alpha}{2}
+-
+2\log n_T
+-\br{\pi-2}
+-
+\frac{(\pi-|\varphi_{0}|)^{2}}{n_T^{2}}+O\left(\frac{1}{n_T^{3}}\right)}
+\end{gather}
+
+and the final result in this limit:
+\begin{gather}
+	\mathcal{I}
+	\sim
+	\exp
+	\left[
+	\frac{2\abs{g_L}}{\omega}\br{\log\frac{\alpha}{2}
+		-
+		2\log n_T
+		-\br{\pi-2}
+		-
+		\frac{(\pi-|\varphi_{0}|)^{2}}{n_T^{2}}+O\left(\frac{1}{n_T^{3}}\right)}	
+\right]
+\end{gather}
+
+
+
+\subsubsection{Subcase $ n_T\ll M \ll n_T^2  $}
+
+In this
+case the dominating term in (\ref{pure_MAR_to_polylog}) have large index $K$, but the gaussian
+envelope is very narrow, which means that the
+full series is dominated by a single term. This is in full agreement
+with the fact that the form (\ref{polylog_useful_formula}) of polylogarithm  converges
+over a large number of $r$-terms. The optimal
 term has the integer index $K_{0}$ closest to the real saddle-point
-$K_{*}=M/n_{*}$. We write
-\[
-K_{*}=K_{0}+\xi,\qquad\mbox{with\ensuremath{\qquad\xi\in(-\frac{1}{2},\frac{1}{2})}}
-\]
-
-Then, omitting the complex phase, we write
+$K_{*}=M/n_{*}$. We write $
+K_{*}=K_{0}+\xi,$ with $\xi \in \br{-\frac{1}{2}, \frac{1}{2}}$, so:
 \begin{multline*}
-\li_{-M}(e^{-n_{*}+i(\phi_{0}+\pi)})\approx a_{K_{0}}\propto e^{-n_{*}(K_{*}-\xi)+M\ln(K_{0}-\xi)}=\\
-=e^{-M+n_{*}\xi+M\ln\frac{M}{n_{*}}+M\ln(1-\frac{\xi n_{*}}{M})}=e^{-M+M\ln\frac{M}{n_{*}}-\frac{\xi^{2}n_{*}^{2}}{2M}+O\left(\frac{n_{*}^{3}}{M^{2}}\right)}\\
+\li_{-M}(e^{-n_{*}+i(\phi_{0}+\pi)})
+\propto e^{-n_{*}(K_{*}-\xi)+M\ln(K_{0}-\xi)}=\\
+=e^{-M+n_{*}\xi+M\ln\frac{M}{n_{*}}+M\ln(1-\frac{\xi n_{*}}{M})}=e^{-M+M\ln\frac{M}{n_{*}}-\frac{\xi^{2}n_{*}^{2}}{2M}+O\left(\frac{n_{*}^{3}}{M^{2}}\right)}
 \end{multline*}
 
 Substituting this result for the $\li$ function we obtain in this

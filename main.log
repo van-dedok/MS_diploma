@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  15 JUN 2019 22:09
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  16 JUN 2019 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,14 +1189,14 @@ Chapter 4.
 ] [26]
 File: images/tunneling.png Graphic file (type QTm)
  <use  "images/tunneling.png" > [27]
-Overfull \hbox (5.44017pt too wide) in paragraph at lines 186--188
+Overfull \hbox (5.44017pt too wide) in paragraph at lines 187--189
 [] \OML/cmm/m/it/12 h[]G[] [] h[]G[] [] h[] [] $ \TU/TimesNewRoman(0)/m/n/12 fa
 ctorizes into individual factors, which we denote as $\OML/cmm/m/it/12 J[] [] \
 OMS/cmsy/m/n/12 ^^Q
  []
 
-[28] [29] [30] [31] [32] [33] [34] [35] [36]
-Overfull \hbox (37.9055pt too wide) in paragraph at lines 802--804
+[28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
+Overfull \hbox (37.9055pt too wide) in paragraph at lines 820--822
 []\TU/TimesNewRoman(0)/m/n/12 The next step is to sum this over $\OML/cmm/m/it/
 12 N$\TU/TimesNewRoman(0)/m/n/12 . Remember that $\OML/cmm/m/it/12 k[] \OT1/cmr
 /m/n/12 = \OML/cmm/m/it/12 Ne[]$ \TU/TimesNewRoman(0)/m/n/12 and $\OML/cmm/m/it
@@ -1205,8 +1205,8 @@ Overfull \hbox (37.9055pt too wide) in paragraph at lines 802--804
 Roman(0)/m/n/12 . 
  []
 
-[37] [38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 929--939
+[38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 947--957
 
  []
 
@@ -1275,10 +1275,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20503 strings out of 493068
- 427562 string characters out of 6137720
- 871332 words of memory out of 5000000
- 24098 multiletter control sequences out of 15000+600000
+ 20504 strings out of 493068
+ 427592 string characters out of 6137720
+ 871343 words of memory out of 5000000
+ 24099 multiletter control sequences out of 15000+600000
  12614 words of font info for 72 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  44i,18n,68p,10402b,4352s stack positions out of 5000i,500n,10000p,200000b,80000s

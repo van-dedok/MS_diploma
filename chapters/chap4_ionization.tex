@@ -114,6 +114,7 @@ The approach to multiphoton ionization is described in Appendix \ref{app:multiph
 \end{multline}
 so:
 \begin{gather}
+\label{tunnel_hamiltonian_harmonics}
 	H_{T}=
 	\sum_n
 	H_{T,n}
@@ -157,7 +158,7 @@ Then the rate is given by (see Appendix \ref{app:multiphoton ionization}):
 \label{ionization_key}
 \mathcal{I}
 \sim
-\frac{|\langle\mathcal{E}|w_{\mathcal{E}}|\gamma\rangle|^{2}}{N(\mathcal{E})},
+\frac{|\langle\mathcal{E}|w_{\mathcal{E}}|\gamma\rangle|^{2}}{N_L(\mathcal{E})},
 \qquad
 w_{\mathcal{E}}(E)
 =
@@ -691,9 +692,9 @@ K_{\lambda}=K_{0}+\xi_\lambda,$ with $\xi_\lambda \in \br{-\frac{1}{2}, \frac{1}
 		O\br{\frac{n_\lambda^3}{M^2}}
 	}
 \end{gather}
-Here we have a nonlinear in $ M $ term. It means, that the answer for the ionization rate depends on how we split the process into energy slices. So, we must take only one slice --- the whole gap. As we take only one slice, $ n_\lambda $ changes significantly inside it. Therefore the optimal photon number is not given by $ \frac{M}{n_\lambda} $ anymore. Consequently $\xi_\lambda $ becomes ill-defined. 
+Here we have a nonlinear in $ M $ term. It means, that the answer for the ionization rate depends on how we split the process into energy slices. So, we must take only one slice --- the whole gap. As we take only one slice, $ n_\lambda $ changes significantly inside it. Therefore the optimal photon number is not given by $ \frac{M}{n_\lambda} $ anymore, and, consequentially,  $\xi_\lambda $ becomes ill-defined. 
 
-However,we can use the term $ \frac{\xi_\lambda^2 n_\lambda}{2M} $ as an estimate for integer effects. The answer for ionization rate is:
+However, we can use the term $ \frac{\xi_\lambda^2 n_\lambda}{2M} $ as an estimate for integer effects. It yields the following correction in the ionization exponent:
 \begin{gather}
 	\mathcal{I}
 	\sim
@@ -717,7 +718,24 @@ The linear term $ \frac{\abs{g_L}}{\omega} $ is obtained by averaging the action
 \label{subsect:single_photon}
 
 
-When the optimal photon size is larger than the slice size ($ n_T>M $), one again cannot use the procedure described in section \ref{sect:factorizeing_w} and divide the ionization process into pieces. This situation corresponds to the case, when only
+When the optimal photon size is larger than the slice size ($ n_T>M $), one again cannot use the procedure described in section \ref{sect:factorizeing_w} and divide the ionization process into pieces. In this case the system just takes one photon with the size of the gap and ionize. This case can be calculated exactly with conventional Fermi Golden rule (\ref{golden_reul_first_order}) (with $ N_L\br{E} $ in the denominator), where the perturbation is the term of (\ref{tunnel_hamiltonian_harmonics}) corresponding to the closet to $ \frac{\abs{g_L}}{\omega} $ bigger integer. We denote this integer as $ M $, which consistent with the previous notation. The result is:
+\begin{gather}
+	\mathcal{I}
+	=
+	\frac
+	{\alpha^M}{2^{M-2}M!}
+	t^2\zeta^4
+	\cos
+	\br{
+		\frac{\varphi_0}{2}
+		+
+		\frac{\pi M}{2}
+	}
+	\frac
+	{\sqrt{M^2\omega^2-g_L^2}}
+	{M\omega}
+\end{gather}
+Note, that $ M\omega $ is the actual energy of the destination state of the ionization. When $ M\omega $ becomes equal to $ \abs{g_L} $, this expression gives zero. However, when this happens  the ionizing harmonic of $ H_T $ changes, so $ M $ changes to $ M+1 $ and the result again becomes nontrivial.
 \subsection{Andreev+Normal reflection regime}
 
 For completenness, let us also consider the case $M/N\ll\log N$.

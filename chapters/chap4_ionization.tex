@@ -164,7 +164,7 @@ w_{\mathcal{E}}(E)
 =
 \sum_{\{n_{i}\}:\mathcal{E}}H_{T,n_{N}}\prod_{j=1}^{N-1}G_{0}\left(E+\sum_{s=1}^{j}\omega_{n_{s}}\right)H_{T,n_{j}}
 \end{gather}
-here sum is taken over all sets $ \{n_i\}:\mathcal{E} $ so that $ \sum_{i} \omega_{n_i}=\mathcal{E}=\min[g_R, \abs{g_L}]$. Each term in sum (\ref{ionization_key}) corresponds to some way (i.e. trajectory) to absorb photons with energies $ \omega_{n_i} $, such that the total absorbed energy is equal to spectrum gap.
+here sum is taken over all sets $ \{n_i\}:\mathcal{E} $ so that $ \sum_{i} \omega_{n_i}=\mathcal{E}=\min[g_R, \abs{g_L}]$.  Each term in sum (\ref{ionization_key}) corresponds to some way (i.e. trajectory) to absorb photons with energies $ \omega_{n_i} $, such that the total absorbed energy is equal to spectrum gap. Recall that Planck constant here is taken to be unity.
 
 For unperturbed Green function we take a notaion:
 \begin{gather}
@@ -234,7 +234,7 @@ recalling (\ref{tunnel_matrix_elements_maj-cont}), we obtain:
 \end{gather}
 where $ \lambda = \frac{E}{\abs{g_L}} $, $ T=\frac{g_R\br{\zeta^2t}^2}{\abs{g_L}} $. We consider $ T\ll 1$, so the systems remains in a strong tunneling limit.
 
-Thus, the elementary block  in our product for small enough $ n $ becomes:
+Thus, the elementary block  in our product for small enough $ E $ becomes:
 \begin{gather}
 	\frac{J_{nm}}{E+n\omega}
 	\approx
@@ -405,7 +405,7 @@ M\log\frac{M}{N}
 \end{gather}
 with relatively slow function $ A_N $. 
 
-It's easy to see, that the biggest term in (\ref{ionization_saddle_action}) corresponds to the $ N_*=2M/\log\frac{1}{T_\lambda} $. This is the optimal photon number  for the slice  from $ E $ to $ E+\Delta E $ of energy range with $ E=\abs{g_L}\lambda  $ and $ \Delta E = \omega M $. Consequentially the optimal photon size is given by $ n_*=\frac{M}{N_*}=\frac{1}{2}\log\frac{1}{T_\lambda} $. From (\ref{T_lambda_def}) we see, that $ T_\lambda $ differs from $ T $ by a smooth depending on $ \lambda $ prefactor phonot. We introdice a global optimal photon size $ n_T\equiv\log\frac{1}{T} \gg1$ and find, that $ n_* \sim n_T $. It's important to note, that $ n_* $ doesn't depend on the energy slice size $ M $, being an intensive parameter of the process.
+It's easy to see, that the biggest term in (\ref{ionization_saddle_action}) corresponds to the $ N_*=2M/\log\frac{1}{T_\lambda} $. This is the optimal photon number  for the slice  from $ E $ to $ E+\Delta E $ of energy range with $ E=\abs{g_L}\lambda  $ and $ \Delta E = \omega M $. Consequentially the optimal photon size is given by $ n_*=\frac{M}{N_*}=\frac{1}{2}\log\frac{1}{T_\lambda} $. From (\ref{T_lambda_def}) we see, that $ T_\lambda $ differs from $ T $ by a smooth depending on $ \lambda $ prefactor. We introduce a global optimal photon size $ n_T\equiv\log\frac{1}{T} \gg1$ and find, that $ n_* \sim n_T $. It's important to note, that $ n_* $ doesn't depend on the energy slice size $ M $, being an intensive parameter of the process.
 
 \subsection{Two regimes of factorized ionization}
 To treat (\ref{ionization_super_formula}) more accurately it's convenient to use the multinomial formula:
@@ -501,9 +501,9 @@ by at least
 \exp\left[-\frac{8\pi^{2}M}{n_{\lambda}^{2}}\right]
 \]
 
-This leads us to three additional subcases. When $ M \gg n_\lambda^2\sim n_T$, the sum over $ r $ is dominated by the  largest terms: they correspond to $ r=0,1 $ for $ -\pi<\varphi_0<\pi $. The small number of terms in (\ref{polylog_useful_formula}) corresponds to the large number of terms in (\ref{pure_MAR_to_polylog}), so in this case not only the trajectories with $ N_* $ contributes to ionization, but also the large number of neighboring ones.
+This leads us to three additional subcases. When $ M \gg n_\lambda^2\sim n_T^2$, the sum over $ r $ is dominated by the  largest terms: they correspond to $ r=0,1 $ for $ -\pi<\varphi_0<\pi $. The small number of terms in (\ref{polylog_useful_formula}) corresponds to the large number of terms in (\ref{pure_MAR_to_polylog}), so in this case not only the trajectories with $ N_* $ contributes to ionization, but also the large number of neighboring ones.
 
-When $ M\ll n_\lambda^2 $, the formula (\ref{polylog_useful_formula}) isn't useful. Instead we look directly at (\ref{pure_MAR_to_polylog}) and find, that if $ M<n_T $ only first term is relevant --- which is one photon case, treated in section \ref{subsect:single_photon}. When $ n_T\ll M\ll n_T^2 $, the maximum term in (\ref{pure_MAR_to_polylog}) is at $ N_*\sim\frac{M}{n_T} $.
+When $ M\ll n_\lambda^2 $, the formula (\ref{polylog_useful_formula}) isn't useful. Instead we look directly at (\ref{pure_MAR_to_polylog}) and find, that if $ M<n_T $ only first term is relevant --- which is single photon case, treated in section \ref{subsect:single_photon}. When $ n_T\ll M\ll n_T^2 $, the maximum term in (\ref{pure_MAR_to_polylog}) is at $ N_*\sim\frac{M}{n_T} $.
 
 The subcases $ n_T \ll M\ll n_T^2 $ and $ n_T^2 \ll M\ll n_T e^{n_T} $ are presented below.
 
@@ -562,22 +562,16 @@ M\log\frac{\alpha}{2}
 \end{gather}
 Calculation of the $\lambda$-integral:
 \begin{gather}
+\label{pure_msr_lambda_integral}
 \intop_{0}^{1}\log(n_{\lambda}^{2}+(\pi-|\varphi_{0}|)^{2})d\lambda
 	\approx
 	\intop_{0}^{1}\left(2\log n_{\lambda}+\frac{(\pi-|\varphi_{0}|)^{2}}{n_{\lambda}^{2}}\right)d\lambda
 \end{gather}
 
 Separately we find (recall, that $ n_T=\log\frac{1}{T} $):
-\begin{multline}
+\begin{gather}
 	\intop_{0}^{1}\log n_{\lambda}d\lambda
 	\approx
-	\log n_T
-	+
-	\frac{1}{n_T}
-	\intop_{0}^{1}\log\frac{\lambda^{2}}{1-\sqrt{1-\lambda^{2}}}d\lambda
-	=
-	\\
-	=
 	\log n_T
 	+
 	\frac{\pi-2}{2n_T}
@@ -587,7 +581,7 @@ Separately we find (recall, that $ n_T=\log\frac{1}{T} $):
 	O
 	\br{\frac{1}{n_T^3}}
 	.
-\end{multline}
+\end{gather}
 where
 \begin{gather}
 	C_2
@@ -600,7 +594,7 @@ where
 \approx
 0.689
 \end{gather}
-The last integral here is:
+The last integral in (\ref{pure_msr_lambda_integral}) is:
 \begin{gather}
 \intop_{0}^{1}\frac{1}{n_{\lambda}^{2}}d\lambda
 =
@@ -719,7 +713,7 @@ The linear term $ \frac{\abs{g_L}}{\omega} $ is obtained by averaging the action
 \label{subsect:single_photon}
 
 
-When the optimal photon size is larger than the slice size ($ n_T>M $), one again cannot use the procedure described in section \ref{sect:factorizeing_w} and divide the ionization process into pieces. In this case the system just takes one photon with the size of the gap and ionize. This case can be calculated exactly with conventional Fermi Golden rule (\ref{golden_reul_first_order}) (with $ N_L\br{E} $ in the denominator), where the perturbation is the term of (\ref{tunnel_hamiltonian_harmonics}) corresponding to the closet to $ \frac{\abs{g_L}}{\omega} $ bigger integer. We denote this integer as $ M $, which consistent with the previous notation. The result is:
+When the optimal photon size is larger than the slice size ($ n_T>M $), one again cannot use the procedure described in section \ref{sect:factorizeing_w} and divide the ionization process into pieces. In this case the system just takes one photon with the size of the gap and ionize. This case can be calculated exactly with conventional Fermi Golden rule (\ref{golden_reul_first_order}) (with $ N_L\br{E} $ in the denominator), where the perturbation is the term of (\ref{tunnel_hamiltonian_harmonics}) corresponding to the closest to $ \frac{\abs{g_L}}{\omega} $ larger integer. We denote this integer as $ M $,  consistent with the previous notation. The result is:
 \begin{gather}
 \label{final_ioniztion_single_photon}
 	\mathcal{I}
@@ -859,7 +853,7 @@ We drop the terms proportional to $ k_0 $ from the action as they are beyond our
 	e^{-S_{0}+i\varphi_{0}K}
 	\right]
 \end{gather}
-This contains the same polylogaritm as in (\ref{pure_MAR_to_polylog}). As $ M<n_Te^n_T $, we should treat it exactly as in the first subcase of the section \ref{sect:pure_MAR}. Thus we can just take the answer (\ref{final_ion_pure_mar_1}), but add an additional correction:
+This contains the same polylogaritm as in (\ref{pure_MAR_to_polylog}). As $ M\gg n_Te^{n_T} $, we should treat it exactly as in the first subcase of the section \ref{sect:pure_MAR}. Thus we can just take the answer (\ref{final_ion_pure_mar_1}), but add an additional correction:
 \begin{multline}
 \label{final_ionization_andreev_normal}
 		\mathcal{I}
@@ -915,7 +909,7 @@ In the left wire the transitions are possible only between the states of continu
   \end{gather}
   holds.
   
-  The fact, that in adiabaticity condition  $\omega  $ is compared with $ \Delta $, not with $ \abs{g_L} $, means, that even the single photon limit \textbf{ENTER SECTion} is achievable. 
+  The fact, that in adiabaticity condition  $\omega  $ is compared with $ \Delta $, not with $ \abs{g_L} $, means, that even the single photon limit from section \ref{subsect:single_photon} is achievable. 
 \section{Results}
 
 Here we collect results for the ionization rate  within exponential accuracy.  We have the following notations: $ T=\frac{g_R\br{\zeta^2t}^2}{\abs{g_L}}\ll1 $ --- "dressed" tunneling constant relevant for the ionization, $M=\abs{g_{L}}/\omega$ ---
@@ -997,7 +991,7 @@ O\br{
 	O\left(\frac{1}{n_T^{3}}\right)}	
 \right]
 	\end{equation}
-	\item Mixed Andreev and normal reflections: $ n_T e^{n_T} \ll M$. In this case there is an additional correction to the ionization rate, which can be large even than leading term. The result (formula (\ref{final_ionization_andreev_normal})) is:
+	\item Mixed Andreev and normal reflections: $ n_T e^{n_T} \ll M$. In this case there is an additional correction to the ionization rate, which can be even larger than leading term --- in this case the result isn't valid. However, when this correction remains small, the ionization rate is (formula (\ref{final_ionization_andreev_normal})) is:
 \begin{multline}
 \mathcal{I}
 \sim

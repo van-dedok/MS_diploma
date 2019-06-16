@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  16 JUN 2019 14:21
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  16 JUN 2019 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1195,18 +1195,18 @@ ctorizes into individual factors, which we denote as $\OML/cmm/m/it/12 J[] [] \
 OMS/cmsy/m/n/12 ^^Q
  []
 
-[28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
-Overfull \hbox (37.9055pt too wide) in paragraph at lines 820--822
-[]\TU/TimesNewRoman(0)/m/n/12 The next step is to sum this over $\OML/cmm/m/it/
-12 N$\TU/TimesNewRoman(0)/m/n/12 . Remember that $\OML/cmm/m/it/12 k[] \OT1/cmr
-/m/n/12 = \OML/cmm/m/it/12 Ne[]$ \TU/TimesNewRoman(0)/m/n/12 and $\OML/cmm/m/it
-/12 S[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
- M; N; k[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M; N\OT1/cmr/m/n/12 ))$\TU/TimesNew
-Roman(0)/m/n/12 . 
+[28] [29] [30] [31] [32] [33] [34] [35] [36]
+Overfull \hbox (1.77039pt too wide) in paragraph at lines 836--839
+\TU/TimesNewRoman(0)/m/n/12 The next step is to sum this over $\OML/cmm/m/it/12
+ N$\TU/TimesNewRoman(0)/m/n/12 . Remember that $\OML/cmm/m/it/12 k[] \OT1/cmr/m
+/n/12 = \OML/cmm/m/it/12 Ne[]$ \TU/TimesNewRoman(0)/m/n/12 and $\OML/cmm/m/it/1
+2 S[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M
+; N; k[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M; N\OT1/cmr/m/n/12 ))$\TU/TimesNewRo
+man(0)/m/n/12 . 
  []
 
-[38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 947--957
+[37] [38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 965--975
 
  []
 

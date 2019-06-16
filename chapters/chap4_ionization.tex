@@ -735,77 +735,91 @@ When the optimal photon size is larger than the slice size ($ n_T>M $), one agai
 	{\sqrt{M^2\omega^2-g_L^2}}
 	{M\omega}
 \end{gather}
-Note, that $ M\omega $ is the actual energy of the destination state of the ionization. When $ M\omega $ becomes equal to $ \abs{g_L} $, this expression gives zero. However, when this happens  the ionizing harmonic of $ H_T $ changes, so $ M $ changes to $ M+1 $ and the result again becomes nontrivial.
+Note, that $ M\omega $ is the actual energy of the destination state of the ionization. When $ M\omega $ becomes equal to $ \abs{g_L} $, this expression gives zero. However, when this happens,  the ionizing harmonic of $ H_T $ changes, so $ M $ switches to $ M+1 $, and the result again becomes nontrivial.
 \subsection{Andreev+Normal reflection regime}
 
-For completenness, let us also consider the case $M/N\ll\log N$.
+Now consider the case $M\gg n_T\log n_T$ (or, which is the same, $ M\ll N_*\log N_* $).
 In this case the sum (\ref{sum_after_multinomial}) is not defined by the two edge terms.
 We write:
 \begin{gather}
-\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-2ki\chi}=\sum_{k=0}^{N}e^{-S_{0}(k)-2ki\chi}
+\sum_{k=0}^{N}C_{k}^{N}(N-2k)^{M}e^{-ik\varphi_0}=\sum_{k=0}^{N}e^{-S_{0}(k)-ik\varphi_0}
 \end{gather}
 
 where the action $S_{0}$ is 
-\begin{multline*}
-S_{0}=-\log C_{k}^{N}-M\log(N-2k)=-N\log N+k\log k+(N-k)\log(N-k)-\\
+\begin{multline}
+S_{0}=-\log C_{k}^{N}-M\log(N-2k)
+=
+\\
+=
+-N\log N+k\log k+(N-k)\log(N-k)-
+\\
 -M\log(N-2k)-\frac{1}{2}\log\frac{N}{2\pi(N-k)k}+\dots
-\end{multline*}
+\end{multline}
 
 The stationary point of that action obeys $\partial S_{0}/\partial k=0$:
-\[
-\ln k-\ln(N-k)+\frac{2M}{N-2k}+\frac{1}{2k}-\frac{1}{2(N-k)}=0
-\]
+\begin{gather}
+	\log k-\log(N-k)+\frac{2M}{N-2k}+\frac{1}{2k}-\frac{1}{2(N-k)}=0
+\end{gather}
+
 
 As expected, $k\to N-k$ changes the sign of this. We seek for the
 stationary point with $k<N/2$. We have the transcendent equation
 (terms $\sim1/k,1/N$ are neglected)
-\[
-\ln(\frac{N}{k}-1)=\frac{2M/N}{1-2k/N}
-\]
+\begin{gather}
+	\log\br{\frac{N}{k}-1}=\frac{2M/N}{1-2k/N}
+\end{gather}
+
 
 This is generally unsolvable, but if we assume that $M/N\gg1$ then
-we get $k/N\ll1$ and the asymptotics is
-\begin{align*}
--\ln\frac{k}{N} & =2\frac{M}{N}\\
-\\
-k_{0} & =Ne^{-2M/N}
-\end{align*}
+we get $k/N\ll1$ and the asymptotic is
+\begin{gather}
+k_{0}  =Ne^{-2M/N}
+\end{gather}
 
 We remind that this happens in the regimes $1\ll M/N\ll\ln N$. At
 the same time, to have $k\gg1$ produces the additional constraint
 $M/N\ll\frac{1}{2}\ln N$. At this saddle point, $k=k_{0}$, we have
-\[
+\begin{gather}
 \frac{\partial^{2}S_{0}}{\partial k^{2}}\approx\frac{1}{k}+\frac{1}{N-k}+\frac{4M}{(N-2k)^{2}}\approx\frac{1}{k_{0}}+\frac{4M}{N^{2}}=\frac{1}{N}\left(e^{2M/N}+\frac{4M}{N}\right)\approx\frac{1}{k_{0}}
-\]
+\end{gather}
 
 where we made use of $M/N\gg1$. The action itself is:
+\begin{gather}
+\label{mixed_refl_action}
+S_0 = -M\log N + O\br{k_0 \log N}
+\end{gather}
+\if 0
 \begin{multline*}
 S_{0}=-N\ln N+k_{0}\ln k_{0}+(N-k_{0})\ln(N-k_{0})-M\ln(N-2k_{0})-\frac{1}{2}\ln\frac{N}{2\pi(N-k_{0})k_{0}}\\
 \approx-N\ln N+k_{0}\ln k_{0}+(N-k_{0})\left[\ln N+\ln(1-\frac{k_{0}}{N})\right]-\\
 -M\left[\ln N+\ln(1-\frac{2k_{0}}{N})\right]-\frac{1}{2}\ln\frac{1}{2\pi k_{0}}+\frac{1}{2}\ln(1-\frac{k_{0}}{N})
 \end{multline*}
 
-
-
 However, since our solution for $k_{0}$ is itself approximate, we
 should restrict ourselves to exponential accuracy here and keep only
 major terms, linear in $M$
-\begin{align*}
-\label{mixed_refl_action}
-S_{0} & =-M\ln N+O(k_{0}\frac{M}{N},k_{0}\ln N,k_{0},k_{0}\ln k_{0})\\
-& =-M\ln N+O(k_{0}\ln N)
-\end{align*}
-
+\begin{multline}
+S_{0}  =-M\ln N+O(k_{0}\frac{M}{N},k_{0}\ln N,k_{0},k_{0}\ln k_{0})\\
+ =-M\ln N+O(k_{0}\ln N)
+\end{multline}
+\fi
 We now integrate using the Poisson formula:
-\begin{align*}
-\sum_{k=0}^{N/2}e^{-S_{0}(k)-2ki\chi} & =\sum_{p\in\mathbb{Z}}e^{-S_{0}(k_{0})-2k_{0}i(\chi-\pi p)}\int dke^{-\frac{1}{2k_{0}}(k-k_{0})^{2}-2(k-k_{0})i(\chi-\pi p)}\\
-& =\sum_{p\in\mathbb{Z}}e^{-S_{0}(k_{0})-2k_{0}i(\chi-\pi p)-2(\chi-\pi p)^{2}k_{0}}\sqrt{2\pi k_{0}}
-\end{align*}
+\begin{multline}
+\sum_{k=0}^{N/2}e^{-S_{0}(k)-ik\varphi_0}  
+=
+\sum_{p\in\mathbb{Z}}e^{-S_{0}(k_{0})-ik_{0}(\varphi_0-2\pi p)}\int dke^{-\frac{1}{2k_{0}}(k-k_{0})^{2}-i(k-k_{0})
+	(\varphi_0-2\pi p)}
+=
+\\
+ =\sum_{p\in\mathbb{Z}}
+ \sqrt{2\pi k_{0}}
+ e^{-S_{0}(k_{0})-ik_{0}(\varphi_0-2\pi p)-2(\frac{\varphi_0}{2}-\pi p)^{2}k_{0}}
+\end{multline}
 
-Assuming $\phi_{0}$ is not close to $\pm\pi$ the above is dominated
+Assuming $\varphi_{0}$ is not close to $\pm\pi$ the above is dominated
 by the term with $p=0$ because $k_{0}\gg1$. If we are close to $\pi$
 phase difference, there are two main terms, but, to an exponential
-accuracy the answer is still the same 
+accuracy the answer is still the same.
 In the above, we only integrated near the saddle-point with $k_{0}<N/2$,
 there remains the symmetric saddle at $N-k_{0}$. This adds the complex
 conjugate to the result (but first we must restore some prefactors):
@@ -814,18 +828,22 @@ conjugate to the result (but first we must restore some prefactors):
 =
 2\frac{\sqrt{2\pi k_{0}}}{M!2^{N}}
 e^{-S_{0}-2\chi^{2}k_{0}}
-\cos\left[-2k_{0}\chi+\chi N+\frac{M\pi}{2}\right]
+\cos\left[
+-\frac{2k_{0}\varphi_0}{2}
++
+\frac{N\varphi_0}{2}
+ N\frac{M\pi}{2}\right]
 \end{gather}
-
 The next step is to sum this over $N$. Remember that $k_{0}=Ne^{-2M/N}$
 and $S_{0}=S_{0}(M,N,k_{0}(M,N))$. 
 
 Up to the preexponent we have:
-\[
-\mathcal{I}
-\sim
-\Re\frac{i^{M}}{M!}\left(\frac{\alpha}{4}\right)^{M}\sum_{N}\left(-\frac{T_{\lambda}}{4}\right)^{N/2}\sqrt{k_{0}}e^{-S_{0}-\chi^{2}k_{0}+i\chi(N-2k_{0})}
-\]
+\begin{gather}
+	\mathcal{I}
+	\sim
+	\Re\frac{i^{M}}{M!}\left(\frac{\alpha}{4}\right)^{M}\sum_{N}\left(-\frac{T_{\lambda}}{4}\right)^{N/2}\sqrt{k_{0}}e^{-S_{0}-\frac{\varphi_0^2}{4}k_{0}+i\frac{\varphi_0}{2}(N-2k_{0})}
+\end{gather}
+
 We drop the terms proportional to $ k_0 $ from the action as they are beyond our accuracy. Recalling, that $ N=2K $, we write:
 \begin{gather}
 	\mathcal{I}

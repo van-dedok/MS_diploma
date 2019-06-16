@@ -21,7 +21,7 @@ Time dependence of phase difference is introduced as:
 \end{gather}
 where $ \varphi_0 $ is an initial time independent phase difference and $ \alpha\ll1 $ is the amplitude of phase oscillations.
 
-As was shown in section  \ref{sec:elimintaing_long-wave}, there is a gauge transform $ U_\phi $, which  redistributes the phase difference between the wires, so the phase in a given wire can have any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is an observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However, when treating the time dependent  phase difference this gauge transform also becomes time-dependent. After its application the additional term $ \dot{U}_{\phi\br{\tau}}U_{\phi\br{\tau}}^\dagger \propto \dot{\phi}\br{\tau}$ will appear, but, as $ \omega $ is small, it can be neglected. The corresponding condition on $ \omega $ will be established in section \textbf{ENTER SECTION}  
+As was shown in section  \ref{sec:elimintaing_long-wave}, there is a gauge transform $ U_\phi $, which  redistributes the phase difference between the wires, so the phase in a given wire can have any value. This ambiguity just reflects a  fact, that only phase difference $ \varphi $ is an observable quantity, but not the phases $ \phi_L $, $ \phi_R $ separately. However, when treating the time dependent  phase difference this gauge transform also becomes time-dependent. After its application the additional term $ \dot{U}_{\phi\br{\tau}}U_{\phi\br{\tau}}^\dagger \propto \dot{\phi}\br{\tau}$ will appear, but, as $ \omega $ is small, it can be neglected. The corresponding condition on $ \omega $ is established in section \ref{subsec: adiabaticity condition}. 
 
 As the term $ \dot{U}_{\phi\br{\tau}}U_{\phi\br{\tau}}^\dagger \propto \dot{\phi}\br{\tau}$ is negligible, we again can gauge all the phase difference into the boundary condition. Now the boundary condition is time-dependent. It's not very convenient, and to avoid dealing with it we reformulate the problem in terms  of tunnel Hamiltonian, which allow us to treat both tunneling and time dependence simultaneously via perturbation theory.
 
@@ -254,7 +254,7 @@ The prefactor $  \br{\alpha/4}^{n+m} $ yields $ (\alpha/4)^{\mathcal{E}/\omega} 
 
 Now consider a slice of the ionization process, i.e. a part of the full ionization product, which runs from energy $ E $ to $ E+\Delta E $ where $ \Delta E=M\omega $ with a large M. One can assume that within that process, a large number N of photons is absorbed, but energy does not change significantly, $ \Delta E\ll E $, so that $ \lambda $ can be considered a constant within that process. 
 
-This approach is invalid, if the optimal photon energy is larger  than the slice size. If this happens, one needs to enlarge the slice until it reaches the energy of optimal photon. It cannot be done, when the optimal photon energy is equal or larger than spectrum gap. This case will be treated separately in section (\textbf{ENTER SECTION}).
+This approach is invalid, if the optimal photon energy is larger  than the slice size. If this happens, one needs to enlarge the slice until it reaches the energy of optimal photon. It cannot be done, when the optimal photon energy is equal or larger than spectrum gap. This case is treated separately in section \ref{subsect:single_photon}.
 
 For now, denoting
 \begin{gather}
@@ -503,7 +503,7 @@ by at least
 
 This leads us to three additional subcases. When $ M \gg n_\lambda^2\sim n_T$, the sum over $ r $ is dominated by the  largest terms: they correspond to $ r=0,1 $ for $ -\pi<\varphi_0<\pi $. The small number of terms in (\ref{polylog_useful_formula}) corresponds to the large number of terms in (\ref{pure_MAR_to_polylog}), so in this case not only the trajectories with $ N_* $ contributes to ionization, but also the large number of neighboring ones.
 
-When $ M\ll n_\lambda^2 $, the formula (\ref{polylog_useful_formula}) isn't useful. Instead we look directly at (\ref{pure_MAR_to_polylog}) and find, that if $ M<n_T $ only first term is relevant --- which is one photon case, treated in section \textbf{ENTER SECTION}. When $ n_T\ll M\ll n_T^2 $, the maximum term in (\ref{pure_MAR_to_polylog}) is at $ N_*\sim\frac{M}{n_T} $.
+When $ M\ll n_\lambda^2 $, the formula (\ref{polylog_useful_formula}) isn't useful. Instead we look directly at (\ref{pure_MAR_to_polylog}) and find, that if $ M<n_T $ only first term is relevant --- which is one photon case, treated in section \ref{subsect:single_photon}. When $ n_T\ll M\ll n_T^2 $, the maximum term in (\ref{pure_MAR_to_polylog}) is at $ N_*\sim\frac{M}{n_T} $.
 
 The subcases $ n_T \ll M\ll n_T^2 $ and $ n_T^2 \ll M\ll n_T e^{n_T} $ are presented below.
 
@@ -696,6 +696,7 @@ Here we have a nonlinear in $ M $ term. It means, that the answer for the ioniza
 
 However, we can use the term $ \frac{\xi_\lambda^2 n_\lambda}{2M} $ as an estimate for integer effects. It yields the following correction in the ionization exponent:
 \begin{gather}
+\label{final_ionization_pure_mar_2}
 	\mathcal{I}
 	\sim
 	\exp
@@ -720,11 +721,13 @@ The linear term $ \frac{\abs{g_L}}{\omega} $ is obtained by averaging the action
 
 When the optimal photon size is larger than the slice size ($ n_T>M $), one again cannot use the procedure described in section \ref{sect:factorizeing_w} and divide the ionization process into pieces. In this case the system just takes one photon with the size of the gap and ionize. This case can be calculated exactly with conventional Fermi Golden rule (\ref{golden_reul_first_order}) (with $ N_L\br{E} $ in the denominator), where the perturbation is the term of (\ref{tunnel_hamiltonian_harmonics}) corresponding to the closet to $ \frac{\abs{g_L}}{\omega} $ bigger integer. We denote this integer as $ M $, which consistent with the previous notation. The result is:
 \begin{gather}
+\label{final_ioniztion_single_photon}
 	\mathcal{I}
 	=
 	\frac
 	{\alpha^M}{2^{M-2}M!}
 	t^2\zeta^4
+	g_R
 	\cos
 	\br{
 		\frac{\varphi_0}{2}
@@ -858,6 +861,7 @@ We drop the terms proportional to $ k_0 $ from the action as they are beyond our
 \end{gather}
 This contains the same polylogaritm as in (\ref{pure_MAR_to_polylog}). As $ M<n_Te^n_T $, we should treat it exactly as in the first subcase of the section \ref{sect:pure_MAR}. Thus we can just take the answer (\ref{final_ion_pure_mar_1}), but add an additional correction:
 \begin{multline}
+\label{final_ionization_andreev_normal}
 		\mathcal{I}
 	\sim
 	\exp
@@ -893,6 +897,8 @@ This contains the same polylogaritm as in (\ref{pure_MAR_to_polylog}). As $ M<n_
 This correction comes from (\ref{mixed_refl_action}). At large enough $ \frac{\abs{g_L}}{\omega} $ it can become the greatest term in the exponent. This means, that in this case the approximation taken in (\ref{mixed_refl_action}) is insufficient.  
 
 \subsection{The adiabaticity condition}
+\label{subsec: adiabaticity condition}
+
 In section (\ref{sec:stationary_supercurrent}) we gauged the time-dependent phase difference into $ H_T $. This transformation generated the terms $ \dot{U}U^\dagger=\dot{\varphi}\tau_z $ in the wires, and these terms were neglected.This approach in valid, when the ionization from the terms $  \dot{\varphi}\tau_z $ is weaker than than the ionization from $ H_T$.
 
 To estimate the ionization caused by $ \dot{\varphi}\tau_z $ we turn off the tunneling  and look at the transitions in left and right wire separately.
@@ -912,64 +918,118 @@ In the left wire the transitions are possible only between the states of continu
   The fact, that in adiabaticity condition  $\omega  $ is compared with $ \Delta $, not with $ \abs{g_L} $, means, that even the single photon limit \textbf{ENTER SECTion} is achievable. 
 \section{Results}
 
-Here we collect results for the ionization rate (i.e. probability
-$P\propto I_{M}^{2}$) within exponential accuracy. There are for
-parametric regimes (for now we forget about the adiabaticity condition
--- we will later discuss it). We have the notations $M=g_{L.}/\omega$
-is the total number of energy quanta needed to ionize. We have $n_{*}=\ln\frac{1}{T}$
--- \textbf{twice} the optimal size of a photon (in quanta of $\omega$).
-The amount of photons in a configuration is called $N$, its optimum
-amount is $N_{*}=2M/n_{*}$. The results are as follows:
+Here we collect results for the ionization rate  within exponential accuracy.  We have the following notations: $ T=\frac{g_R\br{\zeta^2t}^2}{\abs{g_L}}\ll1 $ --- "dressed" tunneling constant relevant for the ionization, $M=\abs{g_{L}}/\omega$ ---
+ the total number of energy quanta needed to ionize,$n_{T}=\log\frac{1}{T}$
+-- twice the optimal size of a photon (in quanta of $\omega$). The optimal photon number is given by $ N_*=\frac{2M}{n_T} $.
 
-\subsubsection{Ionization rate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/scale}
+	\caption{Different regimes of the ionization for $ \abs{g_L}\ll g_R $}
+	\label{fig:scale}
+\end{figure}
+ There are four different regimes, which presented on fig.\ref{fig:scale} and given by the formulas (\ref{final_ion_pure_mar_1}),  (\ref{final_ionization_pure_mar_2}),  (\ref{final_ioniztion_single_photon}) and (\ref{final_ionization_andreev_normal}). Here we list these results again:
 \begin{enumerate}
-	\item Single-photon case: $M<n_{*}$. In this case, the tunneling parameter
+	\item Single-photon case: $M<n_{T}$. In this case, the tunneling parameter
 	$T$ is so small that it is best to use a single photon to minimize
-	the $T^{N/2}$ factor in the amplitude $I_{NM}$. Then we have
+	the $T^{N/2}$ factor in the amplitude $J_{nm}$. In this case the result (formula (\ref{final_ioniztion_single_photon})) can be found even with the preexponent and yields:
 	\begin{equation}
-	P_{1}\sim T\exp\left[-M\left(2\ln\frac{4}{\alpha}-2\ln M+2\right)\right]
+	\mathcal{I}
+=
+\frac
+{\alpha^M}{2^{M-2}M!}
+t^2\zeta^4 g_R
+\cos
+\br{
+	\frac{\varphi_0}{2}
+	+
+	\frac{\pi M}{2}
+}
+\frac
+{\sqrt{M^2\omega^2-g_L^2}}
+{M\omega}
 	\end{equation}
-	\item Fixed number of photons case: $n_{*}\ll M\ll n_{*}^{2}$. In this
-	case it is optimal to use multiple photons, more sepcifically exactly
-	$N_{*}$ photons (rounded to the nearest integer, of course). Processes
-	with different $N$ do not contribute (their contribution is negligible).
-	We get
+	\item Fixed number of photons case: $n_{T}\ll M\ll n_{T}^{2}$. In this
+	case it is optimal to use multiple photons, more specifically 
+	$N_{*}=\frac{2M}{n_T}$ photons (rounded to the nearest integer). The contribution of the processes with different $ N $ is negligible. The integer effects are important here, but don't contribute in the leading terms. The ionization rate (formula (\ref{final_ionization_pure_mar_2})) is:
 	\begin{equation}
-	P_{N_{*}}\sim\exp\left[-M\left(2\ln\frac{2}{\alpha}+2\ln n_{*}+\pi-2+\left\{ \frac{M}{n_{*}}\right\} ^{2}\frac{n_{*}^{2}}{M^{2}}+O\left(\frac{n_{*}^{3}}{M^{3}}\right)\right)\right]
+	\mathcal{I}
+\sim
+\exp
+\left[
+-\frac{2\abs{g_L}}{\omega}
+\br{
+	\log\frac{2}{\alpha}
+	-
+	\log n_T
+	-
+	\frac{\pi-2}{2n_T}
+}
++
+O\br{	
+	\frac{\omega n_T^2}{2\abs{g_L}}}
+\right]
 	\end{equation}
 	\\
-	Here $\{M/n_{*}\}\in(-0.5,0.5)$ stand for the fractional part of
-	the argument (or rather distance to nearest integer). We see that
-	integer effects are important in this regime.
-	\item Fluctuating photon number case: $n_{*}^{2}\ll M$. Now, for combinatorial
-	reasons, contributions from $N\neq N_{*}$ become important, and we
-	get
+	\item Fluctuating photon number case: $n_{T}^{2}\ll M\ll n_T e^{n_T}$. Now, for combinatorial
+	reasons, contributions from $N\neq N_{*}$ become important. 	The fluctuations $\delta N=N-N_{*}$ is
+	typically much larger than unity but much smaller than $N_{*}$. Thus, no integer effects remain. We
+	get (formula (\ref{final_ion_pure_mar_1})):
 	\begin{equation}
-	P_{N_{*}+\delta N}\sim\exp\left[-M\left(2\ln\frac{2}{\alpha}+2\ln n_{*}+\pi-2+o(1)\right)\right]
+	\mathcal{I}
+\sim
+\exp
+\left[
+-
+\frac{2\abs{g_L}}{\omega}\br{
+	\log\frac{2}{\alpha}
+	+
+	\log n_T
+	+
+	\frac{\pi-2}{2n_T}
+	-
+	\frac{C_2}{n_T^2}
+	+
+	\frac{(\pi-|\varphi_{0}|)^{2}}
+	{2n_T^{2}}
+	+
+	O\left(\frac{1}{n_T^{3}}\right)}	
+\right]
 	\end{equation}
-	\\
-	In this case $N$ fluctuates significantly ($\delta N=N-N_{*}$ is
-	typically much larger than unity but much smaller than $N_{*}$. It
-	can be found if needed). Thus, no integer effects remain.
-	\item Sub-case of (3) where only Andreev reflection happens: $n_{*}^{2}\ll M\ll n_{*}e^{n_{*}}.$
-	In thi case we take only left term in each cosine, or only right --
-	this produces the largest contribution to ionization. {[}At higher
-	$M$ some normal reflections start to happen (combinatorically they
-	become important. Or, in other words, their phase space becomes large
-	-- there are many such ``trajectories''). This case is very technically
-	involved{]}. So, if only MAR (multiple Andreev reflection) happens,
-	then we can further refine the expression for the ionization rate
-	and get
-	\begin{equation}
-	P_{N_{*}+\delta N}^{(MAR)}\sim\exp\left[-M\left(2\ln\frac{2}{\alpha}+2\ln n_{*}+\pi-2+\frac{(\pi-|\varphi_{0}|)^{2}}{n_{*}^{2}}+O\left(\frac{1}{n_{*}^{3}}\right)\right)\right]
-	\end{equation}
-	\linebreak{}
-	\textbf{Note on all cases and energy dependence}: the Green's function
-	energy depends on the current energy (i.e. sum of energies of all
-	previously absorbed photons). Therefore, $T$ becomes a function of
-	$\lambda=E/g_{L}$. Note that this dependence is slow -- $T$ is
-	rescaled by the very nice function $c(\lambda)=(1-\sqrt{1-\lambda^{2}})/\lambda^{2}\in(1/2,1)$.
-	So that $n_{*}$ only changes by $-\ln c(0)=\ln2\simeq0.3$. This
-	energy dependence is actually accounted for and is the origin of the
-	$\pi-2$ terms in expressions for $P$.
+	\item Mixed Andreev and normal reflections: $ n_T e^{n_T} \ll M$. In this case there is an additional correction to the ionization rate, which can be large even than leading term. The result (formula (\ref{final_ionization_andreev_normal})) is:
+\begin{multline}
+\mathcal{I}
+\sim
+\exp
+\bigg[
+-
+\frac
+{2\abs{g_L}}
+{\omega}
+\br{
+	\log
+	\frac{2}{\alpha}
+	+
+	\log n_T
+	+
+	\frac{\pi-2}{2n_T}
+	-
+	\frac{C_2}{n_T^2}
+	+
+	\frac{(\pi-|\varphi_{0}|)^{2}}{2n_T^{2}}
+	+
+	O\br{\frac{1}{n_T^3}}
+}
++
+\\
++
+O
+\br{ 		\frac{\abs{g_L}}{\omega n_T}
+	e^{-n_T}
+	\log\frac{\abs{g_L}}{\omega}
+}		
+\bigg]
+\end{multline}
 \end{enumerate}
+These results are relevant, when the adiabaticity condition $ \omega \ll \frac{\Delta}{\log \frac{1}{T}} $ discussed in section \ref{subsec: adiabaticity condition} holds.

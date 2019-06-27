@@ -16,7 +16,7 @@ To obtain the spectrum of the system it's necessary to find the wavefunctions in
 	}\tau_z,  ~~~~~~~~~-\frac{L}{2}<y<\frac{L}{2}.
 \end{gather} 
 
-As low energies are the under consideration, in Schroedinger equation the energy term can be omitted, so $ p_b\approx\pm i \sqrt{2m\mu_b} $. Matching the wavefunctions and their derivatives inside and outside the barrier, we take barrier wavefunctions out of the problem and obtain the following boundary condition for wavefunctions on the left and on the right of the barrier:
+As low energies are under consideration, in Schroedinger equation the energy term can be omitted, so $ p_b\approx\pm i \sqrt{2m\mu_b} $. Matching the wavefunctions and their derivatives inside and outside the barrier, we take barrier wavefunctions out of the problem and obtain the following boundary condition for wavefunctions on the left and on the right of the barrier:
 \begin{gather}
 \label{bc_initial}
 	\begin{cases}
@@ -25,7 +25,7 @@ As low energies are the under consideration, in Schroedinger equation the energy
 	\end{cases}
 \end{gather}
 
-where $ \psi_{L,R}=\psi\br{\mp\frac{L}{2}} $, $ b=\br{{2m\mu_b}}^{-\frac{1}{2}}=\frac{1}{p_b} $ --- the penetration depth for the particle inside the barrier and $ t = e^{-\frac{L}{b} }$ --- the tunneling constant assumed to be small: $ t\ll 1 $. This condition means, that the size of the barrier $ L $ should be  much bigger that the penetration depth $ b $.
+where $ \psi_{L,R}=\psi\br{\mp\frac{L}{2}} $, $ b=\br{{2m\mu_b}}^{-\frac{1}{2}}=\frac{1}{p_b} $ --- the penetration depth for the particle inside the barrier and $ t = e^{-\frac{L}{b} }$ --- the tunneling constant assumed to be small: $ t\ll 1 $. This condition means, that the size of the barrier $ L $ should be  much bigger than the penetration depth $ b $.
 
 The condition (\ref{bc_initial}) is invariant under the combined action $ L\leftrightarrow R $, $ y\to-y $. To simplify further analysis we reverse the direction in the left wire and shift both ends of the wires from $ y= \frac{L}{2} $ to $ y=0 $. The boundary condition than becomes:
 \begin{gather}
@@ -120,7 +120,7 @@ E\Psi
 \label{sec:elimintaing_long-wave}
 
 
-	As the Majorana state lives at low energies, it's expected to be predominantly long-wave. This argument is in accord with \cite{Oreg_2010} and \cite{Lutchyn_2010}, where the Majorana state was an eigenstate of a linearized Hamiltonian, which is relevant only for long-wave physics. So, it's reasonable to eliminate the short-wave components from the problem, reformulating the boundary condition (\ref{short-long_hamiltonian}).
+	As the Majorana state lives at low energies, it's expected to be predominantly long-wave. This argument is in accord with \cite{Oreg_2010} and \cite{Lutchyn_2010}, where the Majorana state was an eigenstate of a linearized Hamiltonian, which is relevant only for long-wave physics. So, it's reasonable to eliminate the short-wave components from the problem, reformulating the boundary condition (\ref{bc_LR_space}).
 
 The wave function can be decomposed in short-wave and  long-wave  parts: $ \Psi = \Psi_{\mathrm{short}}+\Psi_{\mathrm{long}} $. Inserting it into (\ref{short-long_hamiltonian}) and using the fact, that $ p_{\mathrm{
 long}}\ll p_{\mathrm{short}} \approx 2mu s_z \sigma_z $, one can obtain at the boundary:
@@ -370,7 +370,7 @@ For $ E<\abs{g} $ wavefunctions $ \wf{}{\verylong}	 $ are:
 \section{Subgap states}
 \label{sec:Subgap_states}
 
-To find the bound states one needs to make two linear combinations (each for it's own wire) of decaying wave functions from (\ref{medium_dec_wave_functions}) and (\ref{long_dec_wave_functions}) at $ x=0 $ and put them into boundary condition (\ref{bc_matrix_LR}). For the right wire they can be taken directly from (\ref{medium_dec_wave_functions}) , (\ref{long_dec_wave_functions}), while for the left wire they should be multiplied by $ \sigma_x $ from the left (see the beginning of section \ref{sec:linearized_hamiltonian}).. These linear combinations can be written as:
+To find the bound states one needs to make two linear combinations (each for its own wire) of decaying wave functions from (\ref{medium_dec_wave_functions}) and (\ref{long_dec_wave_functions}) at $ x=0 $ and put them into boundary condition (\ref{bc_matrix_LR}). For the right wire they can be taken directly from (\ref{medium_dec_wave_functions}) , (\ref{long_dec_wave_functions}), while for the left wire they should be multiplied by $ \sigma_x $ from the left (see the beginning of section \ref{sec:linearized_hamiltonian}).. These linear combinations can be written as:
 \begin{gather}
 	\tilde{\psi}_L
 	=
@@ -428,7 +428,7 @@ In most of this work the low energy version $\wf{dec}{\medium}\approx
  $
 will be sufficient.
 
-For dealing with $ \wf{dec}{\verylong} $ it's convenient to introduce two quantities $ \chi_{L,R} $:
+For dealing with $ \wf{dec}{\verylong} $ it is convenient to introduce two quantities $ \chi_{L,R} $:
 \begin{gather}
 \cosh\chi_{L,R}
 =
@@ -439,7 +439,7 @@ For dealing with $ \wf{dec}{\verylong} $ it's convenient to introduce two quanti
 \frac{E}{\sqrt{g^2_{L,R}-E^2}}
 \end{gather}
 
-If $ g>0 $, the corresponding parameter $ \chi $ is real and monotonously growing with $ E $. For $ g<0 $ the parameter $ \chi $ is complex, but can be written as $ \chi=-\tilde{\chi}+i\pi $ with real and monotonous $\tilde{\chi}  $.
+If $ g>0 $, the corresponding parameter $ \chi $ is real and  growing monotonously with $ E $. For $ g<0 $ the parameter $ \chi $ is complex, but can be written as $ \chi=-\tilde{\chi}+i\pi $ with real and monotonous $\tilde{\chi}  $.
 
 With these parameters the spinors $ \wf{dec}{L\br{R},\verylong} $ at $ x=0 $ can be written as:
 \begin{gather}
@@ -490,7 +490,7 @@ where $ d_0 $ is given by (\ref{det_bound_States_zero_t}). $ d_2 $ can be comput
 
 For triv-triv junction there are no such points, so in the tunneling limit there are no bound states for this case.
 
-For triv-top junction there is a solution for $ E=0 $, which corresponds to $ \chi_L=i \pi $, $ \chi_R=0 $. Computing $ d_2 $ for this parameters, one finds that it's exactly zero, so there is no correction to Majorana energy --- as at should be, as it's protected by a particle-hole symmetry. This solution with the first correction in $ t $ is presented in appendix \ref{app:wavefunctions_with_corrections}.
+For triv-top junction there is a solution for $ E=0 $, which corresponds to $ \chi_L=i \pi $, $ \chi_R=0 $. Computing $ d_2 $ for these parameters, one finds that it's exactly zero, so there is no correction to Majorana energy --- as it should be, as this state protected by particle-hole symmetry. This solution with the first correction in $ t $ is presented in appendix \ref{app:wavefunctions_with_corrections}.
 
 For top-top junction the situation is more interesting. In that case there are two solutions at $ E=0 $, which should split for nonzero $ t $. Calculating $  $ $ d_2 $ at $ E=0 $ and expanding $ d_0 $ for small $ E $, one finds:
 \begin{gather}
@@ -555,7 +555,7 @@ After omitting the third term and taking the low temperature limit one rewrites 
 
 As was shown in section \ref{sec:Subgap_states}, there are no subgap states in triv-top contact except Majorana state. But this state lies exactly at zero energy regardless of the phase difference, so the derivative in the first term of (\ref{current_low_T}) will be zero and no supercurrent from the Majorana state is present. 
 
-To find the current from the continuous spectrum with (\ref{current_low_T}) one needs to know the density of states. As there is a derivative over $ \varphi $ taken, one need to find the phase dependent part of $\rho  $ only. It can be done by using the relation between the density of states and the scattering matrix \cite{Akkermans_Avron_Shapiro_scattering_matrix}:
+To find the current from the continuous spectrum with (\ref{current_low_T}) one needs to know the density of states. As there is a derivative over $ \varphi $ taken, one needs	 to find the phase dependent part of $\rho  $ only. It can be done by using the relation between the density of states and the scattering matrix \cite{Akkermans_Avron_Shapiro_scattering_matrix}:
 \begin{gather}
 \label{smatrix_and_DOS}
 	\rho\br{\phi}=\frac{1}{2\pi i}\frac{\partial}{\partial \varepsilon}\log \det \hat{S} +const.
@@ -744,7 +744,7 @@ I
 \end{gather}
 
 \subsection{Analyzing the results}
-From the estimates below 	(\ref{curr_e_between_g_r<g_l}) and (\ref{curr_e_between_g_r>g_l}) one may see, that the current coming from the states between $ g_L $ and $ g_R $ has a multiplier of the order $ g_{R} $ or $ \abs{g_L} $. The current from the states above $ g_{\max} $ and near it can be estimated with (\ref{curr_e>g_max}). It has the multiplier $ g_{\mathrm{max}}\log\frac{\Delta}{g_{\mathrm{max}}} $. Finally, according to (\ref{curr_E_delta}), the current from the states near $ \Delta $ is proportional to $ \Delta $. These results are schematically presented on fig. \ref{fig:spectrum}.
+From the estimates below 	(\ref{curr_e_between_g_r<g_l}) and (\ref{curr_e_between_g_r>g_l}) one may see, that the current coming from the states between $ g_L $ and $ g_R $ has a multiplier of the order $ g_{R} $ or $ \abs{g_L} $. The current from the states above $ g_{\max} $ and near it can be estimated with (\ref{curr_e>g_max}). It has the multiplier $ g_{\mathrm{max}}\log\frac{\Delta}{g_{\mathrm{max}}} $. Finally, according to (\ref{curr_E_delta}), the current from the states near $ \Delta $ is proportional to $ \Delta $. These results are schematically presented on fig. \ref{fig:supercurrent}.
 
 
 \begin{figure}[H]

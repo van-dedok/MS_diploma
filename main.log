@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  17 JUN 2019 00:21
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.10.7)  27 JUN 2019 11:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -946,11 +946,11 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count338
 \@quotereset=\count339
-(./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
-(./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux)
-(./chapters/chap3_stationary.aux) (./chapters/chap4_ionization.aux)
-(./chapters/chap_discussion.aux) (./chapters/chap_conclusion.aux)
-(./chapters/appb.aux) (./chapters/app_tunnel.aux) (./chapters/appc.aux))
+(./main.aux (./chapters/contents.aux) (./chapters/chap1_Intro.aux)
+(./chapters/chap2_Model.aux) (./chapters/chap3_stationary.aux)
+(./chapters/chap4_ionization.aux) (./chapters/chap_discussion.aux)
+(./chapters/chap_conclusion.aux) (./chapters/appb.aux)
+(./chapters/app_tunnel.aux) (./chapters/appc.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -1096,23 +1096,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 Package biblatex Info: Reference section=0 on input line 22.
 Package biblatex Info: Reference segment=0 on input line 22.
-\openout2 = `chapters/cover.aux'.
-
-
-(./chapters/cover.tex
-File: images/sklogo.eps Graphic file (type eps)
- <images/sklogo.eps> [1
-
-
-]
-File: images/sklogo.eps Graphic file (type eps)
- <images/sklogo.eps> [2]
-(./chapters/abstract.tex) [3
-
-])
 \openout2 = `chapters/contents.aux'.
 
- (./chapters/contents.tex (./main.toc [4
+
+(./chapters/contents.tex (./main.toc [1
 
 
 
@@ -1120,13 +1107,12 @@ File: images/sklogo.eps Graphic file (type eps)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-)
-[5]
+) [2]
 \openout2 = `chapters/chap1_Intro.aux'.
 
  (./chapters/chap1_Intro.tex
 Chapter 1.
-) [6
+) [3
 
 
 
@@ -1135,34 +1121,34 @@ Chapter 1.
 
  (./chapters/chap2_Model.tex
 Chapter 2.
-[7
+[4
 
 
 
 ]
 File: images/chem_and_ext_potentials.png Graphic file (type QTm)
- <use  "images/chem_and_ext_potentials.png" > [8] [9]
+ <use  "images/chem_and_ext_potentials.png" > [5] [6]
 File: images/spectrum.png Graphic file (type QTm)
 
-<use  "images/spectrum.png" > [10]) [11]
+<use  "images/spectrum.png" > [7]) [8]
 \openout2 = `chapters/chap3_stationary.aux'.
 
  (./chapters/chap3_stationary.tex
 Chapter 3.
-[12
+[9
 
 
 
 ]
 File: images/bc_transform.png Graphic file (type QTm)
- <use  "images/bc_transform.png" > [13] [14]
+ <use  "images/bc_transform.png" > [10] [11]
 Overfull \hbox (28.84993pt too wide) in paragraph at lines 138--139
 []\TU/TimesNewRoman(0)/m/n/12 Now, using the expansion (3.10[]) and renormalizi
 ng the coefficients: $\OML/cmm/m/it/12 C[] \OMS/cmsy/m/n/12 ! ^^@ [] \OML/cmm/m
 /it/12 C[]$
  []
 
-[15] [16] [17] [18] [19] [20] [21]
+[12] [13] [14] [15] [16] [17] [18]
 Overfull \hbox (15.28716pt too wide) in paragraph at lines 593--594
 []\TU/TimesNewRoman(0)/m/n/12 For $\OML/cmm/m/it/12 E \OMS/cmsy/m/n/12 ^^\ \OT1
 /cmr/m/n/12 ^^A$ \TU/TimesNewRoman(0)/m/n/12 one may use low energy limit of fu
@@ -1170,35 +1156,35 @@ nctions $\OML/cmm/m/it/12  []$\TU/TimesNewRoman(0)/m/n/12 : $\OML/cmm/m/it/12
 [] \OMS/cmsy/m/n/12 ^^Y [][] \OML/cmm/m/it/12 e[]$
  []
 
-[22]
+[19]
 Overfull \hbox (5.39699pt too wide) in paragraph at lines 673--675
 \TU/TimesNewRoman(0)/m/n/12 The computation of supercurrent is again made with 
 (3.39[]) (3.40[]). Introducing $\OML/cmm/m/it/12 g[] \OT1/cmr/m/n/12 = [] []$\T
 U/TimesNewRoman(0)/m/n/12 ,
  []
 
-[23]
+[20]
 File: images/supercurrent.png Graphic file (type QTm)
- <use  "images/supercurrent.png" > [24]) [25]
+ <use  "images/supercurrent.png" > [21]) [22]
 \openout2 = `chapters/chap4_ionization.aux'.
 
 
 (./chapters/chap4_ionization.tex
 Chapter 4.
-[26
+[23
 
 
 
-] [27]
+] [24]
 File: images/tunneling.png Graphic file (type QTm)
- <use  "images/tunneling.png" > [28]
+ <use  "images/tunneling.png" > [25]
 Overfull \hbox (5.44017pt too wide) in paragraph at lines 187--189
 [] \OML/cmm/m/it/12 h[]G[] [] h[]G[] [] h[] [] $ \TU/TimesNewRoman(0)/m/n/12 fa
 ctorizes into individual factors, which we denote as $\OML/cmm/m/it/12 J[] [] \
 OMS/cmsy/m/n/12 ^^Q
  []
 
-[29] [30] [31] [32] [33] [34] [35] [36] [37]
+[26] [27] [28] [29] [30] [31] [32] [33] [34]
 Overfull \hbox (1.77039pt too wide) in paragraph at lines 833--836
 \TU/TimesNewRoman(0)/m/n/12 The next step is to sum this over $\OML/cmm/m/it/12
  N$\TU/TimesNewRoman(0)/m/n/12 . Remember that $\OML/cmm/m/it/12 k[] \OT1/cmr/m
@@ -1208,30 +1194,30 @@ Overfull \hbox (1.77039pt too wide) in paragraph at lines 833--836
 man(0)/m/n/12 . 
  []
 
-[38] [39]
+[35] [36]
 File: images/scale.png Graphic file (type QTm)
  <use  "images/scale.png" >
 Underfull \hbox (badness 10000) in paragraph at lines 967--969
 
  []
 
-[40]) [41]
+[37]) [38]
 \openout2 = `chapters/chap_discussion.aux'.
 
  (./chapters/chap_discussion.tex
 Chapter 5.
-[42
+[39
 
 
 
 ]
 File: images/real_model_3.png Graphic file (type QTm)
- <use  "images/real_model_3.png" >) [43]
+ <use  "images/real_model_3.png" >) [40]
 \openout2 = `chapters/chap_conclusion.aux'.
 
  (./chapters/chap_conclusion.tex
 Chapter 6.
-) [44
+) [41
 
 
 
@@ -1240,16 +1226,16 @@ Chapter 6.
 
  (./chapters/appb.tex
 Appendix A.
-[45
+[42
 
 
 
-] [46]) [47]
+] [43]) [44]
 \openout2 = `chapters/app_tunnel.aux'.
 
  (./chapters/app_tunnel.tex
 Appendix B.
-) [48
+) [45
 
 
 
@@ -1258,35 +1244,35 @@ Appendix B.
 
  (./chapters/appc.tex
 Appendix C.
-[49
+[46
 
 
 
-] [50] [51] [52]) [53]
+] [47] [48] [49]) [50]
 Overfull \hbox (0.22112pt too wide) in paragraph at lines 40--40
 []\TU/TimesNewRoman(0)/m/n/12 G. Volovik, “Fermion zero modes on vortices in ch
 iral superconductors”, Pisma Zh.Eksp.Teor.Fiz.
  []
 
-[54
+[51
 
 
-] [55] (./main.aux (./chapters/cover.aux) (./chapters/contents.aux)
-(./chapters/chap1_Intro.aux) (./chapters/chap2_Model.aux)
-(./chapters/chap3_stationary.aux) (./chapters/chap4_ionization.aux)
-(./chapters/chap_discussion.aux) (./chapters/chap_conclusion.aux)
-(./chapters/appb.aux) (./chapters/app_tunnel.aux) (./chapters/appc.aux))
+] [52] (./main.aux (./chapters/contents.aux) (./chapters/chap1_Intro.aux)
+(./chapters/chap2_Model.aux) (./chapters/chap3_stationary.aux)
+(./chapters/chap4_ionization.aux) (./chapters/chap_discussion.aux)
+(./chapters/chap_conclusion.aux) (./chapters/appb.aux)
+(./chapters/app_tunnel.aux) (./chapters/appc.aux))
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20516 strings out of 493068
- 427861 string characters out of 6137720
- 871439 words of memory out of 5000000
- 24109 multiletter control sequences out of 15000+600000
- 12614 words of font info for 72 fonts, out of 8000000 for 9000
+ 20502 strings out of 493068
+ 427587 string characters out of 6137720
+ 868162 words of memory out of 5000000
+ 24106 multiletter control sequences out of 15000+600000
+ 12606 words of font info for 71 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  44i,18n,68p,10402b,4352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (55 pages).
+Output written on main.pdf (52 pages).
